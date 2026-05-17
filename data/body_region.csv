@@ -1,0 +1,10 @@
+Body.region,Victim.injury,count,total,pct
+Arm/Hand,fatal,6,120,5.0
+Arm/Hand,injured,114,120,95.0
+Foot/Ankle,injured,120,120,100.0
+Head,injured,13,13,100.0
+Leg/Thigh/Calf,fatal,88,408,21.6
+Leg/Thigh/Calf,injured,320,408,78.4
+Other,injured,1,1,100.0
+Torso/Shoulder,fatal,82,185,44.3
+Torso/Shoulder,injured,103,185,55.7

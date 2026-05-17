@@ -1,0 +1,14 @@
+Activity.clean,Victim.injury,count
+Boating,injured,3
+Boating,uninjured,1
+Diving,injured,29
+Diving,uninjured,4
+Fishing,injured,10
+Fishing,uninjured,1
+Snorkelling,injured,14
+Spearfishing,injured,16
+Spearfishing,uninjured,3
+Standing in Water,injured,16
+Surfing/Boarding,injured,35
+Surfing/Boarding,uninjured,1
+Swimming,injured,64

@@ -1,0 +1,203 @@
+Incident.year,Latitude,Longitude,Victim.injury,Activity.clean,County,Decade
+1950,32.5883333333,-117.1466666667,injured,Swimming,San Diego,1950
+1952,32.5883333333,-117.2466666667,injured,Swimming,San Diego,1950
+1952,36.6266666667,-122.05,fatal,Swimming,Monterey,1950
+1955,36.6266666667,-122.15,injured,Diving,Monterey,1950
+1956,35.1383333333,-120.6466666667,injured,Swimming,San Luis Obispo,1950
+1957,35.4033333333,-120.875,fatal,Swimming,San Luis Obispo,1950
+1958,32.685,-117.2166666667,injured,Swimming,San Diego,1950
+1959,37.7936,-122.4836,fatal,Swimming,San Francisco,1950
+1959,32.855,-117.28,fatal,Diving,San Diego,1950
+1959,32.855,-117.38,injured,Diving,San Diego,1950
+1959,38.295,-123.0466666667,uninjured,Diving,Sonoma,1950
+1959,34.0183333333,-118.7833333333,injured,Diving,Los Angeles,1950
+1960,38.1816666667,-122.965,injured,Diving,Marin,1960
+1960,36.96,-122.095,injured,Swimming,Santa Cruz,1960
+1961,38.1816666667,-123.065,uninjured,Diving,Marin,1960
+1961,38.3583333333,-123.0766666667,injured,Swimming,Sonoma,1960
+1962,37.72,-123.0316666667,injured,Diving,Island - Farallones,1960
+1962,37.72,-123.1316666667,injured,Diving,Island - Farallones,1960
+1964,37.72,-123.2316666667,injured,Diving,Island - Farallones,1960
+1966,36.5833333333,-122.0423722,injured,Diving,Monterey,1960
+1968,38.295,-123.1466666667,injured,Diving,Sonoma,1960
+1969,38.1816666667,-123.165,injured,Diving,Marin,1960
+1971,34.7583333333,-120.6416666667,injured,Diving,Santa Barbara,1970
+1971,38.6666666667,-123.43,injured,Diving,Sonoma,1970
+1972,38.1816666667,-123.265,injured,Diving,Marin,1970
+1974,38.1816666667,-123.365,injured,Diving,Marin,1970
+1974,39.2283333333,-123.7766666667,injured,Diving,Mendocino,1970
+1974,37.3233333333,-122.4083333333,injured,Surfing/Boarding,San Mateo,1970
+1974,37.15,-122.3666666667,injured,Diving,San Mateo,1970
+1974,37.15,-122.4666666667,injured,Diving,San Mateo,1970
+1974,37.72,-123.3316666667,injured,Diving,Island - Farallones,1970
+1974,36.3133333333,-121.9966666667,injured,Surfing/Boarding,Monterey,1970
+1975,34.45,-120.475,uninjured,Diving,Santa Barbara,1970
+1975,34.45,-120.575,injured,Diving,Santa Barbara,1970
+1975,39.82,-123.8566666667,injured,Diving,Mendocino,1970
+1975,37.72,-123.4316666667,injured,Diving,Island - Farallones,1970
+1976,41.025,-124.1116666667,injured,Surfing/Boarding,Humboldt,1970
+1976,34.04,-120.4366666667,injured,Diving,Island - San Miguel,1970
+1977,38.1816666667,-123.465,injured,Diving,Marin,1970
+1978,36.86,-121.81,injured,Swimming,Santa Cruz,1970
+1979,37.1083333333,-122.3433333333,uninjured,Diving,San Mateo,1970
+1980,41.025,-124.2116666667,uninjured,Surfing/Boarding,Humboldt,1980
+1981,36.6266666667,-122.25,fatal,Surfing/Boarding,Monterey,1980
+1982,38.5433333333,-123.305,injured,Diving,Sonoma,1980
+1982,35.2366666667,-120.9066666667,uninjured,Surfing/Boarding,San Luis Obispo,1980
+1982,39.9333333333,-123.9333333333,injured,Diving,Mendocino,1980
+1982,36.5266666667,-121.9266666667,injured,Diving,Monterey,1980
+1984,37.1916666667,-122.5083333333,fatal,Diving,San Mateo,1980
+1984,32.785,-117.2566666667,injured,Swimming,San Diego,1980
+1984,38.1816666667,-123.565,injured,Diving,Marin,1980
+1985,34.04,-120.5366666667,injured,Diving,Island - San Miguel,1980
+1985,33.75,-118.1,injured,Surfing/Boarding,Orange,1980
+1985,38.1816666667,-123.665,uninjured,Diving,Marin,1980
+1985,34.45,-120.675,injured,Diving,Santa Barbara,1980
+1986,36.5266666667,-122.1266666667,injured,Diving,Monterey,1980
+1987,37.492,-122.499,injured,Surfing/Boarding,San Mateo,1980
+1987,37.05,-122.2533333333,injured,Surfing/Boarding,Santa Cruz,1980
+1988,35.4033333333,-120.975,uninjured,Surfing/Boarding,San Luis Obispo,1980
+1988,41.5616666667,-124.0883333333,injured,Surfing/Boarding,Del Norte,1980
+1989,34.0183333333,-118.8833333333,fatal,Boating,Los Angeles,1980
+1989,37.72,-123.5316666667,injured,Diving,Island - Farallones,1980
+1990,37.5583333333,-122.5183333333,uninjured,Surfing/Boarding,San Mateo,1990
+1990,41.0583333333,-124.15,injured,Surfing/Boarding,Humboldt,1990
+1990,41.0583333333,-124.25,uninjured,Boating,Humboldt,1990
+1990,38.475,-123.175,injured,Diving,Sonoma,1990
+1990,36.5266666667,-122.2266666667,injured,Diving,Monterey,1990
+1991,37.05,-122.3533333333,injured,Surfing/Boarding,Santa Cruz,1990
+1991,37.05,-122.4533333333,injured,Surfing/Boarding,Santa Cruz,1990
+1991,37.983,-122.99694,uninjured,Diving,Marin,1990
+1991,40.0283333333,-124.0833333333,uninjured,Diving,Humboldt,1990
+1992,41.5616666667,-124.1883333333,uninjured,Surfing/Boarding,Del Norte,1990
+1992,34.04,-120.6366666667,injured,Diving,Island - San Miguel,1990
+1992,33.2266666667,-119.5383333333,injured,Diving,Island - San Nicolas,1990
+1992,37.1083333333,-122.4433333333,uninjured,Boating,San Mateo,1990
+1992,33.37,-117.6,injured,Diving,San Diego,1990
+1993,37.5966666667,-122.517,uninjured,Diving,San Mateo,1990
+1993,39.6666666667,-123.785,injured,Diving,Mendocino,1990
+1993,38.4366666667,-123.1333333333,uninjured,Boating,Sonoma,1990
+1993,40.77,-124.2266666667,injured,Surfing/Boarding,Humboldt,1990
+1994,34.04,-120.7366666667,fatal,Diving,Island - San Miguel,1990
+1995,32.855,-117.48,injured,Boating,San Diego,1990
+1995,36.5266666667,-122.0266666667,injured,Diving,Monterey,1990
+1995,40.0283333333,-124.1833333333,injured,Diving,Humboldt,1990
+1995,37.05,-122.5533333333,injured,Surfing/Boarding,Santa Cruz,1990
+1996,38.1816666667,-123.765,injured,Diving,Marin,1990
+1996,38.3583333333,-123.1766666667,uninjured,Surfing/Boarding,Sonoma,1990
+1996,38.25,-122.9716666667,injured,Surfing/Boarding,Marin,1990
+1996,38.3583333333,-123.2766666667,injured,Surfing/Boarding,Sonoma,1990
+1997,41.025,-124.3116666667,injured,Surfing/Boarding,Humboldt,1990
+1998,37.8966666667,-122.645,injured,Surfing/Boarding,Marin,1990
+1999,37.09583,-122.28333,uninjured,Surfing/Boarding,Santa Cruz,1990
+2000,37.492,-122.599,uninjured,Surfing/Boarding,San Mateo,2000
+2000,40.77,-124.3266666667,injured,Surfing/Boarding,Humboldt,2000
+2002,37.8966666667,-122.745,injured,Surfing/Boarding,Marin,2000
+2002,41.025,-124.4116666667,uninjured,Surfing/Boarding,Humboldt,2000
+2002,38.3583333333,-123.3766666667,injured,Surfing/Boarding,Sonoma,2000
+2003,35.2,-120.7,fatal,Swimming,San Luis Obispo,2000
+2004,38.3583333333,-123.4766666667,uninjured,Surfing/Boarding,Sonoma,2000
+2004,33.37,-117.7,uninjured,Surfing/Boarding,San Diego,2000
+2004,39.5783333333,-123.7783333333,fatal,Diving,Mendocino,2000
+2004,33.45,-117.6198,injured,Surfing/Boarding,Orange,2000
+2004,33.7,-118.0,uninjured,Surfing/Boarding,Orange,2000
+2004,35.1383333333,-120.7466666667,uninjured,Surfing/Boarding,San Luis Obispo,2000
+2004,38.024,-122.886,injured,Surfing/Boarding,Marin,2000
+2004,40.77,-124.4266666667,injured,Surfing/Boarding,Humboldt,2000
+2005,32.855,-117.58,injured,Surfing/Boarding,San Diego,2000
+2005,38.3583333333,-123.5766666667,injured,Surfing/Boarding,Sonoma,2000
+2005,41.5616666667,-124.2883333333,injured,Surfing/Boarding,Del Norte,2000
+2005,37.74,-122.518,uninjured,Surfing/Boarding,San Francisco,2000
+2005,37.492,-122.699,uninjured,Surfing/Boarding,San Mateo,2000
+2006,36.96,-122.195,uninjured,Surfing/Boarding,Santa Cruz,2000
+2006,36.6266666667,-121.85,uninjured,Diving,Monterey,2000
+2006,38.25,-123.0716666667,injured,Surfing/Boarding,Marin,2000
+2007,34.03,-118.54,injured,Swimming,Los Angeles,2000
+2007,34.318,-119.391,injured,Swimming,Ventura,2000
+2007,37.1916666667,-122.6083333333,uninjured,Boating,San Mateo,2000
+2007,34.0183333333,-118.9833333333,uninjured,Surfing/Boarding,Los Angeles,2000
+2007,32.5883333333,-117.3466666667,uninjured,Surfing/Boarding,San Diego,2000
+2007,36.7,-121.8,injured,Surfing/Boarding,Monterey,2000
+2007,41.025,-124.5116666667,uninjured,Surfing/Boarding,Humboldt,2000
+2007,34.004,-118.502,injured,Surfing/Boarding,Los Angeles,2000
+2007,33.978,-118.469,injured,Surfing/Boarding,Los Angeles,2000
+2008,33.7,-118.1,uninjured,Surfing/Boarding,Orange,2000
+2008,33.0,-117.3,fatal,Swimming,San Diego,2000
+2008,33.3879,-118.4163,uninjured,Boating,Island - Catalina,2000
+2008,34.683,-120.61,uninjured,Surfing/Boarding,Santa Barbara,2000
+2009,32.817,-117.274,uninjured,Diving,San Diego,2000
+2009,33.1,-117.3,injured,Swimming,San Diego,2000
+2009,33.7,-118.2,uninjured,Surfing/Boarding,Orange,2000
+2009,33.37,-117.8,injured,Surfing/Boarding,San Diego,2000
+2009,37.05,-122.6533333333,uninjured,Surfing/Boarding,Santa Cruz,2000
+2010,33.37,-117.9,uninjured,Surfing/Boarding,San Diego,2010
+2010,35.1383333333,-120.8466666667,injured,Surfing/Boarding,San Luis Obispo,2010
+2010,34.397,-120.122,uninjured,Boating,Santa Barbara,2010
+2010,37.1916666667,-122.7083333333,uninjured,Boating,San Mateo,2010
+2010,34.683,-120.71,fatal,Surfing/Boarding,Santa Barbara,2010
+2011,32.855,-117.68,uninjured,Diving,San Diego,2010
+2011,33.37,-118.0,uninjured,Surfing/Boarding,San Diego,2010
+2011,40.8,-124.204,uninjured,Surfing/Boarding,Humboldt,2010
+2011,36.7,-121.9,injured,Surfing/Boarding,Monterey,2010
+2011,37.1916666667,-122.8083333333,uninjured,Boating,San Mateo,2010
+2012,33.3879,-118.5163,uninjured,Surfing/Boarding,Island - Catalina,2010
+2012,35.583,-121.122,uninjured,Boating,San Luis Obispo,2010
+2012,36.96,-121.995,uninjured,Boating,Santa Cruz,2010
+2012,34.0,-118.6,injured,Surfing/Boarding,Los Angeles,2010
+2012,37.05,-122.7533333333,uninjured,Surfing/Boarding,Santa Cruz,2010
+2012,34.683,-120.81,fatal,Surfing/Boarding,Santa Barbara,2010
+2012,40.77,-124.5266666667,injured,Surfing/Boarding,Humboldt,2010
+2013,37.5966666667,-122.617,uninjured,Boating,San Mateo,2010
+2013,37.492,-122.799,uninjured,Surfing/Boarding,San Mateo,2010
+2013,34.4176,-119.6492,injured,Swimming,Santa Barbara,2010
+2013,40.77,-124.6266666667,injured,Surfing/Boarding,Humboldt,2010
+2014,35.11,-120.635,uninjured,Surfing/Boarding,San Luis Obispo,2010
+2014,36.7,-122.0,uninjured,Surfing/Boarding,Santa Cruz,2010
+2014,34.76,-120.64,injured,Surfing/Boarding,Santa Barbara,2010
+2014,34.76,-120.74,uninjured,Boating,Santa Barbara,2010
+2014,34.76,-120.84,uninjured,Boating,Santa Barbara,2010
+2014,34.398,-119.701,uninjured,Boating,Santa Barbara,2010
+2014,35.276,-120.892,injured,Surfing/Boarding,San Luis Obispo,2010
+2015,33.7,-118.3,uninjured,Surfing/Boarding,Orange,2010
+2015,34.367,-120.21,uninjured,Boating,Santa Barbara,2010
+2015,35.4033333333,-121.075,uninjured,Surfing/Boarding,San Luis Obispo,2010
+2015,34.0514,-118.9986,injured,Boating,Ventura,2010
+2015,34.038,-118.894,uninjured,Surfing/Boarding,Los Angeles,2010
+2015,34.0,-119.55,injured,Diving,Island - Santa Cruz,2010
+2015,34.417,-119.595,injured,Boating,Santa Barbara,2010
+2016,33.5933,-117.8755,injured,Swimming,Orange,2010
+2016,34.46,-120.075,injured,Diving,Santa Barbara,2010
+2016,40.77,-124.7266666667,uninjured,Surfing/Boarding,Humboldt,2010
+2017,36.6266666667,-121.95,uninjured,Boating,Monterey,2010
+2017,33.37,-118.1,injured,Swimming,San Diego,2010
+2017,36.96,-121.895,uninjured,Boating,Santa Cruz,2010
+2017,34.398,-119.8,uninjured,Surfing/Boarding,Santa Barbara,2010
+2017,34.398,-119.9,uninjured,Boating,Santa Barbara,2010
+2017,37.1916666667,-122.9083333,uninjured,Boating,San Mateo,2010
+2017,36.56425,-121.9423722,injured,Diving,Monterey,2010
+2017,38.0278,-122.9417,injured,Surfing/Boarding,Marin,2010
+2018,33.187739,-117.430831,uninjured,Boating,San Diego,2010
+2018,33.7,-118.4,uninjured,Swimming,Orange,2010
+2018,33.0652,-117.3047,injured,Diving,San Diego,2010
+2018,37.72,-123.6316666667,injured,Diving,Island - Farallones,2010
+2019,35.276,-120.992,injured,Surfing/Boarding,San Luis Obispo,2010
+2019,38.3583333333,-123.6766666667,uninjured,Surfing/Boarding,Sonoma,2010
+2019,33.0,-117.4,uninjured,Surfing/Boarding,San Diego,2010
+2019,33.4625,-118.4917,uninjured,Boating,Island - Catalina,2010
+2019,34.01667,-120.23333,injured,Surfing/Boarding,Island - Santa Rosa,2010
+2020,36.96,-122.095,uninjured,Surfing/Boarding,Santa Cruz,2020
+2020,34.41333,-119.695,injured,Swimming,Santa Barbara,2020
+2020,36.919966,-121.8558,fatal,Surfing/Boarding,Santa Cruz,2020
+2020,40.028333,-124.283333,uninjured,Boating,Humboldt,2020
+2020,34.03416667,-119.5202778,uninjured,Diving,Island - Santa Cruz,2020
+2020,33.79,-118.4089628,injured,Diving,Los Angeles,2020
+2020,40.028333,-124.383333,uninjured,Boating,Humboldt,2020
+2020,32.685,-117.316667,uninjured,Swimming,San Diego,2020
+2020,37.564967,-122.615003,injured,Diving,San Mateo,2020
+2021,33.47,-118.55,injured,Boating,Island - Catalina,2020
+2021,35.583,-121.222,uninjured,Boating,San Luis Obispo,2020
+2021,36.8076,-121.7917,uninjured,Surfing/Boarding,Monterey,2020
+2021,38.35833333,-123.7766667,injured,Surfing/Boarding,Sonoma,2020
+2021,38.358333333,-123.8766667,uninjured,Surfing/Boarding,Sonoma,2020
+2021,35.40333333,-121.175,fatal,Surfing/Boarding,San Luis Obispo,2020
+2022,34.04,-120.8366667,injured,Diving,Island - San Miguel,2020

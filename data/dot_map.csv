@@ -1,0 +1,1197 @@
+Incident.year,Latitude,Longitude,Victim.injury,Species.clean,Activity.clean,State,Location,Provoked.unprovoked,Decade
+1791,-33.86666667,151.2,fatal,White Shark,Swimming,NSW,near sydney,unprovoked,1790
+1803,-25.83333333,113.8833333,injured,Tiger Shark,Swimming,WA,"hamelin bay, faure island",unprovoked,1800
+1807,-33.86666667,151.2,injured,Bull Shark,Swimming,NSW,"cockle bay, sydney harbour",unprovoked,1800
+1820,-42.8,147.5333333,fatal,Unknown,Swimming,TAS,"sweetwater point, pitt water",provoked,1820
+1825,-33.85,151.2166667,injured,Bull Shark,Swimming,NSW,"kirribili point, sydney harbour",unprovoked,1820
+1830,-43.28333333,147.3333333,injured,White Shark,Swimming,TAS,bruny island,unprovoked,1830
+1832,-33.86666667,151.1833333,injured,Bull Shark,Swimming,NSW,"blackwattle bay, glebe, sydney harbour",provoked,1830
+1832,-33.83333333,151.2666667,injured,White Shark,Fishing,NSW,"south head, sydney harbour",provoked,1830
+1836,-34.95,138.5,injured,White Shark,Swimming,SA,holdfast bay,unprovoked,1830
+1836,-25.48333333,152.9833333,fatal,Whaler Shark,Swimming,QLD,fraser island,unprovoked,1830
+1836,-25.48333333,152.9833333,fatal,Whaler Shark,Swimming,QLD,fraser island,unprovoked,1830
+1837,-30.93333333,153.0166667,fatal,Bull Shark,Swimming,NSW,macleay river,unprovoked,1830
+1839,-38.98333333,146.45,fatal,White Shark,Swimming,VIC,"sealer's cove, wilson's promontory",provoked,1830
+1840,-33.85,151.2166667,fatal,Bull Shark,Swimming,NSW,"wooloomooloo bay, sydney harbour",unprovoked,1840
+1841,-33.83333333,151.1666667,fatal,Bull Shark,Swimming,NSW,"cockatoo island, sydney harbour",unprovoked,1840
+1847,-27.25,153.25,injured,Bull Shark,Swimming,QLD,moreton bay,unprovoked,1840
+1847,-27.43333333,153.0833333,injured,Bull Shark,Swimming,QLD,brisbane river,unprovoked,1840
+1849,-33.36666667,115.2833333,fatal,White Shark,Swimming,WA,"quindalup, busselton",provoked,1840
+1849,-38.33333333,141.6,injured,White Shark,Swimming,VIC,portland,unprovoked,1840
+1849,-33.81666667,151.2,fatal,Bull Shark,Swimming,NSW,"woolloomooloo bay, sydney harbour",unprovoked,1840
+1850,-27.28333333,153.2166667,fatal,Tiger Shark,Swimming,QLD,moreton bay,unprovoked,1850
+1850,-29.41666667,153.3333333,injured,Whaler Shark,Swimming,NSW,"yamba, clarence head",unprovoked,1850
+1853,-33.85,151.2166667,injured,Wobbegong,Swimming,NSW,sydney harbour,provoked,1850
+1855,-25.5,152.7166667,injured,Bull Shark,Swimming,QLD,mary river,unprovoked,1850
+1855,-33.85,151.2166667,uninjured,Bull Shark,Swimming,NSW,"woolloomooloo bay, sydney harbour",unprovoked,1850
+1855,-10.56666667,142.2,fatal,Tiger Shark,Swimming,QLD,hammond island,unprovoked,1850
+1855,-33.86666667,151.2,fatal,Bull Shark,Swimming,NSW,"millers point, sydney harbour",unprovoked,1850
+1856,-38.13333333,144.4166667,injured,White Shark,Swimming,VIC,"port phillip bay, point henry",unprovoked,1850
+1856,-35.53333333,138.6833333,injured,Wobbegong,,SA,"port elliot, horseshoe bay",unprovoked,1850
+1858,-37.85,144.9,fatal,White Shark,Swimming,VIC,"hobson's bay, port phillip bay",unprovoked,1850
+1860,-35.56666667,138.6,injured,White Shark,Swimming,SA,encounter bay,unprovoked,1860
+1861,-27.51666667,153.2666667,injured,Wobbegong,Swimming,QLD,"cleveland, moreton bay",unprovoked,1860
+1862,-37.85,144.9,injured,White Shark,Swimming,VIC,"huttons wharf, port phillip bay",unprovoked,1860
+1862,-27.36666667,153.15,fatal,Bull Shark,Swimming,QLD,"brisbane river, brisbane",unprovoked,1860
+1863,-31.88333333,151.4666667,fatal,Bull Shark,Swimming,NSW,manning river,unprovoked,1860
+1863,-27.58333333,153.3166667,fatal,Tiger Shark,Swimming,QLD,"moreton bay, victoria point",provoked,1860
+1863,-37.9,144.9833333,injured,White Shark,Swimming,VIC,"brighton bay, melbourne",unprovoked,1860
+1863,-26.8,153.1333333,fatal,Tiger Shark,,QLD,caloundra heads,unprovoked,1860
+1865,-37.86666667,144.8666667,fatal,White Shark,Swimming,VIC,"williamstown, phillip bay, melbourne",unprovoked,1860
+1868,-23.08333333,150.7333333,injured,Tiger Shark,Swimming,QLD,yeppoon,unprovoked,1860
+1869,-27.46666667,153.0,injured,Bull Shark,Swimming,QLD,"brisbane river, milton reach",unprovoked,1860
+1869,-34.13333333,137.45,injured,Other,Fishing,SA,"cape elizabeth, port hughes",provoked,1860
+1870,-27.46666667,153.0166667,injured,Bull Shark,Swimming,QLD,"brisbane river, north quay",unprovoked,1870
+1870,-27.08333333,153.4,injured,Whaler Shark,Spearfishing,QLD,moreton island,provoked,1870
+1872,-25.8,153.0166667,injured,Unknown,Swimming,QLD,"wide bay, near fraser island",unprovoked,1870
+1873,-34.83333333,138.4666667,uninjured,White Shark,Boating,SA,semaphore beach,unprovoked,1870
+1874,-33.86666667,151.2,injured,Bull Shark,Swimming,NSW,"darling harbour, sydney harbour",unprovoked,1870
+1874,-25.5,152.7166667,injured,Bull Shark,Swimming,QLD,"mary river, maryborough",unprovoked,1870
+1874,-33.0,151.7166667,injured,Wobbegong,Swimming,NSW,"redhead beach, newcastle",provoked,1870
+1875,-29.41666667,153.3333333,injured,Tiger Shark,Swimming,NSW,"yamba, clarence river",unprovoked,1870
+1875,-10.25,142.1166667,fatal,Tiger Shark,Snorkelling,QLD,torres strait islands,provoked,1870
+1875,-29.4,153.3333333,injured,White Shark,Swimming,NSW,"yamba, clarence river heads, lluka beach",provoked,1870
+1875,-29.4,153.3333333,injured,Bull Shark,Swimming,NSW,"yamba, clarence river, grafton",unprovoked,1870
+1876,-20.7,117.25,injured,Bull Shark,Snorkelling,WA,port walcott & de grey river,provoked,1870
+1876,-37.86666667,144.9666667,injured,White Shark,Swimming,VIC,st kilda beach,unprovoked,1870
+1876,-10.25,142.1166667,fatal,Tiger Shark,Snorkelling,QLD,torres strait islands,provoked,1870
+1876,-37.85,144.95,fatal,White Shark,Swimming,VIC,albert park pier,unprovoked,1870
+1876,-33.85,151.2,uninjured,Whaler Shark,Diving,NSW,"dawse point battery, sydney harbour",provoked,1870
+1876,-32.76666667,151.7,injured,Bull Shark,Swimming,NSW,"paterson river, newcastle",unprovoked,1870
+1877,-37.83333333,144.9333333,fatal,White Shark,Swimming,VIC,"emerald hill, melbourne",unprovoked,1870
+1877,-38.38333333,142.4833333,injured,White Shark,Swimming,VIC,port fairy,unprovoked,1870
+1877,-38.1,144.65,injured,White Shark,Swimming,VIC,"port phillip bay, portarlington",unprovoked,1870
+1877,-33.86666667,151.2,injured,Bull Shark,Swimming,NSW,"balmain, sydney harbour",unprovoked,1870
+1877,-34.73333333,138.0333333,injured,Unknown,Swimming,SA,st kilda beach,provoked,1870
+1878,-9.633333333,142.6833333,injured,Tiger Shark,Snorkelling,QLD,"torres strait, saibai island",provoked,1870
+1878,-38.38333333,142.5,injured,Whaler Shark,Swimming,VIC,hopkin's river,unprovoked,1870
+1878,-25.8,153.05,injured,Bull Shark,Fishing,QLD,"inskip point, off frazer island",provoked,1870
+1878,-33.85,151.15,injured,Wobbegong,Swimming,NSW,"iron cove river, sydney harbour",unprovoked,1870
+1879,-33.86666667,151.2,fatal,Bull Shark,Swimming,NSW,"darling harbour, sydney harbour",unprovoked,1870
+1879,-29.4,153.3333333,injured,White Shark,Swimming,NSW,"yamba, clarence river heads, lluka beach",unprovoked,1870
+1880,-16.9,145.9833333,fatal,Tiger Shark,Swimming,QLD,"cairns, fitzroy island",unprovoked,1880
+1880,-33.08333333,151.5,injured,Bull Shark,Swimming,NSW,"lake macquarie, dora creek",unprovoked,1880
+1880,-27.51666667,152.9,injured,Bull Shark,Swimming,QLD,"brisbane river, ipswich",unprovoked,1880
+1880,-27.46666667,153.0333333,fatal,Bull Shark,Swimming,QLD,"brisbane river, kangaroo point",unprovoked,1880
+1881,-31.06666667,152.6333333,uninjured,Bull Shark,Swimming,NSW,"lake macquarie, pelican flat",unprovoked,1880
+1881,-25.25,152.85,injured,Tiger Shark,,QLD,"hervey bay, wide bay",unprovoked,1880
+1881,-20.0,148.8,injured,Tiger Shark,Spearfishing,QLD,great barrier reef (unknown location),provoked,1880
+1881,-33.86666667,151.2333333,fatal,Bull Shark,Swimming,NSW,"rushcutters bay, sydney harbour",unprovoked,1880
+1881,-24.83333333,152.1166667,injured,Bull Shark,Swimming,QLD,"kolan river, bunbagerg",unprovoked,1880
+1882,-17.98333333,122.2333333,injured,Tiger Shark,Snorkelling,WA,broome (area),provoked,1880
+1882,-33.08333333,151.65,fatal,White Shark,,NSW,lake macquarie heads,unprovoked,1880
+1882,-33.85,151.2,injured,Wobbegong,Swimming,NSW,"miller's point, sydney harbour",unprovoked,1880
+1882,-15.88333333,122.0,fatal,Tiger Shark,Snorkelling,WA,broome area (nintey mile beach),provoked,1880
+1882,-17.98333333,122.2333333,fatal,Tiger Shark,Snorkelling,WA,broome (area),provoked,1880
+1883,-33.85,151.15,fatal,Bull Shark,Swimming,NSW,"iron cove bay, sydney",unprovoked,1880
+1883,-33.86666667,151.2,fatal,Bull Shark,Swimming,NSW,"parramatta river, sydney",unprovoked,1880
+1883,-33.8,151.2833333,uninjured,Bull Shark,Swimming,NSW,"store beach, quarantine, manly",provoked,1880
+1884,-33.18333333,137.9833333,fatal,White Shark,Swimming,SA,port pirie,unprovoked,1880
+1885,-33.81666667,151.05,uninjured,Bull Shark,Swimming,NSW,parramatta river,unprovoked,1880
+1885,-33.31666667,115.6333333,injured,White Shark,Swimming,WA,bunbury,unprovoked,1880
+1886,-25.53333333,152.7,uninjured,Bull Shark,Swimming,QLD,maryborough harbour,unprovoked,1880
+1886,-23.38333333,150.6333333,injured,Bull Shark,Swimming,QLD,"fitzroy river, rotheway bay",unprovoked,1880
+1887,-33.8,151.2833333,uninjured,Whaler Shark,Boating,NSW,"manly wharf, sydney",unprovoked,1880
+1887,-33.81666667,151.0833333,fatal,Bull Shark,Swimming,NSW,"ryde, sydney harbour",unprovoked,1880
+1888,-19.85,145.4,injured,Tiger Shark,Snorkelling,QLD,cooktown (gbr),provoked,1880
+1888,-33.85,151.15,fatal,Bull Shark,Swimming,NSW,"iron cove bridge, sydney",unprovoked,1880
+1889,-38.33333333,144.6166667,fatal,White Shark,Swimming,VIC,port phillip bay heads,unprovoked,1880
+1890,-42.73333333,147.2333333,injured,Other,Swimming,TAS,"derwent, bridgewater",unprovoked,1890
+1891,-36.71666667,149.9833333,uninjured,Wobbegong,Diving,NSW,tathra wharf,provoked,1890
+1891,-38.33333333,144.3166667,injured,Wobbegong,Snorkelling,VIC,point danger of torquay,provoked,1890
+1892,-10.11666667,142.1333333,fatal,Tiger Shark,Diving,QLD,"torres strait, badu island",provoked,1890
+1892,-23.36666667,150.5,injured,Bull Shark,Swimming,QLD,"rockhampton, fitzroy river",unprovoked,1890
+1892,-27.45,153.2166667,injured,Whaler Shark,Swimming,QLD,"moreton bay, wellington point",unprovoked,1890
+1892,-27.43333333,153.0833333,injured,Bull Shark,Swimming,QLD,brisbane river,unprovoked,1890
+1893,-28.76666667,114.6,uninjured,Wobbegong,Fishing,WA,geraldton,provoked,1890
+1893,-13.93333333,143.7333333,fatal,Tiger Shark,Swimming,QLD,claremont isles national park,unprovoked,1890
+1893,-9.816666667,142.7,injured,Tiger Shark,Swimming,QLD,"torres strait, cap island",unprovoked,1890
+1894,-32.91666667,151.7833333,injured,White Shark,Swimming,NSW,newcastle beach,unprovoked,1890
+1895,-27.46666667,153.0,uninjured,Bull Shark,Boating,QLD,brisbane river,unprovoked,1890
+1895,-33.93333333,151.25,fatal,Bull Shark,Swimming,NSW,"leichhardt, sydney harbour",unprovoked,1890
+1895,-24.9,152.2333333,injured,Bull Shark,Swimming,QLD,"burnett river, sharon",unprovoked,1890
+1895,-20.78333333,115.5333333,fatal,Tiger Shark,Diving,WA,barrow island,provoked,1890
+1895,-35.13333333,150.75,fatal,Whaler Shark,Swimming,NSW,"jervis bay, cape st george lighthouse",provoked,1890
+1895,-10.56666667,142.2166667,uninjured,Tiger Shark,Diving,QLD,"thursday island, torre strait",provoked,1890
+1895,-33.85,151.15,fatal,Bull Shark,Swimming,NSW,"iron cove bridge, sydney",unprovoked,1890
+1896,-33.86666667,151.1833333,fatal,Bull Shark,Swimming,NSW,"pyrmont baths, sydney",unprovoked,1890
+1896,-33.85,121.8833333,fatal,White Shark,Swimming,WA,esperance,unprovoked,1890
+1897,-31.06666667,152.8333333,injured,Bull Shark,Swimming,NSW,"macleay river, kempsey",unprovoked,1890
+1897,-9.95,142.1833333,injured,Tiger Shark,Swimming,QLD,"torres strait, mabuiag island ",unprovoked,1890
+1898,-32.71666667,152.1166667,injured,Bull Shark,Fishing,NSW,"port stephens, nelson's bay",provoked,1890
+1898,-27.46666667,153.2166667,injured,Whaler Shark,Fishing,QLD,"moreton bay, wellington point",provoked,1890
+1899,-33.78333333,151.2166667,injured,Bull Shark,Swimming,NSW,"sugar loaf bay, sydney harbour",unprovoked,1890
+1899,-27.55,153.1833333,injured,Bull Shark,Swimming,QLD,"moreton bay, tingalpa creek, near wynnum",unprovoked,1890
+1900,-33.85,151.15,injured,Bull Shark,Swimming,NSW,"iron cove bridge, sydney",unprovoked,1900
+1900,-11.6,130.95,injured,Tiger Shark,Swimming,NT,melville island,unprovoked,1900
+1900,-19.25,146.8166667,injured,Tiger Shark,Swimming,QLD,townsville harbour,unprovoked,1900
+1900,-10.55,142.3833333,fatal,Unknown,Snorkelling,QLD,torres strait (unknown location),provoked,1900
+1900,-33.78333333,151.2333333,fatal,Bull Shark,Swimming,NSW,"middle harbour, folly point, sydney harbour",unprovoked,1900
+1901,-11.6,130.95,injured,Tiger Shark,Swimming,NT,melville island,unprovoked,1900
+1901,-27.46666667,153.0,fatal,Bull Shark,Swimming,QLD,"brisbane river, rowing club",unprovoked,1900
+1901,-16.85,145.75,injured,Wobbegong,Swimming,QLD,barron river mouth,provoked,1900
+1901,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1900
+1901,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1900
+1901,-27.46666667,153.0,injured,Bull Shark,Swimming,QLD,"brisbane river, south brisbane cemetery",unprovoked,1900
+1902,-27.48333333,153.0,injured,Bull Shark,Swimming,QLD,"brisbane river, highgate hill",unprovoked,1900
+1902,-27.43333333,153.1666667,injured,Whaler Shark,Swimming,QLD,"moreton bay, wynnum south",provoked,1900
+1903,-33.81666667,151.15,fatal,Bull Shark,Swimming,NSW,"lane cove river, sydney",unprovoked,1900
+1903,-36.63333333,150.0,uninjured,Bull Shark,Fishing,NSW,"middle lagoon, tanja",provoked,1900
+1903,-27.7,153.2833333,fatal,Bull Shark,Swimming,QLD,logan river,unprovoked,1900
+1903,-34.66666667,150.85,uninjured,Whaler Shark,Diving,NSW,kiama,provoked,1900
+1904,-27.41666667,153.1166667,injured,Bull Shark,Swimming,QLD,"brisbane river, pinkenba",unprovoked,1900
+1905,-28.8,153.2666667,injured,Bull Shark,Swimming,NSW,lismore - wilsons river,unprovoked,1900
+1905,-10.2,142.15,fatal,Tiger Shark,Snorkelling,QLD,"badu island, torres strait",provoked,1900
+1906,-33.98333333,151.0666667,fatal,Bull Shark,Swimming,NSW,georges river,unprovoked,1900
+1906,-14.66666667,145.45,fatal,Tiger Shark,Swimming,QLD,lizard island,unprovoked,1900
+1906,-9.95,142.1666667,fatal,Tiger Shark,Snorkelling,QLD,"torres strait, mabuiag island ",provoked,1900
+1906,-35.7,150.1833333,uninjured,Wobbegong,Boating,NSW,batemans bay,unprovoked,1900
+1907,-19.25,146.8166667,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1900
+1907,-28.85,113.9,injured,Tiger Shark,Snorkelling,WA,"geraldton, murray island - off geraldton",provoked,1900
+1907,-32.93333333,151.75,injured,White Shark,Swimming,NSW,"merewether beach, newcastle",unprovoked,1900
+1907,-33.78333333,151.2333333,fatal,Bull Shark,Swimming,NSW,"middle harbour, sugarloaf bay, sydney",unprovoked,1900
+1909,-33.48333333,151.3,injured,Bull Shark,Swimming,NSW,"brisbane waters, woy woy",unprovoked,1900
+1910,-32.9,151.7666667,fatal,Bull Shark,Swimming,NSW,newcastle harbour,unprovoked,1910
+1910,-33.31666667,115.6166667,injured,White Shark,Swimming,WA,bunbury ,unprovoked,1910
+1910,-34.36666667,115.1166667,uninjured,Unknown,Swimming,WA,cape leeuwin,unprovoked,1910
+1910,-21.16666667,149.2333333,injured,Unknown,Swimming,QLD,mackay (9 miles away),unprovoked,1910
+1911,-20.38333333,116.8666667,uninjured,Tiger Shark,Swimming,WA,legendre island,unprovoked,1910
+1911,-10.56666667,142.2166667,fatal,Tiger Shark,Swimming,QLD,"thursday island, torre strait",unprovoked,1910
+1911,-15.48333333,145.4,injured,Tiger Shark,Snorkelling,QLD,cooktown (gbr),provoked,1910
+1912,-33.83333333,151.1666667,injured,Dusky Shark,Swimming,NSW,sydney (near),unprovoked,1910
+1912,-33.81666667,151.15,fatal,Bull Shark,Swimming,NSW,"lane cove river, figtree, sydney",unprovoked,1910
+1912,-19.45,146.6,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1910
+1912,-33.31666667,115.6333333,uninjured,Wobbegong,Diving,WA,bunbury harbour,provoked,1910
+1912,-37.58333333,140.3333333,injured,White Shark,Fishing,SA,carpenters rocks,provoked,1910
+1912,-33.91666667,151.25,injured,White Shark,Swimming,NSW,"coogee beach, sydney",unprovoked,1910
+1912,-27.31666667,153.05,injured,Tiger Shark,Swimming,QLD,"moreton bay, sandgate, scroncliffe pier",unprovoked,1910
+1913,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"torres strait, thursday/york island",provoked,1910
+1913,-29.4,153.3333333,injured,Bull Shark,Fishing,NSW,"yamba, clarence river",provoked,1910
+1913,-10.2,142.15,injured,Unknown,Swimming,QLD,"badu island, torres strait",provoked,1910
+1913,-27.31666667,153.05,injured,Tiger Shark,Swimming,QLD,"moreton bay, sandgate, scroncliffe pier",unprovoked,1910
+1913,-35.05,138.45,injured,White Shark,Swimming,SA,port noarlunga,unprovoked,1910
+1914,-33.85,151.15,uninjured,Bull Shark,Boating,NSW,"five dock bay, drummoyne",unprovoked,1910
+1914,-27.31666667,153.05,injured,Wobbegong,Swimming,QLD,"moreton bay, sandgate beach",unprovoked,1910
+1914,-33.83333333,151.0666667,injured,Bull Shark,Boating,NSW,"parramatta river, sydney harbour",unprovoked,1910
+1914,-35.23333333,136.9666667,injured,Wobbegong,Spearfishing,SA,"marion bay, yorke peninsula",provoked,1910
+1914,-29.43333333,153.1833333,injured,Bull Shark,Fishing,NSW,"maclean river, lawrence",provoked,1910
+1914,-37.95,145.0,fatal,White Shark,Swimming,VIC,"port phillip bay, sandringham beach",unprovoked,1910
+1914,-19.16666667,146.8333333,injured,Unknown,Swimming,QLD,"magnetic island, picnic bay wharf",unprovoked,1910
+1914,-31.98333333,115.7333333,injured,Wobbegong,,WA,"cottesloe beach, perth",provoked,1910
+1915,-33.83333333,151.2333333,fatal,Bull Shark,Swimming,NSW,"sirius cove, sydney harbour",unprovoked,1910
+1915,-27.26666667,153.2166667,injured,Wobbegong,Boating,QLD,moreton bay,unprovoked,1910
+1915,-33.78333333,151.2833333,injured,Whaler Shark,Swimming,NSW,"manly, north steyne, sydney",unprovoked,1910
+1915,-27.31666667,153.0666667,injured,Bull Shark,Swimming,QLD,"moreton bay, cabbage tree creek",unprovoked,1910
+1916,-41.05,145.75,uninjured,Wobbegong,Diving,TAS,burnie,provoked,1910
+1916,-33.76666667,151.2833333,injured,White Shark,Swimming,NSW,curl curl beach,unprovoked,1910
+1916,-19.23333333,146.8,fatal,Tiger Shark,Swimming,QLD,"townsville, kissing point",unprovoked,1910
+1916,-19.23333333,146.8166667,fatal,Tiger Shark,Swimming,QLD,"townsville, strand beach",unprovoked,1910
+1916,-20.0,119.3666667,injured,Tiger Shark,Snorkelling,WA,condon creek - port headland (area),provoked,1910
+1916,-20.0,119.3333333,fatal,Tiger Shark,Snorkelling,WA,condon creek - broome (area),provoked,1910
+1916,-33.78333333,151.2166667,fatal,Bull Shark,Standing in Water,NSW,"sugarloaf point, sydney harbour,",unprovoked,1910
+1916,-23.11666667,150.75,fatal,Tiger Shark,Swimming,QLD,yeppoon (mens beach),unprovoked,1910
+1917,-27.23333333,153.2166667,injured,Whaler Shark,Fishing,QLD,moreton bay,provoked,1910
+1917,-20.3,118.5833333,injured,Tiger Shark,Swimming,WA,port headland,unprovoked,1910
+1918,-32.66666667,152.15,injured,Wobbegong,Fishing,NSW,"port stephens, tea gardens",provoked,1910
+1918,-32.91666667,151.7833333,injured,White Shark,Swimming,NSW,newcastle beach,unprovoked,1910
+1918,-28.15,153.5166667,injured,Wobbegong,Swimming,QLD,"kirra beach, coolangatta",provoked,1910
+1918,-28.15,153.1,injured,Tiger Shark,Swimming,NSW,tweed heads,unprovoked,1910
+1918,-26.41666667,150.0666667,uninjured,Wobbegong,Diving,NSW,burmagui,provoked,1910
+1918,-33.86666667,151.2,uninjured,Bull Shark,Swimming,NSW,"parramatta river, sydney harbour",unprovoked,1910
+1918,-19.25,146.8166667,fatal,Tiger Shark,Swimming,QLD,"townsville, strand beach",unprovoked,1910
+1918,-16.7,146.05,fatal,Tiger Shark,Snorkelling,QLD,arlington reef (gbr),provoked,1910
+1919,-32.91666667,151.7833333,injured,White Shark,Swimming,NSW,newcastle beach,unprovoked,1910
+1919,-33.83333333,151.2333333,fatal,Bull Shark,Swimming,NSW,"sirius cove, sydney harbour",unprovoked,1910
+1919,-19.45,146.6,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1910
+1919,-27.08333333,153.45,injured,Wobbegong,Swimming,QLD,bribie island,provoked,1910
+1919,-30.91666667,153.0166667,fatal,Bull Shark,Swimming,NSW,"macleay river, pelican island",unprovoked,1910
+1920,-32.9,151.75,fatal,Bull Shark,Swimming,NSW,throsby creek. newcastle,unprovoked,1920
+1920,-33.33333333,151.5,uninjured,Wobbegong,Spearfishing,NSW,tuggerah lake entrance,provoked,1920
+1920,-19.25,146.8166667,injured,Tiger Shark,Swimming,QLD,"townsville, cleveland bay",unprovoked,1920
+1920,-20.9,151.7166667,injured,Tiger Shark,Snorkelling,QLD,mackay (320km east),provoked,1920
+1920,-32.2,152.55,injured,Wobbegong,Snorkelling,NSW,cape halke,provoked,1920
+1920,-35.01666667,117.3333333,injured,Wobbegong,Standing in Water,WA,"ocean beach, demark",unprovoked,1920
+1920,-31.98333333,115.7333333,injured,Wobbegong,Standing in Water,WA,"cottesloe beach, perth",unprovoked,1920
+1920,-14.5,144.9166667,injured,Unknown,Fishing,QLD,howick island,provoked,1920
+1920,-28.8,153.2666667,injured,Bull Shark,Swimming,NSW,lismore - wilsons river,unprovoked,1920
+1921,-18.23333333,146.65,injured,Tiger Shark,Snorkelling,QLD,hinchinbrook island,provoked,1920
+1921,-16.9,146.2333333,fatal,Tiger Shark,Swimming,QLD,"cairns, elford reef (26 miles east)",unprovoked,1920
+1921,-27.43333333,153.15,fatal,Bull Shark,Swimming,QLD,"brisbane river, bulimba beach ",unprovoked,1920
+1921,-27.43333333,153.15,injured,Bull Shark,Swimming,QLD,"brisbane river, bulimba beach ",unprovoked,1920
+1921,-23.38333333,150.55,injured,Bull Shark,Swimming,QLD,fitzroy river,unprovoked,1920
+1922,-32.85,151.8333333,injured,White Shark,Swimming,NSW,"stockton beach, newcastle",unprovoked,1920
+1922,-19.45,146.6,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1920
+1922,-33.91666667,151.25,fatal,White Shark,Swimming,NSW,"coogee beach, sydney",unprovoked,1920
+1922,-33.91666667,151.25,fatal,White Shark,Swimming,NSW,"coogee beach, sydney",unprovoked,1920
+1922,-25.53333333,152.7,fatal,Tiger Shark,Swimming,QLD,"maryborough, pialba beach",unprovoked,1920
+1923,-31.96666667,115.7666667,fatal,Bull Shark,Swimming,WA,"swan river, claremont",unprovoked,1920
+1923,-32.93333333,151.75,uninjured,White Shark,Swimming,NSW,"merewether beach, newcastle",provoked,1920
+1923,-19.23333333,146.8166667,injured,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1920
+1923,-16.85,146.15,fatal,Tiger Shark,Snorkelling,QLD,great barrier reef (townsville area),provoked,1920
+1923,-28.81666667,114.6166667,injured,Wobbegong,Fishing,WA,"geraldton, southgate",provoked,1920
+1923,-18.7,147.7666667,injured,Tiger Shark,Snorkelling,QLD,townsville area (gbr),provoked,1920
+1923,-34.35,150.9166667,fatal,White Shark,Swimming,NSW,"bellambi, wollongong",unprovoked,1920
+1923,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1920
+1923,-20.0,119.35,fatal,Tiger Shark,,WA,condon creek - broome (area),provoked,1920
+1923,-20.0,119.35,fatal,Tiger Shark,,WA,condon creek - broome (area),provoked,1920
+1923,-28.31666667,153.4,injured,Bull Shark,Swimming,NSW,"tweed river, murwillumbah",unprovoked,1920
+1924,-33.8,151.0166667,fatal,Bull Shark,Swimming,NSW,"parramatta river, camella, sydney",unprovoked,1920
+1924,-33.31666667,115.6333333,injured,Wobbegong,Swimming,WA,bunbury,unprovoked,1920
+1924,-33.9,151.2666667,injured,White Shark,Swimming,NSW,"bronte beach, sydney",unprovoked,1920
+1924,-34.66666667,150.85,fatal,White Shark,Swimming,NSW,"kiama, wollongong",unprovoked,1920
+1924,-37.83333333,144.9333333,injured,White Shark,Swimming,VIC,"town pier, port melbourne",unprovoked,1920
+1925,-33.91666667,151.25,injured,White Shark,Swimming,NSW,"coogee beach, sydney",unprovoked,1920
+1925,-32.91666667,151.7833333,fatal,White Shark,Swimming,NSW,newcastle beach,unprovoked,1920
+1925,-31.98333333,115.75,fatal,Tiger Shark,Swimming,WA,"cottesloe beach, perth",unprovoked,1920
+1926,-34.9,137.0,fatal,White Shark,Swimming,SA,"brighton pier, adelaide",unprovoked,1920
+1926,-29.45,153.1833333,injured,Bull Shark,Swimming,NSW,"yamba, clarence river, maclean",unprovoked,1920
+1926,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1920
+1926,-18.71666667,146.5666667,fatal,Tiger Shark,Snorkelling,QLD,palm island,provoked,1920
+1927,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1920
+1927,-34.05,151.0833333,fatal,Tiger Shark,Swimming,NSW,"greys point, port hacking",unprovoked,1920
+1927,-27.46666667,153.0333333,uninjured,Bull Shark,Swimming,QLD,brisbane river,unprovoked,1920
+1927,-32.93333333,151.75,injured,White Shark,Swimming,NSW,"merewether beach, newcastle",unprovoked,1920
+1927,-10.56666667,142.2166667,injured,Tiger Shark,,QLD,"thursday island, torre strait",provoked,1920
+1927,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1920
+1927,-17.21666667,145.9666667,fatal,Tiger Shark,Swimming,QLD,cairns (near),unprovoked,1920
+1927,-17.98333333,122.2333333,uninjured,Tiger Shark,Diving,WA,broome (area),provoked,1920
+1928,-9.516666667,141.5666667,fatal,Tiger Shark,,QLD,"deliverance island, torres strait",provoked,1920
+1928,-14.15,144.5,fatal,Tiger Shark,Snorkelling,QLD,"barrow point, 100 km north of cooktown",provoked,1920
+1928,-19.8,149.05,injured,Tiger Shark,Snorkelling,QLD,great barrier reef (bowen area),provoked,1920
+1928,-27.51666667,152.9833333,injured,Bull Shark,Swimming,QLD,"brisbane river, graceville",unprovoked,1920
+1928,-33.88333333,151.2666667,injured,White Shark,Swimming,NSW,"bondi beach north, sydney",unprovoked,1920
+1928,-32.93333333,151.75,fatal,White Shark,Swimming,NSW,"bar beach, newcastle",unprovoked,1920
+1928,-10.58333333,142.2166667,injured,Tiger Shark,Swimming,QLD,torres strait,unprovoked,1920
+1928,-10.58333333,142.2166667,injured,Tiger Shark,Snorkelling,QLD,torres strait,provoked,1920
+1929,-19.13333333,146.8333333,fatal,Tiger Shark,Swimming,QLD,"magnetic island, alma bay",unprovoked,1920
+1929,-34.41666667,137.9166667,injured,Wobbegong,Fishing,SA,adrossan beach,provoked,1920
+1929,-33.88333333,151.2666667,fatal,White Shark,Swimming,NSW,"bondi beach, sydney",unprovoked,1920
+1929,-35.03333333,150.7166667,injured,Wobbegong,Snorkelling,NSW,jervis bay,provoked,1920
+1929,-33.93333333,151.25,fatal,White Shark,Swimming,NSW,"maroubra beach, sydney",unprovoked,1920
+1929,-33.88333333,151.2666667,fatal,White Shark,Swimming,NSW,"bondi beach, sydney",unprovoked,1920
+1929,-34.96666667,138.5,uninjured,White Shark,Boating,SA,"glenelg, adelaide",unprovoked,1920
+1929,-19.51666667,148.8333333,injured,Unknown,Snorkelling,QLD,bowen (gbr),provoked,1920
+1929,-34.41666667,137.9166667,injured,Wobbegong,Boating,SA,adrossan beach,unprovoked,1920
+1929,-34.41666667,137.9166667,injured,Wobbegong,Boating,SA,adrossan beach,unprovoked,1920
+1929,-9.416666667,142.5333333,fatal,Tiger Shark,Swimming,QLD,"torres strait, dauan island",unprovoked,1920
+1929,-21.0,149.8833333,injured,Tiger Shark,Snorkelling,QLD,mackay,provoked,1920
+1929,-26.98333333,153.0666667,injured,Bull Shark,Fishing,QLD,"bribie passage, pumicestone channel",provoked,1920
+1929,-10.11666667,142.1333333,fatal,Tiger Shark,Swimming,QLD,"torres strait, badu island",unprovoked,1920
+1929,-10.05,143.0666667,injured,Tiger Shark,Snorkelling,QLD,"torres strait, coconut island",provoked,1920
+1929,-10.56666667,142.2166667,injured,Tiger Shark,Spearfishing,QLD,"thursday island, torre strait",provoked,1920
+1929,-19.45,146.6,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1920
+1929,-10.11666667,142.1333333,injured,Tiger Shark,Swimming,QLD,"torres strait, badu island",unprovoked,1920
+1929,-19.45,146.6,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1920
+1929,-33.71666667,151.3,injured,Wobbegong,Swimming,NSW,"collaroy beach, sydney",unprovoked,1920
+1929,-33.85,151.1833333,fatal,Bull Shark,Swimming,NSW,"balmain, white bay, sydney harbour",unprovoked,1920
+1929,-10.56666667,142.2166667,injured,Tiger Shark,Swimming,QLD,"thursday island, torre strait",unprovoked,1920
+1929,-28.16666667,153.5333333,uninjured,Unknown,Swimming,QLD,coolangatta beach,unprovoked,1920
+1930,-10.15,142.1833333,injured,Tiger Shark,Spearfishing,QLD,"torres strait, moa island",provoked,1930
+1930,-37.9,144.9833333,fatal,White Shark,Swimming,VIC,"port philip bay, middle brighton pier",unprovoked,1930
+1930,-10.56666667,142.2166667,injured,Tiger Shark,Swimming,QLD,"thursday island, torre strait",unprovoked,1930
+1930,-9.95,142.1833333,fatal,Tiger Shark,Swimming,QLD,"torres strait, mabuiag island",unprovoked,1930
+1930,-10.25,142.1,fatal,Tiger Shark,Snorkelling,QLD,"torres strait, badu island",provoked,1930
+1930,-28.76666667,114.6,injured,Wobbegong,Fishing,WA,geraldton,provoked,1930
+1930,-33.83333333,151.0666667,injured,Bull Shark,Swimming,NSW,"homebush bay, parramatta river, sydney",unprovoked,1930
+1931,-33.8,151.2333333,injured,Wobbegong,Fishing,NSW,"spit bridge, middle harbour sydney",provoked,1930
+1931,-23.11666667,150.7333333,injured,Tiger Shark,Swimming,QLD,yeppoon,unprovoked,1930
+1931,-10.58333333,142.2166667,injured,Tiger Shark,Snorkelling,QLD,torres strait,provoked,1930
+1931,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1930
+1931,-19.45,146.6,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",provoked,1930
+1931,-17.53333333,146.0166667,injured,Tiger Shark,Snorkelling,QLD,innisfail,provoked,1930
+1932,-27.6,152.7666667,injured,Bull Shark,Swimming,QLD,"brisbane river, bremer river",unprovoked,1930
+1932,-23.83333333,151.2166667,injured,Bull Shark,Fishing,QLD,calliope river,provoked,1930
+1932,-34.36666667,150.9166667,injured,Wobbegong,Fishing,NSW,bellambi jetty,provoked,1930
+1932,-16.91666667,145.7666667,injured,Tiger Shark,Snorkelling,QLD,cairns,provoked,1930
+1932,-9.4,142.6666667,fatal,Tiger Shark,Swimming,QLD,"torres strait, warrior reef",unprovoked,1930
+1932,-10.56666667,142.2166667,injured,Tiger Shark,Swimming,QLD,"thursday island, torre strait",unprovoked,1930
+1932,-33.0,151.7166667,injured,White Shark,Swimming,NSW,"redhead beach, newcastle",unprovoked,1930
+1932,-11.93333333,132.6166667,injured,Tiger Shark,Swimming,NT,arnhem land (coastal area),unprovoked,1930
+1933,-19.25,146.8166667,fatal,Tiger Shark,Swimming,QLD,"townsville, strand beach",unprovoked,1930
+1933,-31.96666667,115.85,uninjured,Bull Shark,Fishing,WA,"swan river, pelican rock",provoked,1930
+1933,-14.15,144.5,injured,Tiger Shark,Snorkelling,QLD,"barrow point, 100km north of cooktown",provoked,1930
+1933,-20.96666667,149.75,injured,Tiger Shark,Snorkelling,QLD,mackay (50 miles off - gbr),provoked,1930
+1933,-12.45,130.8333333,uninjured,Unknown,Fishing,NT,"darwin, fanny bay",provoked,1930
+1933,-28.13333333,153.4666667,injured,Bull Shark,Swimming,QLD,"currumbin creek, currumbin",unprovoked,1930
+1933,-17.96666667,122.1666667,uninjured,Tiger Shark,Diving,WA,broome,provoked,1930
+1933,-10.56666667,142.2166667,fatal,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1930
+1933,-14.15,144.5,injured,Tiger Shark,Snorkelling,QLD,"barrow point, 100 km north of cooktown",provoked,1930
+1933,-29.1,153.4333333,injured,Wobbegong,Swimming,NSW,evans head,provoked,1930
+1934,-33.98333333,151.0666667,injured,Bull Shark,Swimming,NSW,"georges river,",unprovoked,1930
+1934,-33.78333333,151.2833333,injured,White Shark,Swimming,NSW,"queenscliff beach, sydney",unprovoked,1930
+1934,-20.0,148.45,uninjured,Tiger Shark,Snorkelling,QLD,"gloucester island, bowen",provoked,1930
+1934,-10.6,142.6166667,injured,Tiger Shark,Spearfishing,QLD,"torres strait, adolphus channel ",provoked,1930
+1934,-33.75,151.3,fatal,White Shark,Swimming,NSW,"dee why beach, sydney",unprovoked,1930
+1934,-28.15,153.4833333,injured,Tiger Shark,Swimming,QLD,"currumbin beach, gold coast",unprovoked,1930
+1934,-33.78333333,151.2833333,fatal,White Shark,Swimming,NSW,"manly, north steyne, sydney",unprovoked,1930
+1934,-18.23333333,146.3166667,fatal,Tiger Shark,Swimming,QLD,"cardwell, off eva island",unprovoked,1930
+1934,-9.966666667,143.2666667,fatal,Tiger Shark,Snorkelling,QLD,"torres strait, warrior reef",provoked,1930
+1934,-11.66666667,132.5166667,fatal,Tiger Shark,Swimming,NT,"red cliff, cobourg peninsula",unprovoked,1930
+1934,-33.95,151.9666667,injured,Bull Shark,Swimming,NSW,"georges river, milpera, sydney",unprovoked,1930
+1934,-33.93333333,150.9666667,fatal,Bull Shark,Swimming,NSW,"georges river, milperra bridge",unprovoked,1930
+1934,-33.48333333,151.3,fatal,Bull Shark,Swimming,NSW,"brisbane waters, woy woy",unprovoked,1930
+1934,-33.48333333,151.3,injured,Bull Shark,Swimming,NSW,"brisbane waters, woy woy",unprovoked,1930
+1935,-10.56666667,142.2166667,fatal,Tiger Shark,Swimming,QLD,"thursday island, torre strait",unprovoked,1930
+1935,-34.3,150.9333333,injured,White Shark,Surfing/Boarding,NSW,"austinmer beach, wollongong",unprovoked,1930
+1935,-33.93333333,151.25,fatal,White Shark,Swimming,NSW,"maroubra beach, sydney",unprovoked,1930
+1935,-21.16666667,149.2333333,injured,Whaler Shark,Snorkelling,QLD,mackay (100 mile south),unprovoked,1930
+1935,-14.66666667,145.45,injured,Tiger Shark,Snorkelling,QLD,lizard island,provoked,1930
+1935,-33.7,151.3,fatal,White Shark,Swimming,NSW,"north narrabeen, sydney",unprovoked,1930
+1935,-9.4,142.6666667,injured,Whaler Shark,Snorkelling,QLD,"torres strait, warrior reef",provoked,1930
+1935,-9.4,142.6666667,fatal,Tiger Shark,Snorkelling,QLD,"torres strait, yule entrance",provoked,1930
+1935,-17.53333333,146.0166667,injured,Tiger Shark,Snorkelling,QLD,innisfail (near),provoked,1930
+1936,-33.88333333,151.2666667,uninjured,White Shark,Surfing/Boarding,NSW,"bondi beach north, sydney",provoked,1930
+1936,-20.66666667,117.1833333,injured,Tiger Shark,Snorkelling,WA,"depuch island, cossack creek, dampier",provoked,1930
+1936,-34.9,137.0,fatal,White Shark,Swimming,SA,"west beach, adelaide",unprovoked,1930
+1936,-33.78333333,151.2833333,fatal,White Shark,Swimming,NSW,"manly, south steyne,  sydney",unprovoked,1930
+1936,-27.43333333,153.0833333,uninjured,Bull Shark,Boating,QLD,brisbane river,unprovoked,1930
+1936,-12.78333333,143.6,injured,Tiger Shark,Snorkelling,QLD,cape direction,provoked,1930
+1936,-12.16666667,143.3833333,injured,Whaler Shark,Swimming,QLD,forbes island,unprovoked,1930
+1936,-16.7,146.05,injured,Tiger Shark,Snorkelling,QLD,"arlington reef, green island",provoked,1930
+1936,-20.81666667,149.4833333,injured,Unknown,Snorkelling,QLD,mackay reef (area),provoked,1930
+1936,-10.6,142.2166667,fatal,Tiger Shark,Snorkelling,QLD,"torres strait, nepean island ",provoked,1930
+1936,-20.81666667,149.4833333,injured,Tiger Shark,Snorkelling,QLD,mackay (reef area),provoked,1930
+1936,-9.95,142.1833333,injured,Whaler Shark,Snorkelling,QLD,"torres strait, mabuiag island",provoked,1930
+1936,-31.98333333,115.5333333,injured,Wobbegong,Swimming,WA,rottnest island,provoked,1930
+1936,-33.95,151.15,injured,Wobbegong,Swimming,NSW,"botany bay, brighton-le-sands",unprovoked,1930
+1936,-32.9,151.75,fatal,Bull Shark,Swimming,NSW,"throsby creek, newcastle",unprovoked,1930
+1937,-10.58333333,142.2166667,injured,Tiger Shark,Swimming,QLD,torres strait,unprovoked,1930
+1937,-32.93333333,151.75,fatal,White Shark,Swimming,NSW,"bar beach, newcastle",unprovoked,1930
+1937,-30.91666667,153.0833333,injured,Wobbegong,Swimming,NSW,smoky cape lighthouse,unprovoked,1930
+1937,-19.45,146.6,fatal,Bull Shark,Swimming,QLD,"townsville, ross creek",unprovoked,1930
+1937,-9.95,142.1833333,injured,Tiger Shark,Snorkelling,QLD,"torres strait, mabuiag island",provoked,1930
+1937,-28.63333333,153.6166667,injured,White Shark,Swimming,NSW,byron bay beach,unprovoked,1930
+1937,-28.16666667,153.5166667,fatal,Tiger Shark,Swimming,QLD,"kirra beach, coolangatta",unprovoked,1930
+1937,-28.16666667,153.5166667,fatal,Tiger Shark,Swimming,QLD,"kirra beach, coolangatta",unprovoked,1930
+1937,-23.38333333,150.5166667,injured,Bull Shark,Swimming,QLD,"fitzroy river, rockhampton",unprovoked,1930
+1937,-18.53333333,146.2333333,injured,Tiger Shark,Snorkelling,QLD,hinchinbrook channel,provoked,1930
+1938,-18.13333333,146.25,injured,Tiger Shark,Fishing,QLD,brook island nr townsville,provoked,1930
+1938,-33.85,151.25,injured,Bull Shark,Swimming,NSW,"lady martins beach, sydney harbour",provoked,1930
+1938,-34.03333333,151.15,uninjured,White Shark,Surfing/Boarding,NSW,"cronulla beach, sydney",unprovoked,1930
+1938,-12.03333333,134.2,injured,Whaler Shark,Boating,NT,liverpool river,unprovoked,1930
+1938,-10.56666667,142.1666667,fatal,Unknown,Diving,QLD,thursday island area (unknown location),provoked,1930
+1938,-11.4,130.4,fatal,Whaler Shark,Diving,NT,bathurst island,provoked,1930
+1938,-27.43333333,153.1666667,injured,Tiger Shark,Fishing,QLD,"moreton bay, wynnum",provoked,1930
+1938,-27.35,153.1166667,injured,Wobbegong,Swimming,QLD,"cribb island, brisbane",provoked,1930
+1939,-29.41666667,152.3333333,uninjured,Bull Shark,Fishing,NSW,"yamba, clarence river",provoked,1930
+1939,-9.95,142.1666667,injured,Tiger Shark,Snorkelling,QLD,"torres strait, mabuig island",provoked,1930
+1939,-16.71666667,154.6833333,injured,Unknown,Swimming,QLD,"double island beach, cairns",unprovoked,1930
+1939,-12.61666667,143.45,injured,Tiger Shark,Snorkelling,QLD,"restoration rock, portland road",provoked,1930
+1939,-33.98333333,151.0666667,injured,Bull Shark,Swimming,NSW,georges river,unprovoked,1930
+1939,-21.16666667,149.2333333,fatal,Bull Shark,Swimming,QLD,"mackay, rubbish dump creek, pioneer river",unprovoked,1930
+1940,-10.56666667,142.2166667,injured,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1940
+1940,-27.48333333,153.0166667,injured,Bull Shark,Swimming,QLD,"brisbane river, dutton park",unprovoked,1940
+1940,-28.0,153.4166667,injured,Tiger Shark,Swimming,QLD,"southport, surfers paradise",unprovoked,1940
+1940,-33.95,151.15,fatal,Tiger Shark,Swimming,NSW,"botany bay, brighton-le-sands",unprovoked,1940
+1940,-33.95,151.15,fatal,Bull Shark,Swimming,NSW,"botany bay, brighton-le-sands",unprovoked,1940
+1940,-34.73333333,150.8333333,injured,Wobbegong,Snorkelling,NSW,"gerringong, wollongong",provoked,1940
+1940,-21.4,150.5333333,injured,Tiger Shark,Swimming,QLD,mackay,unprovoked,1940
+1940,-32.85,151.8333333,fatal,Tiger Shark,Swimming,NSW,"stockton beach, newcastle",unprovoked,1940
+1941,-10.56666667,142.2166667,injured,Tiger Shark,Swimming,QLD,"thursday island, torre strait",unprovoked,1940
+1941,-10.11666667,142.1333333,fatal,Tiger Shark,Swimming,QLD,"torres strait, badu island",unprovoked,1940
+1941,-26.46666667,110.2666667,injured,Unknown,Swimming,WA,off carnarvon,unprovoked,1940
+1941,-24.88333333,113.65,injured,Bull Shark,Swimming,WA,"the facine, carnarvon",unprovoked,1940
+1942,-33.76666667,151.2166667,fatal,Bull Shark,Swimming,NSW,"bantry bay, sydney harbour",unprovoked,1940
+1942,-33.78333333,151.2833333,uninjured,White Shark,Surfing/Boarding,NSW,"manly, fairy bower, sydney",provoked,1940
+1942,-17.7,146.5166667,injured,Tiger Shark,Snorkelling,QLD,cairns (reef 160km south),provoked,1940
+1942,-20.08333333,148.8833333,injured,Unknown,Snorkelling,QLD,"hook island, whitsunday islands",provoked,1940
+1942,-16.78333333,145.7,injured,Tiger Shark,Swimming,QLD,"trinity beach, cairns",unprovoked,1940
+1942,-33.76666667,151.2166667,fatal,Bull Shark,Swimming,NSW,"bantry bay, sydney harbour",unprovoked,1940
+1943,-12.46666667,130.8333333,injured,Tiger Shark,Swimming,NT,darwin,unprovoked,1940
+1944,-32.16666667,152.5166667,injured,White Shark,Surfing/Boarding,NSW,"forster, first beach",unprovoked,1940
+1945,-33.95,151.25,injured,Wobbegong,Fishing,NSW,malabar bay,provoked,1940
+1945,-16.71666667,145.6666667,fatal,Tiger Shark,Swimming,QLD,"trinity beach, double island, cairns",unprovoked,1940
+1946,-19.25,146.8166667,injured,Unknown,Swimming,QLD,townsville,unprovoked,1940
+1946,-33.98333333,151.0833333,fatal,Bull Shark,Swimming,NSW,"georges river, oatley bay, sydney",unprovoked,1940
+1946,-31.93333333,115.75,injured,White Shark,Swimming,WA,"city beach, perth",unprovoked,1940
+1946,-16.78333333,145.7,fatal,Tiger Shark,Swimming,QLD,"trinity beach, cairns",unprovoked,1940
+1946,-16.71666667,145.6333333,fatal,Tiger Shark,Swimming,QLD,"ellis beach, cairns",unprovoked,1940
+1946,-33.05,151.6333333,injured,Bull Shark,Swimming,NSW,"lake macquarie, mark's point",unprovoked,1940
+1946,-10.56666667,142.2166667,fatal,Tiger Shark,Snorkelling,QLD,"thursday island, torre strait",provoked,1940
+1946,-34.96666667,138.5,injured,White Shark,Swimming,SA,"glenelg jetty, adelaide",unprovoked,1940
+1947,-12.45,130.7833333,uninjured,Tiger Shark,Diving,NT,darwin harbour,provoked,1940
+1947,-16.55,139.4,injured,Tiger Shark,Standing in Water,QLD,mornington island,unprovoked,1940
+1947,-31.33333333,152.8333333,fatal,Bull Shark,Swimming,NSW,"port macquarie, wilson river",unprovoked,1940
+1947,-31.33333333,152.8333333,injured,Bull Shark,Swimming,NSW,"port macquarie, wilson river",unprovoked,1940
+1947,-31.7,152.75,injured,Bull Shark,Fishing,NSW,"watson taylor lake, laurieton",provoked,1940
+1948,-31.98333333,115.5333333,injured,Wobbegong,Swimming,WA,rottnest island,provoked,1940
+1948,-32.85,151.8333333,fatal,Tiger Shark,Swimming,NSW,"stockton beach, newcastle",unprovoked,1940
+1948,-9.633333333,142.6833333,injured,Tiger Shark,Snorkelling,QLD,"torres strait, saibai island",provoked,1940
+1948,-26.8,153.1333333,fatal,Tiger Shark,Swimming,QLD,"caloundra, kings beach",unprovoked,1940
+1948,-33.85,151.25,uninjured,Tiger Shark,Spearfishing,NSW,"nielson park, sydney harbour",provoked,1940
+1949,-33.88333333,151.2666667,uninjured,Whaler Shark,Surfing/Boarding,NSW,"bondi north, ben buckler, sydney",provoked,1940
+1949,-29.1,153.4333333,injured,Wobbegong,,NSW,evans head,provoked,1940
+1949,-33.66666667,151.3,uninjured,White Shark,Surfing/Boarding,NSW,"mona vale beach, sydney",unprovoked,1940
+1949,-32.93333333,151.75,fatal,White Shark,Swimming,NSW,"bar beach, newcastle",unprovoked,1940
+1949,-33.65,151.3166667,uninjured,White Shark,Surfing/Boarding,NSW,"newport, sydney",unprovoked,1940
+1949,-16.71666667,145.6333333,fatal,Tiger Shark,Swimming,QLD,"ellis beach, cairns",unprovoked,1940
+1949,-17.96666667,122.1666667,injured,Bull Shark,Swimming,WA,"broome, gantheaume point",unprovoked,1940
+1949,-40.11666667,148.9333333,injured,White Shark,Swimming,TAS,"flinders island, bass strait.",unprovoked,1940
+1949,-16.81666667,145.7666667,injured,Tiger Shark,Swimming,QLD,"yorkey knob beach, cairns",unprovoked,1940
+1949,-16.81666667,145.7666667,fatal,Tiger Shark,Swimming,QLD,"yorkey knob beach, cairns",unprovoked,1940
+1949,-34.0,151.2,injured,Wobbegong,Swimming,NSW,"botany bay, kurnell",provoked,1940
+1950,-37.96666667,144.7,injured,Wobbegong,Swimming,VIC,"port phillip bay, south beach, werribee",provoked,1950
+1950,-16.9,145.85,fatal,Tiger Shark,Swimming,QLD,"cairns, kings beach",unprovoked,1950
+1950,-28.1,153.1,injured,Bull Shark,Swimming,QLD,burleigh heads,unprovoked,1950
+1950,-23.11666667,150.7333333,uninjured,Tiger Shark,Boating,QLD,yeppoon,unprovoked,1950
+1950,-28.1,153.4666667,fatal,Tiger Shark,Swimming,QLD,"palm beach, gold coast",unprovoked,1950
+1951,-34.53333333,150.8666667,injured,Bull Shark,Spearfishing,NSW,"windang, lake illawarra, wollongong",provoked,1950
+1951,-33.88333333,151.2666667,injured,Wobbegong,Swimming,NSW,"bondi beach, sydney",unprovoked,1950
+1951,-33.63333333,151.3166667,injured,Wobbegong,Surfing/Boarding,NSW,"avalon beach, sydney.",provoked,1950
+1951,-23.38333333,150.55,fatal,Bull Shark,Swimming,QLD,fitzroy river,unprovoked,1950
+1951,-19.23333333,146.8,fatal,Tiger Shark,Swimming,QLD,"townsville, kissing point",unprovoked,1950
+1951,-32.93333333,151.75,fatal,White Shark,Swimming,NSW,"merewether beach, newcastle",unprovoked,1950
+1951,-33.36666667,151.4333333,uninjured,White Shark,Surfing/Boarding,NSW,"terrigal, central coast",unprovoked,1950
+1952,-29.1,153.4333333,injured,Wobbegong,Surfing/Boarding,NSW,evan's head,unprovoked,1950
+1952,-19.25,146.8166667,uninjured,Bull Shark,,QLD,"townsville, ross creek",provoked,1950
+1952,-35.06666667,117.05,injured,Wobbegong,Fishing,WA,boyup brook (area),provoked,1950
+1952,-38.38333333,145.15,injured,White Shark,Swimming,VIC,"somers beach, westernport",unprovoked,1950
+1952,-38.01666667,140.5666667,injured,White Shark,Fishing,SA,cape douglas,provoked,1950
+1953,-33.86666667,151.2,injured,Wobbegong,Spearfishing,NSW,sydney,provoked,1950
+1953,-34.56666667,150.8666667,injured,Wobbegong,Spearfishing,NSW,"shellharbour, wollongong",provoked,1950
+1953,-33.71666667,151.3,injured,Wobbegong,Spearfishing,NSW,"collaroy beach, sydney",provoked,1950
+1953,-33.73333333,151.3,injured,Tiger Shark,Spearfishing,NSW,"long reef, sydney",provoked,1950
+1953,-33.93333333,151.25,uninjured,White Shark,Swimming,NSW,"maroubra beach, sydney",unprovoked,1950
+1953,-33.93333333,151.25,injured,White Shark,Swimming,NSW,"maroubra beach, sydney",unprovoked,1950
+1953,-28.11666667,153.4666667,injured,White Shark,Swimming,QLD,"palm beach, gold coast",unprovoked,1950
+1954,-38.05,140.7,injured,Wobbegong,,SA,port macdonnell,provoked,1950
+1954,-10.23333333,142.4833333,injured,Tiger Shark,Spearfishing,QLD,"torres strait, naghir island",provoked,1950
+1954,-33.45,151.4333333,injured,Whaler Shark,Swimming,NSW,avoca beach,unprovoked,1950
+1954,-33.33333333,151.5,fatal,White Shark,Swimming,NSW,"the entrance, gosford",unprovoked,1950
+1954,-16.91666667,145.99445,injured,Tiger Shark,Snorkelling,QLD,"cairns,  fitzroy island",provoked,1950
+1954,-9.583333333,143.7666667,fatal,Tiger Shark,Spearfishing,QLD,"torres strait, darnley (erub) island",provoked,1950
+1955,-33.81666667,151.25,fatal,Bull Shark,Spearfishing,NSW,"balmoral beach, wyargine point",provoked,1950
+1955,-33.78333333,151.2166667,fatal,Bull Shark,Swimming,NSW,"sugarloaf bay, sydney harbour",unprovoked,1950
+1955,-33.41666667,151.45,fatal,White Shark,Swimming,NSW,"wamberal beach, gosford.",unprovoked,1950
+1955,-17.93333333,145.9333333,injured,Wobbegong,Spearfishing,QLD,tully (5 miles off),provoked,1950
+1956,-17.71666667,146.4,injured,Tiger Shark,Snorkelling,QLD,innisfail (off shore reef),provoked,1950
+1956,-21.11666667,149.15,fatal,Bull Shark,Swimming,QLD,"mackay, rocklea reach, pioneer river",unprovoked,1950
+1956,-38.43333333,145.2333333,injured,Wobbegong,Swimming,VIC,"cowes jetty, phillip island",unprovoked,1950
+1956,-37.96666667,145.0,uninjured,Bronze Whaler,Spearfishing,VIC,"port phillip bay, black rock beach",provoked,1950
+1956,-32.13333333,115.7333333,uninjured,Whaler Shark,Diving,WA,"woodmans point, perth",unprovoked,1950
+1956,-38.33333333,144.7,fatal,White Shark,Swimming,VIC,portsea beach,unprovoked,1950
+1956,-10.58333333,142.2166667,injured,Tiger Shark,Snorkelling,QLD,torres strait,provoked,1950
+1956,-28.0,153.4166667,injured,Wobbegong,Diving,QLD,"southport, surfers paradise",provoked,1950
+1957,-28.63333333,153.6166667,uninjured,White Shark,Surfing/Boarding,NSW,"byron bay, sharkey's beach ",unprovoked,1950
+1957,-16.38333333,122.9166667,fatal,Tiger Shark,Swimming,WA,cape leveque,unprovoked,1950
+1957,-32.93333333,151.75,injured,Wobbegong,Swimming,NSW,"merewether beach, newcastle",unprovoked,1950
+1957,-10.56666667,142.2166667,injured,Tiger Shark,Swimming,QLD,"torres strait, hervey island harbour",provoked,1950
+1957,-32.68333333,152.1833333,injured,White Shark,Spearfishing,NSW,"port stephens, mount yakaba head",provoked,1950
+1957,-10.58333333,142.2166667,injured,Tiger Shark,Snorkelling,QLD,torres strait,provoked,1950
+1958,-28.53333333,153.55,injured,Wobbegong,Swimming,NSW,brunswick heads,unprovoked,1950
+1958,-35.2,150.55,injured,White Shark,Spearfishing,NSW,"swan lake, sussex inlet",provoked,1950
+1958,-33.05,151.6333333,uninjured,Bull Shark,Fishing,NSW,"lake macquarie, speers point",provoked,1950
+1958,-9.75,143.4,fatal,Tiger Shark,Spearfishing,QLD,"torres strait, umaga (york) island",provoked,1950
+1958,-38.21666667,145.0166667,uninjured,Bronze Whaler,Spearfishing,VIC,"port phillip bay, mornington, marina cove",provoked,1950
+1958,-32.71666667,152.1666667,injured,Wobbegong,Spearfishing,NSW,"port stephens, shoal bay",provoked,1950
+1958,-28.0,153.4166667,fatal,Tiger Shark,Swimming,QLD,surfers paradise,unprovoked,1950
+1959,-31.95,115.85,injured,Bull Shark,Fishing,WA,"swan river, south perth",provoked,1950
+1959,-26.66666667,153.1166667,injured,Wobbegong,Swimming,QLD,"mooloolaba, alexandra headland",unprovoked,1950
+1959,-43.15,147.85,fatal,White Shark,Swimming,TAS,"safety cove, port arthur",provoked,1950
+1959,-39.85,143.8333333,injured,White Shark,Boating,TAS,"whale bay, king island",unprovoked,1950
+1959,-34.3,150.9166667,uninjured,Whaler Shark,Spearfishing,NSW,thirroul near wollongong,provoked,1950
+1959,-10.58333333,142.2166667,injured,Tiger Shark,,QLD,"torres strait, coconut island",provoked,1950
+1959,-28.01666667,153.4333333,injured,Tiger Shark,Swimming,QLD,northcliffe beach. gold coast,provoked,1950
+1959,-38.45,144.0833333,injured,White Shark,Swimming,VIC,"fairhaven beach, lorne",unprovoked,1950
+1959,-27.43333333,153.1666667,fatal,Tiger Shark,Swimming,QLD,"moreton bay, wynnum",unprovoked,1950
+1959,-27.23333333,153.1,uninjured,Tiger Shark,Surfing/Boarding,QLD,"moreton bay, scott's point beach, redcliff",provoked,1950
+1960,-37.98333333,145.0166667,injured,Bronze Whaler,Spearfishing,VIC,"port phillip bay, ricketts point, parkdale",provoked,1960
+1960,-33.76666667,151.2,fatal,Bull Shark,Snorkelling,NSW,"roseville bridge, sydney",unprovoked,1960
+1960,-38.16666667,145.0666667,injured,Bronze Whaler,Spearfishing,VIC,"port phillip bay, canadian bay, mount eliza,",provoked,1960
+1960,-30.86666667,153.0333333,injured,White Shark,Swimming,NSW,"horseshoe bay, kempsey",unprovoked,1960
+1960,-32.6,152.3166667,uninjured,Bronze Whaler,Spearfishing,NSW,"port stephens, broughton island",provoked,1960
+1960,-21.13333333,149.2,injured,Whaler Shark,Swimming,QLD,"mackay, black beach",unprovoked,1960
+1960,-34.21666667,115.0166667,injured,Wobbegong,Spearfishing,WA,hamelin bay,provoked,1960
+1960,-33.78333333,151.2833333,injured,Whaler Shark,Swimming,NSW,"manly, shelly beach",unprovoked,1960
+1960,-27.36666667,153.15,injured,Bull Shark,Swimming,QLD,"brisbane river, college crossing",unprovoked,1960
+1961,-30.63333333,153.1833333,injured,Other,Swimming,NSW,nambucca heads,provoked,1960
+1961,-38.26666667,145.0166667,injured,Wobbegong,Swimming,VIC,"port phillip bay, mount martha beach",unprovoked,1960
+1961,-32.11666667,115.65,uninjured,Wobbegong,Spearfishing,WA,carnac island,provoked,1960
+1961,-34.96666667,138.5,injured,Bronze Whaler,Spearfishing,SA,"glenelg, adelaide",provoked,1960
+1961,-38.38333333,142.4833333,injured,White Shark,Swimming,VIC,"lady bay beach, warrnambool",unprovoked,1960
+1961,-35.28333333,138.4333333,injured,White Shark,Spearfishing,SA,aldinga beach,provoked,1960
+1961,-38.46666667,145.0166667,uninjured,Dusky Shark,Spearfishing,VIC,flinders beach,provoked,1960
+1961,-26.36666667,153.0833333,fatal,Bull Shark,Surfing/Boarding,QLD,"noosa heads, laguna bay",unprovoked,1960
+1961,-21.06666667,149.2166667,injured,Tiger Shark,Swimming,QLD,"mackay, lamberts beach",unprovoked,1960
+1961,-21.06666667,149.2166667,fatal,Tiger Shark,Swimming,QLD,"mackay, lamberts beach",unprovoked,1960
+1961,-10.38333333,142.2833333,injured,Tiger Shark,Swimming,QLD,"torres strait, horn island",unprovoked,1960
+1962,-28.78333333,153.5833333,injured,White Shark,Surfing/Boarding,NSW,lennox head,unprovoked,1960
+1962,-33.73333333,151.3,uninjured,White Shark,Surfing/Boarding,NSW,"long reef, sydney",unprovoked,1960
+1962,-28.15,153.5333333,injured,Wobbegong,Swimming,QLD,"greenmount beach, coolangatta",provoked,1960
+1962,-33.73333333,151.3166667,uninjured,Whaler Shark,Spearfishing,NSW,"long reef, sydney",provoked,1960
+1962,-35.4,138.3166667,fatal,White Shark,Spearfishing,SA,carrickalinga head,provoked,1960
+1963,-33.78333333,151.2333333,fatal,Bull Shark,Standing in Water,NSW,"middle harbour, sydney harbour",unprovoked,1960
+1963,-34.3,150.9333333,injured,Bronze Whaler,Spearfishing,NSW,"austinmer beach, wollongong",provoked,1960
+1963,-33.63333333,115.0,injured,White Shark,Surfing/Boarding,WA,"yallingup, south perth",unprovoked,1960
+1963,-35.28333333,138.4333333,injured,White Shark,Spearfishing,SA,aldinga beach,provoked,1960
+1964,-31.95,115.85,uninjured,Whaler Shark,Spearfishing,WA,off coast of western aust,provoked,1960
+1964,-34.21666667,115.0166667,injured,Wobbegong,Spearfishing,WA,hamelin bay,provoked,1960
+1964,-35.53333333,138.6166667,injured,White Shark,Surfing/Boarding,SA,"paradise beach, nr victor harbour",unprovoked,1960
+1964,-32.51666667,115.6833333,injured,Unknown,Swimming,WA,mandurah,provoked,1960
+1964,-38.41666667,142.0,injured,White Shark,Snorkelling,VIC,lady julia percy island,provoked,1960
+1965,-37.83333333,144.9333333,injured,Wobbegong,Standing in Water,VIC,port melbourne,provoked,1960
+1965,-16.91666667,145.7666667,injured,Tiger Shark,Surfing/Boarding,QLD,"cairns, oak beach",unprovoked,1960
+1965,-31.98333333,115.5333333,injured,Wobbegong,Spearfishing,WA,rottnest island,provoked,1960
+1966,-34.28333333,150.9333333,injured,White Shark,Swimming,NSW,coledale beach near wollongong,unprovoked,1960
+1966,-35.03333333,150.7166667,fatal,White Shark,Swimming,NSW,jervis bay,unprovoked,1960
+1966,-31.98333333,115.5333333,uninjured,Other,Spearfishing,WA,rottnest island,provoked,1960
+1966,-33.91666667,151.25,injured,Wobbegong,Spearfishing,NSW,"coogee beach, sydney",provoked,1960
+1966,-23.43333333,151.9,injured,Bronze Whaler,Spearfishing,QLD,"heron island, broomfield reef",provoked,1960
+1966,-41.86666667,148.3,injured,White Shark,Swimming,TAS,"bicheno, piccaninny point, ",provoked,1960
+1966,-30.88333333,153.05,injured,Wobbegong,Spearfishing,NSW,"south west rocks, trial bay",provoked,1960
+1967,-34.41666667,150.8833333,injured,Bronze Whaler,Spearfishing,NSW,"south coast, wollongong",provoked,1960
+1967,-30.25,115.0166667,fatal,White Shark,Spearfishing,WA,jurien bay,provoked,1960
+1968,-31.95,115.85,injured,Bull Shark,Swimming,WA,"swan river, belmont",unprovoked,1960
+1968,-35.6,138.0833333,uninjured,Bronze Whaler,Spearfishing,SA,cape jervis,provoked,1960
+1968,-35.0,136.1666667,uninjured,White Shark,Diving,SA,"thistle island, port lincoln",provoked,1960
+1969,-35.0,150.8166667,injured,Bronze Whaler,Snorkelling,NSW,"currarong beach, jervis bay",provoked,1960
+1969,-34.66666667,150.85,injured,Wobbegong,Spearfishing,NSW,"kiama, wollongong",provoked,1960
+1969,-31.95,115.85,injured,Bull Shark,Swimming,WA,"swan river, perth",unprovoked,1960
+1971,-41.15,148.35,injured,Other,Swimming,TAS,east devonport beach,unprovoked,1970
+1971,-33.85,121.8833333,injured,Whaler Shark,Spearfishing,WA,esperance,provoked,1970
+1971,-23.48333333,151.2,fatal,Tiger Shark,Swimming,QLD,"cape capricorn, gladstone",unprovoked,1970
+1972,-38.81666667,148.0833333,injured,White Shark,Surfing/Boarding,VIC,"sandy point, wilsons promotory",unprovoked,1970
+1972,-27.46666667,153.2333333,injured,Unknown,Swimming,QLD,"moreton bay, wellington point",unprovoked,1970
+1972,-43.23333333,148.0,injured,White Shark,Diving,TAS,"tasman island, tasman peninsula",provoked,1970
+1972,-35.35,150.4666667,injured,White Shark,Surfing/Boarding,NSW,"wairo beach, milton",unprovoked,1970
+1972,-17.1,146.4,injured,Whaler Shark,Spearfishing,QLD,"mackay, steven's reef (96km off mackay)",provoked,1970
+1972,-35.0,136.1666667,uninjured,White Shark,Diving,SA,"thistle island, port lincoln",provoked,1970
+1973,-33.51666667,151.3166667,injured,White Shark,Surfing/Boarding,NSW,"umina beach, central coast",unprovoked,1970
+1973,-18.51666667,146.35,injured,Tiger Shark,Swimming,QLD,"havana island, nr lucinda",unprovoked,1970
+1973,-27.41666667,153.5333333,injured,White Shark,Surfing/Boarding,QLD,"stradbroke island, point lookout",unprovoked,1970
+1973,-17.68333333,139.3666667,injured,Bull Shark,Swimming,QLD,"gin arm creek, north qld",unprovoked,1970
+1974,-32.76666667,134.2,fatal,White Shark,Diving,SA,streaky bay,provoked,1970
+1974,-27.73333333,153.6833333,fatal,Tiger Shark,Swimming,QLD,"south stradbroke island, jumpinpin ",unprovoked,1970
+1974,-33.63333333,115.35,injured,Wobbegong,Diving,WA,geographe bay,unprovoked,1970
+1975,-34.68333333,135.35,fatal,White Shark,Surfing/Boarding,SA,"port lincoln, almonta beach",unprovoked,1970
+1975,-38.93333333,146.2333333,injured,White Shark,Surfing/Boarding,VIC,"cotters lake beach, wilsons promontory",unprovoked,1970
+1975,-32.08333333,132.9666667,fatal,White Shark,Snorkelling,SA,"cactus beach, point sinclair, penong",provoked,1970
+1975,-38.4,144.1833333,injured,Wobbegong,Snorkelling,VIC,"soapys point, anglesea",provoked,1970
+1975,-16.55,139.4,injured,Tiger Shark,Swimming,QLD,mornington island,unprovoked,1970
+1975,-26.65,153.0833333,injured,White Shark,Surfing/Boarding,QLD,"maroochydore, alexandra head",unprovoked,1970
+1975,-43.35,147.35,fatal,White Shark,Diving,TAS,"bruny island, fluted cape",provoked,1970
+1975,-33.78333333,151.2833333,injured,Wobbegong,Spearfishing,NSW,"queenscliff beach, sydney",provoked,1970
+1976,-32.98333333,137.7833333,injured,White Shark,Spearfishing,SA,point lowly,provoked,1970
+1977,-28.23333333,153.5666667,injured,Tiger Shark,Surfing/Boarding,NSW,kingscliffe beach,unprovoked,1970
+1977,-27.25,153.25,fatal,Tiger Shark,Swimming,QLD,moreton bay,unprovoked,1970
+1977,-27.25,153.25,fatal,Tiger Shark,Swimming,QLD,moreton bay,unprovoked,1970
+1977,-28.08333333,153.45,injured,Bull Shark,Swimming,QLD,"burleigh heads, tallebudgera creek",unprovoked,1970
+1977,-26.68333333,153.1333333,fatal,Tiger Shark,Snorkelling,QLD,"caloundra, buddina beach",unprovoked,1970
+1977,-32.08333333,132.9666667,injured,White Shark,Surfing/Boarding,SA,cactus beach,unprovoked,1970
+1978,-31.76666667,115.7166667,uninjured,White Shark,Surfing/Boarding,WA,"mullaloo beach, perth",unprovoked,1970
+1978,-43.16666667,147.9833333,uninjured,White Shark,Diving,TAS,munro bight,provoked,1970
+1978,-26.8,153.1166667,injured,Bull Shark,Swimming,QLD,"bribie island, pumicestone passage",unprovoked,1970
+1979,-26.66666667,153.1166667,uninjured,Bronze Whaler,Swimming,QLD,mooloolaba,provoked,1970
+1979,-28.63333333,153.6166667,injured,Whaler Shark,Swimming,NSW,"byron bay, the pass",unprovoked,1970
+1980,-32.43333333,152.5166667,injured,Wobbegong,Diving,NSW,seal rocks,provoked,1980
+1980,-38.41666667,145.05,injured,Bronze Whaler,Spearfishing,VIC,"shoreham beach, port phillip bay",provoked,1980
+1980,-27.41666667,153.5333333,injured,Whaler Shark,Surfing/Boarding,QLD,"stradbroke island, point lookout",unprovoked,1980
+1980,-32.08333333,132.9666667,uninjured,White Shark,Surfing/Boarding,SA,cactus beach,unprovoked,1980
+1980,-16.91666667,145.7666667,injured,Grey Reef,Diving,QLD,marian reef,provoked,1980
+1980,-31.0,115.3,injured,White Shark,Swimming,WA,lancelin,unprovoked,1980
+1981,-28.63333333,153.6166667,uninjured,Tiger Shark,Surfing/Boarding,NSW,byron bay,unprovoked,1980
+1981,-32.0,115.5166667,injured,Wobbegong,Swimming,WA,"rottnest island, parker point",unprovoked,1980
+1981,-32.01666667,115.7333333,injured,Wobbegong,Standing in Water,WA,"leighton beach, perth",unprovoked,1980
+1981,-16.75,145.9666667,injured,Tiger Shark,Swimming,QLD,green island,unprovoked,1980
+1982,-43.51666667,146.9,uninjured,White Shark,Diving,TAS,"recherche bay, the strip",provoked,1980
+1982,-43.56666667,146.8833333,fatal,White Shark,Spearfishing,TAS,south cape bay,provoked,1980
+1982,-28.63333333,153.6166667,fatal,White Shark,Surfing/Boarding,NSW,"byron bay, tallow beach",unprovoked,1980
+1983,-18.9,147.7333333,uninjured,Tiger Shark,Swimming,QLD,"broadhurst reef, townsville",unprovoked,1980
+1983,-18.68333333,147.1,fatal,Tiger Shark,Swimming,QLD,"townsville, lodestone reef",unprovoked,1980
+1983,-18.68333333,147.1,fatal,Tiger Shark,Swimming,QLD,"townsville, lodestone reef",unprovoked,1980
+1983,-28.16666667,153.5333333,injured,Tiger Shark,Swimming,QLD,coolangatta beach,unprovoked,1980
+1983,-35.31666667,136.1,injured,White Shark,Diving,SA,south neptune island,provoked,1980
+1984,-21.13333333,149.1833333,injured,Tiger Shark,Swimming,QLD,"mackay, derwent island",unprovoked,1980
+1984,-23.13333333,113.7666667,injured,Whaler Shark,Standing in Water,WA,coral bay,unprovoked,1980
+1984,-31.83333333,115.75,injured,Wobbegong,Standing in Water,WA,waterman reef,unprovoked,1980
+1984,-43.23333333,147.7833333,uninjured,White Shark,Diving,TAS,cape raoul,provoked,1980
+1984,-14.11666667,129.5333333,injured,Tiger Shark,Standing in Water,NT,port keats,unprovoked,1980
+1984,-28.68333333,153.6166667,uninjured,White Shark,Surfing/Boarding,NSW,"byron bay, suffolk park  beach",unprovoked,1980
+1984,-43.13333333,148.0,uninjured,White Shark,Diving,TAS,"the lanterns, fortescue bay",provoked,1980
+1984,-21.05,149.1833333,fatal,Tiger Shark,Swimming,QLD,"mackay, blacks beach",unprovoked,1980
+1985,-38.33333333,144.3,uninjured,White Shark,Surfing/Boarding,VIC,jan juc beach,unprovoked,1980
+1985,-31.85,115.75,injured,Wobbegong,Diving,WA,watermans beach,provoked,1980
+1985,-34.46666667,136.0166667,fatal,White Shark,Snorkelling,SA,"wiseman's beach, port lincoln",unprovoked,1980
+1985,-13.91666667,146.6166667,injured,Whitetip Reef,Diving,QLD,osprey reef,provoked,1980
+1985,-29.91666667,153.3833333,injured,Wobbegong,Diving,NSW,north solitary island,provoked,1980
+1986,-10.66666667,142.1833333,fatal,Tiger Shark,Spearfishing,QLD,"torres strait, prince of wales island",provoked,1980
+1986,-12.36666667,130.8333333,injured,Wobbegong,Swimming,NT,"nightcliff beach, darwin",provoked,1980
+1986,-33.81666667,151.3,injured,Wobbegong,Diving,NSW,"north head, sydney ",unprovoked,1980
+1986,-33.81666667,151.3,injured,Wobbegong,Diving,NSW,"north head, sydney ",unprovoked,1980
+1986,-12.15,96.81666667,uninjured,Tiger Shark,Surfing/Boarding,WA,"cocos (keeling) islands, direction island",unprovoked,1980
+1987,-14.66666667,145.45,injured,Tiger Shark,Swimming,QLD,lizard island,unprovoked,1980
+1987,-13.91666667,146.6166667,injured,Whitetip Reef,Diving,QLD,"osprey reef, north horn",provoked,1980
+1987,-32.16666667,152.5166667,injured,Wobbegong,Diving,NSW,"forster, pebbly beach",provoked,1980
+1987,-38.46666667,144.8833333,fatal,White Shark,Surfing/Boarding,VIC,mornington peninsula,unprovoked,1980
+1987,-33.88333333,121.8166667,injured,White Shark,Surfing/Boarding,WA,between twilight & fourth beach,unprovoked,1980
+1987,-32.16666667,115.65,injured,Wobbegong,Swimming,WA,"garden island, two people bay",unprovoked,1980
+1987,-34.91666667,138.5833333,fatal,White Shark,Diving,SA,"merino rocks, adelaide",unprovoked,1980
+1987,-14.16666667,132.1833333,injured,Bull Shark,Swimming,NT,edith falls,unprovoked,1980
+1987,-14.66666667,145.45,uninjured,Hammerhead,Diving,QLD,"the cod hole, near lizard island",provoked,1980
+1988,-33.26666667,151.5666667,injured,White Shark,Swimming,NSW,norah head,unprovoked,1980
+1988,-34.91666667,138.5833333,injured,White Shark,Surfing/Boarding,SA,moana beach south of adelaide,unprovoked,1980
+1988,-23.9,152.3833333,uninjured,Tiger Shark,Spearfishing,QLD,lady musgrave island,provoked,1980
+1988,-38.5,145.2666667,injured,White Shark,Surfing/Boarding,VIC,"surfies point, phillip island",unprovoked,1980
+1988,-23.11666667,150.7333333,fatal,Tiger Shark,Swimming,QLD,yeppoon,unprovoked,1980
+1988,-23.11666667,150.7333333,fatal,Tiger Shark,Swimming,QLD,yeppoon,unprovoked,1980
+1989,-33.86666667,151.2,injured,Wobbegong,Diving,NSW,"south head, sydney ",provoked,1980
+1989,-38.5,145.2666667,uninjured,White Shark,Surfing/Boarding,VIC,"surfies beach, phillip island",unprovoked,1980
+1989,-32.0,115.5166667,injured,Wobbegong,Snorkelling,WA,"rottnest island, parker point",unprovoked,1980
+1989,-28.88333333,153.55,injured,White Shark,Surfing/Boarding,NSW,"ballina south, half tide beach",unprovoked,1980
+1989,-17.96666667,122.2333333,uninjured,Tiger Shark,Snorkelling,WA,"broome, roebuck bay",provoked,1980
+1989,-10.11666667,142.1333333,injured,Whaler Shark,Spearfishing,QLD,"torres strait, badu island harbour",provoked,1980
+1989,-35.63333333,138.4833333,fatal,White Shark,Surfing/Boarding,SA,"waitpinga beach, encounter bay",unprovoked,1980
+1989,-28.78333333,153.5833333,uninjured,White Shark,Surfing/Boarding,NSW,lennox head,unprovoked,1980
+1989,-41.43333333,148.2666667,uninjured,White Shark,Surfing/Boarding,TAS,"shelly point, scamander",unprovoked,1980
+1989,-14.16666667,132.1833333,injured,Bull Shark,Swimming,NT,edith falls,unprovoked,1980
+1989,-38.53333333,145.4666667,injured,White Shark,Surfing/Boarding,VIC,kilcunda,unprovoked,1980
+1989,-28.03333333,153.4,injured,Bull Shark,Swimming,QLD,"mermaid waters, gold coast (canal)",unprovoked,1980
+1989,-16.38333333,122.9166667,injured,Wobbegong,Diving,WA,capes area,unprovoked,1980
+1989,-12.28333333,136.8166667,injured,Tiger Shark,Swimming,NT,"gove peninsula, cape wirrawoi",provoked,1980
+1990,-28.15,153.5333333,uninjured,Tiger Shark,Surfing/Boarding,QLD,"greenmount point, coolangatta",unprovoked,1990
+1990,-28.18333333,153.55,uninjured,White Shark,Surfing/Boarding,NSW,"tweed heads, fingal",unprovoked,1990
+1990,-19.16666667,148.3833333,fatal,Tiger Shark,Snorkelling,QLD,"dingo reef, off townsville",provoked,1990
+1990,-16.21666667,145.8833333,injured,Hammerhead,Snorkelling,QLD,"opal reef, port douglas",provoked,1990
+1990,-16.21666667,145.8833333,injured,Hammerhead,Snorkelling,QLD,"opal reef, port douglas",provoked,1990
+1990,-25.9,153.0833333,injured,Wobbegong,Standing in Water,QLD,rainbow beach. near gympie,unprovoked,1990
+1990,-28.03333333,153.4,injured,Bull Shark,Swimming,QLD,"mermaid waters, gold coast (canal)",unprovoked,1990
+1990,-35.51666667,138.7666667,injured,White Shark,Surfing/Boarding,SA,"goolwa beach, adelaide",unprovoked,1990
+1990,-28.0,153.4166667,injured,Bull Shark,Swimming,QLD,surfers paradise (canals),unprovoked,1990
+1991,-23.83333333,151.25,injured,Unknown,Surfing/Boarding,QLD,gladstone harbour,unprovoked,1990
+1991,-38.26666667,144.65,uninjured,Bronze Whaler,Spearfishing,VIC,"queenscliff beach, melbourne",provoked,1990
+1991,-33.51666667,151.3666667,uninjured,Dusky Shark,Snorkelling,NSW,"putty beach, central coast",unprovoked,1990
+1991,-28.03333333,153.4,injured,Bull Shark,Swimming,QLD,"mermaid waters, gold coast (canal)",unprovoked,1990
+1991,-34.56666667,150.8666667,injured,Grey Nurse,Diving,NSW,"bass point, wollongong",provoked,1990
+1991,-35.28333333,138.4333333,fatal,White Shark,Diving,SA,aldinga beach,unprovoked,1990
+1991,-32.51666667,115.7,injured,White Shark,Surfing/Boarding,WA,"backbeach, halls head",unprovoked,1990
+1992,-28.16666667,153.5333333,injured,White Shark,Surfing/Boarding,QLD,"duranbah, north of tweed heads",unprovoked,1990
+1992,-24.86666667,152.35,uninjured,Tiger Shark,Surfing/Boarding,QLD,"nielson park, bundaberg",unprovoked,1990
+1992,-27.98333333,153.3333333,uninjured,Bull Shark,,QLD,"evandale channal,chevron is",provoked,1990
+1992,-38.28333333,144.6,injured,White Shark,Surfing/Boarding,VIC,"port phillip bay, point lonsdale, west melbourne",unprovoked,1990
+1992,-34.25,135.1666667,injured,White Shark,Surfing/Boarding,SA,"lipson cove, tumby bay",unprovoked,1990
+1992,-27.08333333,153.4,fatal,White Shark,Surfing/Boarding,QLD,"moreton island, brisbane",unprovoked,1990
+1993,-20.05,148.8833333,injured,Whitetip Reef,Spearfishing,QLD,"line reef, 50k off hayman island",provoked,1990
+1993,-40.93333333,146.9833333,uninjured,White Shark,Spearfishing,TAS,"tenth island, georgetown",provoked,1990
+1993,-34.21666667,138.0166667,injured,White Shark,Spearfishing,SA,point clinton,provoked,1990
+1993,-40.93333333,146.9833333,fatal,White Shark,Diving,TAS,"tenth island, georgetown",unprovoked,1990
+1993,-28.63333333,153.6166667,fatal,White Shark,Diving,NSW,"byron bay, julian rocks",unprovoked,1990
+1993,-17.96666667,122.2333333,fatal,Tiger Shark,Diving,WA,"broome, roebuck bay",provoked,1990
+1993,-23.36666667,150.5,uninjured,Whaler Shark,Surfing/Boarding,QLD,"rockhampton, farnborough beach",unprovoked,1990
+1994,-27.53333333,153.8333333,injured,Bull Shark,Swimming,QLD,"brisbane river, karana downs reach ",unprovoked,1990
+1994,-27.98333333,153.4166667,injured,Bull Shark,Swimming,QLD,"buds beach, gold coast canal",unprovoked,1990
+1994,-37.31666667,139.8333333,injured,Wobbegong,Fishing,SA,"stinky bay, nora creina",provoked,1990
+1994,-27.93333333,153.4166667,injured,Whaler Shark,Swimming,QLD,"broadbeach, surfers paradise",unprovoked,1990
+1994,-38.46666667,144.8833333,injured,Wobbegong,Diving,VIC,mornington peninsula (pier),provoked,1990
+1995,-38.51666667,145.0833333,uninjured,Other,Diving,VIC,"seal rocks, phillip island",provoked,1990
+1995,-35.53333333,138.6666667,injured,Wobbegong,Surfing/Boarding,SA,"boomer beach, port elliot",unprovoked,1990
+1995,-32.08333333,132.9666667,injured,White Shark,Surfing/Boarding,SA,cactus beach,unprovoked,1990
+1995,-33.85,151.2333333,uninjured,Bull Shark,Surfing/Boarding,NSW,"clark island, sydney harbour",unprovoked,1990
+1995,-37.05,149.9,injured,Wobbegong,Diving,NSW,eden,unprovoked,1990
+1995,-24.83333333,113.1333333,uninjured,Tiger Shark,Diving,WA,"bernier island, shark bay",unprovoked,1990
+1995,-33.88333333,120.6833333,fatal,White Shark,Diving,WA,"hopetoun, starvation bay",unprovoked,1990
+1995,-25.0,152.8333333,injured,Tiger Shark,Standing in Water,QLD,"hervey bay, pialba",unprovoked,1990
+1995,-29.53333333,153.3333333,injured,Bull Shark,,NSW,"brooms head, lake arragan",provoked,1990
+1995,-23.16666667,150.95,injured,Tiger Shark,Swimming,QLD,"fishermans beach, great keppel",unprovoked,1990
+1995,-33.55,151.2666667,injured,Bull Shark,Swimming,NSW,"little patonga beach, hawkesbury river",unprovoked,1990
+1996,-27.85,153.4,injured,Bull Shark,Standing in Water,QLD,"coomera river mouth, gold coast",unprovoked,1990
+1996,-35.05,117.6833333,injured,Wobbegong,Spearfishing,WA,"mutton bird island, albany",provoked,1990
+1996,-33.86666667,151.2,injured,Bull Shark,Swimming,NSW,"parramatta river, sydney",unprovoked,1990
+1996,-31.51666667,159.05,injured,Galapagos Shark,Standing in Water,NSW,"lord howe island, ned's beach",provoked,1990
+1996,-23.43333333,151.9,injured,Whaler Shark,Swimming,QLD,"heron island, barrier reef",unprovoked,1990
+1996,-33.66666667,151.3,injured,Wobbegong,Swimming,NSW,"mona vale beach, sydney",unprovoked,1990
+1996,-33.66666667,151.3,injured,Wobbegong,Swimming,NSW,"mona vale beach, sydney",unprovoked,1990
+1996,-38.41666667,145.0666667,uninjured,White Shark,Surfing/Boarding,VIC,suicide point at point leo,unprovoked,1990
+1996,-32.0,115.5166667,injured,Wobbegong,Standing in Water,WA,"rottnest island, parker point",unprovoked,1990
+1996,-38.41666667,144.1833333,injured,Wobbegong,Surfing/Boarding,VIC,anglesea beach,unprovoked,1990
+1996,-26.5,153.0,injured,Wobbegong,Surfing/Boarding,QLD,"sunshine coast, coolumn beach",unprovoked,1990
+1997,-20.25,148.9666667,injured,Tiger Shark,Snorkelling,QLD,"whitehaven beach, whitsunday island",unprovoked,1990
+1997,-28.15,153.5333333,injured,Bull Shark,Surfing/Boarding,QLD,"rainbow bay, coolangatta",unprovoked,1990
+1997,-38.51666667,145.0833333,uninjured,White Shark,Boating,VIC,"seal rocks, phillip island",unprovoked,1990
+1997,-20.26666667,148.9,injured,Grey Reef,Diving,QLD,"ravens cove, whitsundays",unprovoked,1990
+1997,-27.98333333,153.3333333,injured,Bull Shark,Swimming,QLD,"nerang river, 14km upstream",unprovoked,1990
+1997,-33.86666667,151.2,uninjured,Bull Shark,Boating,NSW,"parramatta river, sydney",unprovoked,1990
+1997,-26.65,153.1,injured,Tiger Shark,Surfing/Boarding,QLD,"maroochydore, pincushion",unprovoked,1990
+1997,-31.98333333,115.75,injured,White Shark,Surfing/Boarding,WA,"cottesloe beach, perth",unprovoked,1990
+1997,-38.28333333,144.45,uninjured,White Shark,Surfing/Boarding,VIC,surf coast - 13th beach,unprovoked,1990
+1997,-35.13333333,117.95,injured,White Shark,Diving,WA,albany,unprovoked,1990
+1997,-33.98333333,114.9833333,injured,Wobbegong,Standing in Water,WA,gnarabup beach,unprovoked,1990
+1997,-29.1,153.4333333,injured,Wobbegong,Swimming,NSW,"evans head, shark bay",unprovoked,1990
+1997,-20.11666667,148.9166667,injured,Bull Shark,Swimming,QLD,"luncheon bay, hook island",unprovoked,1990
+1998,-34.21666667,115.0166667,injured,Wobbegong,Diving,WA,hamelin bay,provoked,1990
+1998,-18.66666667,146.5,uninjured,Tiger Shark,Snorkelling,QLD,"orpheus island, juno bay",unprovoked,1990
+1998,-35.5,138.7,injured,Wobbegong,Surfing/Boarding,SA,"middleton beach, adelaide",unprovoked,1990
+1998,-35.31666667,136.1,fatal,White Shark,Snorkelling,SA,south neptune island,unprovoked,1990
+1998,-35.03333333,150.7166667,injured,Wobbegong,Diving,NSW,jervis bay,unprovoked,1990
+1998,-26.5,153.0,injured,Wobbegong,Diving,QLD,sunshine coast,provoked,1990
+1998,-35.5,138.7,injured,Wobbegong,Surfing/Boarding,SA,"middleton beach, adelaide",unprovoked,1990
+1998,-33.95,151.15,injured,Whaler Shark,Spearfishing,NSW,"botany bay, sydney",provoked,1990
+1999,-30.56666667,152.9833333,injured,White Shark,Surfing/Boarding,NSW,"nambucca heads, scott's head beach ",unprovoked,1990
+1999,-34.88333333,137.45,fatal,White Shark,Surfing/Boarding,SA,flaherty's beach hardwicke bay,unprovoked,1990
+1999,-27.38333333,153.4333333,injured,Wobbegong,Diving,QLD,"stradbroke island, amity point",provoked,1990
+1999,-32.21666667,152.6,uninjured,Bronze Whaler,Diving,NSW,"forster, the pinnacle",unprovoked,1990
+1999,-31.88333333,115.75,uninjured,White Shark,Diving,WA,"scarborough beach, perth",provoked,1990
+2000,-34.03333333,151.15,uninjured,White Shark,Surfing/Boarding,NSW,"wanda beach, sydney",unprovoked,2000
+2000,-32.08333333,132.9833333,injured,White Shark,Surfing/Boarding,SA,"cactus beach, point sinclair, ceduna",unprovoked,2000
+2000,-31.81666667,115.7333333,injured,Wobbegong,Swimming,WA,sorrento beach,unprovoked,2000
+2000,-27.96666667,153.4166667,injured,White Shark,Swimming,QLD,"main beach, gold coast",unprovoked,2000
+2000,-31.95,115.0666667,injured,White Shark,Surfing/Boarding,WA,margaret river  nr perth,unprovoked,2000
+2000,-33.48333333,151.4166667,uninjured,White Shark,Surfing/Boarding,NSW,"mcmasters beach, central coast",unprovoked,2000
+2000,-33.86666667,151.2,injured,Bull Shark,Swimming,NSW,"athol bay, taronga wharf, sydney harbour",unprovoked,2000
+2000,-33.86666667,151.2,uninjured,Bull Shark,Boating,NSW,"parramatta river, sydney",unprovoked,2000
+2000,-33.93333333,151.25,uninjured,Whaler Shark,Surfing/Boarding,NSW,"maroubra beach, sydney",unprovoked,2000
+2000,-31.98333333,115.75,injured,Wobbegong,Standing in Water,WA,"cottesloe beach, perth",provoked,2000
+2000,-33.61666667,134.8166667,fatal,White Shark,Surfing/Boarding,SA,"blackfellows point, near elliston",unprovoked,2000
+2000,-32.08333333,132.9666667,fatal,White Shark,Surfing/Boarding,SA,cactus beach,unprovoked,2000
+2000,-18.66666667,146.5,uninjured,Tiger Shark,Diving,QLD,"orpheus island, juno bay",provoked,2000
+2000,-31.98333333,115.75,injured,White Shark,Swimming,WA,"cottesloe beach, perth",unprovoked,2000
+2000,-34.63333333,150.3833333,uninjured,White Shark,Swimming,NSW,"kiama, jones beach",unprovoked,2000
+2000,-33.18333333,134.65,uninjured,White Shark,Diving,SA,venus bay,provoked,2000
+2000,-31.98333333,115.75,fatal,White Shark,Swimming,WA,"cottesloe beach, perth",unprovoked,2000
+2000,-23.43333333,151.9,injured,Whaler Shark,Spearfishing,QLD,"heron island, sykes reef",provoked,2000
+2000,-19.25,146.8166667,injured,Wobbegong,Diving,QLD,"townsville, flinders cay off townsville",unprovoked,2000
+2001,-26.38333333,153.0833333,uninjured,Tiger Shark,Surfing/Boarding,QLD,"noosa heads, main beach",unprovoked,2000
+2001,-30.88333333,153.05,uninjured,White Shark,Boating,NSW,south west rocks,unprovoked,2000
+2001,-29.6,153.3333333,injured,Tiger Shark,Surfing/Boarding,NSW,brooms head ,unprovoked,2000
+2001,-33.96666667,114.9833333,injured,Wobbegong,Snorkelling,WA,"margaret river, prevelly beach",unprovoked,2000
+2001,-30.63333333,153.0166667,injured,Wobbegong,Surfing/Boarding,NSW,"nambucca river, entrance",unprovoked,2000
+2001,-33.9,151.2666667,injured,Wobbegong,Snorkelling,NSW,"bronte beach, sydney",provoked,2000
+2001,-33.23333333,151.5333333,injured,White Shark,Surfing/Boarding,NSW,"lakes beach, budgewoi",unprovoked,2000
+2001,-27.28333333,153.4166667,uninjured,Tiger Shark,Boating,QLD,"moreton bay, sovereign beach",unprovoked,2000
+2001,-16.91666667,149.25,injured,Other,Snorkelling,QLD,"pinnacles, coral sea, gbr",provoked,2000
+2001,-28.81666667,153.5333333,injured,White Shark,Surfing/Boarding,NSW,"ballina, flat rock",unprovoked,2000
+2001,-29.43333333,153.35,injured,Wobbegong,Swimming,NSW,"yamba, main beach",unprovoked,2000
+2001,-33.63333333,115.0,uninjured,White Shark,Surfing/Boarding,WA,"yallingup, honeycombs",unprovoked,2000
+2001,-34.25,115.0166667,uninjured,White Shark,Spearfishing,WA,canal rocks,provoked,2000
+2002,-33.3,115.6833333,injured,Other,Swimming,WA,river mouth off collie river,unprovoked,2000
+2002,-32.73333333,152.1833333,injured,Bull Shark,Surfing/Boarding,NSW,"port stephens, fingal spit",unprovoked,2000
+2002,-26.36666667,153.0833333,injured,Whaler Shark,Surfing/Boarding,QLD,"noosa, sunrise beach",unprovoked,2000
+2002,-33.86666667,151.2,uninjured,Bull Shark,Boating,NSW,"parramatta river, cabarita, sydney",unprovoked,2000
+2002,-30.28333333,153.1333333,uninjured,Bull Shark,Spearfishing,NSW,coffs harbour,provoked,2000
+2002,-32.38422037,133.9255802,fatal,White Shark,Diving,SA,smokey bay,provoked,2000
+2002,-32.93333333,151.75,injured,Wobbegong,Swimming,NSW,"bar beach, newcastle",unprovoked,2000
+2002,-31.96666667,115.75,uninjured,White Shark,Surfing/Boarding,WA,"cove beach, perth, sth of cottesloe beach",unprovoked,2000
+2002,-16.66666667,145.9333333,injured,Hammerhead,Snorkelling,QLD,"upolu cay, cairns",provoked,2000
+2002,-33.78333333,151.2833333,injured,Wobbegong,Diving,NSW,"manly, shelly beach,  sydney",unprovoked,2000
+2002,-28.05,153.4166667,fatal,Bull Shark,Swimming,QLD,miami lake (canals) gold coast,unprovoked,2000
+2003,-33.91666667,151.25,injured,Wobbegong,Swimming,NSW,"coogee beach, sydney",unprovoked,2000
+2003,-33.86666667,135.1666667,uninjured,White Shark,Surfing/Boarding,SA,sheringa beach,unprovoked,2000
+2003,-35.51666667,138.7666667,injured,Wobbegong,Standing in Water,SA,"goolwa beach, adelaide",unprovoked,2000
+2003,-28.1,153.1,fatal,Bull Shark,Swimming,QLD,"burleigh lake, goldcoast canal",unprovoked,2000
+2003,-29.41666667,153.35,injured,Whaler Shark,Surfing/Boarding,NSW,"yamba, turner's beach",unprovoked,2000
+2003,-32.53333333,115.7166667,injured,Wobbegong,Diving,WA,mandurah,provoked,2000
+2003,-12.18333333,136.7666667,uninjured,Tiger Shark,Boating,NT,"nhulunbuy, bremmer island",unprovoked,2000
+2003,-30.28333333,153.1333333,injured,Wobbegong,Surfing/Boarding,NSW,"coff's harbour, charlesworth beach",unprovoked,2000
+2003,-32.43333333,152.5166667,injured,Wobbegong,Surfing/Boarding,NSW,"seal rocks, lighthouse beach",unprovoked,2000
+2003,-33.63333333,114.9833333,injured,Wobbegong,Swimming,WA,"margaret river, mainbreak",provoked,2000
+2003,-33.96666667,114.9833333,injured,Wobbegong,Swimming,WA,"margaret river, mainbreak",provoked,2000
+2003,-33.96666667,114.9833333,injured,Wobbegong,Spearfishing,WA,"margaret river, prevelly",provoked,2000
+2003,-38.26666667,144.5333333,uninjured,Whaler Shark,Swimming,VIC,"ocean grove, collendina",unprovoked,2000
+2004,-33.98333333,114.9833333,injured,Wobbegong,Swimming,WA,gnarabup beach,unprovoked,2000
+2004,-34.56666667,150.8666667,uninjured,Whaler Shark,Diving,NSW,"shellharbour, bass point, wollongong",unprovoked,2000
+2004,-30.56666667,152.9833333,injured,Wobbegong,Swimming,NSW,"nambucca heads, scott's head beach",unprovoked,2000
+2004,-30.63333333,153.0166667,injured,Wobbegong,Swimming,NSW,nambucca heads,unprovoked,2000
+2004,-33.13333333,115.6833333,injured,White Shark,Spearfishing,WA,"binningup beach, bunbury",provoked,2000
+2004,-38.36666667,144.75,uninjured,White Shark,Diving,VIC,"bridgewater bay, portland",provoked,2000
+2004,-33.1,151.65,injured,Other,Spearfishing,NSW,caves beach,provoked,2000
+2004,-31.85,115.75,injured,Wobbegong,Snorkelling,WA,waterman beach,unprovoked,2000
+2004,-31.85,115.75,injured,Wobbegong,Snorkelling,WA,waterman beach,unprovoked,2000
+2004,-30.25,115.0166667,injured,Bronze Whaler,Spearfishing,WA,"cervantes, nr jurien bay",provoked,2000
+2004,-32.2,152.55,injured,Wobbegong,Diving,NSW,"forster, latitude reef",unprovoked,2000
+2004,-33.96666667,114.9833333,injured,Wobbegong,Snorkelling,WA,"margaret river, prevelly",unprovoked,2000
+2004,-31.91666667,115.75,uninjured,White Shark,Diving,WA,floreat beach,provoked,2000
+2004,-33.33333333,115.6333333,injured,White Shark,Surfing/Boarding,WA,bunbury back beach,unprovoked,2000
+2004,-31.98333333,115.5333333,injured,Wobbegong,Diving,WA,rottnest island,unprovoked,2000
+2004,-33.85,114.9833333,fatal,White Shark,Surfing/Boarding,WA,"margaret river, gracetown",unprovoked,2000
+2004,-28.63333333,153.6166667,injured,Grey Nurse,Spearfishing,NSW,"byron bay, tallows beach",provoked,2000
+2004,-38.46666667,145.0166667,uninjured,White Shark,Surfing/Boarding,VIC,"flinders, gunnery surf break",unprovoked,2000
+2004,-16.4,145.7666667,uninjured,Tiger Shark,Snorkelling,QLD,batt reef,provoked,2000
+2004,-32.85,151.8333333,injured,White Shark,Surfing/Boarding,NSW,"stockton beach, newcastle",unprovoked,2000
+2004,-32.01666667,152.5333333,injured,Wobbegong,Surfing/Boarding,NSW,"saltwater beach, nr taree",unprovoked,2000
+2004,-16.21666667,145.8833333,fatal,Tiger Shark,Spearfishing,QLD,opal reef off cairns,provoked,2000
+2004,-34.9,137.0,fatal,White Shark,Surfing/Boarding,SA,"west beach, adelaide",unprovoked,2000
+2005,-37.98333333,145.0166667,uninjured,White Shark,Spearfishing,VIC,"port phillip bay, rickett's point",provoked,2000
+2005,-27.55,152.8166667,injured,Bull Shark,Swimming,QLD,"brisbane river, karalee",unprovoked,2000
+2005,-33.38333333,151.4833333,uninjured,White Shark,Surfing/Boarding,NSW,"crackneck point, bateau bay",unprovoked,2000
+2005,-28.71666667,113.7833333,fatal,White Shark,Snorkelling,WA,"houtman abrolhos, off geraldton",unprovoked,2000
+2005,-12.11666667,136.8,injured,Whaler Shark,Spearfishing,NT,"nhulunbuy, bremmer island",provoked,2000
+2005,-33.9,151.2666667,uninjured,White Shark,Surfing/Boarding,NSW,"bronte beach, sydney",unprovoked,2000
+2005,-19.35,147.3666667,injured,Blacktip Reef,Spearfishing,QLD,townsville (50km off shore),provoked,2000
+2005,-34.96666667,138.5,fatal,White Shark,Diving,SA,"glenelg, adelaide",unprovoked,2000
+2005,-30.88333333,153.0833333,uninjured,Tiger Shark,Surfing/Boarding,NSW,"south west rocks, little bay",unprovoked,2000
+2005,-30.3,153.1333333,injured,Wobbegong,Surfing/Boarding,NSW,"coff's harbour, park beach",unprovoked,2000
+2005,-31.88333333,115.75,uninjured,White Shark,Surfing/Boarding,WA,"scarborough beach, perth",unprovoked,2000
+2005,-35.08333333,137.5333333,injured,White Shark,Surfing/Boarding,SA,"cape de couedic, kangaroo is",unprovoked,2000
+2005,-34.83333333,135.6833333,injured,White Shark,Surfing/Boarding,SA,fishery bay nr port lincoln,unprovoked,2000
+2005,-38.46666667,145.0166667,injured,White Shark,Surfing/Boarding,VIC,"flinders, western port bay",unprovoked,2000
+2005,-27.18333333,153.4,uninjured,Bronze Whaler,Diving,QLD,"moreton island, henderson's shoal ",unprovoked,2000
+2005,-16.48333333,145.45,injured,Whitetip Reef,Spearfishing,QLD,port douglas,provoked,2000
+2006,-27.4,153.4333333,fatal,Bull Shark,Swimming,QLD,"stradbroke island, north",unprovoked,2000
+2006,-31.93333333,115.75,injured,White Shark,Spearfishing,WA,"city beach, perth",provoked,2000
+2006,-26.8,153.1333333,injured,Wobbegong,Standing in Water,QLD,"caloundra, golden beach",unprovoked,2000
+2006,-33.88333333,151.2666667,uninjured,Whaler Shark,Surfing/Boarding,NSW,"bondi beach (south end), sydney",unprovoked,2000
+2006,-32.91666667,151.7833333,injured,Wobbegong,Surfing/Boarding,NSW,"cowrie hole, newcastle",unprovoked,2000
+2006,-26.68333333,153.1333333,injured,Wobbegong,Diving,QLD,"caloundra, moffat beach",provoked,2000
+2006,-33.9,151.2666667,uninjured,White Shark,Spearfishing,NSW,"coogee, lurline bay, sydney",provoked,2000
+2006,-33.91666667,122.5833333,injured,White Shark,Surfing/Boarding,WA,"orleans bay, nr esperance",unprovoked,2000
+2006,-20.36666667,116.8666667,uninjured,Grey Reef,Spearfishing,WA,"enderby island, dampier",provoked,2000
+2006,-38.36666667,144.2666667,injured,White Shark,Surfing/Boarding,VIC,"bells beach, winkipop reef",unprovoked,2000
+2007,-32.38333333,152.5166667,uninjured,White Shark,Surfing/Boarding,NSW,"sandbar beach, smiths lakes",unprovoked,2000
+2007,-37.5,149.9666667,injured,White Shark,Diving,NSW,cape howe ,provoked,2000
+2007,-28.83333333,153.6,injured,White Shark,Surfing/Boarding,NSW,"ballina, angels beach ",unprovoked,2000
+2007,-28.53333333,153.55,injured,White Shark,Surfing/Boarding,NSW,"brunswick head, south golden beach",unprovoked,2000
+2007,-24.71666667,152.2666667,injured,Bull Shark,Swimming,QLD,moore park beach,unprovoked,2000
+2007,-16.55,139.4,injured,Unknown,Swimming,QLD,mornington island,unprovoked,2000
+2007,-23.13333333,113.7666667,injured,Whitetip Reef,Swimming,WA,"warra beach, nr coral bay",provoked,2000
+2007,-31.18333333,152.9666667,injured,Bull Shark,Surfing/Boarding,NSW,"crescent heads, shelly beach",unprovoked,2000
+2007,-33.78333333,151.2833333,injured,Wobbegong,Diving,NSW,"manly, shelly beach,  sydney",unprovoked,2000
+2007,-21.95,114.1166667,uninjured,White Shark,Surfing/Boarding,WA,"exmouth, dunnes surf beach",unprovoked,2000
+2007,-12.15,96.81666667,injured,Wobbegong,Swimming,WA,cocos (keeling) islands,provoked,2000
+2007,-16.91666667,145.7666667,injured,Whaler Shark,Spearfishing,QLD,"cairns, holmes reef north of cairns",provoked,2000
+2007,-28.63333333,153.6166667,injured,White Shark,Surfing/Boarding,NSW,"byron bay, the pass",unprovoked,2000
+2007,-28.63333333,153.6,uninjured,White Shark,Surfing/Boarding,NSW,"byron bay, wategos beach",unprovoked,2000
+2007,-33.9495,151.2437,injured,Wobbegong,Surfing/Boarding,NSW,"maroubra beach, sydney",unprovoked,2000
+2007,-27.93333333,153.4166667,injured,Whaler Shark,Swimming,QLD,"broadwater, gold coast",unprovoked,2000
+2007,-32.68333333,152.1833333,injured,White Shark,Surfing/Boarding,NSW,port stephens (inside headland),unprovoked,2000
+2008,-41.0,147.1333333,uninjured,White Shark,Boating,TAS,"pipers river mouth, waymouth",unprovoked,2000
+2008,-28.18333333,153.5666667,injured,Wobbegong,Diving,NSW,"tweed heads, turtle sanctuary, cook island",unprovoked,2000
+2008,-31.98333333,115.5333333,injured,Wobbegong,Swimming,WA,rottnest island,unprovoked,2000
+2008,-38.83333333,146.1666667,injured,Wobbegong,Swimming,VIC,"shallow inlet, wilson's promontory",unprovoked,2000
+2008,-28.15,153.5333333,injured,Wobbegong,Standing in Water,QLD,"greenmount beach, coolangatta",unprovoked,2000
+2008,-28.86666667,153.5666667,fatal,Bull Shark,Surfing/Boarding,NSW,"ballina, lighthouse beach",unprovoked,2000
+2008,-33.63333333,115.0,injured,Wobbegong,Swimming,WA,"yallingup, south perth",provoked,2000
+2008,-35.01666667,117.9166667,injured,White Shark,Swimming,WA,"albany, middleton beach",unprovoked,2000
+2008,-38.38333333,142.4833333,uninjured,White Shark,Surfing/Boarding,VIC,"levys beach, warrnambool",unprovoked,2000
+2008,-28.63333333,153.6166667,uninjured,White Shark,Surfing/Boarding,NSW,"byron bay, tallow beach",unprovoked,2000
+2008,-28.63333333,153.6166667,uninjured,White Shark,Surfing/Boarding,NSW,"byron bay, clarkes beach",unprovoked,2000
+2008,-32.43333333,152.5166667,uninjured,Whaler Shark,Surfing/Boarding,NSW,seal rocks,unprovoked,2000
+2008,-32.35,115.7166667,fatal,White Shark,Snorkelling,WA,"port kennedy beach, perth",provoked,2000
+2008,-33.73333333,151.3166667,uninjured,White Shark,Boating,NSW,"long reef, sydney",provoked,2000
+2009,-34.53333333,150.8666667,injured,Dusky Shark,Spearfishing,NSW,"windang, lake illawarra, wollongong",provoked,2000
+2009,-13.91666667,146.6166667,injured,Grey Reef,Diving,QLD,osprey reef,provoked,2000
+2009,-28.18333333,153.55,injured,White Shark,Surfing/Boarding,NSW,"dreamtime beach, fingal head",unprovoked,2000
+2009,-41.23333333,148.3,injured,White Shark,Surfing/Boarding,TAS,"baileys rock, binalong bay",unprovoked,2000
+2009,-35.76,150.2053,injured,Unknown,Swimming,NSW,"surf beach, bateman's bay",unprovoked,2000
+2009,-31.45,152.9166667,uninjured,White Shark,Surfing/Boarding,NSW,"port macquarie, shelley beach",unprovoked,2000
+2009,-33.85,151.2166667,injured,Bull Shark,Diving,NSW,"woolloomooloo bay, sydney harbour",unprovoked,2000
+2009,-29.76666667,153.2833333,uninjured,White Shark,Surfing/Boarding,NSW,"minnie waters, sandon beach",unprovoked,2000
+2009,-33.88333333,151.2666667,injured,White Shark,Surfing/Boarding,NSW,"bondi beach, sydney",unprovoked,2000
+2009,-32.38333333,152.5166667,uninjured,White Shark,Surfing/Boarding,NSW,"cellito beach, north coast",unprovoked,2000
+2009,-33.63333333,151.3166667,injured,White Shark,Surfing/Boarding,NSW,avalon beach,unprovoked,2000
+2009,-35.85,150.1666667,uninjured,Whaler Shark,Surfing/Boarding,NSW,"broulee beach north, batemans bay",unprovoked,2000
+2009,-33.93333333,151.25,injured,Wobbegong,Diving,NSW,"maroubra beach, sydney",unprovoked,2000
+2009,-32.5,115.7,injured,White Shark,Surfing/Boarding,WA,halls head beach,unprovoked,2000
+2009,-31.98333333,115.5333333,injured,Wobbegong,Swimming,WA,"rottnest island, natural jetty",provoked,2000
+2009,-32.73333333,152.1833333,uninjured,Bull Shark,Surfing/Boarding,NSW,"port stephens, fingal spit",unprovoked,2000
+2009,-34.66666667,150.85,injured,Wobbegong,Surfing/Boarding,NSW,"kiama, seven mile beach",unprovoked,2000
+2009,-28.63333333,153.6166667,injured,Whaler Shark,Surfing/Boarding,NSW,"byron bay, broken head",unprovoked,2000
+2009,-32.0,115.45,uninjured,White Shark,Spearfishing,WA,"rottnest island, horse shoe reef",provoked,2000
+2009,-12.15,96.81666667,injured,Whaler Shark,Surfing/Boarding,WA,"cocos (kelling) island, jetty",unprovoked,2000
+2009,-38.33333333,141.6,uninjured,White Shark,Boating,VIC,portland,unprovoked,2000
+2009,-28.78333333,153.5833333,uninjured,White Shark,Surfing/Boarding,NSW,lennox head,unprovoked,2000
+2009,-35.5,138.2333333,injured,White Shark,Spearfishing,SA,"second valley, fleurieu peninsula",provoked,2000
+2009,-23.43333333,151.9,injured,Whaler Shark,Spearfishing,QLD,"heron island, lamont reef",provoked,2000
+2009,-33.45,151.4333333,injured,Wobbegong,Standing in Water,NSW,avoca beach,provoked,2000
+2009,-26.067,113.567,injured,White Shark,Boating,NSW,hawks nest ,unprovoked,2000
+2009,-29.1,153.4333333,injured,White Shark,Surfing/Boarding,NSW,evans head,unprovoked,2000
+2009,-32.16666667,152.5,uninjured,White Shark,Surfing/Boarding,NSW,tuncurry beach,unprovoked,2000
+2010,-24.8,152.45,uninjured,White Shark,Surfing/Boarding,QLD,"bargara, archies beach",unprovoked,2010
+2010,-38.28333333,144.4333333,injured,White Shark,Surfing/Boarding,VIC,"13th beach, boings",unprovoked,2010
+2010,-10.56666667,142.2166667,injured,Whitetip Reef,Snorkelling,QLD,"thursday island, torre strait",unprovoked,2010
+2010,-29.41666667,153.3666667,uninjured,White Shark,Surfing/Boarding,NSW,"yamba, turners beach",unprovoked,2010
+2010,-20.35,148.9333333,injured,Bull Shark,Snorkelling,QLD,"dent island, whitsunday islands",unprovoked,2010
+2010,-33.66666667,151.3,injured,Wobbegong,Standing in Water,NSW,"mona vale, bongin bongin bay",unprovoked,2010
+2010,-31.3,152.9666667,injured,Bull Shark,Surfing/Boarding,NSW,"crescent heads, point plomer",unprovoked,2010
+2010,-35.03333333,116.8333333,injured,White Shark,Surfing/Boarding,WA,"conspicuous cliff beach, walpole",unprovoked,2010
+2010,-31.18333333,152.9666667,injured,White Shark,Surfing/Boarding,NSW,crescent head,unprovoked,2010
+2010,-33.85,114.9666667,fatal,White Shark,Surfing/Boarding,WA,"south point beach, cowaramup bay",unprovoked,2010
+2010,-29.4,153.3333333,injured,White Shark,Surfing/Boarding,NSW,"yamba, lluka, frasers reef",unprovoked,2010
+2010,-30.83333333,115.2666667,injured,White Shark,Surfing/Boarding,WA,"wedge island, north of perth",unprovoked,2010
+2010,-30.06666667,153.2,injured,Wobbegong,Surfing/Boarding,NSW,"mullawarra beach, arrawarra",unprovoked,2010
+2010,-32.18333333,115.6833333,injured,White Shark,Snorkelling,WA,"garden island, perth",unprovoked,2010
+2011,-34.71666667,135.15,fatal,White Shark,Diving,SA,perforated island nr coffin bay,provoked,2010
+2011,-21.95,114.1166667,injured,Whaler Shark,Snorkelling,WA,exmouth,unprovoked,2010
+2011,-32.73333333,152.1833333,injured,White Shark,Surfing/Boarding,NSW,"port stephens, jimmys beach",unprovoked,2010
+2011,-31.83333333,152.7333333,injured,White Shark,Surfing/Boarding,NSW,crowdy heads,unprovoked,2010
+2011,-24.48333333,113.4,injured,Whaler Shark,Fishing,WA,"red bluff, nr carnarvon",provoked,2010
+2011,-32.45,152.5333333,injured,Wobbegong,Diving,NSW,big seal rocks,provoked,2010
+2011,-18.71666667,146.5666667,fatal,Tiger Shark,Swimming,QLD,"challenger bay, palm island",unprovoked,2010
+2011,-33.53333333,115.0333333,fatal,White Shark,Surfing/Boarding,WA,bunker bay,unprovoked,2010
+2011,-32.0,115.45,fatal,White Shark,Diving,WA,rottnest island,unprovoked,2010
+2011,-37.88333333,144.9833333,uninjured,Other,Diving,VIC,"elwood beach, port phillip bay",provoked,2010
+2011,-31.98333333,115.75,fatal,White Shark,Swimming,WA,"cottesloe beach, perth",unprovoked,2010
+2011,-26.46666667,153.0833333,injured,Wobbegong,Swimming,QLD,peregain beach,provoked,2010
+2011,-28.7,153.6,injured,White Shark,Surfing/Boarding,NSW,"suffolk park, broken head beach",unprovoked,2010
+2011,-33.93333333,151.25,injured,Wobbegong,Surfing/Boarding,NSW,"maroubra beach, sydney",provoked,2010
+2011,-29.48333333,153.35,injured,White Shark,Surfing/Boarding,NSW,"yamba, angourie beach",unprovoked,2010
+2012,-33.45,151.4333333,injured,White Shark,Surfing/Boarding,NSW,north avoca beach,unprovoked,2010
+2012,-28.16666667,153.55,uninjured,Tiger Shark,Spearfishing,NSW,"tweed river mouth, duranbah",provoked,2010
+2012,-33.0,151.7166667,injured,White Shark,Surfing/Boarding,NSW,"redhead beach, newcastle",unprovoked,2010
+2012,-23.13333333,113.7666667,injured,Tiger Shark,Snorkelling,WA,"the lagoon, coral bay",unprovoked,2010
+2012,-31.98333333,152.5666667,uninjured,White Shark,Surfing/Boarding,NSW,"wallabi point, old bar",unprovoked,2010
+2012,-32.6,152.3166667,injured,Wobbegong,Fishing,NSW,"port stephens, broughton island",provoked,2010
+2012,-26.75,153.1333333,uninjured,Whaler Shark,Surfing/Boarding,QLD,wurtulla beach,unprovoked,2010
+2012,-28.05,153.4333333,injured,Bull Shark,Surfing/Boarding,QLD,"nobbys beach, gold coast",provoked,2010
+2012,-33.55,151.3166667,uninjured,Unknown,Boating,NSW,"lion island, hawkesbury river",unprovoked,2010
+2012,-33.46666667,115.5166667,fatal,White Shark,Diving,WA,"stratham beach, bunbury",unprovoked,2010
+2012,-35.18333333,136.85,injured,White Shark,Boating,SA,"dolphin bay, yorke peninsula",unprovoked,2010
+2012,-32.21666667,152.6,injured,Wobbegong,Diving,NSW,"forster, barge wreck",provoked,2010
+2012,-33.0,151.7,uninjured,White Shark,Boating,NSW,"redhead beach, newcastle",unprovoked,2010
+2012,-38.61666667,142.9833333,injured,White Shark,Surfing/Boarding,VIC,port campbell,unprovoked,2010
+2012,-43.51666667,146.2333333,injured,White Shark,Surfing/Boarding,TAS,south west national park,unprovoked,2010
+2012,-31.78333333,115.7166667,uninjured,White Shark,Boating,WA,"pinnaroo point, kallaroo, perth",unprovoked,2010
+2012,-32.76666667,134.2,injured,White Shark,Surfing/Boarding,SA,"streaky bay, black beach",unprovoked,2010
+2012,-30.83333333,115.2666667,fatal,White Shark,Surfing/Boarding,WA,"wedge island, north of perth",unprovoked,2010
+2012,-24.38333333,113.3833333,injured,Tiger Shark,Surfing/Boarding,WA,"red bluff, north of carnarvon",unprovoked,2010
+2012,-31.76666667,115.7166667,uninjured,White Shark,Surfing/Boarding,WA,"mullaloo beach, perth",unprovoked,2010
+2012,-31.73333333,152.7833333,injured,Bull Shark,Surfing/Boarding,NSW,"kylie's beach, diamond head",unprovoked,2010
+2012,-30.86666667,153.0333333,injured,Grey Nurse,Spearfishing,NSW,"south west rocks, fish rock",provoked,2010
+2012,-33.75,151.3,uninjured,White Shark,Surfing/Boarding,NSW,"dee why beach, sydney",unprovoked,2010
+2013,-20.35,116.8166667,injured,Whaler Shark,Spearfishing,WA,"cape legendre, cape legendre island",provoked,2010
+2013,-26.36666667,153.0833333,injured,Tiger Shark,Surfing/Boarding,QLD,noosa heads,unprovoked,2010
+2013,-28.8,114.6,injured,Bronze Whaler,Spearfishing,WA,"geraldton, african reef",provoked,2010
+2013,-29.46666667,153.35,injured,Wobbegong,Swimming,NSW,"yamba, spooky beach, angourie",provoked,2010
+2013,-32.4,115.7333333,uninjured,White Shark,Surfing/Boarding,WA,"secret harbour, perth",unprovoked,2010
+2013,-28.63333333,153.6,injured,Wobbegong,Swimming,NSW,"byron bay, wategos beach",provoked,2010
+2013,-35.06666667,150.7833333,uninjured,White Shark,Surfing/Boarding,NSW,"target beach, jarvis bay",unprovoked,2010
+2013,-38.46666667,145.0166667,injured,White Shark,Swimming,VIC,flinders,unprovoked,2010
+2013,-33.71666667,151.3,injured,Wobbegong,Surfing/Boarding,NSW,narrabeen beach (south),provoked,2010
+2013,-21.95,114.1166667,injured,Grey Reef,Snorkelling,WA,"exmouth, turquoise bay",unprovoked,2010
+2013,-33.95,123.9166667,injured,White Shark,Diving,WA,"poison creek beach, israelite bay",provoked,2010
+2013,-30.26666667,153.1333333,fatal,Tiger Shark,Surfing/Boarding,NSW,"coffs harbour, campbell's beach",unprovoked,2010
+2013,-33.85,114.9666667,fatal,White Shark,Surfing/Boarding,WA,"gracetown, umbies break",unprovoked,2010
+2013,-28.1,153.4666667,injured,Wobbegong,Diving,QLD,gold coast,unprovoked,2010
+2013,-31.45,152.9166667,injured,Wobbegong,Surfing/Boarding,NSW,"port macquarie, shelley beach",unprovoked,2010
+2014,-35.13333333,137.7,fatal,White Shark,Spearfishing,SA,"goldsmith beach, yorke peninsula",provoked,2010
+2014,-32.0,115.55,uninjured,White Shark,Spearfishing,WA,rottnest island,provoked,2010
+2014,-38.36666667,144.2666667,uninjured,White Shark,Surfing/Boarding,VIC,"winkipop, bell's beach",unprovoked,2010
+2014,-31.46666667,152.9166667,injured,Wobbegong,Swimming,NSW,"port macquarie, lighthouse beach",provoked,2010
+2014,-36.71666667,149.9833333,fatal,White Shark,Swimming,NSW,tathra,unprovoked,2010
+2014,-23.13333333,113.75,injured,Whaler Shark,Spearfishing,WA,"coral bay, south passage",provoked,2010
+2014,-33.63333333,134.8666667,uninjured,White Shark,Surfing/Boarding,SA,elliston bar,unprovoked,2010
+2014,-27.98333333,153.4166667,injured,Bull Shark,Swimming,QLD,"chevron island, narang river",unprovoked,2010
+2014,-35.63087083,138.4666667,injured,White Shark,Surfing/Boarding,SA,"parsons beach, fleurieu peninsula",unprovoked,2010
+2014,-34.83333333,150.75,injured,Wobbegong,Surfing/Boarding,NSW,"seven mile beach, nowra",provoked,2010
+2014,-35.5,138.7166667,injured,White Shark,Surfing/Boarding,SA,middleton beach,unprovoked,2010
+2014,-35.5,138.7166667,injured,White Shark,Surfing/Boarding,SA,middleton beach,unprovoked,2010
+2014,-23.78333333,113.5,injured,Whaler Shark,Spearfishing,WA,gnaraloo station,provoked,2010
+2014,-28.63333333,153.6,fatal,White Shark,Snorkelling,NSW,"byron bay, clarkes beach",unprovoked,2010
+2014,-31.41666667,152.9166667,injured,Wobbegong,Swimming,NSW," port macquarie, town beach",unprovoked,2010
+2014,-33.45,151.4333333,injured,Wobbegong,Surfing/Boarding,NSW,avoca beach,provoked,2010
+2014,-31.98333333,152.5666667,injured,Wobbegong,Surfing/Boarding,NSW,"wallabi point, old bar",provoked,2010
+2014,-33.83333333,121.9166667,injured,White Shark,Surfing/Boarding,WA,"wylie bay, esperance",unprovoked,2010
+2014,-30.2,159.15,injured,Wobbegong,Swimming,NSW,moonee bay,provoked,2010
+2014,-35.73333333,150.2,injured,Wobbegong,Snorkelling,NSW,"casey's beach, bateman's bay",provoked,2010
+2014,-33.75,151.3,injured,Wobbegong,Swimming,NSW,"dee why beach, sydney",unprovoked,2010
+2014,-32.6,115.6166667,injured,Bronze Whaler,Surfing/Boarding,WA,"pyramind's beach, dawesville",unprovoked,2010
+2014,-35.1338,150.686,injured,Unknown,Surfing/Boarding,NSW,booderee national park,unprovoked,2010
+2014,-34.88003124,118.404958,fatal,White Shark,Spearfishing,WA,"cheynes beach, albany",provoked,2010
+2014,-16.2,145.75,fatal,Tiger Shark,Spearfishing,QLD,"rudder reef, port douglas",provoked,2010
+2015,-28.63333333,153.6166667,uninjured,White Shark,Surfing/Boarding,NSW,"byron bay, wategos beach",unprovoked,2010
+2015,-32.68333333,152.0333333,injured,Wobbegong,Standing in Water,NSW,"port stephens, piggies beach",provoked,2010
+2015,-27.63333333,153.45,uninjured,Bull Shark,Boating,QLD,"nerang river, surfers paradise",unprovoked,2010
+2015,-28.83333333,153.6,uninjured,White Shark,Surfing/Boarding,NSW,"ballina, flat rock",unprovoked,2010
+2015,-35.33333333,150.4666667,injured,Bronze Whaler,Spearfishing,NSW,mollymook,provoked,2010
+2015,-28.88333333,153.5666667,injured,White Shark,Surfing/Boarding,NSW,"ballina, seven mile beach",unprovoked,2010
+2015,-28.85,153.5833333,fatal,White Shark,Surfing/Boarding,NSW,"ballina, shelly beach",unprovoked,2010
+2015,-32.95,151.75,injured,Wobbegong,Swimming,NSW,"merewether beach, newcastle",unprovoked,2010
+2015,-31.51666667,159.05,injured,Galapagos Shark,Swimming,NSW,"lord howe island, ned's beach",provoked,2010
+2015,-31.51666667,159.05,injured,Galapagos Shark,Swimming,NSW,"lord howe island, ned's beach",provoked,2010
+2015,-35.8,150.2166667,injured,Wobbegong,Surfing/Boarding,NSW,"mackenzies beach, bateman's bay",provoked,2010
+2015,-34.86666667,135.7666667,injured,White Shark,Surfing/Boarding,SA,fishery bay nr port lincoln,unprovoked,2010
+2015,-32.01666667,152.5333333,injured,White Shark,Surfing/Boarding,NSW,"saltwater point, nr taree",unprovoked,2010
+2015,-35.01666667,117.3333333,injured,White Shark,Surfing/Boarding,WA,"ocean beach, demark",unprovoked,2010
+2015,-31.98333333,115.5333333,injured,Wobbegong,Swimming,WA,"rottnest island, natural jetty",provoked,2010
+2015,-28.63333333,153.6,uninjured,White Shark,Surfing/Boarding,NSW,"byron bay, belongi beach",unprovoked,2010
+2015,-35.65,150.2833333,injured,Tiger Shark,Spearfishing,NSW,"mill point, south durras",provoked,2010
+2015,-28.1,153.465,uninjured,White Shark,Surfing/Boarding,QLD,burleigh heads,unprovoked,2010
+2015,-42.63333333,147.9833333,fatal,White Shark,Diving,TAS,maria island,provoked,2010
+2015,-42.63333333,147.9833333,uninjured,White Shark,Diving,TAS,maria island,provoked,2010
+2015,-29.1,153.4333333,injured,White Shark,Surfing/Boarding,NSW,"evans head, main beach",unprovoked,2010
+2015,-28.78333333,153.5833333,uninjured,White Shark,Surfing/Boarding,NSW,lennox head,unprovoked,2010
+2015,-29.43333333,153.3666667,injured,White Shark,Surfing/Boarding,NSW,"yamba, flat rock, pippi beach",unprovoked,2010
+2015,-38.25,141.7833333,injured,White Shark,Surfing/Boarding,VIC,tyrendarra beach,unprovoked,2010
+2015,-28.86666667,153.5833333,injured,White Shark,Surfing/Boarding,NSW,"ballina, lighthouse beach",unprovoked,2010
+2015,-31.46666667,152.9166667,injured,White Shark,Surfing/Boarding,NSW,"port macquarie, lighthouse beach",unprovoked,2010
+2015,-18.83333333,147.6333333,uninjured,Tiger Shark,Surfing/Boarding,QLD,"davies reef, off townsville",unprovoked,2010
+2015,-33.05,152.5333333,injured,Unknown,Surfing/Boarding,NSW,"north shelly beach, gosford",provoked,2010
+2015,-32.06666667,152.5333333,injured,White Shark,Surfing/Boarding,NSW,black head beach,unprovoked,2010
+2015,-17.21666667,146.0833333,injured,Unknown,Snorkelling,QLD,"russell island, frankland islands, gbr",unprovoked,2010
+2015,-34.88003124,118.404958,injured,White Shark,Spearfishing,WA,"cheynes beach, albany, wa",provoked,2010
+2015,-32.6,115.6166667,injured,Grey Nurse,Surfing/Boarding,WA,"pyramids beach, mandurah",unprovoked,2010
+2015,-28.86666667,153.5833333,injured,Bull Shark,Surfing/Boarding,NSW,"ballina, north wall",unprovoked,2010
+2016,-26.8,153.1333333,injured,Wobbegong,Surfing/Boarding,QLD,caloundra,provoked,2010
+2016,-23.43333333,151.9,injured,Blacktip Reef,Swimming,QLD,heron island,unprovoked,2010
+2016,-23.15,150.9,injured,Tiger Shark,Spearfishing,QLD,"miall island, yeppoon",provoked,2010
+2016,-34.0,151.65,uninjured,White Shark,Surfing/Boarding,NSW,hams beach (part of caves beach),unprovoked,2010
+2016,-23.56666667,151.3166667,injured,Wobbegong,Spearfishing,NSW,barrenjoey,provoked,2010
+2016,-40.91666667,144.6166667,uninjured,White Shark,Surfing/Boarding,TAS,"nettley bay, marrawah",unprovoked,2010
+2016,-31.18333333,152.9666667,uninjured,White Shark,Surfing/Boarding,NSW,cresent head,unprovoked,2010
+2016,-37.03333333,139.7333333,injured,Bronze Whaler,Fishing,SA,wrights bay beach,provoked,2010
+2016,-34.03333333,151.15,uninjured,White Shark,Surfing/Boarding,NSW,"cronulla beach, sydney",unprovoked,2010
+2016,-34.65,150.85,injured,White Shark,Surfing/Boarding,NSW,"bombo beach, kiama",unprovoked,2010
+2016,-28.63333333,153.6,injured,Wobbegong,Swimming,NSW,"main beach, byron bay",provoked,2010
+2016,-32.58333333,115.6333333,fatal,White Shark,Surfing/Boarding,WA,"gearies beach, mandurah",unprovoked,2010
+2016,-28.25276667,153.5921833,uninjured,Bronze Whaler,Spearfishing,NSW,kingscliff ,provoked,2010
+2016,-31.66666667,115.6666667,fatal,White Shark,Diving,WA,"one mile reef, mindarie",unprovoked,2010
+2016,-23.02411667,113.1294,injured,Grey Reef,Spearfishing,WA,coral bay coast,provoked,2010
+2016,-34.6215,150.8568,uninjured,Unknown,Surfing/Boarding,NSW,minnamurra,unprovoked,2010
+2016,-28.2646,153.5777,uninjured,Bronze Whaler,Spearfishing,NSW,kingscliff,provoked,2010
+2016,-32.717,152.1049,uninjured,Unknown,Spearfishing,NSW,"big rocky, port stephens",provoked,2010
+2016,-28.8377,153.6044,uninjured,White Shark,Surfing/Boarding,NSW,"sharpes beach, ballina",unprovoked,2010
+2016,-28.3037,153.5742,uninjured,White Shark,Surfing/Boarding,NSW,cauarina beach,unprovoked,2010
+2016,-38.06115,144.04745,uninjured,White Shark,Surfing/Boarding,VIC,"bells beach, winkipop reef",unprovoked,2010
+2016,-28.86666667,153.5833333,injured,White Shark,Surfing/Boarding,NSW,"lighthouse beach, ballina",unprovoked,2010
+2016,-33.11656667,114.1649,uninjured,White Shark,Surfing/Boarding,WA,"injidup beach, yallingup",unprovoked,2010
+2016,-27.335,153.235,injured,White Shark,Surfing/Boarding,QLD,"kings beach, sunshine coast",unprovoked,2010
+2016,-28.83333333,153.6,injured,White Shark,Surfing/Boarding,NSW,"sharpes beach, ballina",unprovoked,2010
+2016,-33.08945,151.0587667,injured,White Shark,Surfing/Boarding,NSW,"tallows beach, byron bay",unprovoked,2010
+2016,-20.23333333,148.95,injured,Lemon Shark,Swimming,QLD,"whitehaven beach, whitsunday island",provoked,2010
+2016,-32.30595,152.52275,injured,White Shark,Surfing/Boarding,NSW,"the ruin, booti booti national park",unprovoked,2010
+2016,-12.45183333,143.3444167,uninjured,Bull Shark,Spearfishing,QLD,lockhart river,provoked,2010
+2016,-21.15741667,114.0218833,injured,Whaler Shark,Snorkelling,WA,"bundegi sanctuary zone, exmouth",unprovoked,2010
+2016,-31.14531667,115.1265,injured,Unknown,Snorkelling,WA,trigg beach,unprovoked,2010
+2017,-9.863916667,144.7908167,injured,Whaler Shark,Snorkelling,QLD,"murry island, torres strait, (80km east)",unprovoked,2010
+2017,-36.88666667,149.9131833,injured,Wobbegong,Swimming,NSW,merrimbula main beach,provoked,2010
+2017,-21.96676667,149.4843833,injured,Unknown,Swimming,QLD,flaggy rock,unprovoked,2010
+2017,-10.65406667,142.5072333,uninjured,Whaler Shark,Spearfishing,QLD,northern tip of cape york (unknown location),provoked,2010
+2017,-32.567,115.65,uninjured,Unknown,Surfing/Boarding,WA,"falcon bay, mandurah",unprovoked,2010
+2017,-18.24948333,146.1839333,injured,Tiger Shark,Snorkelling,QLD,hinchinbrook island,unprovoked,2010
+2017,-23.2411667,113.1294,injured,Bull Shark,Snorkelling,WA,mauds point coral bay,unprovoked,2010
+2017,-34.60465,150.8677833,injured,Unknown,Surfing/Boarding,NSW,"the farm, killalea state park",unprovoked,2010
+2017,-27.05206667,153.05745,uninjured,Unknown,Boating,QLD,moreton bay off redcliff,unprovoked,2010
+2017,-32.7667,152.1127,injured,Grey Nurse,Surfing/Boarding,NSW,"one mile beach, port stephens",provoked,2010
+2017,-33.83250092,121.9968696,fatal,White Shark,Surfing/Boarding,WA,"the kelp beds, wylie bay, esperance",unprovoked,2010
+2017,-33.0775,151.0725,uninjured,White Shark,Surfing/Boarding,NSW,avoca beach,unprovoked,2010
+2017,-33.3146,115.635,uninjured,White Shark,Surfing/Boarding,WA,"casuarina point, bunbury",unprovoked,2010
+2017,-38.5367,143.9715,injured,White Shark,Surfing/Boarding,VIC,"cathedral point, lorne",unprovoked,2010
+2017,-29.59387,153.3322,injured,White Shark,Surfing/Boarding,NSW,main beach illuka,unprovoked,2010
+2017,-33.8585,114.9843,uninjured,White Shark,Surfing/Boarding,WA,"north point beach, gracetown",unprovoked,2010
+2017,-20.61367,117.1863,injured,Whaler Shark,Swimming,WA,"sams creek, karratha",unprovoked,2010
+2017,-35.448,138.318,uninjured,White Shark,Boating,SA,"lady bay, normanville, adelaide",unprovoked,2010
+2017,-32.798333,152.079167,injured,Wobbegong,Surfing/Boarding,NSW,"birubi beach, port stephens",provoked,2010
+2017,-33.465,151.435,injured,White Shark,Surfing/Boarding,NSW,avoca beach,unprovoked,2010
+2017,-32.7876,152.08002,uninjured,Grey Nurse,Surfing/Boarding,NSW,"birubi, port stephens",unprovoked,2010
+2018,-16.4683,123.5353,injured,Bull Shark,Swimming,WA,"cone bay, kimberley",provoked,2010
+2018,-34.425072,150.893143,injured,White Shark,Snorkelling,NSW,"five islands, wollongong",unprovoked,2010
+2018,-33.8416,115.0221,injured,Wobbegong,Surfing/Boarding,WA,gracetown,unprovoked,2010
+2018,-14.668,145.4638,injured,Grey Reef,Snorkelling,QLD,lizard island,provoked,2010
+2018,-32.5361,115.7424,uninjured,Whaler Shark,Spearfishing,WA,"avalon point, mandurah",provoked,2010
+2018,-34.67,150.84,injured,Whaler Shark,Standing in Water,NSW,"kiama surf beach, kiama",unprovoked,2010
+2018,-31.7789,115.7326,injured,Wobbegong,Swimming,WA,"mullaoo beach, joondalup",unprovoked,2010
+2018,-33.5638,115.0629,injured,Wobbegong,Snorkelling,WA,"rocky point, eagle bay",provoked,2010
+2018,-33.993,151.1753,injured,White Shark,Swimming,NSW,"congwong beach, botany bay",unprovoked,2010
+2018,-34.2256,115.0609,uninjured,Tiger Shark,Snorkelling,WA,hamelin bay,provoked,2010
+2018,-38.37,144.28,injured,Bronze Whaler,Surfing/Boarding,VIC,"winkipop, bell's beach",unprovoked,2010
+2018,-33.8416,115.0221,injured,White Shark,Surfing/Boarding,WA,"lefthanders, gracetown",unprovoked,2010
+2018,-33.8416,115.0221,injured,White Shark,Surfing/Boarding,WA,"cobblestones beach, gracetown",unprovoked,2010
+2018,-33.9825,114.9922,uninjured,White Shark,Surfing/Boarding,WA,"main break, prevelly",unprovoked,2010
+2018,-33.8416,115.0221,uninjured,White Shark,Surfing/Boarding,WA,"lefthanders, gracetown",unprovoked,2010
+2018,-30.296,153.11,injured,Wobbegong,Surfing/Boarding,NSW,"arrawarra beach, coffs harbour",unprovoked,2010
+2018,-28.84,153.601,uninjured,White Shark,Surfing/Boarding,NSW,"flat rock, ballina",unprovoked,2010
+2018,-20.25,148.9333,injured,Tiger Shark,Swimming,QLD,"cid harbour, whitsundays",unprovoked,2010
+2018,-20.25,148.9333,injured,Tiger Shark,Swimming,QLD,"cid harbour, whitsundays",unprovoked,2010
+2018,-13.97,136.5933,injured,Bull Shark,,NT,"groote eylandt, arnhem land (east)",unprovoked,2010
+2018,-32.7667,152.0833,injured,Wobbegong,Swimming,NSW,"samurai beach, nsw",provoked,2010
+2018,-20.25,148.9333,fatal,Unknown,Surfing/Boarding,QLD,"cid harbour, whitsundays",unprovoked,2010
+2018,-33.37,151.4859,injured,Wobbegong,Surfing/Boarding,NSW,"shelley beach, manly",unprovoked,2010
+2018,-28.8632,153.5944,injured,White Shark,Surfing/Boarding,NSW,"shelly beach, ballina",unprovoked,2010
+2018,-26.791,153.139,uninjured,Tiger Shark,,QLD,"moffat beach, sunshine coast",unprovoked,2010
+2018,-34.830278,150.7561,injured,Wobbegong,Surfing/Boarding,NSW,"seven mile beach, nowra",unprovoked,2010
+2018,-12.1825,136.7819,injured,Whaler Shark,Spearfishing,NT,nhulunbuy,provoked,2010
+2018,-32.6036,115.6304,injured,Grey Nurse,Surfing/Boarding,WA,"pyramids beach, mandurah",unprovoked,2010
+2018,-30.643181,153.008839,injured,Unknown,,NSW,"the bar, nambucca river entrance",unprovoked,2010
+2018,-33.425018,151.342224,injured,Wobbegong,Swimming,NSW,"the entrance, gosford",provoked,2010
+2019,-31.989,115.7526,injured,Wobbegong,Swimming,WA,north cottesloe,unprovoked,2010
+2019,-33.6702,114.9951,uninjured,White Shark,Spearfishing,WA,,provoked,2010
+2019,-30.452,152.8979,uninjured,Unknown,Surfing/Boarding,NSW,,unprovoked,2010
+2019,-13.8611,136.8116,injured,Whitetip Reef,,NT,umbakumba - 12 km out to sea,provoked,2010
+2019,-28.6337,153.6003,injured,White Shark,Surfing/Boarding,NSW,"belongil beach, byron bay",unprovoked,2010
+2019,-18.156,147.48,injured,Grey Reef,Snorkelling,QLD,"block reef, whitsundays",unprovoked,2010
+2019,-32.7501,152.1459,injured,Grey Nurse,Spearfishing,NSW,tomaree,provoked,2010
+2019,-24.7293,152.101,injured,Unknown,Swimming,QLD,yandaran,unprovoked,2010
+2019,-43.6523,146.277,uninjured,White Shark,Diving,TAS,,provoked,2010
+2019,-28.7999,153.58,injured,Whaler Shark,,NSW,lennox point,unprovoked,2010
+2019,-11.9667,143.2333,injured,Tiger Shark,Snorkelling,QLD,"cape grenville, far north queensland",provoked,2010
+2019,-33.8005,151.2979,injured,Grey Nurse,Swimming,NSW,"shelly beach, manly",unprovoked,2010
+2019,-26.7994,153.0611,injured,Bull Shark,Surfing/Boarding,QLD,"bells creek, sunshine coast",unprovoked,2010
+2019,-28.45602,153.54457,injured,Bull Shark,Surfing/Boarding,NSW,"wooyung beach, far north coast",unprovoked,2010
+2019,-34.6817,150.8511,injured,Unknown,,NSW,surf beach kiama,unprovoked,2010
+2019,-31.7247,115.7249,uninjured,White Shark,Spearfishing,WA,"burns beach, perth",provoked,2010
+2019,-21.957,148.1893,injured,Unknown,Snorkelling,QLD,"hook passage, whitsundays",,2010
+2019,-20.3441,148.1893,injured,Unknown,Snorkelling,QLD,"hook passage, whitsundays",unprovoked,2010
+2019,-32.4436,152.5279,uninjured,White Shark,Surfing/Boarding,NSW,"lighthouse beach, seal rocks",unprovoked,2010
+2019,-27.0609,153.2006,uninjured,Unknown,Surfing/Boarding,QLD,"woorim, bribie island, queensland",,2010
+2019,-24.8312,152.4592,injured,Unknown,Snorkelling,QLD,"bargara, bundaberg",unprovoked,2010
+2019,-20.3441,114.143,injured,Unknown,,WA,exmouth boat harbour,,2010
+2019,-34.6038,150.8676,injured,Wobbegong,Surfing/Boarding,NSW,"killalea beach, shellharbour",unprovoked,2010
+2019,-23.3,151.71,injured,Lemon Shark,Swimming,QLD,north west island,,2010
+2020,-33.9222,121.9032,fatal,White Shark,Diving,WA,"cull island, esperance",unprovoked,2020
+2020,-30.3119,153.1427,uninjured,Bull Shark,Surfing/Boarding,NSW,"gallows beach, coffs harbour",unprovoked,2020
+2020,-31.9908,115.5215,uninjured,White Shark,Snorkelling,WA,"geordie bay, rottnest island",provoked,2020
+2020,-23.2951,151.7079,injured,Lemon Shark,Swimming,QLD,"north west island, gladstone, qld",unprovoked,2020
+2020,-34.5343,150.8746,injured,Unknown,Surfing/Boarding,NSW,"windang beach, wollongong, nsw",unprovoked,2020
+2020,-14.6787,145.4483,injured,Lemon Shark,Swimming,QLD,"lizard island, research station",unprovoked,2020
+2020,-31.19,152.98,injured,Wobbegong,Swimming,NSW,"killick creek, crescent head",unprovoked,2020
+2020,-23.2951,151.7079,fatal,Unknown,Swimming,QLD,north west island,unprovoked,2020
+2020,-21.93,114.117778,uninjured,Bull Shark,Surfing/Boarding,WA,"steps surf break, lighthouse bay, exmouth",unprovoked,2020
+2020,-34.6817,150.8511,uninjured,Bull Shark,Surfing/Boarding,NSW,"surf beach, kiama",unprovoked,2020
+2020,-38.3669,144.2847,injured,Whaler Shark,Surfing/Boarding,VIC,bells beach,unprovoked,2020
+2020,-28.2778,153.5774,fatal,White Shark,Surfing/Boarding,NSW,"casuarina beach, kingscliff ",unprovoked,2020
+2020,-22.6799,113.698,injured,Unknown,Surfing/Boarding,WA,"tantabiddi beach, ningaloo",unprovoked,2020
+2020,-33.49762,151.420378,uninjured,White Shark,Surfing/Boarding,NSW,macmasters beach,unprovoked,2020
+2020,-34.33834,150.91347,uninjured,Bronze Whaler,Spearfishing,NSW,"bulli, illawarra",provoked,2020
+2020,-34.33834,150.91347,uninjured,Bronze Whaler,Spearfishing,NSW,"bulli, illawarra",provoked,2020
+2020,-34.33834,150.91347,uninjured,Bronze Whaler,Spearfishing,NSW,"bulli, illawarra",provoked,2020
+2020,-33.5427,115.0392,injured,White Shark,,WA,bunker bay,unprovoked,2020
+2020,-16.9337,145.9943,injured,Whaler Shark,Swimming,QLD,"fitzroy island, cairns",unprovoked,2020
+2020,-25.2398,153.1325,fatal,Whaler Shark,Snorkelling,QLD,"fraser island, sunshine coast",provoked,2020
+2020,-40.7667,145.3,injured,White Shark,Fishing,TAS,"stanley, north west coast",provoked,2020
+2020,-33.44815,151.44666,uninjured,Dusky Shark,Swimming,NSW,"terrigal, central coast",unprovoked,2020
+2020,-29.853,153.2715,fatal,White Shark,Surfing/Boarding,NSW,"wooli beach, wilsons headland, mid north coast",unprovoked,2020
+2020,-31.4333,152.9,injured,White Shark,Surfing/Boarding,NSW,"shelly beach, port macquarie",unprovoked,2020
+2020,-28.164,153.5476,fatal,White Shark,,QLD,"greenmount beach, gold coast",unprovoked,2020
+2020,-28.33362,153.569698,uninjured,White Shark,Surfing/Boarding,NSW,cabarita beach ,provoked,2020
+2020,-32.7876,152.08002,uninjured,Whaler Shark,Standing in Water,NSW,"birubi, port stephens",unprovoked,2020
+2020,-32.7876,153.08002,injured,Wobbegong,Surfing/Boarding,NSW,"birubi, port stephens",unprovoked,2020
+2020,-33.95,151.267,injured,White Shark,Diving,NSW,"magic point, maroubra",unprovoked,2020
+2020,-38.26789,144.66193,uninjured,Whaler Shark,Surfing/Boarding,NSW,"queenscliff, north steyne",unprovoked,2020
+2020,-18.25,146.666944,injured,Bull Shark,Spearfishing,QLD,"britomart reef, hinchinbrook island",provoked,2020
+2020,-34.8611,121.8919,fatal,White Shark,Surfing/Boarding,WA,"kelps beds, esperance ",unprovoked,2020
+2020,-17.9319,122.2081,fatal,Bull Shark,Surfing/Boarding,WA,"cable beach, broome",unprovoked,2020
+2020,-13.7333,143.8667,uninjured,Hammerhead,Fishing,QLD,"magpie reef, princess charlotte bay, cape york",provoked,2020
+2020,-31.4295,152.9193,injured,Wobbegong,Surfing/Boarding,NSW,"town beach, port macquarie",unprovoked,2020
+2020,-17.9319,122.2081,injured,Bull Shark,Surfing/Boarding,WA,"cable beach, broome",unprovoked,2020
+2020,-35.9295,137.5966,injured,White Shark,Surfing/Boarding,SA,"d'estrees bay, kangaroo island",unprovoked,2020
+2021,-33.0833,151.5833,injured,Bull Shark,Swimming,NSW,lake macquarie,unprovoked,2020
+2021,-33.864,114.9864,injured,Wobbegong,Swimming,WA,"melaleuca beach, cowaramup bay, gracetown",unprovoked,2020
+2021,-32.0117,115.7866,injured,Bull Shark,Swimming,WA,"swan river, point walter reserve, bicton",unprovoked,2020
+2021,-31.034,115.3356,injured,Wobbegong,Surfing/Boarding,WA,lancelin back beach,unprovoked,2020
+2021,-34.0557,151.1551,uninjured,Wobbegong,Surfing/Boarding,NSW,"cronulla beach, sydney",unprovoked,2020
+2021,-34.2763,115.052,uninjured,Wobbegong,Spearfishing,WA,"deepene beach, elephant rock, hamelin bay",provoked,2020
+2021,-36.8875,149.9059,injured,Unknown,Swimming,NSW,merimbula main beach,unprovoked,2020
+2021,-23.325,113.791,injured,Bull Shark,Spearfishing,WA,"sandy point, warroora station, coral bay",provoked,2020
+2021,-33.6397,115.0263,uninjured,Blacktip Reef,Surfing/Boarding,WA,yallingup,unprovoked,2020
+2021,-20.6564,116.7081,injured,Blacktip Reef,Swimming,WA,dampier boat ramp,unprovoked,2020
+2021,-17.5804,122.1571,injured,Tiger Shark,Spearfishing,WA,quondong beach,provoked,2020
+2021,-32.1521,152.5053,fatal,White Shark,Surfing/Boarding,NSW,tuncurry beach,unprovoked,2020
+2021,-23.1423,113.7723,injured,Tiger Shark,Snorkelling,WA,"five fingers reef, coral bay",unprovoked,2020
+2021,-29.9453,114.9824,injured,White Shark,Spearfishing,WA,"gumtree bay, leeman",provoked,2020
+2021,-31.1295,153.0011,injured,White Shark,Surfing/Boarding,NSW,killick beach at crescent head,unprovoked,2020
+2021,-20.6517,115.5785,injured,Lemon Shark,Boating,WA,varanus island,provoked,2020
+2021,-30.1575,153.1502,fatal,White Shark,Surfing/Boarding,NSW,emerald beach,unprovoked,2020
+2021,-30.286,153.1364,injured,Wobbegong,Surfing/Boarding,NSW,"park beach, coffs harbour",unprovoked,2020
+2021,-20.2665,148.8819,injured,Unknown,Swimming,QLD,"hook passage, whitsundays",unprovoked,2020
+2021,-30.2042,153.149,injured,Wobbegong,Surfing/Boarding,NSW,moonee beach,unprovoked,2020
+2021,-32.0569,115.7439,fatal,White Shark,Swimming,WA,"port beach, fremantle",unprovoked,2020
+2021,-38.2676,144.5067,injured,Unknown,,VIC,"ocean grove beach, geelong",unprovoked,2020
+2021,-38.2676,144.5067,injured,Unknown,Surfing/Boarding,VIC,"ocean grove beach, geelong",unprovoked,2020
+2021,-16.9062,145.8662,injured,Bull Shark,Spearfishing,QLD,"rocky island, yarrabah, far north queensland",provoked,2020
+2022,-35.1011,150.6892,injured,Whaler Shark,Swimming,NSW,hyams beach (seamans),unprovoked,2020
+2022,-33.7,151.2999,injured,Wobbegong,Swimming,NSW,turimetta,unprovoked,2020
+2022,-35.0031,117.866,injured,Wobbegong,Snorkelling,WA,"whalers beach, albany",unprovoked,2020
+2022,-30.883,153.083,fatal,White Shark,Swimming,NSW,"little bay, sydney",unprovoked,2020
+2022,-27.2333,153.2667,injured,Tiger Shark,Standing in Water,QLD,"Redcliffe, Brisbane",unprovoked,2020
+2022,-33.84848,121.9184,injured,White Shark,Standing in Water,WA,"wylie bay, esperance",unprovoked,2020
+2022,-33.8006,151.2982,injured,Wobbegong,Diving,NSW,"shelley beach, manly",unprovoked,2020
+2022,-32.0,152.7512,injured,Wobbegong,Standing in Water,NSW,crowdy head beach,unprovoked,2020
+2022,-33.9516,151.2603,uninjured,Unknown,Surfing/Boarding,NSW,"maroubra beach, sydney",unprovoked,2020

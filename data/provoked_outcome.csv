@@ -1,0 +1,7 @@
+Provoked.unprovoked,Victim.injury,count,total,pct
+provoked,fatal,53,398,13.3
+provoked,injured,261,398,65.6
+provoked,uninjured,84,398,21.1
+unprovoked,fatal,197,794,24.8
+unprovoked,injured,459,794,57.8
+unprovoked,uninjured,138,794,17.4

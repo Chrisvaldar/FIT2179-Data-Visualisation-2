@@ -1,0 +1,7 @@
+Victim.gender,Victim.injury,count
+female,fatal,16
+female,injured,86
+female,uninjured,15
+male,fatal,232
+male,injured,625
+male,uninjured,203
