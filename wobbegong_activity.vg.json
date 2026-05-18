@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "The wobbegong exception: 201 incidents, zero fatalities",
+    "subtitle": "Wobbegongs bite when disturbed. Every single incident was non-fatal.",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 500,
+  "height": 360,
+  "data": { "url": "data/wobbegong_activity.csv" },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3
+  },
+  "encoding": {
+    "y": {
+      "field": "Activity\\.clean",
+      "type": "nominal",
+      "sort": "x",
+      "axis": {
+        "title": "Activity",
+        "labelFontSize": 12,
+        "titleFontSize": 12,
+        "titleAngle": 0,
+        "titleAlign": "right",
+        "titleX": -5,
+        "titleY": -10
+      }
+    },
+    "x": {
+      "field": "count",
+      "type": "quantitative",
+      "stack": "zero",
+      "axis": {
+        "title": "Number of incidents",
+        "grid": true,
+        "gridColor": "#eeeeee"
+      }
+    },
+    "color": {
+      "field": "Victim\\.injury",
+      "type": "nominal",
+      "scale": {
+        "domain": ["injured", "uninjured"],
+        "range": ["#e67e22", "#7f8c8d"]
+      },
+      "legend": {
+        "title": "Outcome",
+        "orient": "right",
+        "labelFontSize": 11,
+        "labelExpr": "datum.label === 'injured' ? 'Injured' : 'Uninjured'"
+      }
+    },
+    "tooltip": [
+      { "field": "Activity\\.clean", "title": "Activity" },
+      { "field": "Victim\\.injury", "title": "Outcome" },
+      { "field": "count", "title": "Incidents" }
+    ]
+  }
+}
