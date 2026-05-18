@@ -1,0 +1,190 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Shark incidents per decade, 1790s to 2020s",
+    "subtitle": "Raw counts have surged since 2000, but the rate per million Australians tells a different story.",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 800,
+  "height": 420,
+  "params": [
+    {
+      "name": "metric",
+      "value": "count",
+      "bind": {
+        "input": "radio",
+        "options": ["count", "rate"],
+        "labels": ["Raw incident count", "Rate per million people"],
+        "name": "Show: "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "description": "Stacked area using fold for count view",
+      "data": { "url": "data/decade_timeline.csv" },
+      "transform": [
+        { "filter": "metric === 'count'" },
+        {
+          "fold": ["uninjured", "injured", "fatal"],
+          "as": ["outcome", "n"]
+        }
+      ],
+      "mark": { "type": "area", "opacity": 0.85, "line": false },
+      "encoding": {
+        "x": {
+          "field": "Decade",
+          "type": "quantitative",
+          "axis": {
+            "title": "Decade",
+            "tickCount": 12,
+            "format": "d",
+            "labelAngle": -45,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "n",
+          "type": "quantitative",
+          "stack": "zero",
+          "axis": { "title": "Number of incidents", "grid": true }
+        },
+        "color": {
+          "field": "outcome",
+          "type": "nominal",
+          "scale": {
+            "domain": ["fatal", "injured", "uninjured"],
+            "range": ["#c0392b", "#e67e22", "#7f8c8d"]
+          },
+          "legend": {
+            "title": "Outcome",
+            "orient": "right",
+            "labelFontSize": 11,
+            "labelExpr": "datum.label === 'fatal' ? 'Fatal' : datum.label === 'injured' ? 'Injured' : 'Uninjured'"
+          }
+        },
+        "order": {
+          "field": "outcome",
+          "sort": { "field": "outcome", "order": "descending" }
+        },
+        "tooltip": [
+          {
+            "field": "Decade",
+            "type": "quantitative",
+            "title": "Decade",
+            "format": "d"
+          },
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "Total incidents"
+          },
+          { "field": "fatal", "type": "quantitative", "title": "Fatal" },
+          { "field": "injured", "type": "quantitative", "title": "Injured" },
+          { "field": "uninjured", "type": "quantitative", "title": "Uninjured" }
+        ]
+      }
+    },
+    {
+      "description": "Rate per million area fill",
+      "data": { "url": "data/decade_timeline.csv" },
+      "transform": [{ "filter": "metric === 'rate'" }],
+      "mark": { "type": "area", "opacity": 0.15, "color": "#2c3e50" },
+      "encoding": {
+        "x": {
+          "field": "Decade",
+          "type": "quantitative",
+          "axis": {
+            "title": "Decade",
+            "tickCount": 12,
+            "format": "d",
+            "labelAngle": -45,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "rate_per_million",
+          "type": "quantitative",
+          "axis": { "title": "Incidents per million people", "grid": true }
+        }
+      }
+    },
+    {
+      "description": "Rate per million line with points",
+      "data": { "url": "data/decade_timeline.csv" },
+      "transform": [{ "filter": "metric === 'rate'" }],
+      "mark": {
+        "type": "line",
+        "color": "#2c3e50",
+        "strokeWidth": 2.5,
+        "point": { "filled": true, "size": 55, "fill": "#2c3e50" }
+      },
+      "encoding": {
+        "x": { "field": "Decade", "type": "quantitative" },
+        "y": { "field": "rate_per_million", "type": "quantitative" },
+        "tooltip": [
+          {
+            "field": "Decade",
+            "type": "quantitative",
+            "title": "Decade",
+            "format": "d"
+          },
+          {
+            "field": "rate_per_million",
+            "type": "quantitative",
+            "title": "Rate per million",
+            "format": ".2f"
+          },
+          { "field": "total", "type": "quantitative", "title": "Raw count" },
+          {
+            "field": "population_m",
+            "type": "quantitative",
+            "title": "Population (millions)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Vertical annotation rules",
+      "data": {
+        "values": [{ "Decade": 1937 }, { "Decade": 1940 }, { "Decade": 2020 }]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 3],
+        "strokeWidth": 1.3,
+        "color": "#444444",
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": { "field": "Decade", "type": "quantitative" }
+      }
+    },
+    {
+      "description": "Annotation text labels",
+      "data": {
+        "values": [
+          { "Decade": 1938, "y_pos": 215, "label": "Shark nets NSW (1937)" },
+          { "Decade": 1941, "y_pos": 175, "label": "WW2 dip" },
+          { "Decade": 2021, "y_pos": 90, "label": "Partial decade" }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 10,
+        "color": "#333333",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": { "field": "Decade", "type": "quantitative" },
+        "y": { "field": "y_pos", "type": "quantitative" },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    }
+  ]
+}
