@@ -1,0 +1,133 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Which shark should you actually fear?",
+    "subtitle": "Bubble size = median shark length (m). Colour = % of attacks that were provoked.",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 650,
+  "height": 480,
+  "data": { "url": "data/species_bubble.csv" },
+  "transform": [
+    {
+      "calculate": "datum['Species.clean'] === 'Bronze Whaler' ? -4 : datum['Species.clean'] === 'Dusky Shark' ? -2 : datum['Species.clean'] === 'Grey Nurse' ? -6 : datum['Species.clean'] === 'Grey Reef' ? -8 : datum['Species.clean'] === 'Hammerhead' ? -10 : datum['Species.clean'] === 'Lemon Shark' ? -12 : datum['Species.clean'] === 'Whitetip Reef' ? -14 : datum['fatal_rate']",
+      "as": "y_display"
+    },
+    {
+      "calculate": "datum['Species.clean'] === 'Bronze Whaler' ? 4 : datum['Species.clean'] === 'Dusky Shark' ? 4 : datum['Species.clean'] === 'Grey Nurse' ? 4 : datum['Species.clean'] === 'Grey Reef' ? 4 : datum['Species.clean'] === 'Hammerhead' ? 4 : datum['Species.clean'] === 'Lemon Shark' ? 4 : datum['Species.clean'] === 'Whitetip Reef' ? 4 : -14",
+      "as": "label_dy"
+    }
+  ],
+  "layer": [
+    {
+      "description": "Bubble marks",
+      "mark": {
+        "type": "circle",
+        "opacity": 0.82,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "count",
+          "type": "quantitative",
+          "axis": {
+            "title": "Number of incidents",
+            "grid": true,
+            "gridColor": "#eeeeee"
+          }
+        },
+        "y": {
+          "field": "y_display",
+          "type": "quantitative",
+          "scale": { "domain": [-18, 42] },
+          "axis": {
+            "title": "Fatality rate (%)",
+            "grid": true,
+            "gridColor": "#eeeeee",
+            "values": [0, 5, 10, 15, 20, 25, 30, 35, 40]
+          }
+        },
+        "size": {
+          "field": "median_length",
+          "type": "quantitative",
+          "scale": { "range": [60, 2800] },
+          "legend": null
+        },
+        "color": {
+          "field": "provoked_rate",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "orangered",
+            "domain": [0, 100]
+          },
+          "legend": {
+            "title": "% provoked",
+            "orient": "right",
+            "labelFontSize": 10,
+            "gradientLength": 120
+          }
+        },
+        "tooltip": [
+          { "field": "Species\\.clean", "title": "Species" },
+          { "field": "count", "title": "Total incidents" },
+          { "field": "fatal", "title": "Fatal" },
+          {
+            "field": "fatal_rate",
+            "title": "Fatality rate (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "median_length",
+            "title": "Median length (m)",
+            "format": ".1f"
+          },
+          { "field": "provoked_rate", "title": "% provoked", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "description": "Species labels",
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#222222"
+      },
+      "encoding": {
+        "x": { "field": "count", "type": "quantitative" },
+        "y": { "field": "y_display", "type": "quantitative" },
+        "dy": { "field": "label_dy", "type": "quantitative" },
+        "text": { "field": "Species\\.clean", "type": "nominal" }
+      }
+    },
+    {
+      "description": "Median length legend - manual bubbles on the right",
+      "data": {
+        "values": [
+          { "len": 1.0, "label": "1.0 m" },
+          { "len": 2.0, "label": "2.0 m" },
+          { "len": 3.0, "label": "3.0 m" },
+          { "len": 4.0, "label": "4.0 m" }
+        ]
+      },
+      "mark": { "type": "point", "opacity": 0, "size": 0 },
+      "encoding": {
+        "size": {
+          "field": "len",
+          "type": "quantitative",
+          "scale": { "range": [60, 2800], "domain": [1, 4] },
+          "legend": {
+            "title": "Median length (m)",
+            "orient": "right",
+            "labelFontSize": 10,
+            "values": [1.0, 2.0, 3.0, 4.0],
+            "symbolFillColor": "#888888",
+            "legendY": 160
+          }
+        }
+      }
+    }
+  ]
+}
