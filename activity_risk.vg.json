@@ -1,0 +1,222 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Activity risk: volume vs fatality rate",
+    "subtitle": "Swimming dominates on both measures. Surfing is common but rarely fatal. Fishing: 37 incidents, zero deaths.",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 16
+  },
+  "data": { "url": "data/activity_risk.csv" },
+  "transform": [{ "calculate": "-datum.count", "as": "count_neg" }],
+  "hconcat": [
+    {
+      "title": {
+        "text": "Number of incidents",
+        "fontSize": 12,
+        "anchor": "middle"
+      },
+      "width": 260,
+      "height": 300,
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "strokeWidth": 2,
+            "color": "#2c3e50"
+          },
+          "encoding": {
+            "y": {
+              "field": "Activity\\.clean",
+              "type": "nominal",
+              "sort": { "field": "count", "order": "descending" },
+              "axis": null
+            },
+            "x": {
+              "field": "count_neg",
+              "type": "quantitative",
+              "scale": { "domain": [-520, 0] },
+              "axis": {
+                "title": "Number of incidents",
+                "labelExpr": "abs(datum.value)",
+                "grid": true,
+                "gridColor": "#eeeeee"
+              }
+            },
+            "x2": { "datum": 0 },
+            "tooltip": [
+              { "field": "Activity\\.clean", "title": "Activity" },
+              { "field": "count", "title": "Total incidents" },
+              { "field": "fatal", "title": "Fatal" },
+              {
+                "field": "fatal_rate",
+                "title": "Fatality rate (%)",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": { "type": "circle", "size": 80, "color": "#2c3e50" },
+          "encoding": {
+            "y": {
+              "field": "Activity\\.clean",
+              "type": "nominal",
+              "sort": { "field": "count", "order": "descending" },
+              "axis": null
+            },
+            "x": {
+              "field": "count_neg",
+              "type": "quantitative",
+              "scale": { "domain": [-520, 0] }
+            },
+            "tooltip": [
+              { "field": "Activity\\.clean", "title": "Activity" },
+              { "field": "count", "title": "Total incidents" },
+              { "field": "fatal", "title": "Fatal" },
+              {
+                "field": "fatal_rate",
+                "title": "Fatality rate (%)",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "rule",
+            "strokeWidth": 0.5,
+            "color": "#dddddd",
+            "strokeDash": [2, 2]
+          },
+          "encoding": {
+            "y": {
+              "field": "Activity\\.clean",
+              "type": "nominal",
+              "sort": { "field": "count", "order": "descending" }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": "Activity",
+        "fontSize": 12,
+        "anchor": "middle"
+      },
+      "width": 100,
+      "height": 300,
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "fontSize": 11.5,
+            "fontWeight": "bold",
+            "color": "#333333",
+            "align": "center"
+          },
+          "encoding": {
+            "y": {
+              "field": "Activity\\.clean",
+              "type": "nominal",
+              "sort": { "field": "count", "order": "descending" },
+              "axis": null
+            },
+            "text": { "field": "Activity\\.clean", "type": "nominal" }
+          }
+        }
+      ],
+      "view": { "stroke": null }
+    },
+    {
+      "title": {
+        "text": "Fatality rate (%)",
+        "fontSize": 12,
+        "anchor": "middle"
+      },
+      "width": 260,
+      "height": 300,
+      "layer": [
+        {
+          "mark": { "type": "rule", "strokeWidth": 2, "color": "#c0392b" },
+          "encoding": {
+            "y": {
+              "field": "Activity\\.clean",
+              "type": "nominal",
+              "sort": { "field": "count", "order": "descending" },
+              "axis": null
+            },
+            "x": {
+              "field": "fatal_rate",
+              "type": "quantitative",
+              "scale": { "domain": [0, 40] },
+              "axis": {
+                "title": "Fatality rate (%)",
+                "grid": true,
+                "gridColor": "#eeeeee"
+              }
+            },
+            "x2": { "datum": 0 },
+            "tooltip": [
+              { "field": "Activity\\.clean", "title": "Activity" },
+              { "field": "count", "title": "Total incidents" },
+              { "field": "fatal", "title": "Fatal" },
+              {
+                "field": "fatal_rate",
+                "title": "Fatality rate (%)",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": { "type": "circle", "size": 80, "color": "#c0392b" },
+          "encoding": {
+            "y": {
+              "field": "Activity\\.clean",
+              "type": "nominal",
+              "sort": { "field": "count", "order": "descending" },
+              "axis": null
+            },
+            "x": {
+              "field": "fatal_rate",
+              "type": "quantitative",
+              "scale": { "domain": [0, 40] }
+            },
+            "tooltip": [
+              { "field": "Activity\\.clean", "title": "Activity" },
+              { "field": "count", "title": "Total incidents" },
+              { "field": "fatal", "title": "Fatal" },
+              {
+                "field": "fatal_rate",
+                "title": "Fatality rate (%)",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "rule",
+            "strokeWidth": 0.5,
+            "color": "#dddddd",
+            "strokeDash": [2, 2]
+          },
+          "encoding": {
+            "y": {
+              "field": "Activity\\.clean",
+              "type": "nominal",
+              "sort": { "field": "count", "order": "descending" }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "spacing": 0,
+  "config": {
+    "view": { "stroke": null }
+  }
+}
