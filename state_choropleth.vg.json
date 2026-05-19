@@ -73,12 +73,12 @@
             "zero": true
           },
           "legend": {
-            "title": {
-              "expr": "metric === 'total' ? 'Total incidents' : 'Fatal rate (%)'"
-            },
+            "title": "Value (toggle to switch)",
             "orient": "bottom-left",
             "gradientLength": 180,
-            "labelFontSize": 11
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "titleFontWeight": "bold"
           },
           "condition": {
             "test": "datum.display_value === null",

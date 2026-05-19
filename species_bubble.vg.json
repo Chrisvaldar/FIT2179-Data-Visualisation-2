@@ -54,19 +54,31 @@
           "field": "median_length",
           "type": "quantitative",
           "scale": { "range": [60, 2800] },
-          "legend": null
+          "legend": {
+            "title": "Median length (m)",
+            "orient": "right",
+            "labelFontSize": 10,
+            "titleFontSize": 11,
+            "titleFontWeight": "bold",
+            "values": [1.0, 2.0, 3.0, 4.0],
+            "symbolOpacity": 0.4,
+            "symbolBaseFillColor": "#888888",
+            "symbolStrokeWidth": 0
+          }
         },
         "color": {
           "field": "provoked_rate",
           "type": "quantitative",
           "scale": {
-            "scheme": "orangered",
+            "scheme": "oranges",
             "domain": [0, 100]
           },
           "legend": {
             "title": "% provoked",
             "orient": "right",
             "labelFontSize": 10,
+            "titleFontSize": 11,
+            "titleFontWeight": "bold",
             "gradientLength": 120
           }
         },
@@ -101,33 +113,11 @@
         "dy": { "field": "label_dy", "type": "quantitative" },
         "text": { "field": "Species\\.clean", "type": "nominal" }
       }
-    },
-    {
-      "description": "Median length legend - manual bubbles on the right",
-      "data": {
-        "values": [
-          { "len": 1.0, "label": "1.0 m" },
-          { "len": 2.0, "label": "2.0 m" },
-          { "len": 3.0, "label": "3.0 m" },
-          { "len": 4.0, "label": "4.0 m" }
-        ]
-      },
-      "mark": { "type": "point", "opacity": 0, "size": 0 },
-      "encoding": {
-        "size": {
-          "field": "len",
-          "type": "quantitative",
-          "scale": { "range": [60, 2800], "domain": [1, 4] },
-          "legend": {
-            "title": "Median length (m)",
-            "orient": "right",
-            "labelFontSize": 10,
-            "values": [1.0, 2.0, 3.0, 4.0],
-            "symbolFillColor": "#888888",
-            "legendY": 160
-          }
-        }
-      }
     }
-  ]
+  ],
+  "resolve": {
+    "legend": {
+      "size": "independent"
+    }
+  }
 }

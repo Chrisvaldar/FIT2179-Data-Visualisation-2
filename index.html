@@ -1,19 +1,697 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharks in Australian Waters, 1791–2022</title>
+
+    <!-- Vega -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <!-- Fonts: Playfair Display for editorial headers, Source Sans 3 for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ============================================================
+       DESIGN TOKENS
+       Palette: deep ocean navy, sandy warm tan, blood red accent,
+       foam off-white, slate mid-tone
+    ============================================================ */
+      :root {
+        --ocean: #0d2b3e;
+        --ocean-mid: #1a4a63;
+        --ocean-light: #2c6e8a;
+        --sand: #c8a96e;
+        --sand-light: #e8d9b8;
+        --sand-pale: #f5f0e6;
+        --blood: #9b2226;
+        --blood-light: #c0392b;
+        --foam: #fafaf7;
+        --slate: #4a6274;
+        --text-dark: #1a2530;
+        --text-mid: #3d5263;
+        --text-light: #6b8899;
+
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-body: "Source Sans 3", "Helvetica Neue", sans-serif;
+
+        --section-gap: 80px;
+        --chart-gap: 40px;
+        --max-width: 1160px;
+      }
+
+      /* ============================================================
+       RESET & BASE
+    ============================================================ */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--foam);
+        color: var(--text-dark);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ============================================================
+       HERO / MASTHEAD
+    ============================================================ */
+      .hero {
+        background: var(--ocean);
+        background-image:
+          radial-gradient(
+            ellipse at 80% 50%,
+            rgba(44, 110, 138, 0.45) 0%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse at 10% 80%,
+            rgba(155, 34, 38, 0.18) 0%,
+            transparent 50%
+          );
+        color: var(--foam);
+        padding: 56px 48px 52px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle wave texture using SVG background */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='120' height='40' viewBox='0 0 120 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q30 5 60 20 Q90 35 120 20' stroke='rgba(255,255,255,0.04)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+        background-size: 120px 40px;
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 32px;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-text {
+      }
+
+      .hero-eyebrow {
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--sand);
+        margin-bottom: 14px;
+      }
+
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(36px, 5vw, 62px);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+        color: var(--foam);
+        margin-bottom: 20px;
+      }
+
+      .hero-title em {
+        font-style: italic;
+        color: var(--sand);
+      }
+
+      .hero-subtitle {
+        font-size: 15px;
+        font-weight: 300;
+        color: rgba(250, 250, 247, 0.75);
+        max-width: 580px;
+        line-height: 1.7;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 36px;
+        margin-top: 36px;
+      }
+
+      .stat-pill {
+        text-align: center;
+      }
+
+      .stat-pill .num {
+        font-family: var(--font-display);
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--sand);
+        line-height: 1;
+        display: block;
+      }
+
+      .stat-pill .lbl {
+        font-size: 11px;
+        font-weight: 300;
+        color: rgba(250, 250, 247, 0.6);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-top: 4px;
+        display: block;
+      }
+
+      /* SVG shark illustration */
+      .hero-shark {
+        width: 260px;
+        opacity: 0.18;
+        flex-shrink: 0;
+      }
+
+      /* ============================================================
+       COLOUR KEY BAR (outcome legend, shared across all charts)
+    ============================================================ */
+      .legend-bar {
+        background: var(--ocean-mid);
+        padding: 12px 48px;
+      }
+
+      .legend-bar-inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .legend-bar-label {
+        font-family: var(--font-body);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(250, 250, 247, 0.55);
+        margin-right: 8px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: rgba(250, 250, 247, 0.85);
+      }
+
+      .legend-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .dot-fatal {
+        background: #c0392b;
+      }
+      .dot-injured {
+        background: #e67e22;
+      }
+      .dot-uninjured {
+        background: #7f8c8d;
+      }
+
+      /* ============================================================
+       MAIN LAYOUT
+    ============================================================ */
+      .page {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 40px 80px;
+      }
+
+      /* ============================================================
+       SECTION HEADERS
+    ============================================================ */
+      .section {
+        margin-top: var(--section-gap);
+      }
+
+      .section-header {
+        border-left: 4px solid var(--blood);
+        padding-left: 18px;
+        margin-bottom: 32px;
+      }
+
+      .section-number {
+        font-family: var(--font-body);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--blood);
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(22px, 3vw, 30px);
+        font-weight: 700;
+        color: var(--ocean);
+        line-height: 1.2;
+      }
+
+      .section-intro {
+        font-size: 15px;
+        color: var(--text-mid);
+        max-width: 720px;
+        line-height: 1.75;
+        margin-top: 8px;
+      }
+
+      /* ============================================================
+       CHART WRAPPERS
+    ============================================================ */
+      .chart-block {
+        background: #ffffff;
+        border-radius: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        box-shadow: 0 2px 12px rgba(13, 43, 62, 0.06);
+        padding: 32px 36px 28px;
+        margin-bottom: var(--chart-gap);
+        overflow: hidden;
+      }
+
+      .chart-block.full-width {
+        width: 100%;
+      }
+
+      .chart-caption {
+        font-size: 13px;
+        color: var(--text-light);
+        margin-top: 18px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(0, 0, 0, 0.07);
+        max-width: 700px;
+        line-height: 1.6;
+      }
+
+      .chart-caption strong {
+        color: var(--text-mid);
+        font-weight: 600;
+      }
+
+      /* Two-column chart grid */
+      .chart-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--chart-gap);
+        margin-bottom: var(--chart-gap);
+      }
+
+      /* ============================================================
+       DIVIDER
+    ============================================================ */
+      .section-divider {
+        border: none;
+        border-top: 1px solid rgba(13, 43, 62, 0.1);
+        margin: 0;
+      }
+
+      /* ============================================================
+       FOOTER
+    ============================================================ */
+      footer {
+        background: var(--ocean);
+        color: rgba(250, 250, 247, 0.55);
+        font-size: 12px;
+        padding: 28px 48px;
+        margin-top: 80px;
+        line-height: 1.6;
+      }
+
+      footer .footer-inner {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      footer a {
+        color: var(--sand);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* ============================================================
+       VEGA EMBED OVERRIDES: remove default border/shadow
+    ============================================================ */
+      .vega-embed {
+        width: 100% !important;
+      }
+      .vega-embed canvas {
+        display: block;
+      }
+      .vega-embed summary {
+        opacity: 0.3 !important;
+      }
+
+      /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+      @media (max-width: 860px) {
+        .hero {
+          padding: 40px 24px;
+        }
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        .hero-shark {
+          display: none;
+        }
+        .page {
+          padding: 0 20px 60px;
+        }
+        .legend-bar {
+          padding: 12px 20px;
+        }
+        .chart-grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .chart-block {
+          padding: 20px 18px;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <div id="vis"></div>
+    <!-- ============================================================
+       HERO MASTHEAD
+  ============================================================ -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">
+            FIT2179 Data Visualisation 2 &nbsp;|&nbsp; Australia, 1791–2022
+          </p>
+          <h1 class="hero-title">Sharks in<br /><em>Australian Waters</em></h1>
+          <p class="hero-subtitle">
+            Over 230 years and 1,196 recorded incidents, the story of sharks and
+            Australians is more nuanced than the headlines suggest. Who gets
+            attacked, which sharks are truly dangerous, and does the risk
+            actually keep growing?
+          </p>
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <span class="num">1,196</span>
+              <span class="lbl">Total incidents</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">232</span>
+              <span class="lbl">Years of data</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">22.6%</span>
+              <span class="lbl">Overall fatality rate</span>
+            </div>
+            <div class="stat-pill">
+              <span class="num">7</span>
+              <span class="lbl">States covered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inline SVG shark silhouette -->
+        <svg
+          class="hero-shark"
+          viewBox="0 0 400 200"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <!-- Body -->
+          <path
+            d="M20 110 Q80 60 180 90 Q280 115 380 100 Q360 130 280 140 Q180 155 80 135 Z"
+            fill="white"
+          />
+          <!-- Dorsal fin -->
+          <path d="M180 90 Q200 30 230 75 Q210 85 180 90 Z" fill="white" />
+          <!-- Pectoral fin -->
+          <path d="M160 115 Q130 155 110 145 Q140 125 160 115 Z" fill="white" />
+          <!-- Tail -->
+          <path d="M370 100 Q400 70 395 105 Q400 140 370 120 Z" fill="white" />
+          <!-- Eye -->
+          <circle cx="100" cy="110" r="5" fill="var(--ocean)" />
+          <!-- Mouth suggestion -->
+          <path
+            d="M30 115 Q45 125 60 118"
+            stroke="var(--ocean)"
+            stroke-width="2.5"
+            fill="none"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <!-- Shared colour legend -->
+    <div class="legend-bar">
+      <div class="legend-bar-inner">
+        <span class="legend-bar-label">Outcome key</span>
+        <span class="legend-item"
+          ><span class="legend-dot dot-fatal"></span> Fatal</span
+        >
+        <span class="legend-item"
+          ><span class="legend-dot dot-injured"></span> Injured</span
+        >
+        <span class="legend-item"
+          ><span class="legend-dot dot-uninjured"></span> Uninjured</span
+        >
+      </div>
+    </div>
+
+    <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+    <main class="page">
+      <!-- ─── SECTION 1: Setting the Scene ─── -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-number">Section 1</span>
+          <h2 class="section-title">Setting the Scene: Australia and Sharks</h2>
+          <p class="section-intro">
+            Every dot is a real incident. The coastal concentration along New
+            South Wales and Queensland is immediate, but the choropleth tells a
+            different story when you switch from raw counts to fatality rates.
+          </p>
+        </div>
+
+        <!-- 1.1 Dot map -->
+        <div class="chart-block full-width">
+          <div id="vis-dot-map"></div>
+          <p class="chart-caption">
+            <strong>Figure 1.1 — Incident locations, 1791–2022.</strong>
+            Use the decade filter to watch incidents cluster. Pre-1900 incidents
+            are concentrated around Sydney Harbour, reflecting colonial-era
+            swimming culture. The modern spread reflects both population growth
+            and improved reporting.
+          </p>
+        </div>
+
+        <!-- 1.2 Choropleth -->
+        <div class="chart-block full-width">
+          <div id="vis-choropleth"></div>
+          <p class="chart-caption">
+            <strong>Figure 1.2 — Incidents and fatality rates by state.</strong>
+            Toggle between metrics. NSW accounts for 438 incidents but its
+            fatality rate is lower than Queensland or South Australia. Western
+            Australia has a fearsome reputation, but falls mid-range on both
+            measures.
+          </p>
+        </div>
+
+        <!-- 1.3 Decade timeline -->
+        <div class="chart-block full-width">
+          <div id="vis-timeline"></div>
+          <p class="chart-caption">
+            <strong
+              >Figure 1.3 — Incidents per decade, raw and
+              population-adjusted.</strong
+            >
+            The post-2000 surge in raw counts is real, but the rate per million
+            Australians peaked in the 1930s and has been broadly flat since the
+            1960s. More people at the beach, not more dangerous water.
+          </p>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ─── SECTION 2: Which Shark ─── -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-number">Section 2</span>
+          <h2 class="section-title">Which Shark Should You Actually Fear?</h2>
+          <p class="section-intro">
+            The most common shark in the dataset is not the most dangerous. The
+            species breakdown subverts the Jaws narrative.
+          </p>
+        </div>
+
+        <!-- 2.1 Species bubble -->
+        <div class="chart-block full-width">
+          <div id="vis-species"></div>
+          <p class="chart-caption">
+            <strong
+              >Figure 2.1 — Species by incident count, fatality rate, and
+              size.</strong
+            >
+            Bubble area encodes median shark length. Colour encodes what
+            proportion of that species' attacks were provoked. The wobbegong
+            cluster sits bottom-left: 201 incidents, 0% fatal, small and
+            defensive. Tiger sharks sit top-right.
+          </p>
+        </div>
+
+        <!-- 2.2 Wobbegong -->
+        <div class="chart-block full-width">
+          <div id="vis-wobbegong"></div>
+          <p class="chart-caption">
+            <strong>Figure 2.2 — Wobbegong incidents by activity.</strong>
+            Every single wobbegong bite is non-fatal. The activity breakdown
+            confirms why: almost all occur while the victim is diving,
+            snorkelling, or standing in water. The shark bites when disturbed,
+            not when hunting.
+          </p>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ─── SECTION 3: Where, When, What ─── -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-number">Section 3</span>
+          <h2 class="section-title">Where, When, and What Were You Doing?</h2>
+          <p class="section-intro">
+            Risk is not evenly distributed. The charts below profile the
+            circumstances of attacks to give an actionable picture of who gets
+            bitten and why.
+          </p>
+        </div>
+
+        <!-- 3.1 Activity risk -->
+        <div class="chart-block full-width">
+          <div id="vis-activity"></div>
+          <p class="chart-caption">
+            <strong
+              >Figure 3.1 — Activity risk: volume vs fatality rate.</strong
+            >
+            Swimming leads on both axes. Surfing and boarding generate many
+            incidents but a low fatality rate, consistent with defensive bites.
+            Fishing and boating record zero deaths across all incidents.
+          </p>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- ─── SECTIONS 4 and 5 PLACEHOLDER ─── -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-number">Sections 4–5</span>
+          <h2 class="section-title">
+            Who Gets Attacked? Australia vs California.
+          </h2>
+          <p class="section-intro">
+            Charts covering victim demographics (gender, age, provocation) and a
+            direct comparison with 220 California white shark incidents from
+            1950–2022 will appear here once those visualisations are finalised.
+          </p>
+        </div>
+
+        <div
+          class="chart-block"
+          style="
+            background: var(--sand-pale);
+            border-style: dashed;
+            text-align: center;
+            padding: 60px 36px;
+            color: var(--text-light);
+            font-size: 14px;
+          "
+        >
+          Remaining charts to be embedded here: seasonal heatmap, radial
+          time-of-day, body region, gender breakdown, age histogram, provoked vs
+          unprovoked, AU vs CA activity comparison, fatality rate by decade,
+          California dot map.
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <strong style="color: rgba(250, 250, 247, 0.8)">Data sources:</strong>
+          Australian Shark Incident Database (ASID), Macquarie University,
+          1791–2022. California white shark incident records, 1950–2022.
+        </div>
+        <div style="text-align: right">
+          FIT2179 Data Visualisation 2 &nbsp;&middot;&nbsp; Semester 1, 2026
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================
+       VEGA-EMBED
+  ============================================================ -->
     <script>
-      vegaEmbed("#vis", "dot_map.vg.json");
-      vegaEmbed("#vis", "state_choropleth.vg.json");
-      vegaEmbed("#vis", "decade_timeline.vg.json");
-      vegaEmbed("#vis", "species_bubble.vg.json");
-      vegaEmbed("#vis", "wobbegong_activity.vg.json");
-      vegaEmbed("#vis", "activity_risk.vg.json");
+      const embedOpts = { actions: false, renderer: "canvas" };
+
+      vegaEmbed("#vis-dot-map", "dot_map.vg.json", embedOpts).catch(
+        console.warn,
+      );
+      vegaEmbed("#vis-choropleth", "state_choropleth.vg.json", embedOpts).catch(
+        console.warn,
+      );
+      vegaEmbed("#vis-timeline", "decade_timeline.vg.json", embedOpts).catch(
+        console.warn,
+      );
+      vegaEmbed("#vis-species", "species_bubble.vg.json", embedOpts).catch(
+        console.warn,
+      );
+      vegaEmbed(
+        "#vis-wobbegong",
+        "wobbegong_activity.vg.json",
+        embedOpts,
+      ).catch(console.warn);
+      vegaEmbed("#vis-activity", "activity_risk.vg.json", embedOpts).catch(
+        console.warn,
+      );
     </script>
   </body>
 </html>
