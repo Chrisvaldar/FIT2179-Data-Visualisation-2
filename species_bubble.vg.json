@@ -9,7 +9,7 @@
   },
   "width": 650,
   "height": 480,
-  "data": { "url": "data/species_bubble.csv" },
+  "data": { "url": "data/wrangled_data/species_bubble.csv" },
   "transform": [
     {
       "calculate": "datum['Species.clean'] === 'Bronze Whaler' ? -4 : datum['Species.clean'] === 'Dusky Shark' ? -2 : datum['Species.clean'] === 'Grey Nurse' ? -6 : datum['Species.clean'] === 'Grey Reef' ? -8 : datum['Species.clean'] === 'Hammerhead' ? -10 : datum['Species.clean'] === 'Lemon Shark' ? -12 : datum['Species.clean'] === 'Whitetip Reef' ? -14 : datum['fatal_rate']",

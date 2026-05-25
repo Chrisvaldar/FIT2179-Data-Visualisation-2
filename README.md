@@ -35,8 +35,9 @@ The visualisation is structured in five sections:
 
 ## Notes
 
-- All processed CSVs are in the `data/` folder
-- TopoJSON files (`australia.json`, `australia_states.json`) sourced from Natural Earth via Mapshaper
+- Raw source files are in `data/base_data/`
+- Processed CSVs for charts are in `data/wrangled_data/`
+- TopoJSON files (`australia.json`, `australia_states.json`) are in `data/topojson/`, sourced from Natural Earth via Mapshaper
 - State join key uses `iso_3166_2` field from the TopoJSON, stripping the `AU-` prefix to match CSV abbreviations
 - Field names containing dots (e.g. `Victim.injury`) are escaped as `Victim\\.injury` in Vega-Lite specs to avoid property path parsing issues
 

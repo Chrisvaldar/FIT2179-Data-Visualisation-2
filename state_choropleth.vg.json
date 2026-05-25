@@ -29,7 +29,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/australia_states.json",
+        "url": "data/topojson/australia_states.json",
         "format": {
           "type": "topojson",
           "feature": "australia_states"
@@ -43,7 +43,7 @@
         {
           "lookup": "state_abbrev",
           "from": {
-            "data": { "url": "data/state_choropleth.csv" },
+            "data": { "url": "data/wrangled_data/state_choropleth.csv" },
             "key": "State",
             "fields": ["total", "fatal", "fatal_rate"]
           }

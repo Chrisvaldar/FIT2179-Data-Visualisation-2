@@ -8,7 +8,7 @@
     "anchor": "start",
     "offset": 16
   },
-  "data": { "url": "data/activity_risk.csv" },
+  "data": { "url": "data/wrangled_data/activity_risk.csv" },
   "transform": [{ "calculate": "-datum.count", "as": "count_neg" }],
   "hconcat": [
     {

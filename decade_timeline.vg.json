@@ -24,7 +24,7 @@
   "layer": [
     {
       "description": "Stacked area using fold for count view",
-      "data": { "url": "data/decade_timeline.csv" },
+      "data": { "url": "data/wrangled_data/decade_timeline.csv" },
       "transform": [
         { "filter": "metric === 'count'" },
         {
@@ -89,7 +89,7 @@
     },
     {
       "description": "Rate per million area fill",
-      "data": { "url": "data/decade_timeline.csv" },
+      "data": { "url": "data/wrangled_data/decade_timeline.csv" },
       "transform": [{ "filter": "metric === 'rate'" }],
       "mark": { "type": "area", "opacity": 0.15, "color": "#2c3e50" },
       "encoding": {
@@ -113,7 +113,7 @@
     },
     {
       "description": "Rate per million line with points",
-      "data": { "url": "data/decade_timeline.csv" },
+      "data": { "url": "data/wrangled_data/decade_timeline.csv" },
       "transform": [{ "filter": "metric === 'rate'" }],
       "mark": {
         "type": "line",

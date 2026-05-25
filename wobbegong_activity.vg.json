@@ -9,7 +9,7 @@
   },
   "width": 500,
   "height": 360,
-  "data": { "url": "data/wobbegong_activity.csv" },
+  "data": { "url": "data/wrangled_data/wobbegong_activity.csv" },
   "mark": {
     "type": "bar",
     "cornerRadiusTopLeft": 3,

@@ -81,7 +81,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/australia.json",
+        "url": "data/topojson/australia.json",
         "format": {
           "type": "topojson",
           "feature": "australia"
@@ -96,7 +96,7 @@
     },
     {
       "data": {
-        "url": "data/dot_map.csv"
+        "url": "data/wrangled_data/dot_map.csv"
       },
       "transform": [
         { "filter": "decade_select === null || datum.Decade == decade_select" }
