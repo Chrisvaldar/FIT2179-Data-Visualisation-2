@@ -1,0 +1,43 @@
+/* stevie-sans */
+
+@import url('//use.typekit.net/lni0eoo.css');
+
+/* Borgia Pro */
+
+@font-face {
+	font-family: "Borgia Pro";
+	src: url("../fonts/BorgiaPro-Regular-webfont.woff2") format("woff2"),
+	 	 url("../fonts/BorgiaPro-Regular-webfont.woff") format("woff"),
+		 url("../fonts/BorgiaPro-Regular-webfont.ttf") format("truetype"),
+		 url("../fonts/BorgiaPro-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: auto;
+}
+@font-face {
+	font-family: "Borgia Pro";
+	src: url("../fonts/BorgiaPro-Bold-webfont.woff2") format("woff2"),
+		 url("../fonts/BorgiaPro-Bold-webfont.woff") format("woff"),
+		 url("../fonts/BorgiaPro-Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: auto;
+}
+@font-face {
+	font-family: "Borgia Pro";
+	src: url("../fonts/BorgiaPro-BoldItalic-webfont.woff2") format("woff2"),
+		 url("../fonts/BorgiaPro-BoldItalic-webfont.woff") format("woff"),
+		 url("../fonts/BorgiaPro-BoldItalic.otf") format("opentype");
+	font-weight: 700;
+	font-style: italic;
+	font-display: auto;
+}
+@font-face {
+	font-family: "Borgia Pro";
+	src: url("../fonts/BorgiaPro-Italic-webfont.woff2") format("woff2"),
+		 url("../fonts/BorgiaPro-Italic-webfont.woff") format("woff"),
+		 url("../fonts/BorgiaPro-Italic.otf") format("opentype");
+	font-weight: 400;
+	font-style: italic;
+	font-display: auto;
+}

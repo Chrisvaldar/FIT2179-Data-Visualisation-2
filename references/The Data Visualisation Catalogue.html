@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3LDPXVJ7W6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3LDPXVJ7W6');
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="styles/main_style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/devices_style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/menu.css" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+    <!-- LANGAUGE -->
+    <link rel="canonical" hreflang="en" href="https://datavizcatalogue.com" />
+    <link rel="alternate" hreflang="zh" href="https://datavizcatalogue.com/ZH/" />
+    <link rel="alternate" hreflang="zh-cn" href="https://datavizcatalogue.com/ZH/" />
+    <link rel="alternate" hreflang="es" href="https://datavizcatalogue.com/ES/" />
+    <link rel="alternate" hreflang="ru" href="https://datavizcatalogue.com/RU/" />
+    <link rel="alternate" hreflang="tr" href="https://datavizcatalogue.com/TR/" />
+    <link rel="alternate" hreflang="fr" href="https://datavizcatalogue.com/FR/" />
+
+
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="description" content="A handy guide and library of different data visualization techniques, tools, and a learning resource for data visualization." />
+    <meta name="keywords" content="data, data visualization, data visualisation, dataviz, infographic, information design" />
+
+    <title>The Data Visualisation Catalogue</title>
+
+    <!-- Begin Cookie Consent plugin https://cookieconsent.insites.com/ -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#ff6363",
+          "text": "#ffffff"
+        }
+      },
+      "theme": "edgeless",
+      "content": {
+        "message": "This website uses cookies to personalise ads &amp; analyse traffic.",
+        "href": "https://datavizcatalogue.com/cookiepolicy.html"
+      }
+    })});
+    </script>
+    
+    <!-- ADNIMATION -->
+    <script src="https://adncdn.net/cL5CjFxn" async></script>
+</head>
+<body>
+	<!--  Header  -->
+	<div class = "title">
+    <a class = "title" href="index.html">
+		The Data Visualisation Catalogue
+    </a>
+	</div>
+	<br>
+	<div class="navi_container" align="center">
+    
+	<label for="show-menu" class="show-menu">
+   	  <img src="images/buttons/trigram.png" width="12" height="12" alt="trigram" />
+    </label>
+	<input type="checkbox" id="show-menu" role="button">
+		<ul id="menu">
+			<li><a href="about.html">About</a></li>
+            <li class="navi_divider">&nbsp; &bull;&nbsp;</li>
+			<li><a href="/blog">Blog</a></li>
+            <li class="navi_divider">&nbsp; &bull;&nbsp;</li>
+			<li><a href="/store">Shop</a></li>
+            <li class="navi_divider">&nbsp; &bull;&nbsp;</li>
+			<li><a href="resources.html">Resources</a></li>
+    	</ul>
+	</div>
+	<br>
+    <hr style = "border-top: dotted 1px darkgrey;">
+	
+	<!-- Language Menu -->
+	<iframe src="Langauge_menu.html" class="language_menu" scrolling="no">
+	<p>Language Menu</p>
+	</iframe>
+	
+	<br>
+    
+	<table style = "width: 100%;">
+        
+	    <!--  TOP BUTTONS  -->
+		<tr>
+		<td></td>
+		<td class = "body_single">
+
+            <!-- Ad Unit BuySellAds -->
+            <div id="carbon-block"></div>
+            <script>
+            try {
+              fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+                return true;
+              }).catch(function(e) {
+                var carbonScript = document.createElement("script");
+                carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DV23N&placement=datavizcataloguecom";
+                carbonScript.id = "_carbonads_js";
+                document.getElementById("carbon-block").appendChild(carbonScript);
+              });
+            } catch (error) {
+              console.log(error);
+            }
+            </script>
+
+            <br><br>
+		
+			<a href = "search.html" class = "footer_navi">
+			<div class = "search_long_button">
+			Search by Function
+			</div>
+			</a>
+			
+			<a href = "home_list.html" class = "footer_navi">
+			<div class = "list_long_button">
+			View by List
+			</div>
+			</a>
+		</td>
+		<td></td>
+		</tr>
+		<tr>
+		<td></td>
+            
+		<td class = "body">		
+		
+    		<!--  ON METHOD BUTTONS  -->
+        	<br>
+            
+			<div class = "circle_block">
+				<a href = "methods/arc_diagram.html" class = "circle">
+				<img class = "circle" src = "images/buttons/SVG/on/arc_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/arc_diagram.png'" alt = "data visualization">
+				</a>
+                <p>Arc Diagram</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/area_graph.html">
+				<img class = "circle" src = "images/buttons/SVG/on/area_graph.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/area_graph.png'" alt = "data visualization">
+				</a>
+                <p>Area Graph</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/bar_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/bar_graph.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/bar_graph.png'" alt = "data visualization">
+				</a>
+                <p>Bar Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/box_plot.html">
+				<img class = "circle" src = "images/buttons/SVG/on/box_plot.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/box_plot.png'" alt = "data visualization"/>
+				</a>
+                <p>Box &amp; Whisker Plot</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/brainstorm.html">
+				<img class = "circle" src = "images/buttons/SVG/on/brainstorm.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/brainstorm.png'" alt = "data visualization">
+				</a>
+                <p>Brainstorm</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/bubble_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/bubble_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/bubble_chart.png'" alt = "data visualization">
+				</a>
+                <p>Bubble Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/bubble_map.html">
+				<img class = "circle" src = "images/buttons/SVG/on/bubble_map.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/bubble_map.png'" alt = "data visualisation">
+                </a>
+                <p>Bubble Map</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/bullet_graph.html">
+				<img class = "circle" src = "images/buttons/SVG/on/bullet_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/bullet_chart.png'" alt = "data visualisation"></a>
+                <p>Bullet Graph</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/calendar.html">
+				<img class = "circle" src = "images/buttons/SVG/on/calendar.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/calendar.png'" alt = "data visualization">
+			  </a>
+              <p>Calendar</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/candlestick_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/candlestick_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/candlestick_chart.png'" alt = "data visualisation">
+                </a>
+                <p>Candlestick Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/chord_diagram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/chord_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/chord_diagram.png'" alt = "data visualisation">
+                </a>
+                <p>Chord Diagram</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/choropleth.html">
+				<img class = "circle" src = "images/buttons/SVG/on/choropleth_map.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/choropleth_map.png'" alt = "data visualization"></a>
+                <p>Choropleth Map</p>
+			</div>
+            
+			<div class = "circle_block">
+            	<a href = "methods/circle_packing.html">
+				<img class = "circle" src = "images/buttons/SVG/on/circle_packing.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/circle_packing.png'" alt = "data visualization"></a>
+                <p>Circle Packing</p>
+			</div>
+            
+             <div class = "circle_block">
+            	<a href = "methods/connection_map.html">
+				<img class = "circle" src = "images/buttons/SVG/on/connection_map.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/connection_map.png'" alt = "data visualisation"></a>
+                <p>Connection Map</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/density_plot.html">
+				<img class = "circle" src = "images/buttons/SVG/on/density_plot.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/density_plot.png'" alt = "data visualisation"></a>
+                <p>Density Plot</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/donut_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/donut_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/donut_chart.png'" alt = "data visualization"></a>
+                <p>Donut Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/dot_map.html">
+				<img class = "circle" src = "images/buttons/SVG/on/point_map.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/point_map.png'" alt = "data visualisation"></a>
+                <p>Dot Map</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/dot_matrix_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/dot_matrix_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/dot_matrix_chart.png'" alt = "data visualization">
+				</a>
+                <p>Dot Matrix Chart</p>
+			</div>
+                        
+			<div class = "circle_block">
+            	<a href = "methods/error_bars.html">
+				<img class = "circle" src = "images/buttons/SVG/on/error_bars.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/error_bars.png'" alt = "data visualisation">
+                </a>
+                <p>Error Bars</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/flow_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/flow_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/flow_chart.png'" alt = "data visualisation"></a>
+                <p>Flow Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/flow_map.html">
+				<img class = "circle" src = "images/buttons/SVG/on/flow_map.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/flow_map.png'" alt = "data visualization">
+			  </a>
+              <p>Flow Map</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/gantt_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/gantt_chart.svg"  onerror="this.onerror=null; this.src='images/buttons/PNG/on/gantt_chart.png'" alt = "data visualisation"></a>
+                <p>Gantt Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/heatmap.html">
+				<img class = "circle" src = "images/buttons/SVG/on/heat_map.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/heat_map.png'" alt = "data visualisation"></a>
+                <p>Heatmap</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/histogram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/histogram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/histogram.png'" alt = "data visualization"></a>
+                <p>Histogram</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/illustration_diagram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/illustration_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/illustration_diagram.png'" alt = "data visualization"></a>
+                <p>Illustration Diagram</p>
+			</div>
+            
+			<div class = "circle_block">
+            	<a href = "methods/kagi_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/kagi_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/kagi_chart.png'" alt = "data visualisation"></a>
+                <p>Kagi Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/line_graph.html">
+				<img class = "circle" src = "images/buttons/SVG/on/line_graph.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/line_graph.png'" alt = "data visualization">
+				</a>
+                <p>Line Graph</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/marimekko_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/marimekko_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/marimekko_chart.png'" alt = "data visualization">
+                </a>
+               <p>Marimekko Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/multiset_barchart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/multiset_bar_chart.svg"  onerror="this.onerror=null; this.src='images/buttons/PNG/on/multiset_bar_chart.png'" alt = "data visualization">
+				</a>
+                <p>Multi-set Bar Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/network_diagram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/network_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/network_diagram.png'" alt = "data visualisation">
+                </a>
+                <p>Network Diagram</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/nightingale_rose_chart.html">
+            	<img class = "circle" src = "images/buttons/SVG/on/nightingale_rose_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/nightingale_rose_chart.png'" alt = "data visualisation">
+            	</a>
+                <p>Nightingale Rose Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/non_ribbon_chord_diagram.html">
+            	<img class = "circle" src = "images/buttons/SVG/on/non_ribbon_chord_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/non_ribbon_chord_diagram.png'" alt = "data visualisation">
+               	</a>
+                <p>Non-ribbon Chord Diagram</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/OHLC_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/hikkake_pattern.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/hikkake_pattern.png'" alt = "data visualisation">
+                </a>
+                <p>Open-high-low-close Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href="methods/parallel_coordinates.html">
+				<img class = "circle" src = "images/buttons/SVG/on/parallel_coordinates.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/parallel_coordinates.png'" alt = "data visualisation">
+				</a>
+				<p>Parallel Coordinates Plot</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/parallel_sets.html">
+				<img class = "circle" src = "images/buttons/SVG/on/parallel_sets.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/parallel_sets.png'" alt = "data visualization">
+				</a>
+                <p>Parallel Sets</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/pictogram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/pictogram_chart.svg"  onerror="this.onerror=null; this.src='images/buttons/PNG/on/pictogram_chart.png'" alt = "data visualization">
+				</a>
+                <p>Pictogram Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/pie_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/pie_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/pie_chart.png'" alt = "data visualization">
+				</a>
+                <p>Pie Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/point_and_figure_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/point_and_figure_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/point_and_figure_chart.png'" alt = "data visualisation"></a>
+                <p>Point &amp; Figure Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/population_pyramid.html">
+				<img class = "circle" src = "images/buttons/SVG/on/population_pyramid.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/population_pyramid.png'" alt = "data visualization">
+				</a>
+                <p>Population Pyramid</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/area_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/proportional_area_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/proportional_area_chart.png'" alt = "data visualization">
+				</a>
+                <p>Proportional Area Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/radar_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/radar_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/radar_chart.png'" alt = "data visualization">
+                </a>
+                <p>Radar Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/radial_bar_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/radial_bar_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/radial_bar_chart.png'" alt = "data visualization">
+				</a>
+                <p>Radial Bar Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/radial_column_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/radial_column_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/radial_column_chart.png'" alt = "data visualisation"></a>
+                <p>Radial Column Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/sankey_diagram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/sankey_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/sankey_diagram.png'" alt = "data visualization">
+				</a>
+                <p>Sankey Diagram</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/scatterplot.html">
+				<img class = "circle" src = "images/buttons/SVG/on/scatterplot.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/scatterplot.png'" alt = "data visualization">
+                </a>
+                <p>Scatterplot</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/span_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/span_chart.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/span_chart.png'" alt = "data visualization">
+				</a>
+                <p>Span Chart</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/spiral_plot.html">
+				<img class = "circle" src = "images/buttons/SVG/on/condegram_spiral_plot.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/condegram_spiral_plot.png'" alt = "data visualisation"></a>
+                <p>Spiral Plot</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href ="methods/stacked_area_graph.html">
+				<img class = "circle" src = "images/buttons/SVG/on/stacked_area_graph.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/stacked_area_graph.png'" alt = "data visualization"></a>
+                <p>Stacked Area Graph</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href ="methods/stacked_bar_graph.html">
+				<img class = "circle" src = "images/buttons/SVG/on/stacked_bar_graph.svg"  onerror="this.onerror=null; this.src='images/buttons/PNG/on/stacked_bar_graph.png'" alt = "data visualization">
+				</a>
+                <p>Stacked Bar Graph</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/stem_and_leaf_plot.html">
+				<img class = "circle" src = "images/buttons/SVG/on/stem_and_leaf_plot.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/stem_and_leaf_plot.png'" alt = "data visualisation"></a>
+                <p>Stem &amp; Leaf Plot</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href="methods/stream_graph.html">
+				<img class = "circle" src = "images/buttons/SVG/on/stream_graph.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/stream_graph.png'" alt = "data visualisation">
+                </a>
+                <p>Stream Graph</p>
+			</div>
+                        
+			<div class = "circle_block">
+            	<a href="methods/sunburst_diagram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/sunburst_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/sunburst_diagram.png'" alt = "data visualisation"></a>
+                <p>Sunburst Diagram</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/tally_chart.html">
+				<img class = "circle" src = "images/buttons/SVG/on/tally_chart.svg"  onerror="this.onerror=null; this.src='images/buttons/PNG/on/tally_chart.png'" alt = "data visualisation">
+				</a>
+                <p>Tally Chart</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/timeline.html">
+				<img class = "circle" src = "images/buttons/SVG/on/timeline.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/timeline.png'" alt = "data visualisation">
+				</a>
+                <p>Timeline</p>
+			</div>
+
+			<div class = "circle_block">
+				<a href = "methods/timetable.html">
+				<img class = "circle" src = "images/buttons/SVG/on/time_table.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/time_table.png'" alt = "data visualisation">
+				</a>
+                <p>Timetable</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/tree_diagram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/tree_diagram.svg"  onerror="this.onerror=null; this.src='images/buttons/PNG/on/tree_diagram.png'" alt = "data visualisation">
+				</a>
+                <p>Tree Diagram</p>
+			</div>
+            
+            <div class = "circle_block">
+            	<a href = "methods/treemap.html">
+				<img class = "circle" src = "images/buttons/SVG/on/treemap.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/treemap.png'" alt = "data visualisation">
+                </a>
+                <p>Treemap</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/venn_diagram.html">
+				<img class = "circle" src = "images/buttons/SVG/on/venn_diagram.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/venn_diagram.png'" alt = "data visualisation"></a>
+                <p>Venn Diagram</p>
+			</div>
+             
+			<div class = "circle_block">
+            	<a href = "methods/violin_plot.html">
+				<img class = "circle" src = "images/buttons/SVG/on/violin_plot.svg" onerror="this.onerror=null; this.src='images/buttons/PNG/on/violin_plot.png'" alt = "data visualisation"></a>
+                <p>Violin Plot</p>
+			</div>
+			
+			<div class = "circle_block">
+				<a href = "methods/wordcloud.html">
+				<img class = "circle" src = "images/buttons/SVG/on/word_cloud.svg"  onerror="this.onerror=null; this.src='images/buttons/PNG/on/word_cloud.png'" alt = "data visualisation"></a>
+                <p>Word Cloud</p>
+			</div>
+            
+            <div style="float: left; width: 100%; text-align: center; margin-top: 20px;">
+                <a href="/store/product-category/icons/" target="_blank" style="text-decoration: none; color: #FD6363;">
+                <strong>
+                You can get the icons here
+                </strong>
+                </a>
+            </div>
+            <br><br>
+		</td>
+		<td></td>
+		</tr>
+	</table>
+    <br><br>
+	
+	<!--  Footer  -->
+	<div class = "footer">
+		<table width = "100%">
+		<tr>
+			<td></td>
+			<td width = "460px">
+				<a href = "about.html" class = "footer_navi">
+					<p class = "footer_button">About</p>
+				</a>
+				
+				<a href = "/blog" class = "footer_navi">
+					<p class = "footer_button">Blog</p>
+				</a>
+                
+                <a href = "/store" class = "footer_navi">
+					<p class = "footer_button">Shop</p>
+				</a>
+				
+				<a href = "resources.html" class = "navi" style = "word-spacing: 0px;">
+					<p class = "footer_button">Resources</p>
+				</a>
+			</td>
+			<td width = "265px" style = "vertical-align: top;">
+				<div style = "float: right;">
+					<a href = "http://twitter.com/dataviz_catalog" target = "_blank"><img src = "images/buttons/twitter.png" class = "sm_button" alt = "data visualization"></a>
+					<a href = "https://www.facebook.com/datavizcatalogue/" target = "_blank">
+					<img src = "images/buttons/facebook_icon.png" class = "sm_button" alt = "data visualization">
+					</a>
+				</div>
+			</td>
+		<td></td>
+		</tr>
+	</table>
+	
+	<!--  Copyright Info  -->
+	<table width = "100%">
+		<tr>
+			<td></td>
+			<td width = "730px">
+				<p class = "copyright">
+					&copy;The Data Visualisation Catalogue
+				</p>
+				<br>
+			</td>
+			<td></td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>
