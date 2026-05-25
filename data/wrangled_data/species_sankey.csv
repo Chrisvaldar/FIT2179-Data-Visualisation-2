@@ -1,0 +1,18 @@
+species,outcome,outcome_label,count,species_order,outcome_order
+White Shark,fatal,Fatal,91,0,0
+White Shark,injured,Injured,167,0,1
+White Shark,uninjured,Uninjured,103,0,2
+Tiger Shark,fatal,Fatal,86,1,0
+Tiger Shark,injured,Injured,115,1,1
+Tiger Shark,uninjured,Uninjured,28,1,2
+Wobbegong,injured,Injured,191,2,1
+Wobbegong,uninjured,Uninjured,10,2,2
+Bull Shark,fatal,Fatal,63,3,0
+Bull Shark,injured,Injured,107,3,1
+Bull Shark,uninjured,Uninjured,27,3,2
+Whaler Shark,fatal,Fatal,5,4,0
+Whaler Shark,injured,Injured,48,4,1
+Whaler Shark,uninjured,Uninjured,20,4,2
+Other,fatal,Fatal,5,5,0
+Other,injured,Injured,95,5,1
+Other,uninjured,Uninjured,35,5,2

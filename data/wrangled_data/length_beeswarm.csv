@@ -1,0 +1,580 @@
+Shark.length.m,Victim.injury,Species.clean,State,Incident.year,Decade
+0.30,injured,Wobbegong,WA,1984,1980
+0.40,injured,Wobbegong,WA,2004,2000
+0.40,injured,Wobbegong,WA,2004,2000
+0.40,injured,Wobbegong,WA,2018,2010
+0.50,injured,Wobbegong,NSW,2002,2000
+0.60,injured,Wobbegong,WA,1930,1930
+0.60,injured,Wobbegong,QLD,1962,1960
+0.60,injured,Wobbegong,QLD,1990,1990
+0.60,injured,Other,NSW,2004,2000
+0.60,injured,Whaler Shark,QLD,2007,2000
+0.60,injured,Wobbegong,VIC,2008,2000
+0.60,injured,Wobbegong,WA,2009,2000
+0.70,injured,Wobbegong,WA,1985,1980
+0.70,injured,Wobbegong,WA,1996,1990
+0.70,injured,Wobbegong,WA,2003,2000
+0.80,injured,Wobbegong,WA,1914,1910
+0.80,injured,Wobbegong,WA,1948,1940
+0.80,injured,Bull Shark,NSW,2000,2000
+0.80,injured,Wobbegong,WA,2008,2000
+0.80,injured,Wobbegong,NSW,2016,2010
+0.80,injured,Blacktip Reef,WA,2021,2020
+0.90,injured,Wobbegong,WA,1924,1920
+0.90,injured,Wobbegong,VIC,1956,1950
+0.90,injured,Whaler Shark,QLD,1960,1960
+0.90,injured,Unknown,QLD,2015,2010
+1.00,injured,Wobbegong,NSW,1853,1850
+1.00,injured,Bull Shark,QLD,1960,1960
+1.00,injured,Wobbegong,WA,1981,1980
+1.00,injured,Wobbegong,NT,1986,1980
+1.00,injured,Wobbegong,NSW,1987,1980
+1.00,injured,White Shark,WA,1991,1990
+1.00,injured,Bull Shark,NSW,1995,1990
+1.00,injured,Bull Shark,QLD,1997,1990
+1.00,injured,Wobbegong,NSW,2001,2000
+1.00,injured,Wobbegong,WA,2004,2000
+1.00,injured,Wobbegong,WA,2004,2000
+1.00,injured,Wobbegong,WA,2004,2000
+1.00,injured,Wobbegong,NSW,2007,2000
+1.00,injured,Wobbegong,WA,2008,2000
+1.00,injured,Whitetip Reef,QLD,2010,2010
+1.00,injured,Wobbegong,NSW,2011,2010
+1.00,injured,Wobbegong,QLD,2011,2010
+1.00,injured,Wobbegong,NSW,2013,2010
+1.00,injured,Wobbegong,NSW,2014,2010
+1.00,injured,Wobbegong,NSW,2014,2010
+1.00,injured,Wobbegong,NSW,2014,2010
+1.00,injured,Wobbegong,WA,2015,2010
+1.00,injured,Lemon Shark,QLD,2016,2010
+1.00,injured,Whaler Shark,WA,2017,2010
+1.00,injured,Wobbegong,NSW,2018,2010
+1.00,injured,Bull Shark,QLD,2019,2010
+1.00,uninjured,Other,VIC,2011,2010
+1.00,uninjured,Whaler Shark,NSW,2020,2020
+1.00,uninjured,Wobbegong,WA,2021,2020
+1.10,injured,White Shark,SA,1990,1990
+1.20,injured,Unknown,SA,1877,1870
+1.20,injured,Whaler Shark,QLD,1898,1890
+1.20,injured,Wobbegong,WA,1920,1920
+1.20,injured,Bull Shark,QLD,1928,1920
+1.20,injured,Wobbegong,NSW,1936,1930
+1.20,injured,Wobbegong,QLD,1938,1930
+1.20,injured,Wobbegong,NSW,1951,1950
+1.20,injured,Wobbegong,QLD,1956,1950
+1.20,injured,White Shark,VIC,1988,1980
+1.20,injured,Wobbegong,WA,1989,1980
+1.20,injured,Wobbegong,QLD,1998,1990
+1.20,injured,Wobbegong,WA,2000,2000
+1.20,injured,Wobbegong,WA,2003,2000
+1.20,injured,Wobbegong,NSW,2003,2000
+1.20,injured,Wobbegong,NSW,2004,2000
+1.20,injured,Wobbegong,NSW,2004,2000
+1.20,injured,Wobbegong,QLD,2016,2010
+1.20,uninjured,Dusky Shark,NSW,1991,1990
+1.20,uninjured,Grey Nurse,NSW,2017,2010
+1.30,injured,Wobbegong,NSW,1945,1940
+1.30,injured,Other,NSW,1961,1960
+1.30,injured,Wobbegong,WA,2003,2000
+1.30,injured,Wobbegong,WA,2003,2000
+1.30,injured,Wobbegong,NSW,2008,2000
+1.30,injured,Bull Shark,QLD,2014,2010
+1.30,injured,Galapagos Shark,NSW,2015,2010
+1.30,uninjured,White Shark,WA,2012,2010
+1.30,uninjured,Bull Shark,QLD,2015,2010
+1.40,injured,Wobbegong,NSW,2010,2010
+1.40,uninjured,White Shark,VIC,2014,2010
+1.50,injured,Bull Shark,QLD,1929,1920
+1.50,injured,Tiger Shark,QLD,1931,1930
+1.50,injured,Bull Shark,WA,1959,1950
+1.50,injured,Bronze Whaler,VIC,1960,1960
+1.50,injured,Wobbegong,VIC,1965,1960
+1.50,injured,Wobbegong,WA,1981,1980
+1.50,injured,Bull Shark,QLD,1990,1990
+1.50,injured,Bull Shark,QLD,1991,1990
+1.50,injured,Whitetip Reef,QLD,1993,1990
+1.50,injured,Bull Shark,QLD,1994,1990
+1.50,injured,Tiger Shark,QLD,1997,1990
+1.50,injured,Wobbegong,WA,2001,2000
+1.50,injured,Other,QLD,2001,2000
+1.50,injured,Whaler Shark,QLD,2002,2000
+1.50,injured,Wobbegong,NSW,2003,2000
+1.50,injured,Bronze Whaler,WA,2004,2000
+1.50,injured,Bull Shark,QLD,2005,2000
+1.50,injured,Whitetip Reef,QLD,2005,2000
+1.50,injured,Unknown,QLD,2007,2000
+1.50,injured,Wobbegong,WA,2007,2000
+1.50,injured,Whaler Shark,NSW,2009,2000
+1.50,injured,White Shark,VIC,2010,2010
+1.50,injured,White Shark,VIC,2012,2010
+1.50,injured,Wobbegong,QLD,2013,2010
+1.50,injured,White Shark,SA,2014,2010
+1.50,injured,Galapagos Shark,NSW,2015,2010
+1.50,uninjured,Wobbegong,TAS,1916,1910
+1.50,uninjured,White Shark,NSW,2005,2000
+1.60,injured,Tiger Shark,QLD,1954,1950
+1.60,injured,Wobbegong,SA,1994,1990
+1.60,injured,White Shark,NSW,2007,2000
+1.60,injured,Wobbegong,NSW,2010,2010
+1.70,injured,Wobbegong,QLD,1914,1910
+1.70,injured,Bull Shark,NSW,1938,1930
+1.70,injured,White Shark,WA,2000,2000
+1.70,injured,White Shark,WA,2010,2010
+1.70,injured,White Shark,VIC,2013,2010
+1.70,injured,Wobbegong,NSW,2013,2010
+1.80,injured,Bull Shark,NSW,1897,1890
+1.80,injured,White Shark,NSW,1907,1900
+1.80,injured,White Shark,WA,1910,1910
+1.80,injured,Tiger Shark,QLD,1927,1920
+1.80,injured,Tiger Shark,QLD,1938,1930
+1.80,injured,Bull Shark,NSW,1939,1930
+1.80,injured,Wobbegong,NSW,1951,1950
+1.80,injured,White Shark,VIC,1952,1950
+1.80,injured,Wobbegong,NSW,1953,1950
+1.80,injured,Wobbegong,QLD,1955,1950
+1.80,injured,Wobbegong,NSW,1958,1950
+1.80,injured,Wobbegong,QLD,1959,1950
+1.80,injured,Tiger Shark,QLD,1959,1950
+1.80,injured,Wobbegong,NSW,1966,1960
+1.80,injured,White Shark,TAS,1966,1960
+1.80,injured,Bull Shark,WA,1969,1960
+1.80,injured,Wobbegong,NSW,1980,1980
+1.80,injured,Wobbegong,NSW,1986,1980
+1.80,injured,Wobbegong,NSW,1986,1980
+1.80,injured,Bull Shark,QLD,1990,1990
+1.80,injured,Tiger Shark,QLD,1995,1990
+1.80,injured,White Shark,VIC,2005,2000
+1.80,injured,Whaler Shark,QLD,2007,2000
+1.80,injured,Whaler Shark,WA,2009,2000
+1.80,injured,Bull Shark,QLD,2010,2010
+1.80,injured,Bull Shark,NSW,2010,2010
+1.80,injured,Whaler Shark,WA,2011,2010
+1.80,injured,Whaler Shark,WA,2011,2010
+1.80,injured,Wobbegong,NSW,2012,2010
+1.80,injured,Wobbegong,NSW,2014,2010
+1.80,injured,White Shark,VIC,2015,2010
+1.80,injured,Grey Reef,WA,2016,2010
+1.80,uninjured,Bull Shark,NSW,1903,1900
+1.80,uninjured,Bull Shark,NSW,2002,2000
+1.80,uninjured,White Shark,NSW,2007,2000
+1.80,uninjured,White Shark,NSW,2013,2010
+1.90,uninjured,Whaler Shark,NSW,2009,2000
+1.90,uninjured,White Shark,QLD,2010,2010
+2.00,fatal,Bull Shark,NSW,1906,1900
+2.00,fatal,White Shark,SA,1989,1980
+2.00,fatal,Bull Shark,QLD,2002,2000
+2.00,fatal,Bull Shark,QLD,2006,2000
+2.00,injured,Wobbegong,NSW,1874,1870
+2.00,injured,White Shark,NSW,1894,1890
+2.00,injured,Bull Shark,QLD,1901,1900
+2.00,injured,Tiger Shark,QLD,1934,1930
+2.00,injured,Bull Shark,NSW,1947,1940
+2.00,injured,Wobbegong,NSW,1949,1940
+2.00,injured,Tiger Shark,QLD,1961,1960
+2.00,injured,Wobbegong,WA,1965,1960
+2.00,injured,Bronze Whaler,NSW,1967,1960
+2.00,injured,Tiger Shark,QLD,1973,1970
+2.00,injured,Wobbegong,NSW,1975,1970
+2.00,injured,Whaler Shark,NSW,1979,1970
+2.00,injured,Grey Reef,QLD,1980,1980
+2.00,injured,Whitetip Reef,QLD,1985,1980
+2.00,injured,Tiger Shark,QLD,1987,1980
+2.00,injured,Wobbegong,NSW,1989,1980
+2.00,injured,Whaler Shark,QLD,1989,1980
+2.00,injured,Bull Shark,NT,1989,1980
+2.00,injured,Bull Shark,QLD,1989,1980
+2.00,injured,Tiger Shark,NT,1989,1980
+2.00,injured,Unknown,QLD,1991,1990
+2.00,injured,Grey Nurse,NSW,1991,1990
+2.00,injured,White Shark,SA,1995,1990
+2.00,injured,Bull Shark,NSW,1996,1990
+2.00,injured,Tiger Shark,QLD,1997,1990
+2.00,injured,White Shark,NSW,2001,2000
+2.00,injured,Whaler Shark,NT,2005,2000
+2.00,injured,Blacktip Reef,QLD,2005,2000
+2.00,injured,Wobbegong,QLD,2006,2000
+2.00,injured,White Shark,NSW,2007,2000
+2.00,injured,Grey Reef,QLD,2009,2000
+2.00,injured,White Shark,NSW,2009,2000
+2.00,injured,White Shark,WA,2009,2000
+2.00,injured,Wobbegong,NSW,2009,2000
+2.00,injured,White Shark,NSW,2010,2010
+2.00,injured,White Shark,NSW,2010,2010
+2.00,injured,Unknown,NSW,2015,2010
+2.00,injured,Grey Reef,QLD,2018,2010
+2.00,injured,Whaler Shark,NSW,2018,2010
+2.00,injured,Bronze Whaler,VIC,2018,2010
+2.00,injured,Wobbegong,NSW,2020,2020
+2.00,injured,Tiger Shark,WA,2021,2020
+2.00,uninjured,Tiger Shark,NSW,1948,1940
+2.00,uninjured,White Shark,NSW,1962,1960
+2.00,uninjured,Other,WA,1966,1960
+2.00,uninjured,White Shark,WA,1978,1970
+2.00,uninjured,White Shark,VIC,1985,1980
+2.00,uninjured,Whaler Shark,QLD,1993,1990
+2.00,uninjured,Bull Shark,NSW,1997,1990
+2.00,uninjured,White Shark,VIC,1997,1990
+2.00,uninjured,Bull Shark,NSW,2000,2000
+2.00,uninjured,White Shark,WA,2001,2000
+2.00,uninjured,Bull Shark,NSW,2002,2000
+2.00,uninjured,White Shark,VIC,2004,2000
+2.00,uninjured,Whaler Shark,NSW,2008,2000
+2.00,uninjured,White Shark,NSW,2012,2010
+2.00,uninjured,White Shark,QLD,2015,2010
+2.00,uninjured,Tiger Shark,WA,2018,2010
+2.00,uninjured,Whaler Shark,NSW,2020,2020
+2.00,uninjured,Blacktip Reef,WA,2021,2020
+2.10,injured,Wobbegong,VIC,1891,1890
+2.10,injured,Tiger Shark,QLD,1933,1930
+2.10,injured,Tiger Shark,QLD,1942,1940
+2.10,injured,Bronze Whaler,QLD,1966,1960
+2.10,uninjured,Bull Shark,WA,1933,1930
+2.10,uninjured,Bull Shark,NSW,1939,1930
+2.10,uninjured,White Shark,TAS,1989,1980
+2.20,fatal,Tiger Shark,QLD,1918,1910
+2.20,fatal,Bull Shark,QLD,2003,2000
+2.20,injured,Other,SA,1869,1860
+2.20,injured,White Shark,NSW,2012,2010
+2.20,uninjured,Bronze Whaler,VIC,1958,1950
+2.30,injured,White Shark,WA,1963,1960
+2.30,injured,Bull Shark,QLD,2007,2000
+2.30,injured,Bronze Whaler,WA,2014,2010
+2.40,fatal,White Shark,NSW,1951,1950
+2.40,injured,White Shark,SA,1912,1910
+2.40,injured,Wobbegong,NSW,1952,1950
+2.40,injured,Tiger Shark,QLD,1954,1950
+2.40,injured,Tiger Shark,QLD,1965,1960
+2.40,injured,Bronze Whaler,NSW,1969,1960
+2.40,injured,Wobbegong,VIC,1975,1970
+2.40,injured,Wobbegong,WA,1998,1990
+2.40,injured,Grey Nurse,NSW,2004,2000
+2.40,uninjured,Bronze Whaler,QLD,1979,1970
+2.40,uninjured,White Shark,NSW,2010,2010
+2.50,fatal,White Shark,NSW,1922,1920
+2.50,injured,Tiger Shark,QLD,1913,1910
+2.50,injured,White Shark,SA,1952,1950
+2.50,injured,Bronze Whaler,VIC,1960,1960
+2.50,injured,White Shark,NSW,1966,1960
+2.50,injured,Whaler Shark,QLD,2000,2000
+2.50,injured,Tiger Shark,NSW,2001,2000
+2.50,injured,White Shark,NSW,2004,2000
+2.50,injured,Whitetip Reef,WA,2007,2000
+2.50,injured,White Shark,NSW,2007,2000
+2.50,injured,White Shark,NSW,2009,2000
+2.50,injured,White Shark,NSW,2011,2010
+2.50,injured,Bronze Whaler,WA,2013,2010
+2.50,injured,Bronze Whaler,NSW,2015,2010
+2.50,injured,White Shark,NSW,2015,2010
+2.50,uninjured,Whaler Shark,WA,1964,1960
+2.50,uninjured,Tiger Shark,NSW,1981,1980
+2.50,uninjured,White Shark,NSW,1984,1980
+2.50,uninjured,Bull Shark,QLD,1992,1990
+2.50,uninjured,Bull Shark,NSW,1995,1990
+2.50,uninjured,White Shark,WA,2001,2000
+2.50,uninjured,White Shark,SA,2003,2000
+2.50,uninjured,Bronze Whaler,QLD,2005,2000
+2.50,uninjured,Whaler Shark,NSW,2006,2000
+2.50,uninjured,White Shark,NSW,2012,2010
+2.50,uninjured,Bronze Whaler,NSW,2016,2010
+2.50,uninjured,White Shark,NSW,2017,2010
+2.50,uninjured,White Shark,NSW,2019,2010
+2.50,uninjured,Bronze Whaler,NSW,2020,2020
+2.50,uninjured,Bronze Whaler,NSW,2020,2020
+2.50,uninjured,Bronze Whaler,NSW,2020,2020
+2.60,fatal,Bull Shark,QLD,1939,1930
+2.60,injured,Bull Shark,NSW,1995,1990
+2.60,injured,White Shark,QLD,2000,2000
+2.60,injured,White Shark,NSW,2012,2010
+2.60,injured,White Shark,NSW,2017,2010
+2.60,injured,White Shark,NSW,2018,2010
+2.60,uninjured,Other,VIC,1995,1990
+2.60,uninjured,White Shark,NSW,2016,2010
+2.70,injured,Tiger Shark,QLD,1912,1910
+2.70,injured,Tiger Shark,QLD,1938,1930
+2.70,injured,Bull Shark,WA,1949,1940
+2.70,injured,White Shark,SA,1976,1970
+2.70,injured,White Shark,VIC,1992,1990
+2.70,injured,Bull Shark,NSW,2009,2000
+2.70,injured,White Shark,NSW,2015,2010
+2.70,uninjured,Wobbegong,WA,1961,1960
+2.70,uninjured,Dusky Shark,VIC,1961,1960
+2.80,fatal,Bull Shark,NSW,2008,2000
+2.80,injured,Tiger Shark,QLD,1934,1930
+2.80,injured,White Shark,QLD,1992,1990
+2.80,injured,White Shark,SA,2014,2010
+2.80,injured,White Shark,SA,2014,2010
+2.80,uninjured,Bull Shark,NSW,1883,1880
+2.80,uninjured,Whaler Shark,NSW,2000,2000
+2.80,uninjured,White Shark,NSW,2007,2000
+2.80,uninjured,White Shark,WA,2007,2000
+2.80,uninjured,White Shark,NSW,2008,2000
+2.80,uninjured,Whaler Shark,QLD,2017,2010
+2.90,injured,Bull Shark,NSW,2002,2000
+2.90,injured,White Shark,NSW,2016,2010
+2.90,uninjured,Bronze Whaler,NSW,1999,1990
+2.90,uninjured,White Shark,NSW,2000,2000
+3.00,fatal,Bull Shark,NSW,1903,1900
+3.00,fatal,Bull Shark,NSW,1912,1910
+3.00,fatal,Tiger Shark,QLD,1916,1910
+3.00,fatal,Tiger Shark,QLD,1922,1920
+3.00,fatal,White Shark,NSW,1925,1920
+3.00,fatal,Bull Shark,NSW,1936,1930
+3.00,fatal,Bull Shark,QLD,1961,1960
+3.00,fatal,Tiger Shark,QLD,1961,1960
+3.00,fatal,Bull Shark,NSW,1963,1960
+3.00,fatal,White Shark,SA,1975,1970
+3.00,fatal,White Shark,WA,1995,1990
+3.00,fatal,White Shark,WA,2011,2010
+3.00,fatal,White Shark,WA,2011,2010
+3.00,fatal,Tiger Shark,NSW,2013,2010
+3.00,fatal,White Shark,WA,2013,2010
+3.00,injured,Bull Shark,QLD,1874,1870
+3.00,injured,Other,TAS,1890,1890
+3.00,injured,Unknown,QLD,1910,1910
+3.00,injured,White Shark,VIC,1924,1920
+3.00,injured,White Shark,NSW,1927,1920
+3.00,injured,Bull Shark,NSW,1934,1930
+3.00,injured,White Shark,NSW,1937,1930
+3.00,injured,Tiger Shark,QLD,1942,1940
+3.00,injured,Tiger Shark,QLD,1957,1950
+3.00,injured,White Shark,NSW,1958,1950
+3.00,injured,Whaler Shark,NSW,1960,1960
+3.00,injured,Tiger Shark,QLD,1961,1960
+3.00,injured,Bronze Whaler,NSW,1963,1960
+3.00,injured,White Shark,NSW,1972,1970
+3.00,injured,White Shark,QLD,1975,1970
+3.00,injured,Bronze Whaler,VIC,1980,1980
+3.00,injured,White Shark,NSW,1989,1980
+3.00,injured,Hammerhead,QLD,1990,1990
+3.00,injured,Hammerhead,QLD,1990,1990
+3.00,injured,Wobbegong,VIC,1994,1990
+3.00,injured,White Shark,SA,2000,2000
+3.00,injured,White Shark,NSW,2001,2000
+3.00,injured,White Shark,WA,2004,2000
+3.00,injured,White Shark,VIC,2006,2000
+3.00,injured,White Shark,NSW,2007,2000
+3.00,injured,White Shark,NSW,2009,2000
+3.00,injured,White Shark,SA,2009,2000
+3.00,injured,Whaler Shark,QLD,2009,2000
+3.00,injured,White Shark,WA,2010,2010
+3.00,injured,White Shark,NSW,2011,2010
+3.00,injured,White Shark,NSW,2011,2010
+3.00,injured,Tiger Shark,WA,2012,2010
+3.00,injured,Bull Shark,NSW,2012,2010
+3.00,injured,Tiger Shark,NSW,2015,2010
+3.00,injured,White Shark,NSW,2015,2010
+3.00,injured,Bull Shark,NSW,2015,2010
+3.00,injured,Tiger Shark,QLD,2016,2010
+3.00,injured,White Shark,VIC,2017,2010
+3.00,injured,White Shark,NSW,2018,2010
+3.00,injured,White Shark,WA,2018,2010
+3.00,injured,Bull Shark,NSW,2019,2010
+3.00,injured,Tiger Shark,WA,2021,2020
+3.00,uninjured,Whaler Shark,NSW,1903,1900
+3.00,uninjured,White Shark,NSW,1942,1940
+3.00,uninjured,White Shark,NSW,1949,1940
+3.00,uninjured,Whaler Shark,NSW,1962,1960
+3.00,uninjured,Bronze Whaler,SA,1968,1960
+3.00,uninjured,Tiger Shark,WA,1986,1980
+3.00,uninjured,Tiger Shark,WA,1989,1980
+3.00,uninjured,White Shark,NSW,1989,1980
+3.00,uninjured,White Shark,NSW,1990,1990
+3.00,uninjured,Bronze Whaler,VIC,1991,1990
+3.00,uninjured,Tiger Shark,QLD,1992,1990
+3.00,uninjured,White Shark,TAS,1993,1990
+3.00,uninjured,Tiger Shark,WA,1995,1990
+3.00,uninjured,White Shark,VIC,1996,1990
+3.00,uninjured,White Shark,VIC,1997,1990
+3.00,uninjured,White Shark,NSW,2000,2000
+3.00,uninjured,Whaler Shark,NSW,2004,2000
+3.00,uninjured,Tiger Shark,QLD,2004,2000
+3.00,uninjured,White Shark,VIC,2005,2000
+3.00,uninjured,Tiger Shark,NSW,2005,2000
+3.00,uninjured,White Shark,NSW,2006,2000
+3.00,uninjured,White Shark,TAS,2008,2000
+3.00,uninjured,White Shark,NSW,2009,2000
+3.00,uninjured,Bull Shark,NSW,2009,2000
+3.00,uninjured,White Shark,NSW,2015,2010
+3.00,uninjured,White Shark,NSW,2016,2010
+3.00,uninjured,White Shark,NSW,2016,2010
+3.00,uninjured,White Shark,WA,2018,2010
+3.00,uninjured,White Shark,NSW,2020,2020
+3.10,fatal,Bull Shark,NSW,1940,1940
+3.10,injured,White Shark,VIC,1961,1960
+3.10,uninjured,Bull Shark,QLD,1936,1930
+3.10,uninjured,Bull Shark,NSW,1958,1950
+3.20,fatal,Bull Shark,QLD,1907,1900
+3.20,fatal,Bull Shark,NSW,1924,1920
+3.20,fatal,White Shark,SA,1974,1970
+3.20,injured,Whaler Shark,VIC,1878,1870
+3.20,injured,Tiger Shark,QLD,1935,1930
+3.20,injured,White Shark,VIC,1975,1970
+3.20,uninjured,White Shark,NSW,1923,1920
+3.30,fatal,Bull Shark,NSW,1960,1960
+3.30,fatal,Tiger Shark,QLD,2014,2010
+3.30,injured,White Shark,WA,2006,2000
+3.30,injured,White Shark,WA,2022,2020
+3.30,uninjured,Tiger Shark,QLD,1998,1990
+3.50,fatal,Bull Shark,NSW,1895,1890
+3.50,fatal,Bull Shark,NSW,1919,1910
+3.50,fatal,White Shark,NSW,1934,1930
+3.50,fatal,White Shark,NSW,2014,2010
+3.50,fatal,White Shark,NSW,2015,2010
+3.50,injured,Wobbegong,NSW,1969,1960
+3.50,injured,White Shark,SA,1992,1990
+3.50,injured,Tiger Shark,WA,2012,2010
+3.50,injured,White Shark,WA,2014,2010
+3.50,injured,Bull Shark,NSW,2015,2010
+3.50,injured,White Shark,NSW,2016,2010
+3.50,injured,White Shark,NSW,2016,2010
+3.50,injured,White Shark,NSW,2018,2010
+3.50,injured,Tiger Shark,QLD,2022,2020
+3.50,uninjured,Bull Shark,NSW,1881,1880
+3.50,uninjured,White Shark,NSW,1936,1930
+3.50,uninjured,White Shark,WA,2002,2000
+3.50,uninjured,Tiger Shark,NSW,2012,2010
+3.50,uninjured,White Shark,WA,2012,2010
+3.50,uninjured,White Shark,WA,2017,2010
+3.50,uninjured,White Shark,NSW,2020,2020
+3.60,fatal,Bull Shark,NSW,1934,1930
+3.60,fatal,Tiger Shark,QLD,1949,1940
+3.60,fatal,Bull Shark,NSW,1955,1950
+3.60,fatal,White Shark,SA,1962,1960
+3.60,fatal,Tiger Shark,QLD,1971,1970
+3.60,fatal,White Shark,WA,2012,2010
+3.60,injured,Bull Shark,NSW,1934,1930
+3.60,injured,Bull Shark,QLD,1950,1950
+3.60,injured,White Shark,SA,1961,1960
+3.60,injured,White Shark,TAS,1972,1970
+3.60,uninjured,White Shark,SA,1929,1920
+3.60,uninjured,White Shark,NSW,1938,1930
+3.60,uninjured,White Shark,NSW,1949,1940
+3.60,uninjured,Bronze Whaler,VIC,1956,1950
+3.60,uninjured,Tiger Shark,QLD,1959,1950
+3.60,uninjured,Bronze Whaler,NSW,1960,1960
+3.70,fatal,Tiger Shark,WA,1916,1910
+3.70,fatal,White Shark,NSW,2014,2010
+3.70,injured,Tiger Shark,WA,1916,1910
+3.70,injured,White Shark,NSW,1919,1910
+3.70,injured,White Shark,NSW,1953,1950
+3.70,injured,White Shark,NSW,1960,1960
+3.70,uninjured,White Shark,NSW,1951,1950
+3.70,uninjured,White Shark,NSW,1953,1950
+4.00,fatal,White Shark,VIC,1876,1870
+4.00,fatal,Bull Shark,NSW,1887,1880
+4.00,fatal,Bull Shark,NSW,1895,1890
+4.00,fatal,Tiger Shark,WA,1925,1920
+4.00,fatal,White Shark,SA,1926,1920
+4.00,fatal,Tiger Shark,NSW,1927,1920
+4.00,fatal,White Shark,NSW,1934,1930
+4.00,fatal,Bull Shark,NSW,1942,1940
+4.00,fatal,Tiger Shark,NSW,1948,1940
+4.00,fatal,White Shark,NSW,1949,1940
+4.00,fatal,Bull Shark,NSW,1955,1950
+4.00,fatal,White Shark,VIC,1956,1950
+4.00,fatal,White Shark,WA,1967,1960
+4.00,fatal,Tiger Shark,QLD,1977,1970
+4.00,fatal,Tiger Shark,QLD,1977,1970
+4.00,fatal,Tiger Shark,QLD,1983,1980
+4.00,fatal,Tiger Shark,QLD,1983,1980
+4.00,fatal,Tiger Shark,QLD,1984,1980
+4.00,fatal,White Shark,SA,1991,1990
+4.00,fatal,White Shark,TAS,1993,1990
+4.00,fatal,Tiger Shark,WA,1993,1990
+4.00,fatal,White Shark,SA,1998,1990
+4.00,fatal,White Shark,WA,2000,2000
+4.00,fatal,White Shark,WA,2010,2010
+4.00,fatal,White Shark,WA,2012,2010
+4.00,injured,Tiger Shark,QLD,1931,1930
+4.00,injured,White Shark,NSW,1932,1930
+4.00,injured,White Shark,NSW,1934,1930
+4.00,injured,Tiger Shark,QLD,1936,1930
+4.00,injured,Tiger Shark,NSW,1953,1950
+4.00,injured,White Shark,VIC,1959,1950
+4.00,injured,White Shark,VIC,1964,1960
+4.00,injured,Tiger Shark,NSW,1977,1970
+4.00,injured,White Shark,SA,1983,1980
+4.00,injured,White Shark,WA,2000,2000
+4.00,injured,White Shark,WA,2008,2000
+4.00,injured,White Shark,WA,2010,2010
+4.00,injured,White Shark,QLD,2016,2010
+4.00,injured,White Shark,NSW,2016,2010
+4.00,injured,Whaler Shark,QLD,2017,2010
+4.00,injured,White Shark,WA,2018,2010
+4.00,injured,White Shark,NSW,2020,2020
+4.00,injured,White Shark,WA,2021,2020
+4.00,uninjured,Tiger Shark,QLD,1983,1980
+4.00,uninjured,Hammerhead,QLD,1987,1980
+4.00,uninjured,White Shark,VIC,1989,1980
+4.00,uninjured,Tiger Shark,QLD,1990,1990
+4.00,uninjured,Tiger Shark,QLD,2000,2000
+4.00,uninjured,White Shark,SA,2000,2000
+4.00,uninjured,Tiger Shark,QLD,2001,2000
+4.00,uninjured,White Shark,VIC,2004,2000
+4.00,uninjured,White Shark,NSW,2005,2000
+4.00,uninjured,White Shark,NSW,2008,2000
+4.00,uninjured,White Shark,NSW,2009,2000
+4.00,uninjured,White Shark,VIC,2009,2000
+4.00,uninjured,White Shark,WA,2014,2010
+4.00,uninjured,White Shark,WA,2017,2010
+4.00,uninjured,White Shark,SA,2017,2010
+4.00,uninjured,White Shark,WA,2018,2010
+4.10,injured,White Shark,QLD,1973,1970
+4.20,fatal,White Shark,NSW,1935,1930
+4.20,fatal,White Shark,NSW,1935,1930
+4.20,fatal,White Shark,QLD,1992,1990
+4.20,injured,Tiger Shark,QLD,1933,1930
+4.20,injured,White Shark,WA,1946,1940
+4.30,fatal,White Shark,TAS,2015,2010
+4.30,injured,Tiger Shark,QLD,1939,1930
+4.30,uninjured,Whaler Shark,NSW,1876,1870
+4.30,uninjured,White Shark,TAS,2015,2010
+4.50,fatal,Tiger Shark,NT,1934,1930
+4.50,fatal,White Shark,SA,1987,1980
+4.50,fatal,Tiger Shark,QLD,1988,1980
+4.50,fatal,Tiger Shark,QLD,1988,1980
+4.50,fatal,White Shark,SA,2000,2000
+4.50,fatal,White Shark,WA,2011,2010
+4.50,fatal,White Shark,NSW,2021,2020
+4.50,fatal,White Shark,NSW,2022,2020
+4.50,injured,Tiger Shark,QLD,1959,1950
+4.50,injured,White Shark,VIC,1989,1980
+4.50,injured,White Shark,WA,2004,2000
+4.50,uninjured,White Shark,WA,2019,2010
+4.60,fatal,Tiger Shark,QLD,1937,1930
+4.60,fatal,Tiger Shark,QLD,1937,1930
+4.60,uninjured,White Shark,SA,2014,2010
+4.80,fatal,Tiger Shark,QLD,1946,1940
+4.90,fatal,White Shark,NSW,1929,1920
+5.00,fatal,White Shark,VIC,1930,1930
+5.00,fatal,White Shark,WA,2004,2000
+5.00,fatal,White Shark,SA,2004,2000
+5.00,fatal,White Shark,SA,2005,2000
+5.00,fatal,White Shark,WA,2014,2010
+5.00,fatal,White Shark,WA,2016,2010
+5.00,injured,Tiger Shark,QLD,1956,1950
+5.00,injured,White Shark,SA,1963,1960
+5.00,injured,White Shark,WA,1997,1990
+5.00,injured,White Shark,WA,1997,1990
+5.00,injured,White Shark,SA,2005,2000
+5.00,injured,White Shark,WA,2006,2000
+5.00,injured,White Shark,TAS,2009,2000
+5.00,injured,White Shark,WA,2013,2010
+5.00,uninjured,White Shark,NSW,2001,2000
+5.00,uninjured,White Shark,WA,2004,2000
+5.00,uninjured,White Shark,NSW,2008,2000
+5.30,injured,White Shark,TAS,2012,2010
+5.50,fatal,White Shark,WA,2008,2000
+5.50,uninjured,White Shark,TAS,1982,1980
+6.00,fatal,White Shark,NSW,1936,1930
+6.00,fatal,White Shark,TAS,1982,1980
+6.00,fatal,White Shark,SA,1985,1980
+6.00,fatal,White Shark,NSW,1993,1990
+6.00,fatal,White Shark,SA,2002,2000
+6.00,fatal,White Shark,WA,2005,2000
+6.00,injured,White Shark,SA,2012,2010
+6.00,injured,White Shark,SA,2015,2010
+6.00,uninjured,White Shark,TAS,1984,1980
+6.00,uninjured,White Shark,TAS,1984,1980
+6.00,uninjured,White Shark,WA,1999,1990
+6.00,uninjured,White Shark,WA,2009,2000

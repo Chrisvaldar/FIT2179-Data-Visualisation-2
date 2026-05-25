@@ -1,36 +1,48 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "title": {
-    "text": "Activity risk: volume vs fatality rate",
-    "subtitle": "Swimming dominates on both measures. Surfing is common but rarely fatal. Fishing: 37 incidents, zero deaths.",
-    "fontSize": 16,
-    "subtitleFontSize": 12,
-    "anchor": "start",
-    "offset": 16
-  },
+  "width": 1000,
+  "height": 380,
+  "padding": { "bottom": 4 },
+  "autosize": { "type": "pad", "contains": "padding", "resize": true },
   "data": { "url": "data/wrangled_data/activity_risk.csv" },
-  "transform": [{ "calculate": "-datum.count", "as": "count_neg" }],
+  "transform": [
+    { "calculate": "-datum.count", "as": "count_neg" },
+    { "calculate": "datum['Activity.clean']", "as": "activity" }
+  ],
+  "config": {
+    "view": { "stroke": "transparent" },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+  },
   "hconcat": [
     {
       "title": {
         "text": "Number of incidents",
         "fontSize": 12,
-        "anchor": "middle"
+        "fontWeight": "bold",
+        "anchor": "middle",
+        "color": "#1a2530"
       },
-      "width": 260,
-      "height": 300,
+      "width": 385,
+      "height": 380,
       "layer": [
         {
-          "mark": {
-            "type": "rule",
-            "strokeWidth": 2,
-            "color": "#2c3e50"
-          },
+          "description": "Lollipop stem from 0 to count_neg",
+          "mark": { "type": "rule", "strokeWidth": 2.4, "color": "#3d5263" },
           "encoding": {
             "y": {
-              "field": "Activity\\.clean",
+              "field": "activity",
               "type": "nominal",
-              "sort": { "field": "count", "order": "descending" },
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
               "axis": null
             },
             "x": {
@@ -38,7 +50,7 @@
               "type": "quantitative",
               "scale": { "domain": [-520, 0] },
               "axis": {
-                "title": "Number of incidents",
+                "title": null,
                 "labelExpr": "abs(datum.value)",
                 "grid": true,
                 "gridColor": "#eeeeee"
@@ -46,56 +58,73 @@
             },
             "x2": { "datum": 0 },
             "tooltip": [
-              { "field": "Activity\\.clean", "title": "Activity" },
+              { "field": "activity", "title": "Activity" },
               { "field": "count", "title": "Total incidents" },
               { "field": "fatal", "title": "Fatal" },
-              {
-                "field": "fatal_rate",
-                "title": "Fatality rate (%)",
-                "format": ".1f"
-              }
+              { "field": "fatal_rate", "title": "Fatality rate (%)", "format": ".1f" }
             ]
           }
         },
         {
-          "mark": { "type": "circle", "size": 80, "color": "#2c3e50" },
+          "description": "Lollipop head circle",
+          "mark": {
+            "type": "circle",
+            "size": 110,
+            "color": "#3d5263",
+            "stroke": "#ffffff",
+            "strokeWidth": 1.2
+          },
           "encoding": {
             "y": {
-              "field": "Activity\\.clean",
+              "field": "activity",
               "type": "nominal",
-              "sort": { "field": "count", "order": "descending" },
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
               "axis": null
             },
             "x": {
               "field": "count_neg",
               "type": "quantitative",
               "scale": { "domain": [-520, 0] }
-            },
-            "tooltip": [
-              { "field": "Activity\\.clean", "title": "Activity" },
-              { "field": "count", "title": "Total incidents" },
-              { "field": "fatal", "title": "Fatal" },
-              {
-                "field": "fatal_rate",
-                "title": "Fatality rate (%)",
-                "format": ".1f"
-              }
-            ]
+            }
           }
         },
         {
+          "description": "Count label sitting next to each circle",
           "mark": {
-            "type": "rule",
-            "strokeWidth": 0.5,
-            "color": "#dddddd",
-            "strokeDash": [2, 2]
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#1a2530",
+            "align": "right",
+            "dx": -10
           },
           "encoding": {
             "y": {
-              "field": "Activity\\.clean",
+              "field": "activity",
               "type": "nominal",
-              "sort": { "field": "count", "order": "descending" }
-            }
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
+              "axis": null
+            },
+            "x": { "field": "count_neg", "type": "quantitative" },
+            "text": { "field": "count", "type": "quantitative" }
           }
         }
       ]
@@ -104,119 +133,158 @@
       "title": {
         "text": "Activity",
         "fontSize": 12,
-        "anchor": "middle"
+        "fontWeight": "bold",
+        "anchor": "middle",
+        "color": "#1a2530"
       },
-      "width": 100,
-      "height": 300,
+      "width": 180,
+      "height": 380,
       "layer": [
         {
+          "description": "Activity name in the central column",
           "mark": {
             "type": "text",
-            "fontSize": 11.5,
+            "fontSize": 12,
             "fontWeight": "bold",
-            "color": "#333333",
+            "color": "#1a2530",
             "align": "center"
           },
           "encoding": {
             "y": {
-              "field": "Activity\\.clean",
+              "field": "activity",
               "type": "nominal",
-              "sort": { "field": "count", "order": "descending" },
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
               "axis": null
             },
-            "text": { "field": "Activity\\.clean", "type": "nominal" }
+            "text": { "field": "activity", "type": "nominal" }
           }
         }
       ],
-      "view": { "stroke": null }
+      "view": { "stroke": "transparent" }
     },
     {
       "title": {
         "text": "Fatality rate (%)",
         "fontSize": 12,
-        "anchor": "middle"
+        "fontWeight": "bold",
+        "anchor": "middle",
+        "color": "#1a2530"
       },
-      "width": 260,
-      "height": 300,
+      "width": 435,
+      "height": 380,
       "layer": [
         {
-          "mark": { "type": "rule", "strokeWidth": 2, "color": "#c0392b" },
+          "description": "Lollipop stem in red",
+          "mark": { "type": "rule", "strokeWidth": 2.4, "color": "#c0392b" },
           "encoding": {
             "y": {
-              "field": "Activity\\.clean",
+              "field": "activity",
               "type": "nominal",
-              "sort": { "field": "count", "order": "descending" },
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
               "axis": null
             },
             "x": {
               "field": "fatal_rate",
               "type": "quantitative",
-              "scale": { "domain": [0, 40] },
+              "scale": { "domain": [0, 70] },
               "axis": {
-                "title": "Fatality rate (%)",
+                "title": null,
                 "grid": true,
-                "gridColor": "#eeeeee"
+                "gridColor": "#eeeeee",
+                "values": [0, 10, 20, 30, 40]
               }
             },
             "x2": { "datum": 0 },
             "tooltip": [
-              { "field": "Activity\\.clean", "title": "Activity" },
+              { "field": "activity", "title": "Activity" },
               { "field": "count", "title": "Total incidents" },
               { "field": "fatal", "title": "Fatal" },
-              {
-                "field": "fatal_rate",
-                "title": "Fatality rate (%)",
-                "format": ".1f"
-              }
+              { "field": "fatal_rate", "title": "Fatality rate (%)", "format": ".1f" }
             ]
           }
         },
         {
-          "mark": { "type": "circle", "size": 80, "color": "#c0392b" },
+          "description": "Lollipop head circle",
+          "mark": {
+            "type": "circle",
+            "size": 110,
+            "color": "#c0392b",
+            "stroke": "#ffffff",
+            "strokeWidth": 1.2
+          },
           "encoding": {
             "y": {
-              "field": "Activity\\.clean",
+              "field": "activity",
               "type": "nominal",
-              "sort": { "field": "count", "order": "descending" },
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
               "axis": null
             },
             "x": {
               "field": "fatal_rate",
               "type": "quantitative",
-              "scale": { "domain": [0, 40] }
-            },
-            "tooltip": [
-              { "field": "Activity\\.clean", "title": "Activity" },
-              { "field": "count", "title": "Total incidents" },
-              { "field": "fatal", "title": "Fatal" },
-              {
-                "field": "fatal_rate",
-                "title": "Fatality rate (%)",
-                "format": ".1f"
-              }
-            ]
+              "scale": { "domain": [0, 70] }
+            }
           }
         },
         {
+          "description": "Fatality rate label next to each red circle",
           "mark": {
-            "type": "rule",
-            "strokeWidth": 0.5,
-            "color": "#dddddd",
-            "strokeDash": [2, 2]
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#1a2530",
+            "align": "left",
+            "dx": 10
           },
           "encoding": {
             "y": {
-              "field": "Activity\\.clean",
+              "field": "activity",
               "type": "nominal",
-              "sort": { "field": "count", "order": "descending" }
-            }
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
+              "axis": null
+            },
+            "x": { "field": "fatal_rate", "type": "quantitative" },
+            "text": { "field": "fatal_rate", "type": "quantitative", "format": ".1f" }
           }
         }
       ]
     }
   ],
-  "spacing": 0,
-  "config": {
-    "view": { "stroke": null }
-  }
+  "spacing": 0
 }

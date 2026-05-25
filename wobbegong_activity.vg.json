@@ -1,63 +1,87 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "title": {
-    "text": "The wobbegong exception: 201 incidents, zero fatalities",
-    "subtitle": "Wobbegongs bite when disturbed. Every single incident was non-fatal.",
-    "fontSize": 16,
-    "subtitleFontSize": 12,
-    "anchor": "start"
-  },
-  "width": 500,
-  "height": 360,
+  "width": 800,
+  "height": 380,
+  "padding": { "bottom": 4 },
   "data": { "url": "data/wrangled_data/wobbegong_activity.csv" },
-  "mark": {
-    "type": "bar",
-    "cornerRadiusTopLeft": 3,
-    "cornerRadiusTopRight": 3
+  "config": {
+    "view": { "stroke": "transparent" },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
   },
-  "encoding": {
-    "y": {
-      "field": "Activity\\.clean",
-      "type": "nominal",
-      "sort": "x",
-      "axis": {
-        "title": "Activity",
-        "labelFontSize": 12,
-        "titleFontSize": 12,
-        "titleAngle": 0,
-        "titleAlign": "right",
-        "titleX": -5,
-        "titleY": -10
+  "transform": [
+    { "calculate": "datum['Activity.clean']", "as": "activity" },
+    { "calculate": "datum['Victim.injury']", "as": "outcome" },
+    {
+      "joinaggregate": [
+        { "op": "sum", "field": "count", "as": "activity_total" }
+      ],
+      "groupby": ["activity"]
+    }
+  ],
+  "layer": [
+    {
+      "description": "Stacked bar by outcome. The fatal segment is absent from the data; the legend swatch is annotated as never observed.",
+      "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+      "encoding": {
+        "y": {
+          "field": "activity",
+          "type": "nominal",
+          "sort": { "field": "activity_total", "op": "max", "order": "descending" },
+          "axis": { "title": null, "labelFontSize": 12, "labelLimit": 200 }
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "count",
+          "type": "quantitative",
+          "stack": "zero",
+          "scale": { "domain": [0, 110] },
+          "axis": { "title": "Number of incidents", "grid": true, "gridColor": "#eeeeee" }
+        },
+        "color": {
+          "field": "outcome",
+          "type": "nominal",
+          "scale": {
+            "domain": ["fatal", "injured", "uninjured"],
+            "range": ["#c0392b", "#e67e22", "#7f8c8d"]
+          },
+          "legend": {
+            "title": "Outcome",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "offset": 4,
+            "labelFontSize": 11,
+            "labelExpr": "datum.label === 'fatal' ? 'Fatal (never observed)' : datum.label === 'injured' ? 'Injured' : 'Uninjured'"
+          }
+        },
+        "tooltip": [
+          { "field": "activity", "title": "Activity" },
+          { "field": "outcome", "title": "Outcome" },
+          { "field": "count", "title": "Incidents this outcome" },
+          { "field": "activity_total", "title": "Activity total" }
+        ]
       }
     },
-    "x": {
-      "field": "count",
-      "type": "quantitative",
-      "stack": "zero",
-      "axis": {
-        "title": "Number of incidents",
-        "grid": true,
-        "gridColor": "#eeeeee"
-      }
-    },
-    "color": {
-      "field": "Victim\\.injury",
-      "type": "nominal",
-      "scale": {
-        "domain": ["injured", "uninjured"],
-        "range": ["#e67e22", "#7f8c8d"]
+    {
+      "description": "Activity total label at the right end of each bar",
+      "transform": [{ "filter": "datum.outcome === 'injured'" }],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1a2530"
       },
-      "legend": {
-        "title": "Outcome",
-        "orient": "right",
-        "labelFontSize": 11,
-        "labelExpr": "datum.label === 'injured' ? 'Injured' : 'Uninjured'"
+      "encoding": {
+        "y": {
+          "field": "activity",
+          "type": "nominal",
+          "sort": { "field": "activity_total", "op": "max", "order": "descending" }
+        },
+        "x": { "field": "activity_total", "type": "quantitative" },
+        "text": { "field": "activity_total", "type": "quantitative" }
       }
-    },
-    "tooltip": [
-      { "field": "Activity\\.clean", "title": "Activity" },
-      { "field": "Victim\\.injury", "title": "Outcome" },
-      { "field": "count", "title": "Incidents" }
-    ]
-  }
+    }
+  ]
 }

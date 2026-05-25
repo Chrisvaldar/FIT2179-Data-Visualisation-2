@@ -1,0 +1,219 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 1000,
+  "height": 322,
+  "padding": { "top": 8, "left": 8, "right": 12, "bottom": 8 },
+  "data": { "url": "data/wrangled_data/gender_isotype.csv" },
+  "config": {
+    "view": { "stroke": "transparent", "clip": false },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+  },
+  "transform": [
+    { "calculate": "datum['Victim.gender']", "as": "gender" },
+    { "calculate": "datum['Victim.injury']", "as": "outcome" },
+    { "calculate": "datum.gender_row == 0 ? 20 : 188", "as": "band_y" },
+    { "calculate": "datum.gender_row == 0 ? 152 : 92", "as": "band_h" },
+    { "calculate": "24", "as": "col_step" },
+    { "calculate": "32", "as": "row_step" },
+    {
+      "calculate": "datum.gender_row == 0 ? datum.band_y + 36 + datum.unit_row * datum.row_step : datum.band_y + datum.band_h / 2",
+      "as": "icon_y"
+    },
+    {
+      "calculate": "156 + datum.unit_col * datum.col_step",
+      "as": "icon_x"
+    }
+  ],
+  "layer": [
+    {
+      "description": "Row band backgrounds",
+      "data": {
+        "values": [
+          { "gender_row": 0, "label": "Male" },
+          { "gender_row": 1, "label": "Female" }
+        ]
+      },
+      "transform": [
+        { "calculate": "datum.gender_row == 0 ? 20 : 188", "as": "band_y" },
+        { "calculate": "datum.gender_row == 0 ? 152 : 92", "as": "band_h" },
+        { "calculate": "datum.band_y + datum.band_h", "as": "band_y2" }
+      ],
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 4,
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": { "value": 142, "scale": null },
+        "x2": { "value": 996 },
+        "y": { "field": "band_y", "type": "quantitative", "scale": null },
+        "y2": { "field": "band_y2", "type": "quantitative", "scale": null },
+        "color": {
+          "condition": {
+            "test": "datum.gender_row == 0",
+            "value": "#eef4f7"
+          },
+          "value": "#f7f4ef"
+        }
+      }
+    },
+    {
+      "description": "Gender icons — uniform size and grid spacing",
+      "mark": {
+        "type": "image",
+        "width": 20,
+        "height": 28,
+        "aspect": false
+      },
+      "encoding": {
+        "x": { "field": "icon_x", "type": "quantitative", "scale": null },
+        "y": { "field": "icon_y", "type": "quantitative", "scale": null },
+        "url": { "field": "icon_url", "type": "nominal" },
+        "tooltip": [
+          { "field": "gender", "title": "Gender" },
+          { "field": "outcome", "title": "Outcome" },
+          {
+            "field": "source_count",
+            "type": "quantitative",
+            "title": "Incidents in group"
+          },
+          {
+            "field": "incidents_per_icon",
+            "type": "quantitative",
+            "title": "Incidents per icon"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Row labels",
+      "data": {
+        "values": [
+          {
+            "gender_row": 0,
+            "label": "Male",
+            "incidents": "1,060 incidents",
+            "fatal": "21.9% fatal"
+          },
+          {
+            "gender_row": 1,
+            "label": "Female",
+            "incidents": "117 incidents",
+            "fatal": "13.7% fatal"
+          }
+        ]
+      },
+      "transform": [
+        { "calculate": "datum.gender_row == 0 ? 20 : 188", "as": "band_y" },
+        { "calculate": "datum.gender_row == 0 ? 152 : 92", "as": "band_h" },
+        {
+          "calculate": "datum.band_y + (datum.band_h - 38) / 2",
+          "as": "label_block_top"
+        },
+        { "calculate": "datum.label_block_top + 4", "as": "label_y" },
+        { "calculate": "datum.label_block_top + 17", "as": "incidents_y" },
+        { "calculate": "datum.label_block_top + 29", "as": "fatal_y" }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 13,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "x": { "value": 4, "scale": null },
+            "y": { "field": "label_y", "type": "quantitative", "scale": null },
+            "text": { "field": "label", "type": "nominal" },
+            "color": { "value": "#1a2530" }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 10
+          },
+          "encoding": {
+            "x": { "value": 4, "scale": null },
+            "y": {
+              "field": "incidents_y",
+              "type": "quantitative",
+              "scale": null
+            },
+            "text": { "field": "incidents", "type": "nominal" },
+            "color": { "value": "#5a6a75" }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 10
+          },
+          "encoding": {
+            "x": { "value": 4, "scale": null },
+            "y": { "field": "fatal_y", "type": "quantitative", "scale": null },
+            "text": { "field": "fatal", "type": "nominal" },
+            "color": { "value": "#5a6a75" }
+          }
+        }
+      ]
+    },
+    {
+      "description": "Legend title",
+      "data": { "values": [{ "text": "Each icon ≈ 10 incidents" }] },
+      "mark": { "type": "text", "align": "left", "baseline": "top", "fontSize": 11 },
+      "encoding": {
+        "x": { "value": 142, "scale": null },
+        "y": { "value": 288, "scale": null },
+        "text": { "field": "text", "type": "nominal" },
+        "color": { "value": "#1a2530" }
+      }
+    },
+    {
+      "description": "Legend swatches — filled circles (no stray plot points)",
+      "data": {
+        "values": [
+          { "label": "Fatal", "color": "#c0392b", "x": 142 },
+          { "label": "Injured", "color": "#e67e22", "x": 218 },
+          { "label": "Uninjured", "color": "#7f8c8d", "x": 308 }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "circle",
+            "size": 70,
+            "filled": true
+          },
+          "encoding": {
+            "x": { "field": "x", "type": "quantitative", "scale": null },
+            "y": { "value": 308, "scale": null },
+            "color": { "field": "color", "type": "nominal", "scale": null }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 11,
+            "dx": 12
+          },
+          "encoding": {
+            "x": { "field": "x", "type": "quantitative", "scale": null },
+            "y": { "value": 308, "scale": null },
+            "text": { "field": "label", "type": "nominal" },
+            "color": { "value": "#1a2530" }
+          }
+        }
+      ]
+    }
+  ]
+}

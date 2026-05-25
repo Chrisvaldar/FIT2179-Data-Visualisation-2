@@ -1,0 +1,217 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 1000,
+  "height": 380,
+  "padding": { "top": 8, "left": 4, "right": 8, "bottom": 12 },
+  "data": { "url": "data/wrangled_data/length_pictogram.csv" },
+  "config": {
+    "view": { "stroke": "transparent", "clip": false },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+  },
+  "params": [
+    {
+      "name": "species_filter",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "White Shark",
+          "Tiger Shark",
+          "Bull Shark",
+          "Wobbegong",
+          "Whaler Shark",
+          "Bronze Whaler",
+          "Other"
+        ],
+        "labels": [
+          "All species",
+          "White Shark",
+          "Tiger Shark",
+          "Bull Shark",
+          "Wobbegong",
+          "Whaler Shark",
+          "Bronze Whaler",
+          "Other / unknown"
+        ],
+        "name": "Filter by species: "
+      }
+    }
+  ],
+  "transform": [
+    { "calculate": "datum['Shark.length.m']", "as": "length_m" },
+    { "calculate": "datum['Victim.injury']", "as": "outcome" },
+    { "calculate": "datum['Species.clean']", "as": "species" },
+    { "calculate": "datum['Incident.year']", "as": "year" },
+    { "calculate": "datum.length_floor", "as": "length_floor" },
+    { "calculate": "datum.length_band", "as": "length_band" },
+    { "calculate": "datum.unit_col", "as": "unit_col" },
+    { "calculate": "datum.unit_row", "as": "unit_row" },
+    {
+      "filter": "!species_filter || datum.species == species_filter"
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "length_band",
+      "type": "ordinal",
+      "sort": [
+        "0–1 m",
+        "1–2 m",
+        "2–3 m",
+        "3–4 m",
+        "4–5 m",
+        "5–6 m",
+        "6–7 m"
+      ],
+      "header": {
+        "title": null,
+        "labelFontSize": 11,
+        "labelFontWeight": "bold",
+        "labelColor": "#1a2530",
+        "labelPadding": 6
+      }
+    }
+  },
+  "spec": {
+    "width": 118,
+    "height": 260,
+    "layer": [
+      {
+        "description": "Column background: neutral below 2 m, light red tint from 2 m upward",
+        "transform": [
+          {
+            "aggregate": [{ "op": "min", "field": "length_floor", "as": "lf" }]
+          }
+        ],
+        "mark": {
+          "type": "rect",
+          "cornerRadius": 3,
+          "opacity": 0.95
+        },
+        "encoding": {
+          "x": { "value": 0, "scale": null },
+          "x2": { "value": 118 },
+          "y": { "value": 0, "scale": null },
+          "y2": { "value": 260 },
+          "color": {
+            "condition": {
+              "test": "datum.lf >= 2",
+              "value": "#fceceb"
+            },
+            "value": "#f4f4f2"
+          }
+        }
+      },
+      {
+        "description": "One square per incident, five wide",
+        "mark": {
+          "type": "square",
+          "size": 42,
+          "cornerRadius": 1.5,
+          "stroke": "#ffffff",
+          "strokeWidth": 0.35
+        },
+        "encoding": {
+          "x": {
+            "field": "unit_col",
+            "type": "ordinal",
+            "scale": {
+              "domain": [0, 1, 2, 3, 4],
+              "paddingInner": 0.12
+            },
+            "axis": null
+          },
+          "y": {
+            "field": "unit_row",
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 38],
+              "reverse": true,
+              "nice": false
+            },
+            "axis": null
+          },
+          "color": {
+            "field": "outcome",
+            "type": "nominal",
+            "scale": {
+              "domain": ["fatal", "injured", "uninjured"],
+              "range": ["#c0392b", "#e67e22", "#7f8c8d"]
+            },
+            "legend": {
+              "title": "Each square = one incident",
+              "orient": "bottom",
+              "direction": "horizontal",
+              "offset": 4,
+              "labelFontSize": 11,
+              "labelExpr": "datum.label == 'fatal' ? 'Fatal' : datum.label == 'injured' ? 'Injured' : 'Uninjured'"
+            }
+          },
+          "tooltip": [
+            {
+              "field": "length_m",
+              "type": "quantitative",
+              "title": "Length (m)",
+              "format": ".1f"
+            },
+            { "field": "outcome", "title": "Outcome" },
+            { "field": "species", "title": "Species" },
+            { "field": "State", "title": "State" },
+            { "field": "year", "title": "Year" }
+          ]
+        }
+      },
+      {
+        "description": "Average adult height note on the 1–2 m column",
+        "transform": [
+          {
+            "aggregate": [{ "op": "min", "field": "length_floor", "as": "lf" }]
+          },
+          { "filter": "datum.lf == 1" }
+        ],
+        "mark": {
+          "type": "text",
+          "baseline": "top",
+          "dy": 268,
+          "fontSize": 9,
+          "fontWeight": "bold",
+          "align": "center"
+        },
+        "encoding": {
+          "x": { "value": 59, "scale": null },
+          "y": { "value": 0, "scale": null },
+          "text": { "datum": "avg height 1.7 m" },
+          "color": { "value": "#1a4a63" }
+        }
+      },
+      {
+        "description": "Threshold note on the 2–3 m column",
+        "transform": [
+          {
+            "aggregate": [{ "op": "min", "field": "length_floor", "as": "lf" }]
+          },
+          { "filter": "datum.lf == 2" }
+        ],
+        "mark": {
+          "type": "text",
+          "baseline": "top",
+          "dy": 268,
+          "fontSize": 9,
+          "fontWeight": "bold",
+          "align": "center"
+        },
+        "encoding": {
+          "x": { "value": 59, "scale": null },
+          "y": { "value": 0, "scale": null },
+          "text": { "datum": "fatalities begin" },
+          "color": { "value": "#c0392b" }
+        }
+      }
+    ]
+  },
+  "resolve": {
+    "legend": { "color": "shared" }
+  }
+}

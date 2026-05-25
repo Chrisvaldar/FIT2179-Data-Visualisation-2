@@ -1,123 +1,278 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "title": {
-    "text": "Which shark should you actually fear?",
-    "subtitle": "Bubble size = median shark length (m). Colour = % of attacks that were provoked.",
-    "fontSize": 16,
-    "subtitleFontSize": 12,
-    "anchor": "start"
-  },
-  "width": 650,
-  "height": 480,
   "data": { "url": "data/wrangled_data/species_bubble.csv" },
-  "transform": [
+  "width": 1000,
+  "height": 380,
+  "padding": { "bottom": 4 },
+  "autosize": { "type": "pad", "contains": "padding", "resize": true },
+  "config": {
+    "view": { "stroke": "transparent" },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+  },
+  "hconcat": [
     {
-      "calculate": "datum['Species.clean'] === 'Bronze Whaler' ? -4 : datum['Species.clean'] === 'Dusky Shark' ? -2 : datum['Species.clean'] === 'Grey Nurse' ? -6 : datum['Species.clean'] === 'Grey Reef' ? -8 : datum['Species.clean'] === 'Hammerhead' ? -10 : datum['Species.clean'] === 'Lemon Shark' ? -12 : datum['Species.clean'] === 'Whitetip Reef' ? -14 : datum['fatal_rate']",
-      "as": "y_display"
+      "title": {
+        "text": "All twelve species at their real fatality rate",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "anchor": "start",
+        "color": "#1a2530"
+      },
+      "width": 620,
+      "height": 380,
+      "layer": [
+        {
+          "description": "Reference rule at 0% fatal rate",
+          "mark": { "type": "rule", "stroke": "#cccccc", "strokeWidth": 1 },
+          "encoding": { "y": { "datum": 0 } }
+        },
+        {
+          "description": "Bubble marks for all twelve species, with click-to-highlight selection",
+          "params": [
+            {
+              "name": "species_select",
+              "select": { "type": "point", "fields": ["Species\\.clean"] },
+              "value": null
+            }
+          ],
+          "mark": {
+            "type": "circle",
+            "stroke": "#ffffff",
+            "strokeWidth": 1.2
+          },
+          "encoding": {
+            "x": {
+              "field": "count",
+              "type": "quantitative",
+              "scale": { "domain": [0, 400] },
+              "axis": {
+                "title": "Number of incidents",
+                "grid": true,
+                "gridColor": "#eeeeee",
+                "tickCount": 5
+              }
+            },
+            "y": {
+              "field": "fatal_rate",
+              "type": "quantitative",
+              "scale": { "domain": [-3, 42] },
+              "axis": {
+                "title": "Fatality rate (%)",
+                "grid": true,
+                "gridColor": "#eeeeee",
+                "values": [0, 10, 20, 30, 40]
+              }
+            },
+            "size": {
+              "field": "median_length",
+              "type": "quantitative",
+              "scale": { "range": [60, 2400] },
+              "legend": {
+                "title": "Median length (m)",
+                "orient": "right",
+                "values": [1.0, 2.0, 3.0, 4.0],
+                "symbolOpacity": 0.4,
+                "symbolBaseFillColor": "#7f8c8d",
+                "symbolStrokeWidth": 0
+              }
+            },
+            "color": {
+              "field": "provoked_rate",
+              "type": "quantitative",
+              "scale": {
+                "scheme": "purples",
+                "domain": [0, 100]
+              },
+              "legend": {
+                "title": "% bites provoked",
+                "orient": "right",
+                "gradientLength": 120
+              }
+            },
+            "opacity": {
+              "condition": {
+                "param": "species_select",
+                "empty": true,
+                "value": 0.85
+              },
+              "value": 0.18
+            },
+            "tooltip": [
+              { "field": "Species\\.clean", "title": "Species" },
+              { "field": "count", "title": "Total incidents" },
+              { "field": "fatal", "title": "Fatal" },
+              {
+                "field": "fatal_rate",
+                "title": "Fatality rate (%)",
+                "format": ".1f"
+              },
+              {
+                "field": "median_length",
+                "title": "Median length (m)",
+                "format": ".1f"
+              },
+              {
+                "field": "provoked_rate",
+                "title": "% provoked",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+        {
+          "description": "Inside-bubble labels for the five named species, shortened to one word so they fit inside the bubble area",
+          "transform": [
+            {
+              "filter": "indexof(['Tiger Shark','White Shark','Bull Shark','Whaler Shark'], datum['Species.clean']) >= 0"
+            },
+            {
+              "calculate": "split(datum['Species.clean'], ' ')[0]",
+              "as": "short_name"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#000000",
+            "align": "center",
+            "baseline": "middle"
+          },
+          "encoding": {
+            "x": { "field": "count", "type": "quantitative" },
+            "y": { "field": "fatal_rate", "type": "quantitative" },
+            "text": { "field": "short_name", "type": "nominal" }
+          }
+        }
+      ]
     },
     {
-      "calculate": "datum['Species.clean'] === 'Bronze Whaler' ? 4 : datum['Species.clean'] === 'Dusky Shark' ? 4 : datum['Species.clean'] === 'Grey Nurse' ? 4 : datum['Species.clean'] === 'Grey Reef' ? 4 : datum['Species.clean'] === 'Hammerhead' ? 4 : datum['Species.clean'] === 'Lemon Shark' ? 4 : datum['Species.clean'] === 'Whitetip Reef' ? 4 : -14",
-      "as": "label_dy"
-    }
-  ],
-  "layer": [
-    {
-      "description": "Bubble marks",
-      "mark": {
-        "type": "circle",
-        "opacity": 0.82,
-        "stroke": "#ffffff",
-        "strokeWidth": 1.2
+      "title": {
+        "text": "Zoom on the bottom-left cluster",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "anchor": "start",
+        "color": "#1a2530"
       },
-      "encoding": {
-        "x": {
-          "field": "count",
-          "type": "quantitative",
-          "axis": {
-            "title": "Number of incidents",
-            "grid": true,
-            "gridColor": "#eeeeee"
-          }
-        },
-        "y": {
-          "field": "y_display",
-          "type": "quantitative",
-          "scale": { "domain": [-18, 42] },
-          "axis": {
-            "title": "Fatality rate (%)",
-            "grid": true,
-            "gridColor": "#eeeeee",
-            "values": [0, 5, 10, 15, 20, 25, 30, 35, 40]
-          }
-        },
-        "size": {
-          "field": "median_length",
-          "type": "quantitative",
-          "scale": { "range": [60, 2800] },
-          "legend": {
-            "title": "Median length (m)",
-            "orient": "right",
-            "labelFontSize": 10,
-            "titleFontSize": 11,
-            "titleFontWeight": "bold",
-            "values": [1.0, 2.0, 3.0, 4.0],
-            "symbolOpacity": 0.4,
-            "symbolBaseFillColor": "#888888",
-            "symbolStrokeWidth": 0
-          }
-        },
-        "color": {
-          "field": "provoked_rate",
-          "type": "quantitative",
-          "scale": {
-            "scheme": "oranges",
-            "domain": [0, 100]
+      "width": 380,
+      "height": 380,
+      "transform": [
+        {
+          "filter": "indexof(['Bronze Whaler','Dusky Shark','Grey Nurse','Grey Reef','Hammerhead','Lemon Shark','Whitetip Reef'], datum['Species.clean']) >= 0"
+        }
+      ],
+      "layer": [
+        {
+          "description": "Bubbles for the seven small or rare species, plotted on a strip with one row per species",
+          "mark": {
+            "type": "circle",
+            "stroke": "#ffffff",
+            "strokeWidth": 1.2
           },
-          "legend": {
-            "title": "% provoked",
-            "orient": "right",
-            "labelFontSize": 10,
-            "titleFontSize": 11,
-            "titleFontWeight": "bold",
-            "gradientLength": 120
+          "encoding": {
+            "x": {
+              "field": "count",
+              "type": "quantitative",
+              "scale": { "domain": [0, 35] },
+              "axis": {
+                "title": "Number of incidents",
+                "grid": true,
+                "gridColor": "#eeeeee",
+                "tickCount": 4
+              }
+            },
+            "y": {
+              "field": "Species\\.clean",
+              "type": "nominal",
+              "sort": [
+                "Bronze Whaler",
+                "Grey Nurse",
+                "Grey Reef",
+                "Whitetip Reef",
+                "Dusky Shark",
+                "Hammerhead",
+                "Lemon Shark"
+              ],
+              "axis": {
+                "title": null,
+                "labelFontSize": 11,
+                "labelLimit": 130
+              }
+            },
+            "size": {
+              "field": "median_length",
+              "type": "quantitative",
+              "scale": { "range": [60, 2400] }
+            },
+            "color": {
+              "field": "provoked_rate",
+              "type": "quantitative",
+              "scale": { "scheme": "purples", "domain": [0, 100] }
+            },
+            "opacity": {
+              "condition": {
+                "param": "species_select",
+                "empty": true,
+                "value": 0.85
+              },
+              "value": 0.18
+            },
+            "tooltip": [
+              { "field": "Species\\.clean", "title": "Species" },
+              { "field": "count", "title": "Total incidents" },
+              { "field": "fatal", "title": "Fatal" },
+              {
+                "field": "fatal_rate",
+                "title": "Fatality rate (%)",
+                "format": ".1f"
+              },
+              {
+                "field": "median_length",
+                "title": "Median length (m)",
+                "format": ".1f"
+              },
+              {
+                "field": "provoked_rate",
+                "title": "% provoked",
+                "format": ".1f"
+              }
+            ]
           }
         },
-        "tooltip": [
-          { "field": "Species\\.clean", "title": "Species" },
-          { "field": "count", "title": "Total incidents" },
-          { "field": "fatal", "title": "Fatal" },
-          {
-            "field": "fatal_rate",
-            "title": "Fatality rate (%)",
-            "format": ".1f"
+        {
+          "description": "Right-side labels showing exact incident count next to each bubble",
+          "mark": {
+            "type": "text",
+            "fontSize": 10.5,
+            "fontWeight": "bold",
+            "color": "#1a2530",
+            "align": "left",
+            "dx": 24
           },
-          {
-            "field": "median_length",
-            "title": "Median length (m)",
-            "format": ".1f"
-          },
-          { "field": "provoked_rate", "title": "% provoked", "format": ".1f" }
-        ]
-      }
-    },
-    {
-      "description": "Species labels",
-      "mark": {
-        "type": "text",
-        "fontSize": 11,
-        "color": "#222222"
-      },
-      "encoding": {
-        "x": { "field": "count", "type": "quantitative" },
-        "y": { "field": "y_display", "type": "quantitative" },
-        "dy": { "field": "label_dy", "type": "quantitative" },
-        "text": { "field": "Species\\.clean", "type": "nominal" }
-      }
+          "encoding": {
+            "x": { "field": "count", "type": "quantitative" },
+            "y": {
+              "field": "Species\\.clean",
+              "type": "nominal",
+              "sort": [
+                "Bronze Whaler",
+                "Grey Nurse",
+                "Grey Reef",
+                "Whitetip Reef",
+                "Dusky Shark",
+                "Hammerhead",
+                "Lemon Shark"
+              ]
+            },
+            "text": { "field": "count", "type": "quantitative" }
+          }
+        }
+      ]
     }
   ],
   "resolve": {
-    "legend": {
-      "size": "independent"
-    }
+    "scale": { "size": "shared", "color": "shared" },
+    "legend": { "size": "shared", "color": "shared" }
   }
 }

@@ -1,0 +1,277 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 560,
+  "height": 560,
+  "padding": { "top": 12, "bottom": 48 },
+  "data": { "url": "data/wrangled_data/radial_time.csv" },
+  "config": {
+    "view": { "stroke": "transparent", "clip": false },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
+      "orient": "bottom",
+      "offset": 8,
+      "direction": "horizontal"
+    },
+    "text": { "font": "Source Sans 3" }
+  },
+  "params": [
+    {
+      "name": "show",
+      "value": "both",
+      "bind": {
+        "input": "select",
+        "options": ["both", "total", "fatal"],
+        "labels": ["Total and fatal", "Total incidents only", "Fatal incidents only"],
+        "name": "Show: "
+      }
+    }
+  ],
+  "transform": [
+    { "calculate": "toNumber(datum.Hour)", "as": "hour" },
+    { "calculate": "datum.total > 0 ? datum.fatal / datum.total * 100 : 0", "as": "fatal_rate" },
+    {
+      "calculate": "datum.hour == 0 ? '12am' : datum.hour < 12 ? datum.hour + 'am' : datum.hour == 12 ? '12pm' : (datum.hour - 12) + 'pm'",
+      "as": "hour_label"
+    },
+    {
+      "calculate": "datum.hour / 24 * 6.283185307179586 - 1.5707963267948966",
+      "as": "theta_start"
+    },
+    {
+      "calculate": "(datum.hour + 1) / 24 * 6.283185307179586 - 1.5707963267948966",
+      "as": "theta_end"
+    },
+    {
+      "calculate": "(datum.hour + 0.5) / 24 * 6.283185307179586 - 1.5707963267948966",
+      "as": "angle"
+    }
+  ],
+  "resolve": { "scale": { "radius": "independent" } },
+  "layer": [
+    {
+      "description": "Full clock face background, outer disc",
+      "data": { "values": [{ "r": 205 }] },
+      "mark": {
+        "type": "arc",
+        "fill": "#f4e9d3",
+        "stroke": "#d4c4a0",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "radius": { "field": "r", "type": "quantitative", "scale": null, "axis": null },
+        "theta": { "datum": -1.5707963267948966, "type": "quantitative", "scale": null, "axis": null },
+        "theta2": { "datum": 4.712388980384689 }
+      }
+    },
+    {
+      "description": "Full clock face background, inner cutout",
+      "data": { "values": [{ "r": 48 }] },
+      "mark": { "type": "arc", "fill": "#fafaf7", "stroke": null },
+      "encoding": {
+        "radius": { "field": "r", "type": "quantitative", "scale": null, "axis": null },
+        "theta": { "datum": -1.5707963267948966, "type": "quantitative", "scale": null, "axis": null },
+        "theta2": { "datum": 4.712388980384689 }
+      }
+    },
+    {
+      "description": "Hour divider spokes",
+      "transform": [
+        { "calculate": "280 + 48 * sin(datum.theta_start)", "as": "spoke_x1" },
+        { "calculate": "280 - 48 * cos(datum.theta_start)", "as": "spoke_y1" },
+        { "calculate": "280 + 205 * sin(datum.theta_start)", "as": "spoke_x2" },
+        { "calculate": "280 - 205 * cos(datum.theta_start)", "as": "spoke_y2" }
+      ],
+      "mark": { "type": "rule", "stroke": "#b8a582", "strokeWidth": 0.75, "opacity": 0.85 },
+      "encoding": {
+        "x": { "field": "spoke_x1", "type": "quantitative", "scale": null, "axis": null },
+        "y": { "field": "spoke_y1", "type": "quantitative", "scale": null, "axis": null },
+        "x2": { "field": "spoke_x2" },
+        "y2": { "field": "spoke_y2" }
+      }
+    },
+    {
+      "description": "Outer ring, total incidents per hour",
+      "mark": { "type": "arc", "innerRadius": 102, "fill": "#6eb0cf", "cornerRadius": 2, "tooltip": true },
+      "encoding": {
+        "theta": { "field": "theta_start", "type": "quantitative", "scale": null, "axis": null },
+        "theta2": { "field": "theta_end" },
+        "radius": {
+          "field": "total",
+          "type": "quantitative",
+          "scale": { "domain": [0, 55], "range": [102, 198], "nice": false }
+        },
+        "opacity": {
+          "condition": { "test": "show === 'both' || show === 'total'", "value": 0.95 },
+          "value": 0
+        },
+        "color": {
+          "value": "#6eb0cf",
+          "legend": {
+            "title": null,
+            "symbolType": "square",
+            "labelExpr": "'Total incidents'"
+          }
+        },
+        "tooltip": [
+          { "field": "hour_label", "title": "Hour" },
+          { "field": "total", "title": "Incidents" },
+          { "field": "fatal", "title": "Fatal" },
+          { "field": "fatal_rate", "title": "Fatality rate (%)", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "description": "Inner ring, fatal incidents per hour",
+      "mark": { "type": "arc", "innerRadius": 58, "fill": "#ea9178", "cornerRadius": 2, "tooltip": true },
+      "encoding": {
+        "theta": { "field": "theta_start", "type": "quantitative", "scale": null, "axis": null },
+        "theta2": { "field": "theta_end" },
+        "radius": {
+          "field": "fatal",
+          "type": "quantitative",
+          "scale": { "domain": [0, 17], "range": [58, 98], "nice": false }
+        },
+        "opacity": {
+          "condition": { "test": "show === 'both' || show === 'fatal'", "value": 0.95 },
+          "value": 0
+        },
+        "color": {
+          "value": "#ea9178",
+          "legend": {
+            "title": null,
+            "symbolType": "square",
+            "labelExpr": "'Fatal incidents'"
+          }
+        },
+        "tooltip": [
+          { "field": "hour_label", "title": "Hour" },
+          { "field": "fatal", "title": "Fatal incidents" },
+          { "field": "total", "title": "Total incidents" },
+          { "field": "fatal_rate", "title": "Fatality rate (%)", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "description": "Clock hour labels around the dial",
+      "data": {
+        "values": [
+          { "Hour": 0, "label": "12am" },
+          { "Hour": 3, "label": "3am" },
+          { "Hour": 6, "label": "6am" },
+          { "Hour": 9, "label": "9am" },
+          { "Hour": 12, "label": "12pm" },
+          { "Hour": 15, "label": "3pm" },
+          { "Hour": 16, "label": "4pm" },
+          { "Hour": 18, "label": "6pm" },
+          { "Hour": 21, "label": "9pm" }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "(toNumber(datum.Hour) + 0.5) / 24 * 6.283185307179586 - 1.5707963267948966",
+          "as": "angle"
+        },
+        { "calculate": "280 + 218 * sin(datum.angle)", "as": "label_x" },
+        { "calculate": "280 - 218 * cos(datum.angle)", "as": "label_y" }
+      ],
+      "mark": { "type": "text", "fontSize": 11, "fill": "#4a6274", "align": "center", "baseline": "middle" },
+      "encoding": {
+        "x": { "field": "label_x", "type": "quantitative", "scale": null, "axis": null },
+        "y": { "field": "label_y", "type": "quantitative", "scale": null, "axis": null },
+        "text": { "field": "label" },
+        "opacity": {
+          "condition": { "test": "datum.Hour == 16", "value": 0 },
+          "value": 1
+        }
+      }
+    },
+    {
+      "description": "Peak hour tick label, 4pm",
+      "data": { "values": [{ "Hour": 16, "label": "4pm" }] },
+      "transform": [
+        {
+          "calculate": "(toNumber(datum.Hour) + 0.5) / 24 * 6.283185307179586 - 1.5707963267948966",
+          "as": "angle"
+        },
+        { "calculate": "280 + 218 * sin(datum.angle)", "as": "label_x" },
+        { "calculate": "280 - 218 * cos(datum.angle)", "as": "label_y" }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#1a2530",
+        "align": "center",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": { "field": "label_x", "type": "quantitative", "scale": null, "axis": null },
+        "y": { "field": "label_y", "type": "quantitative", "scale": null, "axis": null },
+        "text": { "field": "label" }
+      }
+    },
+    {
+      "description": "Peak hour data label at 4pm",
+      "transform": [
+        { "filter": "datum.hour == 16" },
+        { "calculate": "280 + 236 * sin(datum.angle)", "as": "label_x" },
+        { "calculate": "280 - 236 * cos(datum.angle)", "as": "label_y" }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "fill": "#1a2530",
+        "align": "center",
+        "baseline": "middle",
+        "lineBreak": "\n"
+      },
+      "encoding": {
+        "x": { "field": "label_x", "type": "quantitative", "scale": null, "axis": null },
+        "y": { "field": "label_y", "type": "quantitative", "scale": null, "axis": null },
+        "text": { "datum": "55 incidents\nat 4pm" }
+      }
+    },
+    {
+      "description": "Morning secondary peak label at 11am",
+      "transform": [
+        { "filter": "datum.hour == 11" },
+        { "calculate": "280 + 232 * sin(datum.angle)", "as": "label_x" },
+        { "calculate": "280 - 232 * cos(datum.angle)", "as": "label_y" }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fill": "#1a2530",
+        "align": "center",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": { "field": "label_x", "type": "quantitative", "scale": null, "axis": null },
+        "y": { "field": "label_y", "type": "quantitative", "scale": null, "axis": null },
+        "text": { "datum": "45 at 11am" }
+      }
+    },
+    {
+      "description": "Centre hub label",
+      "data": { "values": [{ "label": "Time of\nincident" }] },
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "fill": "#1a2530",
+        "align": "center",
+        "baseline": "middle",
+        "lineBreak": "\n"
+      },
+      "encoding": {
+        "x": { "datum": 280, "scale": null, "axis": null },
+        "y": { "datum": 280, "scale": null, "axis": null },
+        "text": { "field": "label" }
+      }
+    }
+  ]
+}
