@@ -13,7 +13,7 @@ OUTCOME_ORDER = {"fatal": 0, "injured": 1, "uninjured": 2}
 GENDER_ORDER = {"male": 0, "female": 1}
 UNITS_PER_ICON = 10
 # Wider male grid → fewer rows (less vertical height). Female = one row of 13.
-UNITS_WIDE = {"male": 36, "female": 13}
+UNITS_WIDE = {"male": 35, "female": 13}
 def icon_ext(gender: str) -> str:
     if (ROOT / "assets" / "icons" / f"{gender}-icon.png").exists():
         return "png"
