@@ -495,17 +495,7 @@
       .chart-block--gender-isotype .vega-embed,
       .chart-block--age-ridge .vega-embed,
       .chart-block--outcome-comparison .vega-embed {
-        align-items: center !important;
-      }
-
-      .chart-block--sankey .vega-embed form.vega-bindings,
-      .chart-block--species-size .vega-embed form.vega-bindings,
-      .chart-block--activity .vega-embed form.vega-bindings,
-      .chart-block--radial-clock .vega-embed form.vega-bindings,
-      .chart-block--gender-isotype .vega-embed form.vega-bindings,
-      .chart-block--age-ridge .vega-embed form.vega-bindings,
-      .chart-block--outcome-comparison .vega-embed form.vega-bindings {
-        justify-content: center;
+        align-items: stretch !important;
       }
 
       .chart-block--choropleth .chart-lede,
@@ -611,14 +601,22 @@
       }
 
       /* ============================================================
-       VEGA EMBED OVERRIDES: centre charts inside their cards,
-       keep binding controls (sliders, radios, dropdowns) inline-centred
+       VEGA EMBED OVERRIDES: chart centred in card, filters below
+       legend (left-aligned)
     ============================================================ */
       .vega-embed {
         width: 100% !important;
         display: flex !important;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+      }
+      .vega-embed > *:not(form):not(details) {
+        order: 1;
+        align-self: center;
+      }
+      .chart-block--dot-map .vega-embed > *:not(form):not(details) {
+        align-self: stretch;
+        width: 100%;
       }
       .vega-embed canvas,
       .vega-embed svg {
@@ -630,6 +628,7 @@
         display: none !important;
       }
       .vega-embed form.vega-bindings {
+        order: 2;
         margin: 8px 0 16px;
         font-family: var(--font-body);
         font-size: 13px;
@@ -637,8 +636,9 @@
         display: flex;
         gap: 18px;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-self: flex-start;
+        width: 100%;
       }
       .vega-embed form.vega-bindings label {
         display: inline-flex;
