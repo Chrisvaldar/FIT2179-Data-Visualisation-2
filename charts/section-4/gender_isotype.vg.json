@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": 1000,
-  "height": 322,
+  "height": 338,
   "padding": {
     "top": 8,
     "left": 8,
     "right": 12,
-    "bottom": 8
+    "bottom": 12
   },
   "data": {
     "url": "../../data/wrangled_data/gender_isotype.csv"
@@ -301,19 +301,20 @@
       ]
     },
     {
-      "description": "Legend title",
+      "description": "Outcome legend title",
       "data": {
         "values": [
           {
-            "text": "Each icon ≈ 10 incidents"
+            "text": "Outcome"
           }
         ]
       },
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "top",
+        "baseline": "middle",
         "fontSize": 11,
+        "fontWeight": "bold",
         "font": "Source Sans 3"
       },
       "encoding": {
@@ -322,7 +323,7 @@
           "scale": null
         },
         "y": {
-          "value": 288,
+          "value": 296,
           "scale": null
         },
         "text": {
@@ -335,23 +336,23 @@
       }
     },
     {
-      "description": "Legend swatches: filled circles (no stray plot points)",
+      "description": "Outcome legend swatches (Fatal, Injured, Uninjured)",
       "data": {
         "values": [
           {
             "label": "Fatal",
             "color": "#c0392b",
-            "x": 142
+            "x": 214
           },
           {
             "label": "Injured",
             "color": "#e67e22",
-            "x": 218
+            "x": 284
           },
           {
             "label": "Uninjured",
             "color": "#7f8c8d",
-            "x": 308
+            "x": 368
           }
         ]
       },
@@ -359,7 +360,7 @@
         {
           "mark": {
             "type": "circle",
-            "size": 70,
+            "size": 90,
             "filled": true
           },
           "encoding": {
@@ -369,7 +370,7 @@
               "scale": null
             },
             "y": {
-              "value": 308,
+              "value": 296,
               "scale": null
             },
             "color": {
@@ -395,7 +396,7 @@
               "scale": null
             },
             "y": {
-              "value": 308,
+              "value": 296,
               "scale": null
             },
             "text": {
@@ -408,6 +409,145 @@
           }
         }
       ]
+    },
+    {
+      "description": "Icon scale legend title",
+      "data": {
+        "values": [
+          {
+            "text": "Icon"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "x": {
+          "value": 142,
+          "scale": null
+        },
+        "y": {
+          "value": 320,
+          "scale": null
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#1a2530"
+        }
+      }
+    },
+    {
+      "description": "Icon scale legend sample icons (male and female)",
+      "data": {
+        "values": [
+          {
+            "icon_url": "../../assets/icons/male-uninjured.svg",
+            "x": 214
+          },
+          {
+            "icon_url": "../../assets/icons/female-uninjured.png",
+            "x": 254
+          }
+        ]
+      },
+      "mark": {
+        "type": "image",
+        "width": 20,
+        "height": 28,
+        "aspect": false
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "value": 320,
+          "scale": null
+        },
+        "url": {
+          "field": "icon_url",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "description": "Icon scale legend or separator",
+      "data": {
+        "values": [
+          {
+            "text": "or"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 10,
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "x": {
+          "value": 234,
+          "scale": null
+        },
+        "y": {
+          "value": 320,
+          "scale": null
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#5a6a75"
+        }
+      }
+    },
+    {
+      "description": "Icon scale legend label",
+      "data": {
+        "values": [
+          {
+            "label": "= 10 incidents"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "x": {
+          "value": 276,
+          "scale": null
+        },
+        "y": {
+          "value": 320,
+          "scale": null
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#1a2530"
+        }
+      }
     }
   ]
 }
