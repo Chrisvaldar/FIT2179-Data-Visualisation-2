@@ -1414,7 +1414,10 @@
 
       function resolveDataUrl(url, base) {
         if (!url || typeof url !== "string" || /^https?:\/\//i.test(url)) return url;
-        const clean = url.replace(/^\.\.\/\.\.\//, "").replace(/^\.\//, "");
+        const clean = url
+          .replace(/^\.\.\/\.\.\//, "")
+          .replace(/^\.\.\//, "")
+          .replace(/^\.\//, "");
         return new URL(clean, base).href;
       }
 
@@ -1442,6 +1445,16 @@
         }
         const spec = await response.json();
         rewriteSpecUrls(spec, base);
+        if (specPath.includes("gender_isotype")) {
+          const baseLiteral = base.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+          spec.transform = [
+            {
+              calculate: `"${baseLiteral}" + replace(datum.icon_url, '../../assets/', 'assets/')`,
+              as: "icon_url",
+            },
+            ...(spec.transform || []),
+          ];
+        }
         return vegaEmbed(selector, spec, {
           actions: false,
           renderer: "svg",
@@ -1449,6 +1462,15 @@
           ...chartFontConfig,
           ...opts,
         });
+      }
+
+      function logEmbedError(selector, specPath, err) {
+        console.error(
+          `[chart] ${selector} failed (${specPath})`,
+          err,
+          "\nSite base:",
+          getSiteBase(),
+        );
       }
 
       const embedOpts = {};
@@ -1470,18 +1492,25 @@
 
       async function embedCharts() {
         await loadChartFonts();
+        console.info("[charts] site base:", getSiteBase());
 
-        embedChart("#vis-dot-map", "charts/section-1/dot_map.vg.json", mapOpts).catch(console.warn);
+        embedChart("#vis-dot-map", "charts/section-1/dot_map.vg.json", mapOpts).catch((e) =>
+          logEmbedError("#vis-dot-map", "charts/section-1/dot_map.vg.json", e),
+        );
         embedChart(
           "#vis-choropleth-rate",
           "charts/section-1/state_choropleth_rate.vg.json",
           mapOpts,
-        ).catch(console.warn);
+        ).catch((e) =>
+          logEmbedError("#vis-choropleth-rate", "charts/section-1/state_choropleth_rate.vg.json", e),
+        );
         embedChart(
           "#vis-choropleth-fatal",
           "charts/section-1/state_choropleth_fatal.vg.json",
           mapOpts,
-        ).catch(console.warn);
+        ).catch((e) =>
+          logEmbedError("#vis-choropleth-fatal", "charts/section-1/state_choropleth_fatal.vg.json", e),
+        );
         embedChart("#vis-timeline", "charts/section-1/decade_timeline.vg.json", embedOpts)
           .then(({ view }) => {
             const legend = document.getElementById("vis-timeline-legend");
@@ -1491,38 +1520,54 @@
             view.addSignalListener("metric", syncLegend);
             syncLegend();
           })
-          .catch(console.warn);
+          .catch((e) =>
+            logEmbedError("#vis-timeline", "charts/section-1/decade_timeline.vg.json", e),
+          );
         embedChart("#vis-species", "charts/section-2/species_sankey.vg.json", sankeyOpts).catch(
-          console.warn,
+          (e) => logEmbedError("#vis-species", "charts/section-2/species_sankey.vg.json", e),
         );
         embedChart(
           "#vis-species-size",
           "charts/section-2/species_size_icons.vg.json",
           sankeyOpts,
-        ).catch(console.warn);
+        ).catch((e) =>
+          logEmbedError("#vis-species-size", "charts/section-2/species_size_icons.vg.json", e),
+        );
         embedChart("#vis-activity", "charts/section-3/activity_risk.vg.json", embedOpts).catch(
-          console.warn,
+          (e) => logEmbedError("#vis-activity", "charts/section-3/activity_risk.vg.json", e),
         );
         embedChart(
           "#vis-radial-clock",
           "charts/section-3/radial_time_clock.vg.json",
           embedOpts,
-        ).catch(console.warn);
+        ).catch((e) =>
+          logEmbedError("#vis-radial-clock", "charts/section-3/radial_time_clock.vg.json", e),
+        );
         embedChart(
           "#vis-gender-isotype",
           "charts/section-4/gender_isotype.vg.json",
           embedOpts,
-        ).catch(console.warn);
+        ).catch((e) =>
+          logEmbedError("#vis-gender-isotype", "charts/section-4/gender_isotype.vg.json", e),
+        );
         embedChart(
           "#vis-age-ridge",
           "charts/section-4/age_mirror_ridge.vg.json",
           embedOpts,
-        ).catch(console.warn);
+        ).catch((e) =>
+          logEmbedError("#vis-age-ridge", "charts/section-4/age_mirror_ridge.vg.json", e),
+        );
         embedChart(
           "#vis-outcome-comparison",
           "charts/section-5/outcome_comparison.vg.json",
           embedOpts,
-        ).catch(console.warn);
+        ).catch((e) =>
+          logEmbedError(
+            "#vis-outcome-comparison",
+            "charts/section-5/outcome_comparison.vg.json",
+            e,
+          ),
+        );
         embedChart("#vis-nsw-dot-map", "charts/section-5/nsw_dot_map.vg.json", mapOpts)
           .then((nswResult) => {
             return embedChart("#vis-ca-dot-map", "charts/section-5/ca_dot_map.vg.json", mapOpts).then(

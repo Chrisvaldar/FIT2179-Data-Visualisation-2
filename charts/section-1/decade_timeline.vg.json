@@ -77,9 +77,8 @@
       "mark": {
         "type": "area",
         "opacity": 0.85,
-        "line": false,
-        "interpolate": "step-after",
-        "tooltip": false
+        "line": true,
+        "tooltip": null
       },
       "encoding": {
         "x": {
@@ -169,9 +168,8 @@
         "type": "area",
         "color": "#1a4a63",
         "opacity": 0.85,
-        "line": false,
-        "interpolate": "step-after",
-        "tooltip": false
+        "line": true,
+        "tooltip": null
       },
       "encoding": {
         "x": {
@@ -365,17 +363,16 @@
       }
     },
     {
-      "description": "Decade tooltip hit targets (count mode)",
+      "description": "Decade tooltip targets (count mode)",
       "transform": [
         {
           "filter": "metric === 'count'"
         }
       ],
       "mark": {
-        "type": "rule",
-        "stroke": "#1a2530",
-        "strokeOpacity": 0.001,
-        "strokeWidth": 36
+        "type": "circle",
+        "opacity": 0,
+        "size": 900
       },
       "encoding": {
         "x": {
@@ -384,10 +381,8 @@
           "axis": null
         },
         "y": {
-          "datum": 280
-        },
-        "y2": {
-          "datum": 0
+          "field": "total",
+          "type": "quantitative"
         },
         "tooltip": [
           {
@@ -420,17 +415,16 @@
       }
     },
     {
-      "description": "Decade tooltip hit targets (rate mode)",
+      "description": "Decade tooltip targets (rate mode)",
       "transform": [
         {
           "filter": "metric === 'rate'"
         }
       ],
       "mark": {
-        "type": "rule",
-        "stroke": "#1a2530",
-        "strokeOpacity": 0.001,
-        "strokeWidth": 36
+        "type": "circle",
+        "opacity": 0,
+        "size": 900
       },
       "encoding": {
         "x": {
@@ -439,10 +433,8 @@
           "axis": null
         },
         "y": {
-          "datum": 235
-        },
-        "y2": {
-          "datum": 0
+          "field": "rate_per_million",
+          "type": "quantitative"
         },
         "tooltip": [
           {
