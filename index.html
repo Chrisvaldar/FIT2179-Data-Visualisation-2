@@ -1445,6 +1445,7 @@
         return vegaEmbed(selector, spec, {
           actions: false,
           renderer: "svg",
+          loader: vega.loader({ baseURL: base }),
           ...chartFontConfig,
           ...opts,
         });

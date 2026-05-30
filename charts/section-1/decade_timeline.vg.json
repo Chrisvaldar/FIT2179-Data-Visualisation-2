@@ -5,7 +5,7 @@
   "padding": {
     "top": 44,
     "right": 12,
-    "bottom": 12
+    "bottom": 36
   },
   "config": {
     "title": {
@@ -84,8 +84,14 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              1790,
+              2020
+            ],
+            "nice": false
+          },
           "axis": {
             "title": "Decade",
             "values": [
@@ -170,8 +176,7 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
           "axis": null
         },
         "y": {
@@ -213,8 +218,7 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
           "axis": null
         },
         "y": {
@@ -258,8 +262,7 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
           "axis": null
         },
         "y": {
@@ -304,8 +307,7 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
           "axis": null
         },
         "y": {
@@ -349,8 +351,7 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
           "axis": null
         },
         "y": {
@@ -379,8 +380,7 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
           "axis": null
         },
         "y": {
@@ -392,7 +392,7 @@
         "tooltip": [
           {
             "field": "Decade",
-            "type": "ordinal",
+            "type": "quantitative",
             "title": "Decade",
             "format": "d"
           },
@@ -435,8 +435,7 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "ordinal",
-          "sort": "ascending",
+          "type": "quantitative",
           "axis": null
         },
         "y": {
@@ -448,7 +447,7 @@
         "tooltip": [
           {
             "field": "Decade",
-            "type": "ordinal",
+            "type": "quantitative",
             "title": "Decade",
             "format": "d"
           },
