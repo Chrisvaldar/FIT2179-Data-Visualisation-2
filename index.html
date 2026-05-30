@@ -263,14 +263,13 @@
       }
 
       .section-number {
-        font-family: var(--font-body);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
+        font-family: var(--font-display);
+        font-size: clamp(16px, 2.2vw, 20px);
+        font-weight: 700;
         color: var(--blood);
         display: block;
         margin-bottom: 6px;
+        line-height: 1.2;
       }
 
       .section-title {
@@ -279,14 +278,6 @@
         font-weight: 700;
         color: var(--ocean);
         line-height: 1.2;
-      }
-
-      .section-intro {
-        font-size: 15px;
-        color: var(--text-mid);
-        max-width: 720px;
-        line-height: 1.75;
-        margin-top: 8px;
       }
 
       /* ============================================================
@@ -787,14 +778,6 @@
         <div class="section-header">
           <span class="section-number">Section 1</span>
           <h2 class="section-title">A coastal story, not a national one</h2>
-          <p class="section-intro">
-            Across 232 years and 1,196 recorded incidents, Australia's shark
-            history hugs the shoreline. The map below traces every single
-            incident in the database. The choropleths break those incidents
-            down by state, splitting volume from danger. The timeline puts the
-            present moment in context: yes, raw counts are at an all-time high,
-            but per million Australians the rate peaked nearly a century ago.
-          </p>
         </div>
 
         <!-- 1.1 Dot map -->
@@ -901,11 +884,6 @@
         <div class="section-header">
           <span class="section-number">Section 2</span>
           <h2 class="section-title">Which shark should you actually fear?</h2>
-          <p class="section-intro">
-            Dozens of species appear in the records, but a handful dominate the
-            incident count. The flow diagram traces each major species to its
-            outcome: injured, uninjured, or fatal.
-          </p>
         </div>
 
         <!-- 2.1 Species Sankey -->
@@ -970,12 +948,6 @@
         <div class="section-header">
           <span class="section-number">Section 3</span>
           <h2 class="section-title">Risk depends on what you are doing</h2>
-          <p class="section-intro">
-            Volume and fatality rate often disagree. The charts below pair
-            what you are doing with when it happens: a butterfly lollipop
-            compares activity volume against fatality rate, and a 24-hour
-            clock maps incident counts by time of day.
-          </p>
         </div>
 
         <!-- 3.1 Activity risk -->
@@ -1044,12 +1016,6 @@
         <div class="section-header">
           <span class="section-number">Section 4</span>
           <h2 class="section-title">Who gets attacked</h2>
-          <p class="section-intro">
-            Victim demographics expose a wide gap in exposure and a narrower
-            one in lethality. The isotype below counts every ten incidents as
-            one icon, coloured by whether the victim died, was injured, or
-            escaped unharmed.
-          </p>
         </div>
 
         <!-- 4.1 Gender isotype -->
@@ -1127,14 +1093,6 @@
           <h2 class="section-title">
             How does Australia compare with California?
           </h2>
-          <p class="section-intro">
-            Both coastlines sit in great white territory, but comparing a
-            continent to a single US state was never fair. Here we line up
-            <strong>New South Wales</strong>, Australia&rsquo;s highest-incident
-            state, against <strong>California</strong>, our white-shark record
-            for the United States: 286 NSW incidents against 202 in California,
-            both from 1950 to 2022.
-          </p>
         </div>
 
         <!-- 5.1 NSW vs California dot maps -->
