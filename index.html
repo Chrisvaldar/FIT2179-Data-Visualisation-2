@@ -482,10 +482,28 @@
         max-width: 1000px;
       }
 
+      /* Radial clock: chart centred, filter spans full card width (left-aligned) */
+      .chart-block--radial-clock .chart-header {
+        margin-bottom: 6px;
+      }
+
+      .chart-block--radial-clock .vis-wrap {
+        margin: 0;
+      }
+
       .chart-block--radial-clock .vis-wrap > div,
       .chart-block--radial-clock #vis-radial-clock {
         width: 100%;
-        max-width: 560px;
+        max-width: none;
+      }
+
+      .chart-block--radial-clock .vega-embed form.vega-bindings {
+        margin: 0 0 8px;
+      }
+
+      .chart-block--radial-clock .chart-lede {
+        margin-top: 4px;
+        padding-top: 12px;
       }
 
       .chart-block--sankey .vega-embed,
@@ -505,7 +523,6 @@
       .chart-block--sankey .chart-lede,
       .chart-block--species-size .chart-lede,
       .chart-block--activity .chart-lede,
-      .chart-block--radial-clock .chart-lede,
       .chart-block--gender-isotype .chart-lede,
       .chart-block--age-ridge .chart-lede,
       .chart-block--outcome-comparison .chart-lede {

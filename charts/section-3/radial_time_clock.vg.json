@@ -3,8 +3,14 @@
   "width": 560,
   "height": 560,
   "padding": {
-    "top": 12,
-    "bottom": 48
+    "top": 4,
+    "left": 4,
+    "right": 4,
+    "bottom": 16
+  },
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
   },
   "data": {
     "url": "../../data/wrangled_data/radial_time.csv"
@@ -22,7 +28,7 @@
       "labelFont": "Source Sans 3",
       "titleFont": "Source Sans 3",
       "orient": "bottom",
-      "offset": 8,
+      "offset": 4,
       "direction": "horizontal"
     },
     "title": {
