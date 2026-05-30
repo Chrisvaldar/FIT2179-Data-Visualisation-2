@@ -77,19 +77,15 @@
       "mark": {
         "type": "area",
         "opacity": 0.85,
-        "line": false
+        "line": false,
+        "interpolate": "step-after",
+        "tooltip": false
       },
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              1790,
-              2020
-            ],
-            "nice": false
-          },
+          "type": "ordinal",
+          "sort": "ascending",
           "axis": {
             "title": "Decade",
             "values": [
@@ -153,34 +149,7 @@
             "order": "descending"
           }
         },
-        "tooltip": [
-          {
-            "field": "Decade",
-            "type": "quantitative",
-            "title": "Decade",
-            "format": "d"
-          },
-          {
-            "field": "total",
-            "type": "quantitative",
-            "title": "Total incidents"
-          },
-          {
-            "field": "fatal",
-            "type": "quantitative",
-            "title": "Fatal"
-          },
-          {
-            "field": "injured",
-            "type": "quantitative",
-            "title": "Injured"
-          },
-          {
-            "field": "uninjured",
-            "type": "quantitative",
-            "title": "Uninjured"
-          }
-        ]
+        "tooltip": null
       }
     },
     {
@@ -194,42 +163,22 @@
         "type": "area",
         "color": "#1a4a63",
         "opacity": 0.85,
-        "line": false
+        "line": false,
+        "interpolate": "step-after",
+        "tooltip": false
       },
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "quantitative"
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": null
         },
         "y": {
           "field": "rate_per_million",
           "type": "quantitative"
         },
-        "tooltip": [
-          {
-            "field": "Decade",
-            "type": "quantitative",
-            "title": "Decade",
-            "format": "d"
-          },
-          {
-            "field": "rate_per_million",
-            "type": "quantitative",
-            "title": "Rate per million",
-            "format": ".2f"
-          },
-          {
-            "field": "total",
-            "type": "quantitative",
-            "title": "Raw count"
-          },
-          {
-            "field": "population_m",
-            "type": "quantitative",
-            "title": "Population (millions)",
-            "format": ".2f"
-          }
-        ]
+        "tooltip": null
       }
     },
     {
@@ -264,7 +213,9 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "quantitative"
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": null
         },
         "y": {
           "field": "y",
@@ -307,7 +258,9 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "quantitative"
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": null
         },
         "y": {
           "field": "y",
@@ -351,7 +304,9 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "quantitative"
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": null
         },
         "y": {
           "field": "y",
@@ -394,7 +349,9 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "quantitative"
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": null
         },
         "y": {
           "field": "y",
@@ -404,6 +361,115 @@
           "field": "label",
           "type": "nominal"
         }
+      }
+    },
+    {
+      "description": "Decade tooltip hit targets (count mode)",
+      "transform": [
+        {
+          "filter": "metric === 'count'"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#1a2530",
+        "strokeOpacity": 0.001,
+        "strokeWidth": 36
+      },
+      "encoding": {
+        "x": {
+          "field": "Decade",
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": null
+        },
+        "y": {
+          "datum": 280
+        },
+        "y2": {
+          "datum": 0
+        },
+        "tooltip": [
+          {
+            "field": "Decade",
+            "type": "ordinal",
+            "title": "Decade",
+            "format": "d"
+          },
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "Total incidents"
+          },
+          {
+            "field": "fatal",
+            "type": "quantitative",
+            "title": "Fatal"
+          },
+          {
+            "field": "injured",
+            "type": "quantitative",
+            "title": "Injured"
+          },
+          {
+            "field": "uninjured",
+            "type": "quantitative",
+            "title": "Uninjured"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Decade tooltip hit targets (rate mode)",
+      "transform": [
+        {
+          "filter": "metric === 'rate'"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "stroke": "#1a2530",
+        "strokeOpacity": 0.001,
+        "strokeWidth": 36
+      },
+      "encoding": {
+        "x": {
+          "field": "Decade",
+          "type": "ordinal",
+          "sort": "ascending",
+          "axis": null
+        },
+        "y": {
+          "datum": 235
+        },
+        "y2": {
+          "datum": 0
+        },
+        "tooltip": [
+          {
+            "field": "Decade",
+            "type": "ordinal",
+            "title": "Decade",
+            "format": "d"
+          },
+          {
+            "field": "rate_per_million",
+            "type": "quantitative",
+            "title": "Rate per million",
+            "format": ".2f"
+          },
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "Raw count"
+          },
+          {
+            "field": "population_m",
+            "type": "quantitative",
+            "title": "Population (millions)",
+            "format": ".2f"
+          }
+        ]
       }
     }
   ]

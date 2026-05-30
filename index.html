@@ -523,6 +523,7 @@
       .chart-block--outcome-comparison #vis-outcome-comparison {
         width: 100%;
         max-width: 1000px;
+        overflow: visible;
       }
 
       /* Outcome comparison: chart → legend → filter, tight left-aligned stack */
@@ -538,6 +539,7 @@
       .chart-block--outcome-comparison .vega-embed > svg {
         order: 1;
         align-self: flex-start !important;
+        overflow: visible !important;
       }
 
       .chart-block--outcome-comparison .chart-block-legend {
@@ -827,27 +829,24 @@
         <!-- 1.1 Dot map -->
         <div class="chart-block full-width chart-block--split-maps chart-block--dot-map">
           <div class="chart-header">
-            <div class="chart-header__title">Every shark incident in Australia, 1791 to 2022</div>
+            <div class="chart-header__title">NSW bears the brunt, but no coast is safe</div>
           </div>
           <div class="vis-wrap"><div id="vis-dot-map"></div></div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              Every incident since 1791 plotted on the coast makes one thing
-              immediately clear: <strong>NSW</strong> dominates in raw dot
-              density, particularly around <strong>Sydney Harbour</strong> and
-              the northern beaches. The
-              <strong>Gold Coast and Byron Bay corridor</strong> form a second
-              major cluster further north.
+              <strong>Sydney Harbour</strong> and the
+              <strong>northern beaches</strong> carry the densest concentration
+              of incidents on the map, with a second cluster running up the
+              <strong>Gold Coast and Byron Bay corridor</strong>. The surge in
+              dots <strong>after 2000</strong> reflects
+              <strong>population growth</strong> and
+              <strong>better reporting</strong> as much as any change in shark
+              behaviour.
             </p>
             <p class="chart-lede__col">
-              Filtering by decade shows the map thinning dramatically
-              <strong>before 1900</strong> and becoming increasingly dense
-              <strong>after 2000</strong>, reflecting both
-              <strong>population growth</strong> and
-              <strong>improved incident reporting</strong>.
-              <strong>Fatal dots</strong> are distributed across the whole
-              coastline rather than concentrated in any single hotspot, which
-              suggests danger is <strong>not confined to famous beaches</strong>.
+              <strong>Fatal incidents</strong> are not locked to any
+              <strong>famous beach</strong>. They are scattered across the
+              entire coastline, from <strong>Tasmania</strong> to the <strong>Top End</strong>.
             </p>
           </div>
         </div>
@@ -855,7 +854,7 @@
         <!-- 1.2 Choropleth, split into two side-by-side maps -->
         <div class="chart-block full-width chart-block--split-maps chart-block--choropleth">
           <div class="chart-header">
-            <div class="chart-header__title">Volume vs danger by state</div>
+            <div class="chart-header__title">More attacks does not mean more deaths</div>
           </div>
           <div class="vis-wrap">
             <div class="choropleth-grid">
@@ -865,25 +864,28 @@
           </div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              <strong>NSW</strong> leads on raw volume with
-              <strong>438 incidents</strong> but sits in the middle of the pack
-              per capita. <strong>WA</strong> tops the rate map at around
-              <strong>71 incidents per million people</strong>, followed closely
-              by <strong>QLD at 69 per million</strong>, reflecting how much of
-              both states&rsquo; populations live and recreate on the coast.
+              <strong>NT</strong> tops the per capita rate at
+              <strong>75.9 incidents per million people</strong>, with
+              <strong>WA</strong> close behind at <strong>70.6 per million</strong>
+              along a coastline that stretches over <strong>12,000 km</strong>.
+              <strong>Victoria</strong> sits at the bottom at around
+              <strong>10.5 per million</strong>, consistent with colder water and
+              far less year-round beach activity than the northern states.
             </p>
             <p class="chart-lede__col">
-              <strong>Victoria</strong> sits at the bottom at around
-              <strong>10.5 per million</strong>, consistent with colder southern
-              waters that reduce year-round beach activity.
-              <strong>SA and QLD</strong> share the highest fatality rates at
-              around <strong>27%</strong>, despite having very different total
-              incident counts. SA&rsquo;s elevated fatality rate is partly
-              explained by the dominance of <strong>white sharks</strong> in its
-              cooler southern waters, particularly around the
-              <strong>Neptune Islands</strong> and the
-              <strong>Eyre Peninsula</strong>, where great whites congregate and
-              grow to exceptional size.
+              <strong>NSW</strong> leads with <strong>438 incidents</strong> but
+              sits mid-pack on fatality rate. <strong>SA and QLD</strong> share
+              the highest fatality rate at around <strong>27%</strong>, a figure
+              partly explained by the dominance of large
+              <strong>white sharks</strong> in SA&rsquo;s cooler southern waters
+              around the <strong>Neptune Islands</strong> and
+              <strong>Eyre Peninsula</strong>, where great whites congregate
+              year-round. Although <strong>NSW</strong> dominates in raw incident
+              count, a bite in <strong>SA</strong> or <strong>QLD</strong> is far
+              more likely to be fatal, with fatality rates sitting at
+              <strong>27%</strong> compared to <strong>NSW&rsquo;s 18%</strong>.
+              So if you ever find yourself in a shark incident, hope it is not off
+              the coast of <strong>South Australia</strong>.
             </p>
           </div>
         </div>
@@ -891,7 +893,7 @@
         <!-- 1.3 Decade timeline -->
         <div class="chart-block full-width chart-block--split-maps chart-block--timeline">
           <div class="chart-header">
-            <div class="chart-header__title">Shark incidents per decade, 1790s to 2020s</div>
+            <div class="chart-header__title">231 incidents in the 2010s sounds alarming. It isn&rsquo;t.</div>
           </div>
           <div class="vis-wrap">
             <div id="vis-timeline"></div>
@@ -916,26 +918,23 @@
           </div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              Raw counts peak in the <strong>2010s at 231 incidents</strong>,
-              more than double the <strong>2000s figure of 113</strong>. Switch
-              to per capita and the picture changes considerably. The
-              <strong>1920s and 1930s</strong> were actually the most dangerous
-              decades at around
-              <strong>14 to 15 incidents per million Australians</strong>, a
-              period before beach safety infrastructure, shark nets, and aerial
-              surveillance existed in any meaningful form.
+              The <strong>2010s</strong> recorded <strong>231 incidents</strong>,
+              nearly double the <strong>164</strong> from the <strong>2000s</strong>,
+              and on raw count alone that looks like a crisis. Switch to incidents
+              per million people and the chart collapses. The
+              <strong>1790s</strong> sit at around <strong>200 per million</strong>,
+              a figure that reflects how few people were in Australia at the time
+              rather than any genuine explosion of shark activity. Since
+              <strong>Federation in 1901</strong>, the per capita rate has stayed
+              remarkably flat, hovering in low single digits even as raw counts
+              climbed.
             </p>
             <p class="chart-lede__col">
-              <strong>NSW</strong> introduced the first shark meshing program at
-              Sydney beaches in <strong>1937</strong>, which coincides with a
-              modest flattening visible in the raw count view. The
-              <strong>WW2 years</strong> show a visible dip, consistent with
-              reduced civilian beach activity during wartime. The 2010s reach
-              about <strong>10 per million</strong>, high but well below the
-              interwar peak. The population-adjusted view makes a
-              straightforward case that <strong>more Australians in the
-              water</strong>, rather than any change in shark behaviour, accounts
-              for most of the apparent modern surge.
+              The <strong>WW2 dip</strong> is visible in the raw count view,
+              consistent with fewer civilians on beaches during wartime. The
+              modern surge is almost entirely a story of
+              <strong>more Australians in the water</strong>, not more aggressive
+              sharks.
             </p>
           </div>
         </div>
@@ -953,26 +952,28 @@
         <!-- 2.1 Species Sankey -->
         <div class="chart-block full-width chart-block--split-maps chart-block--sankey">
           <div class="chart-header">
-            <div class="chart-header__title">Which shark should you actually fear?</div>
+            <div class="chart-header__title">Three sharks bite a lot and kill. One just bites a lot.</div>
           </div>
           <div class="vis-wrap"><div id="vis-species"></div></div>
           <div class="chart-lede">
             <p class="chart-lede__col">
               <strong>White, tiger, and bull sharks</strong> account for nearly
-              all <strong>250 recorded fatalities</strong>. White sharks lead at
-              <strong>91 deaths</strong>, tiger sharks at <strong>86</strong>,
-              bull sharks at <strong>63</strong>. These three species share a
-              key trait: they are <strong>large, genuinely predatory</strong>,
-              and found in the same coastal shallows where Australians swim.
+              all <strong>250 recorded fatalities</strong>, with white sharks
+              leading at <strong>91 deaths</strong>, tiger sharks at
+              <strong>86</strong>, and bull sharks at <strong>63</strong>. These
+              three species share one trait: they are large, genuinely predatory,
+              and comfortable in the same shallow coastal water where Australians
+              swim.
             </p>
             <p class="chart-lede__col">
-              The <strong>wobbegong</strong> band is thick on the left but
-              terminates almost entirely in the injured column.
-              <strong>201 incidents, zero deaths</strong>. Wobbegongs are ambush
-              predators that sit camouflaged on reef and sandy bottoms; they bite
-              when stepped on or handled and then let go. A wide band here does
-              <strong>not</strong> mean a large shark. But are the sharks
-              involved in more incidents generally bigger?
+              The <strong>wobbegong</strong> tells the opposite story. With
+              <strong>201 incidents</strong> it ranks second only to white sharks
+              in bite count, yet its flow terminates almost entirely in the
+              injured column. <strong>Zero deaths across 201 incidents.</strong>
+              Wobbegongs are bottom-dwelling ambush predators that bite when stepped
+              on or handled, then let go. So if <strong>bite count</strong> does not tell you how
+              dangerous a shark is, does <strong>size</strong>?
+         
             </p>
           </div>
         </div>
@@ -980,26 +981,25 @@
         <!-- 2.2 Species size icons -->
         <div class="chart-block full-width chart-block--split-maps chart-block--species-size">
           <div class="chart-header">
-            <div class="chart-header__title">Most incidents does not mean the biggest shark</div>
+            <div class="chart-header__title">The smallest guy likes to hurt people.</div>
           </div>
           <div class="vis-wrap"><div id="vis-species-size"></div></div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              <strong>No.</strong> Wobbegong ranks third for incident volume at
-              <strong>201 bites</strong> yet its median recorded length is just
-              <strong>1.2 m</strong>, the smallest of the six groups. These are
-              bottom-dwelling ambush fish, not open-water predators. High
-              incident count and large body size simply do not go hand in hand.
+              The <strong>wobbegong</strong> sits at the top with
+              <strong>201 incidents</strong> and a median length of just
+              <strong>1.2 m</strong>, the smallest of every species in this
+              chart. Size and bite count simply do not correlate.
             </p>
             <p class="chart-lede__col">
-              The species driving the death toll in the sankey are a different
-              story. <strong>White sharks</strong> (<strong>361
-              incidents</strong>, <strong>3.0 m</strong> median) and
-              <strong>tiger sharks</strong> (<strong>229</strong>,
-              <strong>3.0 m</strong>) are among the largest sharks in the
-              database and among the deadliest. For the sharks that actually
-              kill, size and danger align. Volume alone is a poor guide to how
-              big the animal was.
+              Where size does matter is at the deadly end:
+              <strong>white sharks</strong> at <strong>3.0 m</strong> median and
+              <strong>361 incidents</strong>, and <strong>tiger sharks</strong>
+              at <strong>3.0 m</strong> with <strong>229 incidents</strong>, are
+              both among the <strong>largest</strong> and the most <strong>fatal</strong> species in the database.
+              For the sharks that <strong>actually kill</strong>, size and danger <strong>align</strong>.
+              For the wobbegong, the only thing it has going for it is <strong>patience</strong>.
+         
             </p>
           </div>
         </div>
@@ -1011,35 +1011,37 @@
       <section class="section">
         <div class="section-header">
           <span class="section-number">Section 3</span>
-          <h2 class="section-title">Risk depends on what you are doing</h2>
+          <h2 class="section-title">Does when and how you swim change your odds?</h2>
         </div>
 
         <!-- 3.1 Activity risk -->
         <div class="chart-block full-width chart-block--split-maps chart-block--activity">
           <div class="chart-header">
-            <div class="chart-header__title">Activity risk, volume vs fatality rate</div>
+            <div class="chart-header__title">Swimmers die the most. Surfers mostly walk away.</div>
           </div>
           <div class="vis-wrap"><div id="vis-activity"></div></div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              <strong>Swimming</strong> sits at the far right on both arms:
-              <strong>451 incidents</strong> and a
-              <strong>34.6% fatality rate</strong>. This is higher than the
-              overall fatality rate of <strong>22.6%</strong>, and the gap is
-              partly explained by <strong>body position</strong>. A swimmer is
-              mostly submerged, moving slowly, and presents a profile similar to
-              a seal from below.
+              <strong>Swimming</strong> dominates both sides of this chart:
+              <strong>451 incidents</strong> and a <strong>34.6% fatality rate</strong>,
+              far above the overall average of <strong>22.6%</strong>. The gap comes
+              down to <strong>body position</strong>. A swimmer is fully <strong>submerged</strong>,
+              moving <strong>slowly</strong>, and presents a silhouette from below that is
+              uncomfortably similar to a <strong>seal</strong>.
+         
             </p>
             <p class="chart-lede__col">
-              <strong>Surfing and boarding</strong> produce
+              <strong>Surfing and boarding</strong> generate
               <strong>284 incidents</strong> but only a
-              <strong>9.5% fatality rate</strong>. Surfers are moving faster,
-              partially above the surface, and shark bites in this context tend
-              to be <strong>investigatory rather than predatory</strong>: the
-              shark bites once and retreats, which is consistent with the low
-              death rate. <strong>Fishing and boating</strong> together account
-              for <strong>70 incidents and zero deaths</strong>, likely because
-              the victim is never fully in the water.
+              <strong>9.5% fatality rate</strong>, largely because shark bites in
+              this context tend to be
+              <strong>investigatory rather than predatory</strong>. The shark bites
+              once and retreats. <strong>Fishing and boating</strong> together
+              account for <strong>70 incidents and zero deaths</strong>, which makes
+              sense given the victim is rarely fully in the water. If you want to
+              <strong>minimise</strong> both the chance of an incident and the chance of dying from
+              one, <strong>stay on the board</strong>.
+        
             </p>
           </div>
         </div>
@@ -1047,7 +1049,7 @@
         <!-- 3.2 Radial time clock -->
         <div class="chart-block full-width chart-block--split-maps chart-block--radial-clock">
           <div class="chart-header">
-            <div class="chart-header__title">Peak hour is 4pm, not dawn</div>
+            <div class="chart-header__title">Peak hour is 4pm, not dawn.</div>
           </div>
           <div class="vis-wrap">
             <div id="vis-radial-clock"></div>
@@ -1073,20 +1075,21 @@
             <p class="chart-lede__col">
               The dial is nearly empty between <strong>midnight and 5 am</strong>,
               just <strong>11 incidents</strong> across those five hours.
-              Incidents build through the morning and peak sharply at
-              <strong>4 pm with 55 total and 17 fatal</strong>. There is a
-              secondary spike around <strong>11 am</strong>.
+              Incidents build through the morning, spike at
+              <strong>11 am with 45</strong>, then peak sharply at
+              <strong>4 pm with 55 total and 17 fatal</strong>.
             </p>
             <p class="chart-lede__col">
-              The <strong>4 pm peak</strong> coincides with peak beach attendance
+              The <strong>4 pm peak</strong> aligns with peak beach attendance
               during Australian summers and with the
               <strong>low afternoon sun angle</strong> that creates glare and
-              reduces underwater visibility, making it harder for both swimmers
-              to see approaching sharks and potentially harder for sharks to
-              identify what they are approaching. The fatal inner ring tracks
-              the outer ring without spiking at any specific hour, meaning
-              <strong>the time of day does not dramatically change your odds of
-              surviving a bite if one occurs</strong>.
+              reduces underwater visibility, making it harder for swimmers to
+              <strong>spot approaching sharks</strong> and harder for sharks to
+              <strong>identify</strong> what they are approaching. Crucially, the
+              fatal inner ring tracks the outer ring
+              <strong>without spiking</strong> at any specific hour. The time of
+              day changes how <strong>likely</strong> you are to encounter a shark.
+              It does not change your odds of <strong>surviving</strong> if you do.
             </p>
           </div>
         </div>
@@ -1098,7 +1101,7 @@
       <section class="section">
         <div class="section-header">
           <span class="section-number">Section 4</span>
-          <h2 class="section-title">Who gets attacked</h2>
+          <h2 class="section-title">Who is most at risk?</h2>
         </div>
 
         <!-- 4.1 Gender isotype -->
@@ -1107,7 +1110,7 @@
         >
           <div class="chart-header">
             <div class="chart-header__title">
-              Nine in ten victims are male
+              Nine in ten victims are male.
             </div>
           </div>
           <div class="vis-wrap">
@@ -1157,21 +1160,21 @@
           <div class="chart-lede">
             <p class="chart-lede__col">
               <strong>Males</strong> account for <strong>1,060 of 1,177
-              victims</strong>, roughly <strong>90%</strong>. The male fatality
-              rate sits at <strong>21.9%</strong> compared to
-              <strong>13.7%</strong> for females. The volume gap is largely an
-              <strong>exposure gap</strong>: surveys of Australian beach
-              attendance and water activity consistently show men spending more
-              time in the surf, swimming further from shore, and dominating
-              activities like <strong>spearfishing, diving, and board
-              sports</strong> that involve prolonged submersion in deeper water.
+              victims</strong>, roughly <strong>90%</strong> of all recorded
+              incidents. The male <strong>fatality rate</strong> sits at
+              <strong>21.9%</strong> compared to <strong>13.7%</strong> for
+              females. This is not a biology story, it is an
+              <strong>exposure story</strong>. Men consistently spend more time
+              in the surf, swim further from shore, and dominate activities like
+              <strong>spearfishing, diving, and board sports</strong> that involve
+              prolonged submersion in deeper water.
             </p>
             <p class="chart-lede__col">
-              The fatality rate gap is smaller but real, and it likely reflects
-              the same activity skew. A man spearfishing in 10 metres of water
-              and a woman swimming inside the flags at <strong>Bondi</strong>
-              face very different risk profiles, and the aggregate numbers
-              reflect that difference.
+              A man spearfishing in <strong>10 metres of water</strong> and a
+              woman swimming inside the flags at <strong>Bondi</strong> face
+              completely different risk profiles. The aggregate numbers simply
+              <strong>reflect</strong> that difference.
+        
             </p>
           </div>
         </div>
@@ -1182,30 +1185,29 @@
         >
           <div class="chart-header">
             <div class="chart-header__title">
-              Fatal and survived both peak in the mid-teens
+              If you are young and in the water, you are the most at risk.
             </div>
           </div>
           <div class="vis-wrap"><div id="vis-age-ridge"></div></div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              Where age is recorded (<strong>697 of 1,203</strong> incidents),
-              the two curves tell separate stories. Among
-              <strong>fatal</strong> attacks, the sharpest concentration sits
-              at age <strong>16</strong> (14 incidents), with most deaths still
-              falling between <strong>10 and 25</strong>. The fatal ridge is
-              wider than the survived one, spreading further into the
-              <strong>20s and 30s</strong>, but it never leaves the young-adult
-              range.
+              Age is only recorded for <strong>697 of 1,203 incidents</strong>,
+              but the pattern is clear. Among <strong>fatal</strong> attacks, the
+              sharpest concentration sits at age <strong>16</strong> with
+              <strong>14 incidents</strong>, and most deaths fall between
+              <strong>10 and 25</strong>. The fatal ridge spreads further into the
+              <strong>20s and 30s</strong> than the survived curve, but it never
+              leaves the <strong>young adult range</strong>.
             </p>
             <p class="chart-lede__col">
-              Among those who <strong>survived</strong>, the single-year peak
-              is age <strong>17</strong> (27 incidents), with the same broad
-              <strong>10–25</strong> cluster. Both outcomes skew young because
-              teenagers and young adults spend the most time in the water. The
-              difference is volume and spread, not a wholesale shift to middle
-              age: survived incidents outnumber fatal ones at almost every age
-              under 30.
-            </p>
+              Among those who <strong>survived</strong>, the single year peak is
+              age <strong>17</strong> with <strong>27 incidents</strong>, the
+              same broad <strong>10 to 25</strong> cluster. Both outcomes skew
+              young because <strong>teenagers and young adults</strong> spend the
+              most time in the water. Survived incidents outnumber fatal ones at
+              <strong>almost every age under 30</strong>. Being young does not
+              <strong>protect you</strong>; it just means there are <strong>more of you</strong> in the water.
+     
           </div>
         </div>
       </section>
@@ -1225,7 +1227,7 @@
         <div class="chart-block full-width chart-block--split-maps chart-block--choropleth chart-block--comparison-maps">
           <div class="chart-header">
             <div class="chart-header__title">
-              Two leading states, two coastal geographies
+              NSW and California: same surf culture, completely different coastlines.
             </div>
           </div>
           <div class="vis-wrap">
@@ -1275,23 +1277,24 @@
           </form>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              At state scale the comparison finally balances.
-              <strong>New South Wales</strong> leads Australia with
-              <strong>286 incidents since 1950</strong>, spread between a
-              <strong>Sydney and Central Coast cluster</strong> and a second
-              band around <strong>Byron Bay</strong>. California records
-              <strong>202 white-shark incidents</strong> in the same period,
-              but <strong>roughly seven in ten</strong> fall inside the
-              surf corridor from San Diego to Mendocino.
+              <strong>New South Wales</strong> is Australia&rsquo;s shark incident
+              capital with <strong>286 incidents since 1950</strong>, making it
+              the most direct comparison to California&rsquo;s
+              <strong>202 white shark incidents</strong> in the same period. NSW
+              incidents cluster around <strong>Sydney and the Central Coast</strong>
+              with a second band around <strong>Byron Bay</strong>, spread across
+              hundreds of kilometres of coastline.
             </p>
             <p class="chart-lede__col">
-              Both states are board-heavy surf cultures:
-              <strong>51%</strong> of NSW incidents involve surfing or
-              boarding, against <strong>43%</strong> in California. The
-              difference is geography, not appetite for risk: NSW still spans
-              hundreds of kilometres of coast, while California packs most of
-              its dots into one visible triangle. The national picture remains
-              in Section 1; this is the state-level peer comparison.
+              California tells a tighter story.
+              <strong>Roughly seven in ten</strong> incidents fall inside the
+              corridor from <strong>San Diego to Mendocino</strong>, a stretch
+              surfers call the <strong>Red Triangle</strong>. Both states are
+              dominated by board culture, with <strong>51%</strong> of NSW
+              incidents involving surfing or boarding against
+              <strong>43%</strong> in California. The difference is not <strong>appetite</strong>
+              for risk. It is <strong>geography</strong>.
+        
             </p>
           </div>
         </div>
@@ -1300,7 +1303,7 @@
         <div class="chart-block full-width chart-block--outcome-comparison">
           <div class="chart-header">
             <div class="chart-header__title">
-              Injury outcomes per million people (with raw counts available)
+              NSW injures at 8x the rate of California. The death share is almost identical.
             </div>
           </div>
           <div class="vis-wrap">
@@ -1325,21 +1328,22 @@
           </div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              Bars default to <strong>incidents per million people</strong> (2021
-              populations) so the two states compare on a level footing. Read each
-              cluster left to right: <strong>California</strong> then
-              <strong>NSW</strong>. Injured encounters dominate in NSW at
-              <strong>22.8 per million</strong> against California&rsquo;s
-              <strong>2.75</strong>; fatalities stay closer
-              (<strong>0.38</strong> vs <strong>2.45</strong>).
+              Adjusted for population, <strong>NSW</strong> dominates the injured
+              category at <strong>22.78 incidents per million</strong> against
+              California&rsquo;s <strong>2.75</strong>, a gap of roughly
+              <strong>8 times</strong>. Fatalities stay much closer, with NSW at
+              <strong>2.45 per million</strong> and California at
+              <strong>0.38</strong>. The per capita view puts both states on a level
+              footing and makes the injured gap impossible to ignore.
             </p>
             <p class="chart-lede__col">
-              Switch to <strong>raw incident count</strong> and the picture
-              softens but the pattern holds: NSW leads on injured
-              (<strong>186</strong> vs <strong>108</strong>), while uninjured
-              totals are almost tied (<strong>80</strong> vs <strong>79</strong>).
-              The share of all incidents that ended in death stays near
-              <strong>7%</strong> in both places.
+              Switch to <strong>raw incident count</strong> and the pattern holds.
+              NSW leads on injured (<strong>186 vs 108</strong>), while uninjured
+              totals are almost tied (<strong>80 vs 79</strong>). NSW has already
+              been <strong>normalised for population</strong>, so the gap is not just
+              because more people live there. Australians simply encounter sharks
+              <strong>more often</strong>, and the numbers reflect that regardless
+              of how you look at them.
             </p>
           </div>
         </div>
