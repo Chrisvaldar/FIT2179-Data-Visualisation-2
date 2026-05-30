@@ -319,7 +319,7 @@
       },
       "encoding": {
         "x": {
-          "value": 142,
+          "value": 4,
           "scale": null
         },
         "y": {
@@ -342,17 +342,17 @@
           {
             "label": "Fatal",
             "color": "#c0392b",
-            "x": 214
+            "x": 76
           },
           {
             "label": "Injured",
             "color": "#e67e22",
-            "x": 284
+            "x": 146
           },
           {
             "label": "Uninjured",
             "color": "#7f8c8d",
-            "x": 368
+            "x": 230
           }
         ]
       },
@@ -429,7 +429,7 @@
       },
       "encoding": {
         "x": {
-          "value": 142,
+          "value": 4,
           "scale": null
         },
         "y": {
@@ -451,11 +451,11 @@
         "values": [
           {
             "icon_url": "../../assets/icons/male-uninjured.svg",
-            "x": 214
+            "x": 76
           },
           {
             "icon_url": "../../assets/icons/female-uninjured.png",
-            "x": 254
+            "x": 116
           }
         ]
       },
@@ -499,7 +499,7 @@
       },
       "encoding": {
         "x": {
-          "value": 234,
+          "value": 96,
           "scale": null
         },
         "y": {
@@ -533,7 +533,7 @@
       },
       "encoding": {
         "x": {
-          "value": 276,
+          "value": 138,
           "scale": null
         },
         "y": {

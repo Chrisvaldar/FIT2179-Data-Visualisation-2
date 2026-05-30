@@ -132,7 +132,7 @@
           },
           "legend": {
             "title": "Outcome",
-            "orient": "bottom",
+            "orient": "bottom-left",
             "direction": "horizontal",
             "offset": 4,
             "labelFontSize": 11,

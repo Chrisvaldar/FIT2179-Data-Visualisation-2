@@ -27,7 +27,7 @@
     "legend": {
       "labelFont": "Source Sans 3",
       "titleFont": "Source Sans 3",
-      "orient": "bottom",
+      "orient": "bottom-left",
       "offset": 4,
       "direction": "horizontal"
     },

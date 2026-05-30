@@ -128,7 +128,7 @@
           },
           "legend": {
             "title": "Region",
-            "orient": "bottom",
+            "orient": "bottom-left",
             "direction": "horizontal",
             "offset": 8,
             "labelFontSize": 11,

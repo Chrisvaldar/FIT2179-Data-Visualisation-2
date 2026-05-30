@@ -198,6 +198,7 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         gap: 32px;
       }
 
@@ -450,7 +451,7 @@
       .chart-block--gender-isotype .vis-wrap,
       .chart-block--age-ridge .vis-wrap,
       .chart-block--outcome-comparison .vis-wrap {
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       .chart-block--sankey .vis-wrap > div,
@@ -482,7 +483,7 @@
         max-width: 1000px;
       }
 
-      /* Radial clock: chart centred, filter spans full card width (left-aligned) */
+      /* Radial clock: full-width embed; legend and filter left-aligned */
       .chart-block--radial-clock .chart-header {
         margin-bottom: 6px;
       }
@@ -530,10 +531,10 @@
         padding-top: 8px;
       }
 
-      /* Vega chart container, centred horizontally inside the card */
+      /* Vega chart container, left-aligned so legends line up with filters */
       .vis-wrap {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
         overflow-x: auto;
@@ -618,7 +619,7 @@
       }
 
       /* ============================================================
-       VEGA EMBED OVERRIDES: chart centred in card, filters below
+       VEGA EMBED OVERRIDES: chart left-aligned, filters below
        legend (left-aligned)
     ============================================================ */
       .vega-embed {
@@ -629,7 +630,7 @@
       }
       .vega-embed > *:not(form):not(details) {
         order: 1;
-        align-self: center;
+        align-self: flex-start;
       }
       .chart-block--dot-map .vega-embed > *:not(form):not(details) {
         align-self: stretch;
@@ -1245,7 +1246,13 @@
       const chartFontConfig = {
         config: {
           axis: { labelFont: "Source Sans 3", titleFont: "Source Sans 3" },
-          legend: { labelFont: "Source Sans 3", titleFont: "Source Sans 3" },
+          legend: {
+            labelFont: "Source Sans 3",
+            titleFont: "Source Sans 3",
+            orient: "bottom-left",
+            direction: "horizontal",
+            offset: 4,
+          },
           title: { font: "Source Sans 3" },
           text: { font: "Source Sans 3" },
         },

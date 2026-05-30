@@ -296,7 +296,8 @@
             "fillColor": "#ffffff",
             "padding": 8,
             "cornerRadius": 4,
-            "strokeColor": "#dddddd"
+            "strokeColor": "#dddddd",
+            "direction": "horizontal"
           }
         },
         "size": {
