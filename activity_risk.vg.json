@@ -61,7 +61,7 @@
               { "field": "activity", "title": "Activity" },
               { "field": "count", "title": "Total incidents" },
               { "field": "fatal", "title": "Fatal" },
-              { "field": "fatal_rate", "title": "Fatality rate (%)", "format": ".1f" }
+              { "field": "fatal_rate", "title": "Incident fatality (%)", "format": ".1f" }
             ]
           }
         },
@@ -173,7 +173,7 @@
     },
     {
       "title": {
-        "text": "Fatality rate (%)",
+        "text": "Incident fatality (%)",
         "fontSize": 12,
         "fontWeight": "bold",
         "anchor": "middle",
@@ -217,7 +217,7 @@
               { "field": "activity", "title": "Activity" },
               { "field": "count", "title": "Total incidents" },
               { "field": "fatal", "title": "Fatal" },
-              { "field": "fatal_rate", "title": "Fatality rate (%)", "format": ".1f" }
+              { "field": "fatal_rate", "title": "Incident fatality (%)", "format": ".1f" }
             ]
           }
         },

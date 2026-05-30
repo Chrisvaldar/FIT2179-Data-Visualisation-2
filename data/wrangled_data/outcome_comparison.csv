@@ -1,0 +1,7 @@
+region,outcome,count,population,rate_per_million,pct_within_region,region_total
+NSW,fatal,20,8166369,2.45,7.0,286
+NSW,injured,186,8166369,22.78,65.0,286
+NSW,uninjured,80,8166369,9.8,28.0,286
+California,fatal,15,39237836,0.38,7.4,202
+California,injured,108,39237836,2.75,53.5,202
+California,uninjured,79,39237836,2.01,39.1,202

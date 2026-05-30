@@ -70,6 +70,7 @@ Each figure lives in a `.chart-block.full-width` with layout modifiers:
 | `chart-block--activity` | Figure 3.1 activity butterfly | hconcat embed max **1000px** wide, **centred** in the card. |
 | `chart-block--radial-clock` | Figure 3.2 radial time clock | Square embed max **560px** wide, **centred** in the card. |
 | `chart-block--gender-isotype` | Figure 4.1 gender isotype | Chart embed max **1000px** wide, **centred** in the card. |
+| `chart-block--age-ridge` | Figure 4.2 age mirror ridge | Chart embed max **1000px** wide, **centred** in the card. |
 
 Legacy `chart-block--820` (820px centred column) is **not** used for Section 1 anymore. Do not use it for new charts unless you intentionally want a narrow centred column.
 
@@ -361,7 +362,8 @@ Shared `config` baseline (no `config.title`):
 .chart-block--length-beeswarm .chart-lede,
 .chart-block--activity .chart-lede,
 .chart-block--radial-clock .chart-lede,
-.chart-block--gender-isotype .chart-lede {
+.chart-block--gender-isotype .chart-lede,
+.chart-block--age-ridge .chart-lede {
   margin-top: 12px;
   padding-top: 14px;
 }
@@ -382,32 +384,51 @@ Under `chart-block--split-maps`, lede and caption use **full card width** (`max-
 
 ---
 
-## Annotations (timeline and maps)
+## Annotations (timeline, maps, and ridge charts)
+
+### Typography and colour
+
+All callout labels use the same neutral slate style (see `decade_timeline.vg.json`):
+
+| Property | Value |
+|----------|-------|
+| Font size | 11px |
+| Font style | italic |
+| Colour | `#2c3e50` |
+| Line breaks | `"lineBreak": "\n"` on the mark; two short lines max |
+| Clip | `"clip": false` on text marks |
+
+Annotations are **never** coloured to match the series they describe — the legend carries series colour. Do not repeat legend labels (e.g. “Fatal”, “Survived”) as on-chart text.
 
 ### Do
 
-- Anchor labels to **real data coordinates** (decade + y value at that point)
+- Anchor labels to **real data coordinates** (x + y at the point being discussed)
+- Offset with **`dx` / `dy`** from that anchor (e.g. `baseline: "bottom"`, `dy: -6` above a peak; `baseline: "top"`, `dy: 8` below a trough)
 - Use **short two-line labels** with `\n` and `"lineBreak": "\n"`
 - Set `"clip": false` on text marks and `"view": { "clip": false }` in config when labels sit near edges
-- Add **top/right padding** in the spec when labels sit above peaks or near the right edge
-- Use `align: "right"` at the 2010 peak so text grows leftward, not off the right edge
+- Add **top/bottom padding** in the spec when labels sit above or below peaks
+- Use `align: "right"` when a label sits near the right edge so text grows leftward, not off the canvas
 - Give the y-axis extra headroom above the highest data value
 
 ### Don't
 
+- Float labels in margin whitespace with `scale: null` pixel coordinates
 - Place annotations at fake x values outside the data domain (e.g. `Decade: 2035`)
 - Use `"limit"` on text marks — it truncates with ellipsis and looks broken
 - Extend the x-axis domain just to create “whitespace” for callouts
 - Rely on margin positioning without padding/headroom — labels get clipped by the view
+- Duplicate legend entries as on-chart row labels
 
-### Current timeline labels (reference copy)
+### Reference copy
 
-| Mode | Anchor | Text |
-|------|--------|------|
-| Count | 2010 peak | `231 incidents\nin the 2010s` |
-| Count | 1940 dip | `WW2 kept people\noff the beaches` |
-| Rate | 1800 spike | `Very few people\nback then` |
-| Rate | ~2000s | `Fairly steady\nsince federation` |
+| Chart | Anchor | Text |
+|-------|--------|------|
+| Timeline count | 2010 peak | `231 incidents\nin the 2010s` |
+| Timeline count | 1940 dip | `WW2 kept people\noff the beaches` |
+| Timeline rate | 1800 spike | `Very few people\nback then` |
+| Timeline rate | ~2000s | `Fairly steady\nsince federation` |
+| Age ridge fatal | age 16 on ridge | `Fatal peak\n16 years` |
+| Age ridge survived | age 17 on ridge | `Survived peak\n17 years` |
 
 ---
 
@@ -452,6 +473,7 @@ const choroplethOpts = { ...embedOpts, renderer: "svg" };
 | 3.1 Activity risk | `split-maps` + `activity` | `activity_risk.vg.json` |
 | 3.2 Radial clock | `split-maps` + `radial-clock` | `radial_time_clock.vg.json` |
 | 4.1 Gender isotype | `split-maps` + `gender-isotype` | `gender_isotype.vg.json` |
+| 4.2 Age mirror ridge | `split-maps` + `age-ridge` | `age_mirror_ridge.vg.json` |
 
 **Gender isotype (Figure 4.1):** Pattern C centred embed. Icon paths in `assets/icons/` (see `assets/icons/README.md`). Wrangle with `scripts/wrangle_gender_isotype.py` → `data/wrangled_data/gender_isotype.csv`.
 
@@ -459,6 +481,17 @@ const choroplethOpts = { ...embedOpts, renderer: "svg" };
 "width": 1000,
 "height": 360,
 "padding": { "top": 8, "left": 8, "right": 12, "bottom": 8 },
+"config": {
+  "view": { "stroke": "transparent", "clip": false }
+}
+```
+
+**Age mirror ridge (Figure 4.2):** Pattern C centred embed. Wrangle with `scripts/wrangle_age_ridge.py` → `data/wrangled_data/age_records.csv`. Density transform lives inside the main area layer. Peak callouts use data-anchored text (same typography as timeline annotations — see **Annotations** section).
+
+```json
+"width": 1000,
+"height": 360,
+"padding": { "top": 36, "left": 8, "right": 12, "bottom": 12 },
 "config": {
   "view": { "stroke": "transparent", "clip": false }
 }

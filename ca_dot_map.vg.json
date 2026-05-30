@@ -1,0 +1,158 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "California",
+    "fontSize": 12,
+    "fontWeight": "bold",
+    "color": "#1a2530",
+    "anchor": "middle"
+  },
+  "width": "container",
+  "height": 380,
+  "autosize": { "type": "pad", "contains": "padding", "resize": true },
+  "padding": { "bottom": 4 },
+  "config": {
+    "view": { "stroke": "transparent", "clip": false },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+  },
+  "params": [
+    {
+      "name": "decade_select",
+      "value": null
+    },
+    {
+      "name": "outcome_select",
+      "value": "all"
+    }
+  ],
+  "projection": {
+    "type": "mercator",
+    "center": [-119.5, 36],
+    "scale": 1280
+  },
+  "layer": [
+    {
+      "description": "Ocean background",
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "rect",
+        "fill": "#dbe7ee",
+        "x": 0,
+        "y": 0,
+        "x2": { "expr": "width" },
+        "y2": { "expr": "height" }
+      }
+    },
+    {
+      "description": "California land mass",
+      "data": {
+        "url": "data/topojson/california.json",
+        "format": { "type": "topojson", "feature": "california" }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f4e9d3",
+        "stroke": "#b89968",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "description": "California white-shark incidents since 1950",
+      "data": { "url": "data/wrangled_data/ca_dot_map.csv" },
+      "transform": [
+        { "filter": "decade_select === null || datum.Decade == decade_select" },
+        {
+          "filter": "outcome_select === 'all' || datum['Victim.injury'] === outcome_select"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.78,
+        "filled": true,
+        "stroke": "white",
+        "strokeWidth": 0.4
+      },
+      "encoding": {
+        "longitude": { "field": "Longitude", "type": "quantitative" },
+        "latitude": { "field": "Latitude", "type": "quantitative" },
+        "color": {
+          "field": "Victim\\.injury",
+          "type": "nominal",
+          "scale": {
+            "domain": ["fatal", "injured", "uninjured"],
+            "range": ["#c0392b", "#e67e22", "#7f8c8d"]
+          },
+          "legend": null
+        },
+        "size": {
+          "condition": {
+            "test": "datum['Victim.injury'] === 'fatal'",
+            "value": 55
+          },
+          "value": 38
+        },
+        "tooltip": [
+          { "field": "Incident\\.year", "title": "Year" },
+          { "field": "County", "title": "County" },
+          { "field": "Activity\\.clean", "title": "Activity" },
+          { "field": "Victim\\.injury", "title": "Outcome" }
+        ]
+      }
+    },
+    {
+      "description": "Red Triangle annotation, text sits west in the Pacific",
+      "data": {
+        "values": [
+          {
+            "lon": -122.05,
+            "lat": 36.5,
+            "label": "Seven in ten incidents\nfrom San Diego to Mendocino"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -14,
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
+        "lineBreak": "\n"
+      },
+      "encoding": {
+        "longitude": { "field": "lon", "type": "quantitative" },
+        "latitude": { "field": "lat", "type": "quantitative" },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    },
+    {
+      "description": "San Diego annotation, text sits west in the Pacific",
+      "data": {
+        "values": [
+          {
+            "lon": -117.32,
+            "lat": 32.75,
+            "label": "San Diego County\nleads raw count (23)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -14,
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
+        "lineBreak": "\n"
+      },
+      "encoding": {
+        "longitude": { "field": "lon", "type": "quantitative" },
+        "latitude": { "field": "lat", "type": "quantitative" },
+        "text": { "field": "label", "type": "nominal" }
+      }
+    }
+  ]
+}

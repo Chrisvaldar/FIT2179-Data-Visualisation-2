@@ -252,6 +252,10 @@
         margin-top: var(--section-gap);
       }
 
+      .section-divider + .section {
+        margin-top: 32px;
+      }
+
       .section-header {
         border-left: 4px solid var(--blood);
         padding-left: 18px;
@@ -376,6 +380,58 @@
         width: 100%;
       }
 
+      .comparison-map-legend {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        width: 100%;
+        margin-top: 8px;
+        font-family: var(--font-body);
+        font-size: 11px;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--text-dark);
+      }
+
+      .comparison-map-legend__title {
+        font-weight: 600;
+      }
+
+      .comparison-map-legend__item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .comparison-map-filters {
+        margin: 8px 0 16px;
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: var(--text-mid);
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .comparison-map-filters label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .comparison-map-filters select {
+        font: inherit;
+        padding: 2px 6px;
+      }
+
+      .chart-block--comparison-maps .vega-embed form.vega-bindings {
+        display: none;
+      }
+
       /* Dot map: stretch to the full card width */
       .chart-block--dot-map .vis-wrap {
         justify-content: stretch;
@@ -394,7 +450,9 @@
       .chart-block--length-pictogram,
       .chart-block--activity,
       .chart-block--radial-clock,
-      .chart-block--gender-isotype {
+      .chart-block--gender-isotype,
+      .chart-block--age-ridge,
+      .chart-block--outcome-comparison {
         overflow: visible;
       }
 
@@ -404,7 +462,9 @@
       .chart-block--length-pictogram .vis-wrap,
       .chart-block--activity .vis-wrap,
       .chart-block--radial-clock .vis-wrap,
-      .chart-block--gender-isotype .vis-wrap {
+      .chart-block--gender-isotype .vis-wrap,
+      .chart-block--age-ridge .vis-wrap,
+      .chart-block--outcome-comparison .vis-wrap {
         justify-content: center;
       }
 
@@ -423,7 +483,11 @@
       .chart-block--activity .vis-wrap > div,
       .chart-block--activity #vis-activity,
       .chart-block--gender-isotype .vis-wrap > div,
-      .chart-block--gender-isotype #vis-gender-isotype {
+      .chart-block--gender-isotype #vis-gender-isotype,
+      .chart-block--age-ridge .vis-wrap > div,
+      .chart-block--age-ridge #vis-age-ridge,
+      .chart-block--outcome-comparison .vis-wrap > div,
+      .chart-block--outcome-comparison #vis-outcome-comparison {
         width: 100%;
         max-width: 1000px;
       }
@@ -440,7 +504,9 @@
       .chart-block--length-pictogram .vega-embed,
       .chart-block--activity .vega-embed,
       .chart-block--radial-clock .vega-embed,
-      .chart-block--gender-isotype .vega-embed {
+      .chart-block--gender-isotype .vega-embed,
+      .chart-block--age-ridge .vega-embed,
+      .chart-block--outcome-comparison .vega-embed {
         align-items: center !important;
       }
 
@@ -450,19 +516,25 @@
       .chart-block--length-pictogram .vega-embed form.vega-bindings,
       .chart-block--activity .vega-embed form.vega-bindings,
       .chart-block--radial-clock .vega-embed form.vega-bindings,
-      .chart-block--gender-isotype .vega-embed form.vega-bindings {
+      .chart-block--gender-isotype .vega-embed form.vega-bindings,
+      .chart-block--age-ridge .vega-embed form.vega-bindings,
+      .chart-block--outcome-comparison .vega-embed form.vega-bindings {
         justify-content: center;
       }
 
       .chart-block--choropleth .chart-lede,
       .chart-block--timeline .chart-lede,
+      .chart-block--comparison-maps .chart-lede,
+      .chart-block--outcome-comparison .chart-lede,
       .chart-block--sankey .chart-lede,
       .chart-block--length-beeswarm .chart-lede,
       .chart-block--length-ridgeline .chart-lede,
       .chart-block--length-pictogram .chart-lede,
       .chart-block--activity .chart-lede,
       .chart-block--radial-clock .chart-lede,
-      .chart-block--gender-isotype .chart-lede {
+      .chart-block--gender-isotype .chart-lede,
+      .chart-block--age-ridge .chart-lede,
+      .chart-block--outcome-comparison .chart-lede {
         margin-top: 4px;
         padding-top: 8px;
       }
@@ -1086,11 +1158,44 @@
             </p>
           </div>
         </div>
+
+        <!-- 4.2 Age mirrored ridge -->
+        <div
+          class="chart-block full-width chart-block--split-maps chart-block--age-ridge"
+        >
+          <div class="chart-header">
+            <div class="chart-header__title">
+              Fatal and survived both peak in the mid-teens
+            </div>
+          </div>
+          <div class="vis-wrap"><div id="vis-age-ridge"></div></div>
+          <div class="chart-lede">
+            <p class="chart-lede__col">
+              Where age is recorded (<strong>697 of 1,203</strong> incidents),
+              the two curves tell separate stories. Among
+              <strong>fatal</strong> attacks, the sharpest concentration sits
+              at age <strong>16</strong> (14 incidents), with most deaths still
+              falling between <strong>10 and 25</strong>. The fatal ridge is
+              wider than the survived one, spreading further into the
+              <strong>20s and 30s</strong>, but it never leaves the young-adult
+              range.
+            </p>
+            <p class="chart-lede__col">
+              Among those who <strong>survived</strong>, the single-year peak
+              is age <strong>17</strong> (27 incidents), with the same broad
+              <strong>10–25</strong> cluster. Both outcomes skew young because
+              teenagers and young adults spend the most time in the water. The
+              difference is volume and spread, not a wholesale shift to middle
+              age: survived incidents outnumber fatal ones at almost every age
+              under 30.
+            </p>
+          </div>
+        </div>
       </section>
 
       <hr class="section-divider" />
 
-      <!-- ─── SECTION 5 PLACEHOLDER ─── -->
+      <!-- ─── SECTION 5: AUSTRALIA VS CALIFORNIA ─── -->
       <section class="section">
         <div class="section-header">
           <span class="section-number">Section 5</span>
@@ -1098,25 +1203,132 @@
             How does Australia compare with California?
           </h2>
           <p class="section-intro">
-            Section 5 will place the Australian record alongside 220
-            California white-shark incidents from 1950 to 2022: activity mix,
-            fatality rate by decade, and a California dot map.
+            Both coastlines sit in great white territory, but comparing a
+            continent to a single US state was never fair. Here we line up
+            <strong>New South Wales</strong>, Australia&rsquo;s highest-incident
+            state, against <strong>California</strong>, our white-shark record
+            for the United States: 286 NSW incidents against 202 in California,
+            both from 1950 to 2022.
           </p>
         </div>
 
-        <div
-          class="chart-block"
-          style="
-            background: var(--sand-pale);
-            border-style: dashed;
-            text-align: center;
-            padding: 60px 36px;
-            color: var(--text-light);
-            font-size: 14px;
-          "
-        >
-          Charts in development: AU vs CA activity comparison, fatality rate
-          by decade, California dot map.
+        <!-- 5.1 NSW vs California dot maps -->
+        <div class="chart-block full-width chart-block--split-maps chart-block--choropleth chart-block--comparison-maps">
+          <div class="chart-header">
+            <div class="chart-header__title">
+              Two leading states, two coastal geographies
+            </div>
+          </div>
+          <div class="vis-wrap">
+            <div class="choropleth-grid">
+              <div class="choropleth-panel"><div id="vis-nsw-dot-map"></div></div>
+              <div class="choropleth-panel"><div id="vis-ca-dot-map"></div></div>
+            </div>
+          </div>
+          <div class="comparison-map-legend" aria-label="Outcome legend">
+            <span class="comparison-map-legend__title">Outcome</span>
+            <span class="comparison-map-legend__item">
+              <span class="legend-dot dot-fatal"></span> Fatal
+            </span>
+            <span class="comparison-map-legend__item">
+              <span class="legend-dot dot-injured"></span> Injured
+            </span>
+            <span class="comparison-map-legend__item">
+              <span class="legend-dot dot-uninjured"></span> Uninjured
+            </span>
+          </div>
+          <form class="comparison-map-filters" id="comparison-map-filters">
+            <label>
+              Filter by decade:
+              <select id="comparison-decade">
+                <option value="">All decades</option>
+                <option value="1950">1950s</option>
+                <option value="1960">1960s</option>
+                <option value="1970">1970s</option>
+                <option value="1980">1980s</option>
+                <option value="1990">1990s</option>
+                <option value="2000">2000s</option>
+                <option value="2010">2010s</option>
+                <option value="2020">2020s</option>
+              </select>
+            </label>
+            <label>
+              Filter by outcome:
+              <select id="comparison-outcome">
+                <option value="all">All outcomes</option>
+                <option value="fatal">Fatal only</option>
+                <option value="injured">Injured only</option>
+                <option value="uninjured">Uninjured only</option>
+              </select>
+            </label>
+          </form>
+          <div class="chart-lede">
+            <p class="chart-lede__col">
+              At state scale the comparison finally balances.
+              <strong>New South Wales</strong> leads Australia with
+              <strong>286 incidents since 1950</strong>, spread between a
+              <strong>Sydney and Central Coast cluster</strong> and a second
+              band around <strong>Byron Bay</strong>. California records
+              <strong>202 white-shark incidents</strong> in the same period,
+              but <strong>roughly seven in ten</strong> fall inside the
+              surf corridor from San Diego to Mendocino.
+            </p>
+            <p class="chart-lede__col">
+              Both states are board-heavy surf cultures:
+              <strong>51%</strong> of NSW incidents involve surfing or
+              boarding, against <strong>43%</strong> in California. The
+              difference is geography, not appetite for risk: NSW still spans
+              hundreds of kilometres of coast, while California packs most of
+              its dots into one visible triangle. The national picture remains
+              in Section 1; this is the state-level peer comparison.
+            </p>
+          </div>
+          <p class="chart-caption">
+            Figure 5.1. Side-by-side dot maps of New South Wales (left) and
+            California (right), 1950 to 2022. Each point is one incident,
+            coloured by outcome and sized up for fatalities. Projections are
+            centred on each state independently so both coastlines fill their
+            panel. Filters below the legend apply to both panels. NSW
+            boundaries from Natural Earth via Mapshaper; California from the
+            same source.
+          </p>
+        </div>
+
+        <!-- 5.2 NSW vs California outcome comparison -->
+        <div class="chart-block full-width chart-block--outcome-comparison">
+          <div class="chart-header">
+            <div class="chart-header__title">
+              Injury outcomes per million people (with raw counts available)
+            </div>
+          </div>
+          <div class="vis-wrap">
+            <div id="vis-outcome-comparison"></div>
+          </div>
+          <div class="chart-lede">
+            <p class="chart-lede__col">
+              Bars default to <strong>incidents per million people</strong> (2021
+              populations) so the two states compare on a level footing. Read each
+              cluster left to right: <strong>California</strong> then
+              <strong>NSW</strong>. Injured encounters dominate in NSW at
+              <strong>22.8 per million</strong> against California&rsquo;s
+              <strong>2.75</strong>; fatalities stay closer
+              (<strong>0.38</strong> vs <strong>2.45</strong>).
+            </p>
+            <p class="chart-lede__col">
+              Switch to <strong>raw incident count</strong> and the picture
+              softens but the pattern holds: NSW leads on injured
+              (<strong>186</strong> vs <strong>108</strong>), while uninjured
+              totals are almost tied (<strong>80</strong> vs <strong>79</strong>).
+              The share of all incidents that ended in death stays near
+              <strong>7%</strong> in both places.
+            </p>
+          </div>
+          <p class="chart-caption">
+            Figure 5.2. Grouped bar chart by outcome (fatal, injured, uninjured),
+            with California and NSW bars side by side in each group, 1950 to
+            2022. Normalised view uses 2021 state populations (NSW 8.17M, ABS;
+            California 39.2M, US Census).
+          </p>
         </div>
       </section>
     </main>
@@ -1189,6 +1401,43 @@
         "gender_isotype.vg.json",
         { ...embedOpts, renderer: "svg" },
       ).catch(console.warn);
+      vegaEmbed(
+        "#vis-age-ridge",
+        "age_mirror_ridge.vg.json",
+        embedOpts,
+      ).catch(console.warn);
+      vegaEmbed(
+        "#vis-outcome-comparison",
+        "outcome_comparison.vg.json",
+        embedOpts,
+      ).catch(console.warn);
+      vegaEmbed("#vis-nsw-dot-map", "nsw_dot_map.vg.json", embedOpts)
+        .then((nswResult) => {
+          return vegaEmbed("#vis-ca-dot-map", "ca_dot_map.vg.json", embedOpts).then(
+            (caResult) => {
+              const nswView = nswResult.view;
+              const caView = caResult.view;
+              const decadeSelect = document.getElementById("comparison-decade");
+              const outcomeSelect = document.getElementById("comparison-outcome");
+
+              function applyComparisonFilters() {
+                const decadeVal = decadeSelect.value
+                  ? Number(decadeSelect.value)
+                  : null;
+                const outcomeVal = outcomeSelect.value;
+
+                nswView.signal("decade_select", decadeVal).run();
+                nswView.signal("outcome_select", outcomeVal).run();
+                caView.signal("decade_select", decadeVal).run();
+                caView.signal("outcome_select", outcomeVal).run();
+              }
+
+              decadeSelect.addEventListener("change", applyComparisonFilters);
+              outcomeSelect.addEventListener("change", applyComparisonFilters);
+            },
+          );
+        })
+        .catch(console.warn);
     </script>
   </body>
 </html>

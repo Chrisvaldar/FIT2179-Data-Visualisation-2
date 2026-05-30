@@ -1,0 +1,14 @@
+# GitHub Pages / Jekyll — this repo is a static Vega dashboard, not a Jekyll site.
+# The references/ folder is a local Vega-Lite doc mirror with {% include %} tags
+# that only exist on vega.github.io; building them breaks Pages.
+
+title: Sharks in Australian Waters
+description: FIT2179 Data Visualisation 2
+
+exclude:
+  - references
+  - scripts
+  - data/base_data
+  - shark_attack_plan.md
+  - PROJECT_STATE.md
+  - CHART_LAYOUT.md

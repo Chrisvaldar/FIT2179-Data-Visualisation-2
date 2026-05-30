@@ -1,0 +1,139 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 1000,
+  "height": 380,
+  "padding": { "top": 44, "right": 12, "bottom": 12 },
+  "autosize": { "type": "pad", "contains": "padding", "resize": true },
+  "data": { "url": "data/wrangled_data/outcome_comparison.csv" },
+  "config": {
+    "view": { "stroke": "transparent" },
+    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+  },
+  "params": [
+    {
+      "name": "metric",
+      "value": "rate",
+      "bind": {
+        "input": "select",
+        "options": ["rate", "count"],
+        "labels": ["Rate per million people", "Raw incident count"],
+        "name": "Show: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.outcome === 'fatal' ? 'Fatal' : datum.outcome === 'injured' ? 'Injured' : 'Uninjured'",
+      "as": "outcome_label"
+    },
+    {
+      "calculate": "metric === 'count' ? datum.count : datum.rate_per_million",
+      "as": "y_value"
+    },
+    {
+      "calculate": "metric === 'count' ? format(datum.count, 'd') : format(datum.rate_per_million, '.2f')",
+      "as": "bar_label"
+    }
+  ],
+  "layer": [
+    {
+      "description": "Grouped bars: outcome on x, California vs NSW within each group",
+      "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+      "encoding": {
+        "x": {
+          "field": "outcome_label",
+          "type": "nominal",
+          "sort": ["Fatal", "Injured", "Uninjured"],
+          "axis": {
+            "title": null,
+            "labelFontSize": 13,
+            "labelPadding": 8
+          }
+        },
+        "xOffset": {
+          "field": "region",
+          "type": "nominal",
+          "sort": ["California", "NSW"]
+        },
+        "y": {
+          "field": "y_value",
+          "type": "quantitative",
+          "scale": {
+            "domain": { "expr": "metric === 'count' ? [0, 210] : [0, 24]" },
+            "nice": false
+          },
+          "axis": {
+            "title": {
+              "expr": "metric === 'count' ? 'Incidents (1950–2022)' : 'Incidents per million (2021 population)'"
+            },
+            "grid": true,
+            "gridColor": "#eeeeee"
+          }
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": ["California", "NSW"],
+            "range": ["#5a6f7d", "#1a6b8a"]
+          },
+          "legend": {
+            "title": "Region",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "offset": 8,
+            "labelFontSize": 11,
+            "symbolSize": 100,
+            "symbolStrokeWidth": 0
+          }
+        },
+        "tooltip": [
+          { "field": "region", "title": "Region" },
+          { "field": "outcome_label", "title": "Outcome" },
+          { "field": "count", "title": "Incidents" },
+          {
+            "field": "rate_per_million",
+            "title": "Per million (2021 pop.)",
+            "format": ".2f"
+          },
+          {
+            "field": "pct_within_region",
+            "title": "Share within region (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "population",
+            "title": "Population (2021)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "description": "Value labels above each bar",
+      "mark": {
+        "type": "text",
+        "baseline": "bottom",
+        "dy": -4,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#1a2530"
+      },
+      "encoding": {
+        "x": {
+          "field": "outcome_label",
+          "type": "nominal",
+          "sort": ["Fatal", "Injured", "Uninjured"]
+        },
+        "xOffset": {
+          "field": "region",
+          "type": "nominal",
+          "sort": ["California", "NSW"]
+        },
+        "y": { "field": "y_value", "type": "quantitative" },
+        "text": { "field": "bar_label", "type": "nominal" }
+      }
+    }
+  ]
+}
