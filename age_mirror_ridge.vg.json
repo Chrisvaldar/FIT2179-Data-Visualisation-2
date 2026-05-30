@@ -11,7 +11,7 @@
   },
   "layer": [
     {
-      "description": "Mirrored kernel density — fatal above centre, survived below",
+      "description": "Mirrored kernel density: fatal above centre, survived below",
       "transform": [
         { "calculate": "toNumber(datum['Victim.age'])", "as": "age" },
         { "calculate": "datum.outcome_group", "as": "side" },

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sharks in Australian Waters, 1791–2022</title>
 
-    <!-- Vega: locked to Vega-Lite v6 to match every spec's $schema -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <!-- Vega stack v6: Vega, Vega-Lite, and vega-embed must match -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
@@ -445,9 +445,7 @@
 
       /* Section 2–3: full-width prose; chart 4 left-aligned, charts 5–6 centred */
       .chart-block--sankey,
-      .chart-block--length-beeswarm,
-      .chart-block--length-ridgeline,
-      .chart-block--length-pictogram,
+      .chart-block--species-size,
       .chart-block--activity,
       .chart-block--radial-clock,
       .chart-block--gender-isotype,
@@ -457,9 +455,7 @@
       }
 
       .chart-block--sankey .vis-wrap,
-      .chart-block--length-beeswarm .vis-wrap,
-      .chart-block--length-ridgeline .vis-wrap,
-      .chart-block--length-pictogram .vis-wrap,
+      .chart-block--species-size .vis-wrap,
       .chart-block--activity .vis-wrap,
       .chart-block--radial-clock .vis-wrap,
       .chart-block--gender-isotype .vis-wrap,
@@ -474,12 +470,17 @@
         max-width: 1000px;
       }
 
-      .chart-block--length-beeswarm .vis-wrap > div,
-      .chart-block--length-beeswarm #vis-length-beeswarm,
-      .chart-block--length-ridgeline .vis-wrap > div,
-      .chart-block--length-ridgeline #vis-length-ridgeline,
-      .chart-block--length-pictogram .vis-wrap > div,
-      .chart-block--length-pictogram #vis-length-pictogram,
+      .chart-block--species-size .vis-wrap > div,
+      .chart-block--species-size #vis-species-size {
+        width: 100%;
+        max-width: 1000px;
+        overflow: visible;
+      }
+
+      .chart-block--species-size .vega-embed svg {
+        overflow: visible !important;
+      }
+
       .chart-block--activity .vis-wrap > div,
       .chart-block--activity #vis-activity,
       .chart-block--gender-isotype .vis-wrap > div,
@@ -499,9 +500,7 @@
       }
 
       .chart-block--sankey .vega-embed,
-      .chart-block--length-beeswarm .vega-embed,
-      .chart-block--length-ridgeline .vega-embed,
-      .chart-block--length-pictogram .vega-embed,
+      .chart-block--species-size .vega-embed,
       .chart-block--activity .vega-embed,
       .chart-block--radial-clock .vega-embed,
       .chart-block--gender-isotype .vega-embed,
@@ -511,9 +510,7 @@
       }
 
       .chart-block--sankey .vega-embed form.vega-bindings,
-      .chart-block--length-beeswarm .vega-embed form.vega-bindings,
-      .chart-block--length-ridgeline .vega-embed form.vega-bindings,
-      .chart-block--length-pictogram .vega-embed form.vega-bindings,
+      .chart-block--species-size .vega-embed form.vega-bindings,
       .chart-block--activity .vega-embed form.vega-bindings,
       .chart-block--radial-clock .vega-embed form.vega-bindings,
       .chart-block--gender-isotype .vega-embed form.vega-bindings,
@@ -527,9 +524,7 @@
       .chart-block--comparison-maps .chart-lede,
       .chart-block--outcome-comparison .chart-lede,
       .chart-block--sankey .chart-lede,
-      .chart-block--length-beeswarm .chart-lede,
-      .chart-block--length-ridgeline .chart-lede,
-      .chart-block--length-pictogram .chart-lede,
+      .chart-block--species-size .chart-lede,
       .chart-block--activity .chart-lede,
       .chart-block--radial-clock .chart-lede,
       .chart-block--gender-isotype .chart-lede,
@@ -548,7 +543,7 @@
         overflow-x: auto;
       }
 
-      /* Editorial lede beneath each chart — two columns for readable line length */
+      /* Editorial lede beneath each chart: two columns for readable line length */
       .chart-lede {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -925,12 +920,9 @@
           <span class="section-number">Section 2</span>
           <h2 class="section-title">Which shark should you actually fear?</h2>
           <p class="section-intro">
-            Twelve identifiable species feature in the database. Three of them
-            account for nearly every fatal encounter. The flow diagram traces
-            each species to its outcomes. The length charts below take
-            different cuts at the same question: how shark size shifts the
-            odds when an encounter turns serious. Figure 2.4 uses a pictogram
-            where every square is one incident.
+            Dozens of species appear in the records, but a handful dominate the
+            incident count. The flow diagram traces each major species to its
+            outcome: injured, uninjured, or fatal.
           </p>
         </div>
 
@@ -954,85 +946,36 @@
               terminates almost entirely in the injured column.
               <strong>201 incidents, zero deaths</strong>. Wobbegongs are ambush
               predators that sit camouflaged on reef and sandy bottoms; they bite
-              when stepped on or handled and then let go. Every other species in
-              the chart contributes
-              <strong>a thin stream to the fatal column at best</strong>.
+              when stepped on or handled and then let go. A wide band here does
+              <strong>not</strong> mean a large shark. But are the sharks
+              involved in more incidents generally bigger?
             </p>
           </div>
         </div>
 
-        <!-- 2.2 Length beeswarm -->
-        <div class="chart-block full-width chart-block--split-maps chart-block--length-beeswarm">
+        <!-- 2.2 Species size icons -->
+        <div class="chart-block full-width chart-block--split-maps chart-block--species-size">
           <div class="chart-header">
-            <div class="chart-header__title">Under 2 metres, no recorded fatalities</div>
+            <div class="chart-header__title">Most incidents does not mean the biggest shark</div>
           </div>
-          <div class="vis-wrap"><div id="vis-length-beeswarm"></div></div>
+          <div class="vis-wrap"><div id="vis-species-size"></div></div>
           <div class="chart-lede">
             <p class="chart-lede__col">
-              Size matters more than Hollywood suggests. Among the
-              <strong>579 incidents</strong> where shark length was recorded,
-              every encounter with a shark <strong>under 2&nbsp;m</strong> ended
-              in injury or no injury, never death
-              (<strong>161 incidents, zero fatalities</strong>).
+              <strong>No.</strong> Wobbegong ranks third for incident volume at
+              <strong>201 bites</strong> yet its median recorded length is just
+              <strong>1.2 m</strong>, the smallest of the six groups. These are
+              bottom-dwelling ambush fish, not open-water predators. High
+              incident count and large body size simply do not go hand in hand.
             </p>
             <p class="chart-lede__col">
-              From <strong>2&nbsp;m upward</strong>, fatal outcomes appear, and
-              the red dots cluster past <strong>3&nbsp;m</strong>:
-              <strong>98 fatalities</strong> in the 418 incidents at 2&nbsp;m or
-              longer, including <strong>54 deaths</strong> where the shark
-              measured <strong>4&nbsp;m or more</strong>. The dashed line at
-              <strong>1.7&nbsp;m</strong> marks average adult height; the
-              threshold where lethality begins sits just above it.
-            </p>
-          </div>
-        </div>
-
-        <!-- 2.3 Length ridgeline -->
-        <div class="chart-block full-width chart-block--split-maps chart-block--length-ridgeline">
-          <div class="chart-header">
-            <div class="chart-header__title">Fatal encounters cluster above 3 metres</div>
-          </div>
-          <div class="vis-wrap"><div id="vis-length-ridgeline"></div></div>
-          <div class="chart-lede">
-            <p class="chart-lede__col">
-              Read each row as a smoothed distribution of shark lengths for that
-              outcome. The <strong>fatal</strong> curve stays flat below
-              <strong>2&nbsp;m</strong>, then rises sharply and peaks between
-              <strong>3 and 5&nbsp;m</strong>, where white, tiger, and bull
-              sharks dominate.
-            </p>
-            <p class="chart-lede__col">
-              The <strong>injured</strong> curve is broader and starts much
-              earlier, reflecting smaller species such as
-              <strong>wobbegongs</strong> that bite but rarely kill. The
-              <strong>uninjured</strong> row is thinner and shifted left, mostly
-              shorter sharks where contact did not cause serious harm.
-            </p>
-          </div>
-        </div>
-
-        <!-- 2.4 Length pictogram -->
-        <div class="chart-block full-width chart-block--split-maps chart-block--length-pictogram">
-          <div class="chart-header">
-            <div class="chart-header__title">No red squares below 2 metres</div>
-          </div>
-          <div class="vis-wrap"><div id="vis-length-pictogram"></div></div>
-          <div class="chart-lede">
-            <p class="chart-lede__col">
-              Below <strong>2 metres</strong>, the <strong>161 squares</strong>
-              are orange and grey. <strong>None are red.</strong> Red first
-              appears in the <strong>2 to 3 metre</strong> column and the
-              density increases consistently from there. The
-              <strong>4 to 5 metre</strong> column is the most concentrated red
-              cluster in the chart.
-            </p>
-            <p class="chart-lede__col">
-              A <strong>4 metre shark</strong> is roughly the size of a small
-              car and can exert a bite force around
-              <strong>1.8 tonnes per square centimetre</strong>, making
-              survivable injuries far less likely regardless of where the bite
-              lands. The <strong>0 to 1 metre</strong> column has more incidents
-              than the 4 to 5 metre column and <strong>kills nobody</strong>.
+              The species driving the death toll in the sankey are a different
+              story. <strong>White sharks</strong> (<strong>361
+              incidents</strong>, <strong>3.0 m</strong> median) and
+              <strong>tiger sharks</strong> (<strong>229</strong>,
+              <strong>3.0 m</strong>) are among the largest sharks in the
+              database and among the deadliest. For the sharks that actually
+              kill, size and danger align. Volume alone is a poor guide to how
+              big the animal was.
             </p>
           </div>
         </div>
@@ -1376,19 +1319,9 @@
           console.warn,
         );
         vegaEmbed(
-          "#vis-length-beeswarm",
-          "length_beeswarm.vg.json",
-          embedOpts,
-        ).catch(console.warn);
-        vegaEmbed(
-          "#vis-length-ridgeline",
-          "length_ridgeline.vg.json",
-          embedOpts,
-        ).catch(console.warn);
-        vegaEmbed(
-          "#vis-length-pictogram",
-          "length_pictogram.vg.json",
-          embedOpts,
+          "#vis-species-size",
+          "species_size_icons.vg.json",
+          sankeyOpts,
         ).catch(console.warn);
         vegaEmbed("#vis-activity", "activity_risk.vg.json", embedOpts).catch(
           console.warn,

@@ -59,7 +59,7 @@
       }
     },
     {
-      "description": "Gender icons — uniform size and grid spacing",
+      "description": "Gender icons: uniform size and grid spacing",
       "mark": {
         "type": "image",
         "width": 20,
@@ -177,7 +177,7 @@
       }
     },
     {
-      "description": "Legend swatches — filled circles (no stray plot points)",
+      "description": "Legend swatches: filled circles (no stray plot points)",
       "data": {
         "values": [
           { "label": "Fatal", "color": "#c0392b", "x": 142 },

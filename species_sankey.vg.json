@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
   "description": "Sankey diagram: shark species (left) to incident outcome (right). Inner width plus symmetric padding totals 1000px to match the centred embed cap in index.html.",
   "width": 664,
   "height": 520,
