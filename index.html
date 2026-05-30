@@ -1436,10 +1436,13 @@
         }
       }
 
+      /** Bump when chart JSON changes so GitHub Pages CDN/browser caches do not serve stale specs. */
+      const CHART_SPEC_VERSION = "20260530b";
+
       async function embedChart(selector, specPath, opts = {}) {
         const base = getSiteBase();
-        const specUrl = new URL(specPath, base).href;
-        const response = await fetch(specUrl);
+        const specUrl = new URL(`${specPath}?v=${CHART_SPEC_VERSION}`, base).href;
+        const response = await fetch(specUrl, { cache: "no-store" });
         if (!response.ok) {
           throw new Error(`Failed to load ${specPath} (${response.status})`);
         }
