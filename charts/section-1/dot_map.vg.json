@@ -346,11 +346,11 @@
       }
     },
     {
-      "description": "NSW coast annotation, text sits inland (west) of the coast anchor",
+      "description": "NSW coast annotation, text sits east in the Tasman Sea",
       "data": {
         "values": [
           {
-            "lon": 151.32,
+            "lon": 151.18,
             "lat": -33.54,
             "label": "Densest stretch of coast"
           }
@@ -358,9 +358,9 @@
       },
       "mark": {
         "type": "text",
-        "align": "right",
+        "align": "left",
         "baseline": "middle",
-        "dx": -12,
+        "dx": 14,
         "fontSize": 11.5,
         "fontStyle": "italic",
         "fill": "#000000",
@@ -382,11 +382,11 @@
       }
     },
     {
-      "description": "WA coast annotation, text sits inland (east) of the coast anchor",
+      "description": "WA coast annotation, text sits west in the Indian Ocean",
       "data": {
         "values": [
           {
-            "lon": 115.86,
+            "lon": 115.72,
             "lat": -31.95,
             "label": "Sparse, spread across a vast coast"
           }
@@ -394,9 +394,9 @@
       },
       "mark": {
         "type": "text",
-        "align": "left",
+        "align": "right",
         "baseline": "middle",
-        "dx": 12,
+        "dx": -14,
         "fontSize": 11.5,
         "fontStyle": "italic",
         "fill": "#000000",
