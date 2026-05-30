@@ -5,7 +5,7 @@
   "padding": {
     "top": 44,
     "right": 12,
-    "bottom": 12
+    "bottom": 8
   },
   "autosize": {
     "type": "pad",
@@ -31,7 +31,8 @@
     },
     "legend": {
       "labelFont": "Source Sans 3",
-      "titleFont": "Source Sans 3"
+      "titleFont": "Source Sans 3",
+      "titleFontWeight": "bold"
     }
   },
   "params": [
@@ -126,15 +127,7 @@
               "#1a6b8a"
             ]
           },
-          "legend": {
-            "title": "Region",
-            "orient": "bottom-left",
-            "direction": "horizontal",
-            "offset": 8,
-            "labelFontSize": 11,
-            "symbolSize": 100,
-            "symbolStrokeWidth": 0
-          }
+          "legend": null
         },
         "tooltip": [
           {

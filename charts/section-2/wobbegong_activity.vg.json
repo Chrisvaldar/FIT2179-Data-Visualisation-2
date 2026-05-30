@@ -24,7 +24,8 @@
     },
     "legend": {
       "labelFont": "Source Sans 3",
-      "titleFont": "Source Sans 3"
+      "titleFont": "Source Sans 3",
+      "titleFontWeight": "bold"
     }
   },
   "transform": [
@@ -109,6 +110,8 @@
             "direction": "horizontal",
             "offset": 4,
             "labelFontSize": 11,
+            "titleFontSize": 11,
+            "titleFontWeight": "bold",
             "labelExpr": "datum.label === 'fatal' ? 'Fatal (never observed)' : datum.label === 'injured' ? 'Injured' : 'Uninjured'"
           }
         },

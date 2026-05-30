@@ -8,7 +8,7 @@
     "resize": true
   },
   "padding": {
-    "bottom": 12
+    "bottom": 44
   },
   "config": {
     "title": {
@@ -27,7 +27,8 @@
     },
     "legend": {
       "labelFont": "Source Sans 3",
-      "titleFont": "Source Sans 3"
+      "titleFont": "Source Sans 3",
+      "titleFontWeight": "bold"
     }
   },
   "params": [
@@ -286,18 +287,18 @@
           },
           "legend": {
             "title": "Outcome",
-            "orient": "bottom-left",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleOrient": "top",
+            "titleAnchor": "start",
+            "titleAlign": "left",
+            "offset": 8,
             "labelExpr": "datum.label === 'fatal' ? 'Fatal' : datum.label === 'injured' ? 'Injured' : 'Uninjured'",
             "labelFontSize": 11,
             "labelFontStyle": "normal",
             "titleFontSize": 11,
             "titleFontStyle": "normal",
-            "titleFontWeight": "bold",
-            "fillColor": "#ffffff",
-            "padding": 8,
-            "cornerRadius": 4,
-            "strokeColor": "#dddddd",
-            "direction": "horizontal"
+            "titleFontWeight": "bold"
           }
         },
         "size": {

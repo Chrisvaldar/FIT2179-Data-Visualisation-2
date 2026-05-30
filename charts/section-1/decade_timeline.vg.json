@@ -25,6 +25,7 @@
     "legend": {
       "labelFont": "Source Sans 3",
       "titleFont": "Source Sans 3",
+      "titleFontWeight": "bold",
       "orient": "bottom-left",
       "offset": 4,
       "direction": "horizontal"
@@ -140,34 +141,7 @@
               "#7f8c8d"
             ]
           },
-          "legend": {
-            "title": "Outcome",
-            "labelFontSize": 11,
-            "labelExpr": "datum.label === 'fatal' ? 'Fatal' : datum.label === 'injured' ? 'Injured' : 'Uninjured'",
-            "encode": {
-              "symbols": {
-                "update": {
-                  "opacity": {
-                    "signal": "metric === 'count' ? 1 : 0"
-                  }
-                }
-              },
-              "labels": {
-                "update": {
-                  "opacity": {
-                    "signal": "metric === 'count' ? 1 : 0"
-                  }
-                }
-              },
-              "title": {
-                "update": {
-                  "opacity": {
-                    "signal": "metric === 'count' ? 1 : 0"
-                  }
-                }
-              }
-            }
-          }
+          "legend": null
         },
         "order": {
           "field": "outcome",

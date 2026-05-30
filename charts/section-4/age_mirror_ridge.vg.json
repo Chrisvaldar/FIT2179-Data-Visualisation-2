@@ -6,7 +6,7 @@
     "top": 36,
     "left": 8,
     "right": 12,
-    "bottom": 12
+    "bottom": 44
   },
   "data": {
     "url": "../../data/wrangled_data/age_records.csv"
@@ -28,7 +28,8 @@
     },
     "legend": {
       "labelFont": "Source Sans 3",
-      "titleFont": "Source Sans 3"
+      "titleFont": "Source Sans 3",
+      "titleFontWeight": "bold"
     }
   },
   "layer": [
@@ -132,10 +133,15 @@
           },
           "legend": {
             "title": "Outcome",
-            "orient": "bottom-left",
+            "orient": "bottom",
             "direction": "horizontal",
-            "offset": 4,
+            "titleOrient": "top",
+            "titleAnchor": "start",
+            "titleAlign": "left",
+            "offset": 8,
             "labelFontSize": 11,
+            "titleFontSize": 11,
+            "titleFontWeight": "bold",
             "labelExpr": "datum.label == 'fatal' ? 'Fatal' : 'Survived (injured or uninjured)'"
           }
         },

@@ -205,7 +205,7 @@
       .legend-bar-label {
         font-family: var(--font-body);
         font-size: 11px;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: rgba(250, 250, 247, 0.55);
@@ -322,6 +322,35 @@
         overflow: visible;
       }
 
+      /* Timeline: chart → legend → filter, left-aligned stack */
+      .chart-block--timeline .vis-wrap {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .chart-block--timeline .vega-embed {
+        display: contents !important;
+      }
+
+      .chart-block--timeline .vega-embed > svg {
+        order: 1;
+        align-self: flex-start !important;
+      }
+
+      .chart-block--timeline .chart-block-legend {
+        order: 2;
+        margin: 4px 0 2px;
+      }
+
+      .chart-block--timeline .chart-block-legend[hidden] {
+        display: none;
+      }
+
+      .chart-block--timeline .vega-embed > form.vega-bindings {
+        order: 3;
+        margin: 0 0 8px;
+      }
+
       .chart-block--split-maps .vis-wrap {
         max-width: none;
         width: 100%;
@@ -386,13 +415,71 @@
       }
 
       .comparison-map-legend__title {
-        font-weight: 600;
+        font-weight: 700;
       }
 
       .comparison-map-legend__item {
         display: flex;
         align-items: center;
         gap: 6px;
+      }
+
+      /* Below-chart legend (HTML): title row, then items row — left-aligned */
+      .chart-block-legend {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        width: 100%;
+        margin: 0 0 8px;
+        font-family: var(--font-body);
+        font-size: 11px;
+        font-weight: 400;
+        color: var(--text-dark);
+      }
+
+      .chart-block-legend__title {
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .chart-block-legend__items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+      }
+
+      .chart-block-legend__item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .legend-swatch {
+        flex-shrink: 0;
+      }
+
+      .legend-swatch--square {
+        width: 11px;
+        height: 11px;
+        border-radius: 2px;
+      }
+
+      .legend-swatch--total-ring {
+        background: #6eb0cf;
+      }
+
+      .legend-swatch--fatal-ring {
+        background: #ea9178;
+      }
+
+      .legend-swatch--ca {
+        background: #5a6f7d;
+      }
+
+      .legend-swatch--nsw {
+        background: #1a6b8a;
       }
 
       .comparison-map-filters {
@@ -483,13 +570,41 @@
         max-width: 1000px;
       }
 
-      /* Radial clock: full-width embed; legend and filter left-aligned */
+      /* Outcome comparison: chart → legend → filter, tight left-aligned stack */
+      .chart-block--outcome-comparison .vis-wrap {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .chart-block--outcome-comparison .vega-embed {
+        display: contents !important;
+      }
+
+      .chart-block--outcome-comparison .vega-embed > svg {
+        order: 1;
+        align-self: flex-start !important;
+      }
+
+      .chart-block--outcome-comparison .chart-block-legend {
+        order: 2;
+        margin: 4px 0 2px;
+      }
+
+      .chart-block--outcome-comparison .vega-embed > form.vega-bindings {
+        order: 3;
+        margin: 0 0 8px;
+      }
+
+      /* Radial clock: chart centred; filter and legend left-aligned below */
       .chart-block--radial-clock .chart-header {
         margin-bottom: 6px;
       }
 
       .chart-block--radial-clock .vis-wrap {
         margin: 0;
+        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .chart-block--radial-clock .vis-wrap > div,
@@ -498,8 +613,30 @@
         max-width: none;
       }
 
-      .chart-block--radial-clock .vega-embed form.vega-bindings {
+      /* Chart → legend → filter (CHART_LAYOUT.md order) */
+      .chart-block--radial-clock .vega-embed {
+        display: contents !important;
+      }
+
+      .chart-block--radial-clock .vega-embed > svg {
+        order: 1;
+        align-self: center !important;
+      }
+
+      .chart-block--radial-clock .chart-block-legend {
+        order: 2;
+        margin: 8px 0 4px;
+      }
+
+      .chart-block--radial-clock .vega-embed > form.vega-bindings {
+        order: 3;
         margin: 0 0 8px;
+        align-self: flex-start;
+        width: 100%;
+      }
+
+      .chart-block--radial-clock .vega-embed > *:not(form):not(details) {
+        align-self: center !important;
       }
 
       .chart-block--radial-clock .chart-lede {
@@ -871,7 +1008,27 @@
           <div class="chart-header">
             <div class="chart-header__title">Shark incidents per decade, 1790s to 2020s</div>
           </div>
-          <div class="vis-wrap"><div id="vis-timeline"></div></div>
+          <div class="vis-wrap">
+            <div id="vis-timeline"></div>
+            <div
+              class="chart-block-legend"
+              id="vis-timeline-legend"
+              aria-label="Outcome legend"
+            >
+              <span class="chart-block-legend__title">Outcome</span>
+              <div class="chart-block-legend__items">
+                <span class="chart-block-legend__item">
+                  <span class="legend-dot dot-fatal"></span> Fatal
+                </span>
+                <span class="chart-block-legend__item">
+                  <span class="legend-dot dot-injured"></span> Injured
+                </span>
+                <span class="chart-block-legend__item">
+                  <span class="legend-dot dot-uninjured"></span> Uninjured
+                </span>
+              </div>
+            </div>
+          </div>
           <div class="chart-lede">
             <p class="chart-lede__col">
               Raw counts peak in the <strong>2010s at 231 incidents</strong>,
@@ -1007,7 +1164,26 @@
           <div class="chart-header">
             <div class="chart-header__title">Peak hour is 4pm, not dawn</div>
           </div>
-          <div class="vis-wrap"><div id="vis-radial-clock"></div></div>
+          <div class="vis-wrap">
+            <div id="vis-radial-clock"></div>
+            <div class="chart-block-legend" aria-label="Incident type legend">
+              <span class="chart-block-legend__title">Incident type</span>
+              <div class="chart-block-legend__items">
+                <span class="chart-block-legend__item">
+                  <span
+                    class="legend-swatch legend-swatch--square legend-swatch--total-ring"
+                  ></span>
+                  Total incidents
+                </span>
+                <span class="chart-block-legend__item">
+                  <span
+                    class="legend-swatch legend-swatch--square legend-swatch--fatal-ring"
+                  ></span>
+                  Fatal incidents
+                </span>
+              </div>
+            </div>
+          </div>
           <div class="chart-lede">
             <p class="chart-lede__col">
               The dial is nearly empty between <strong>midnight and 5 am</strong>,
@@ -1199,6 +1375,23 @@
           </div>
           <div class="vis-wrap">
             <div id="vis-outcome-comparison"></div>
+            <div class="chart-block-legend" aria-label="Region legend">
+              <span class="chart-block-legend__title">Region</span>
+              <div class="chart-block-legend__items">
+                <span class="chart-block-legend__item">
+                  <span
+                    class="legend-swatch legend-swatch--square legend-swatch--ca"
+                  ></span>
+                  California
+                </span>
+                <span class="chart-block-legend__item">
+                  <span
+                    class="legend-swatch legend-swatch--square legend-swatch--nsw"
+                  ></span>
+                  NSW
+                </span>
+              </div>
+            </div>
           </div>
           <div class="chart-lede">
             <p class="chart-lede__col">
@@ -1249,6 +1442,7 @@
           legend: {
             labelFont: "Source Sans 3",
             titleFont: "Source Sans 3",
+            titleFontWeight: "bold",
             orient: "bottom-left",
             direction: "horizontal",
             offset: 4,
@@ -1289,9 +1483,16 @@
           "charts/section-1/state_choropleth_fatal.vg.json",
           mapOpts,
         ).catch(console.warn);
-        vegaEmbed("#vis-timeline", "charts/section-1/decade_timeline.vg.json", embedOpts).catch(
-          console.warn,
-        );
+        vegaEmbed("#vis-timeline", "charts/section-1/decade_timeline.vg.json", embedOpts)
+          .then(({ view }) => {
+            const legend = document.getElementById("vis-timeline-legend");
+            const syncLegend = () => {
+              if (legend) legend.hidden = view.signal("metric") !== "count";
+            };
+            view.addSignalListener("metric", syncLegend);
+            syncLegend();
+          })
+          .catch(console.warn);
         vegaEmbed("#vis-species", "charts/section-2/species_sankey.vg.json", sankeyOpts).catch(
           console.warn,
         );

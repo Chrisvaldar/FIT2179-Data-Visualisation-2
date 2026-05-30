@@ -27,8 +27,9 @@
     "legend": {
       "labelFont": "Source Sans 3",
       "titleFont": "Source Sans 3",
+      "titleFontWeight": "bold",
       "orient": "bottom-left",
-      "offset": 4,
+      "offset": 8,
       "direction": "horizontal"
     },
     "title": {
@@ -204,10 +205,15 @@
     },
     {
       "description": "Outer ring, total incidents per hour",
+      "transform": [
+        {
+          "calculate": "'Total incidents'",
+          "as": "ring"
+        }
+      ],
       "mark": {
         "type": "arc",
         "innerRadius": 102,
-        "fill": "#6eb0cf",
         "cornerRadius": 2,
         "tooltip": true
       },
@@ -244,12 +250,19 @@
           "value": 0
         },
         "color": {
-          "value": "#6eb0cf",
-          "legend": {
-            "title": null,
-            "symbolType": "square",
-            "labelExpr": "'Total incidents'"
-          }
+          "field": "ring",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Total incidents",
+              "Fatal incidents"
+            ],
+            "range": [
+              "#6eb0cf",
+              "#ea9178"
+            ]
+          },
+          "legend": null
         },
         "tooltip": [
           {
@@ -274,10 +287,15 @@
     },
     {
       "description": "Inner ring, fatal incidents per hour",
+      "transform": [
+        {
+          "calculate": "'Fatal incidents'",
+          "as": "ring"
+        }
+      ],
       "mark": {
         "type": "arc",
         "innerRadius": 58,
-        "fill": "#ea9178",
         "cornerRadius": 2,
         "tooltip": true
       },
@@ -314,12 +332,19 @@
           "value": 0
         },
         "color": {
-          "value": "#ea9178",
-          "legend": {
-            "title": null,
-            "symbolType": "square",
-            "labelExpr": "'Fatal incidents'"
-          }
+          "field": "ring",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Total incidents",
+              "Fatal incidents"
+            ],
+            "range": [
+              "#6eb0cf",
+              "#ea9178"
+            ]
+          },
+          "legend": null
         },
         "tooltip": [
           {
