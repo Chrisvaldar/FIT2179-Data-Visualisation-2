@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 1000,
+  "width": "container",
   "height": 640,
-  "autosize": { "type": "pad", "contains": "padding" },
+  "autosize": { "type": "pad", "contains": "padding", "resize": true },
   "padding": { "bottom": 12 },
   "config": {
-    "view": { "stroke": "transparent", "fill": "#dbe7ee" },
+    "view": { "stroke": "transparent", "clip": false },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
     "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
   },
@@ -46,6 +46,18 @@
     "scale": 850
   },
   "layer": [
+    {
+      "description": "Ocean background",
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "rect",
+        "fill": "#dbe7ee",
+        "x": 0,
+        "y": 0,
+        "x2": { "expr": "width" },
+        "y2": { "expr": "height" }
+      }
+    },
     {
       "description": "Australia land mass, soft sand fill",
       "data": {
