@@ -10,11 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
-    <!-- Fonts: Playfair Display for editorial headers, Source Sans 3 for body -->
+    <!-- Fonts: Playfair Display for section titles, Source Sans 3 for everything else -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=block"
       rel="stylesheet"
     />
 
@@ -160,7 +160,7 @@
       }
 
       .stat-pill .num {
-        font-family: var(--font-display);
+        font-family: var(--font-body);
         font-size: 32px;
         font-weight: 700;
         color: var(--sand);
@@ -557,7 +557,7 @@
 
       /* Inline highlight pill used in narration prose */
       .num {
-        font-family: var(--font-display);
+        font-family: var(--font-body);
         font-weight: 700;
         color: var(--blood);
         font-style: normal;
@@ -649,6 +649,10 @@
       .vega-embed form.vega-bindings input[type="range"] {
         font: inherit;
         padding: 2px 6px;
+      }
+
+      .vega-embed svg text {
+        font-family: var(--font-body) !important;
       }
 
       /* ============================================================
@@ -1221,11 +1225,35 @@
        VEGA-EMBED
   ============================================================ -->
     <script>
-      const embedOpts = { actions: false, renderer: "canvas" };
-      const mapOpts = { actions: false, renderer: "svg" };
-      const sankeyOpts = { ...embedOpts, renderer: "svg" };
+      const chartFontConfig = {
+        config: {
+          axis: { labelFont: "Source Sans 3", titleFont: "Source Sans 3" },
+          legend: { labelFont: "Source Sans 3", titleFont: "Source Sans 3" },
+          title: { font: "Source Sans 3" },
+          text: { font: "Source Sans 3" },
+        },
+      };
 
-      function embedCharts() {
+      const embedOpts = { actions: false, renderer: "svg", ...chartFontConfig };
+      const mapOpts = embedOpts;
+      const sankeyOpts = embedOpts;
+
+      async function loadChartFonts() {
+        const faces = [
+          '300 16px "Source Sans 3"',
+          '400 16px "Source Sans 3"',
+          '600 16px "Source Sans 3"',
+          '700 16px "Source Sans 3"',
+          'italic 400 16px "Source Sans 3"',
+          'italic 600 16px "Source Sans 3"',
+        ];
+        await Promise.all(faces.map((face) => document.fonts.load(face)));
+        await document.fonts.ready;
+      }
+
+      async function embedCharts() {
+        await loadChartFonts();
+
         vegaEmbed("#vis-dot-map", "charts/section-1/dot_map.vg.json", mapOpts).catch(console.warn);
         vegaEmbed(
           "#vis-choropleth-rate",
@@ -1254,12 +1282,12 @@
         vegaEmbed(
           "#vis-radial-clock",
           "charts/section-3/radial_time_clock.vg.json",
-          { ...embedOpts, renderer: "svg" },
+          embedOpts,
         ).catch(console.warn);
         vegaEmbed(
           "#vis-gender-isotype",
           "charts/section-4/gender_isotype.vg.json",
-          { ...embedOpts, renderer: "svg" },
+          embedOpts,
         ).catch(console.warn);
         vegaEmbed(
           "#vis-age-ridge",

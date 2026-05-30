@@ -2,13 +2,37 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": 1000,
   "height": 380,
-  "padding": { "top": 44, "right": 12, "bottom": 12 },
-  "autosize": { "type": "pad", "contains": "padding", "resize": true },
-  "data": { "url": "../../data/wrangled_data/outcome_comparison.csv" },
+  "padding": {
+    "top": 44,
+    "right": 12,
+    "bottom": 12
+  },
+  "autosize": {
+    "type": "pad",
+    "contains": "padding",
+    "resize": true
+  },
+  "data": {
+    "url": "../../data/wrangled_data/outcome_comparison.csv"
+  },
   "config": {
-    "view": { "stroke": "transparent" },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
-    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3"
+    },
+    "view": {
+      "stroke": "transparent"
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
   },
   "params": [
     {
@@ -16,8 +40,14 @@
       "value": "rate",
       "bind": {
         "input": "select",
-        "options": ["rate", "count"],
-        "labels": ["Rate per million people", "Raw incident count"],
+        "options": [
+          "rate",
+          "count"
+        ],
+        "labels": [
+          "Rate per million people",
+          "Raw incident count"
+        ],
         "name": "Show: "
       }
     }
@@ -39,12 +69,19 @@
   "layer": [
     {
       "description": "Grouped bars: outcome on x, California vs NSW within each group",
-      "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
       "encoding": {
         "x": {
           "field": "outcome_label",
           "type": "nominal",
-          "sort": ["Fatal", "Injured", "Uninjured"],
+          "sort": [
+            "Fatal",
+            "Injured",
+            "Uninjured"
+          ],
           "axis": {
             "title": null,
             "labelFontSize": 13,
@@ -54,13 +91,18 @@
         "xOffset": {
           "field": "region",
           "type": "nominal",
-          "sort": ["California", "NSW"]
+          "sort": [
+            "California",
+            "NSW"
+          ]
         },
         "y": {
           "field": "y_value",
           "type": "quantitative",
           "scale": {
-            "domain": { "expr": "metric === 'count' ? [0, 210] : [0, 24]" },
+            "domain": {
+              "expr": "metric === 'count' ? [0, 210] : [0, 24]"
+            },
             "nice": false
           },
           "axis": {
@@ -75,8 +117,14 @@
           "field": "region",
           "type": "nominal",
           "scale": {
-            "domain": ["California", "NSW"],
-            "range": ["#5a6f7d", "#1a6b8a"]
+            "domain": [
+              "California",
+              "NSW"
+            ],
+            "range": [
+              "#5a6f7d",
+              "#1a6b8a"
+            ]
           },
           "legend": {
             "title": "Region",
@@ -89,9 +137,18 @@
           }
         },
         "tooltip": [
-          { "field": "region", "title": "Region" },
-          { "field": "outcome_label", "title": "Outcome" },
-          { "field": "count", "title": "Incidents" },
+          {
+            "field": "region",
+            "title": "Region"
+          },
+          {
+            "field": "outcome_label",
+            "title": "Outcome"
+          },
+          {
+            "field": "count",
+            "title": "Incidents"
+          },
           {
             "field": "rate_per_million",
             "title": "Per million (2021 pop.)",
@@ -118,21 +175,35 @@
         "dy": -4,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#1a2530"
+        "color": "#1a2530",
+        "font": "Source Sans 3"
       },
       "encoding": {
         "x": {
           "field": "outcome_label",
           "type": "nominal",
-          "sort": ["Fatal", "Injured", "Uninjured"]
+          "sort": [
+            "Fatal",
+            "Injured",
+            "Uninjured"
+          ]
         },
         "xOffset": {
           "field": "region",
           "type": "nominal",
-          "sort": ["California", "NSW"]
+          "sort": [
+            "California",
+            "NSW"
+          ]
         },
-        "y": { "field": "y_value", "type": "quantitative" },
-        "text": { "field": "bar_label", "type": "nominal" }
+        "y": {
+          "field": "y_value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "bar_label",
+          "type": "nominal"
+        }
       }
     }
   ]

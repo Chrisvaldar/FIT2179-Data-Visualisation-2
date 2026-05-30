@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {
     "text": "New South Wales",
+    "font": "Source Sans 3",
     "fontSize": 12,
     "fontWeight": "bold",
     "color": "#1a2530",
@@ -9,12 +10,33 @@
   },
   "width": "container",
   "height": 380,
-  "autosize": { "type": "fit-x", "contains": "padding", "resize": true },
-  "padding": { "bottom": 4 },
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "padding": {
+    "bottom": 4
+  },
   "config": {
-    "view": { "stroke": "transparent", "clip": false },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
-    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3"
+    },
+    "view": {
+      "stroke": "transparent",
+      "clip": false
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
   },
   "params": [
     {
@@ -28,30 +50,46 @@
   ],
   "projection": {
     "type": "mercator",
-    "center": [149.5, -32.5],
+    "center": [
+      149.5,
+      -32.5
+    ],
     "scale": 1350
   },
   "layer": [
     {
       "description": "Ocean background",
-      "data": { "values": [{}] },
+      "data": {
+        "values": [
+          {}
+        ]
+      },
       "mark": {
         "type": "rect",
         "fill": "#dbe7ee",
         "x": 0,
         "y": 0,
-        "x2": { "expr": "width" },
-        "y2": { "expr": "height" }
+        "x2": {
+          "expr": "width"
+        },
+        "y2": {
+          "expr": "height"
+        }
       }
     },
     {
       "description": "NSW state boundary",
       "data": {
         "url": "../../data/topojson/australia_states.json",
-        "format": { "type": "topojson", "feature": "australia_states" }
+        "format": {
+          "type": "topojson",
+          "feature": "australia_states"
+        }
       },
       "transform": [
-        { "filter": "datum.properties.iso_3166_2 === 'AU-NSW'" }
+        {
+          "filter": "datum.properties.iso_3166_2 === 'AU-NSW'"
+        }
       ],
       "mark": {
         "type": "geoshape",
@@ -62,9 +100,13 @@
     },
     {
       "description": "NSW incidents since 1950",
-      "data": { "url": "../../data/wrangled_data/nsw_dot_map.csv" },
+      "data": {
+        "url": "../../data/wrangled_data/nsw_dot_map.csv"
+      },
       "transform": [
-        { "filter": "decade_select === null || datum.Decade == decade_select" },
+        {
+          "filter": "decade_select === null || datum.Decade == decade_select"
+        },
         {
           "filter": "outcome_select === 'all' || datum['Victim.injury'] === outcome_select"
         }
@@ -77,14 +119,28 @@
         "strokeWidth": 0.4
       },
       "encoding": {
-        "longitude": { "field": "Longitude", "type": "quantitative" },
-        "latitude": { "field": "Latitude", "type": "quantitative" },
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
         "color": {
           "field": "Victim\\.injury",
           "type": "nominal",
           "scale": {
-            "domain": ["fatal", "injured", "uninjured"],
-            "range": ["#c0392b", "#e67e22", "#7f8c8d"]
+            "domain": [
+              "fatal",
+              "injured",
+              "uninjured"
+            ],
+            "range": [
+              "#c0392b",
+              "#e67e22",
+              "#7f8c8d"
+            ]
           },
           "legend": null
         },
@@ -96,10 +152,22 @@
           "value": 38
         },
         "tooltip": [
-          { "field": "Incident\\.year", "title": "Year" },
-          { "field": "Location", "title": "Location" },
-          { "field": "Activity\\.clean", "title": "Activity" },
-          { "field": "Victim\\.injury", "title": "Outcome" }
+          {
+            "field": "Incident\\.year",
+            "title": "Year"
+          },
+          {
+            "field": "Location",
+            "title": "Location"
+          },
+          {
+            "field": "Activity\\.clean",
+            "title": "Activity"
+          },
+          {
+            "field": "Victim\\.injury",
+            "title": "Outcome"
+          }
         ]
       }
     },
@@ -122,12 +190,22 @@
         "fontSize": 11,
         "fontStyle": "italic",
         "fill": "#2c3e50",
-        "lineBreak": "\n"
+        "lineBreak": "\n",
+        "font": "Source Sans 3"
       },
       "encoding": {
-        "longitude": { "field": "lon", "type": "quantitative" },
-        "latitude": { "field": "lat", "type": "quantitative" },
-        "text": { "field": "label", "type": "nominal" }
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
       }
     },
     {
@@ -149,12 +227,22 @@
         "fontSize": 11,
         "fontStyle": "italic",
         "fill": "#2c3e50",
-        "lineBreak": "\n"
+        "lineBreak": "\n",
+        "font": "Source Sans 3"
       },
       "encoding": {
-        "longitude": { "field": "lon", "type": "quantitative" },
-        "latitude": { "field": "lat", "type": "quantitative" },
-        "text": { "field": "label", "type": "nominal" }
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
       }
     }
   ]

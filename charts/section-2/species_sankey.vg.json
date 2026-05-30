@@ -3,15 +3,35 @@
   "description": "Sankey diagram: shark species (left) to incident outcome (right). Inner width plus symmetric padding totals 1000px to match the centred embed cap in index.html.",
   "width": 664,
   "height": 520,
-  "padding": { "top": 36, "left": 168, "right": 168, "bottom": 12 },
+  "padding": {
+    "top": 36,
+    "left": 168,
+    "right": 168,
+    "bottom": 12
+  },
   "background": "transparent",
   "config": {
-    "text": { "font": "Source Sans 3", "fontSize": 11 },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3",
+      "fontSize": 11
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
   },
   "signals": [
-    { "name": "chartWidth", "update": "width" },
-    { "name": "chartHeight", "update": "height" },
+    {
+      "name": "chartWidth",
+      "update": "width"
+    },
+    {
+      "name": "chartHeight",
+      "update": "height"
+    },
     {
       "name": "speciesSelect",
       "value": null,
@@ -45,14 +65,41 @@
     {
       "name": "rawData",
       "url": "../../data/wrangled_data/species_sankey.csv",
-      "format": { "type": "csv", "parse": "auto" },
+      "format": {
+        "type": "csv",
+        "parse": "auto"
+      },
       "transform": [
-        { "type": "formula", "expr": "datum.species", "as": "stk1" },
-        { "type": "formula", "expr": "datum.outcome", "as": "stk2" },
-        { "type": "formula", "expr": "datum.count", "as": "size" },
-        { "type": "formula", "expr": "datum.species_order", "as": "speciesOrder" },
-        { "type": "formula", "expr": "datum.outcome_order", "as": "outcomeOrder" },
-        { "type": "formula", "expr": "datum.outcome_label", "as": "outcomeLabel" }
+        {
+          "type": "formula",
+          "expr": "datum.species",
+          "as": "stk1"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.outcome",
+          "as": "stk2"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.count",
+          "as": "size"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.species_order",
+          "as": "speciesOrder"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.outcome_order",
+          "as": "outcomeOrder"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.outcome_label",
+          "as": "outcomeLabel"
+        }
       ]
     },
     {
@@ -63,11 +110,21 @@
           "type": "filter",
           "expr": "!speciesSelect || speciesSelect.species == datum.stk1"
         },
-        { "type": "formula", "expr": "datum.stk1 + '|' + datum.stk2", "as": "key" },
+        {
+          "type": "formula",
+          "expr": "datum.stk1 + '|' + datum.stk2",
+          "as": "key"
+        },
         {
           "type": "fold",
-          "fields": ["stk1", "stk2"],
-          "as": ["stack", "grpId"]
+          "fields": [
+            "stk1",
+            "stk2"
+          ],
+          "as": [
+            "stack",
+            "grpId"
+          ]
         },
         {
           "type": "formula",
@@ -76,11 +133,20 @@
         },
         {
           "type": "stack",
-          "groupby": ["stack"],
-          "sort": { "field": "sortField", "order": "ascending" },
+          "groupby": [
+            "stack"
+          ],
+          "sort": {
+            "field": "sortField",
+            "order": "ascending"
+          },
           "field": "size"
         },
-        { "type": "formula", "expr": "(datum.y0 + datum.y1) / 2", "as": "yc" },
+        {
+          "type": "formula",
+          "expr": "(datum.y0 + datum.y1) / 2",
+          "as": "yc"
+        },
         {
           "type": "formula",
           "expr": "datum.stack == 'stk2' ? datum.outcomeLabel : datum.grpId",
@@ -94,20 +160,50 @@
       "transform": [
         {
           "type": "aggregate",
-          "groupby": ["stack", "grpId", "label"],
-          "fields": ["size", "sortField"],
-          "ops": ["sum", "min"],
-          "as": ["total", "sortKey"]
+          "groupby": [
+            "stack",
+            "grpId",
+            "label"
+          ],
+          "fields": [
+            "size",
+            "sortField"
+          ],
+          "ops": [
+            "sum",
+            "min"
+          ],
+          "as": [
+            "total",
+            "sortKey"
+          ]
         },
         {
           "type": "stack",
-          "groupby": ["stack"],
-          "sort": { "field": "sortKey", "order": "ascending" },
+          "groupby": [
+            "stack"
+          ],
+          "sort": {
+            "field": "sortKey",
+            "order": "ascending"
+          },
           "field": "total"
         },
-        { "type": "formula", "expr": "scale('y', datum.y0)", "as": "scaledY0" },
-        { "type": "formula", "expr": "scale('y', datum.y1)", "as": "scaledY1" },
-        { "type": "formula", "expr": "datum.stack == 'stk1'", "as": "isSpecies" },
+        {
+          "type": "formula",
+          "expr": "scale('y', datum.y0)",
+          "as": "scaledY0"
+        },
+        {
+          "type": "formula",
+          "expr": "scale('y', datum.y1)",
+          "as": "scaledY1"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.stack == 'stk1'",
+          "as": "isSpecies"
+        },
         {
           "type": "formula",
           "expr": "datum.total / domain('y')[1]",
@@ -123,28 +219,48 @@
     {
       "name": "outcomeNodes",
       "source": "nodes",
-      "transform": [{ "type": "filter", "expr": "datum.stack == 'stk2'" }]
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.stack == 'stk2'"
+        }
+      ]
     },
     {
       "name": "edges",
       "source": "nodes",
       "transform": [
-        { "type": "filter", "expr": "datum.stack == 'stk1'" },
+        {
+          "type": "filter",
+          "expr": "datum.stack == 'stk1'"
+        },
         {
           "type": "lookup",
           "from": "outcomeNodes",
           "key": "key",
-          "fields": ["key"],
-          "as": ["target"]
+          "fields": [
+            "key"
+          ],
+          "as": [
+            "target"
+          ]
         },
         {
           "type": "linkpath",
           "orient": "horizontal",
           "shape": "diagonal",
-          "sourceY": { "expr": "scale('y', datum.yc)" },
-          "sourceX": { "expr": "scale('x', 'stk1') + bandwidth('x')" },
-          "targetY": { "expr": "scale('y', datum.target.yc)" },
-          "targetX": { "expr": "scale('x', 'stk2')" }
+          "sourceY": {
+            "expr": "scale('y', datum.yc)"
+          },
+          "sourceX": {
+            "expr": "scale('x', 'stk1') + bandwidth('x')"
+          },
+          "targetY": {
+            "expr": "scale('y', datum.target.yc)"
+          },
+          "targetX": {
+            "expr": "scale('x', 'stk2')"
+          }
         },
         {
           "type": "formula",
@@ -166,14 +282,27 @@
     {
       "name": "columnTitles",
       "values": [
-        { "stack": "stk1", "title": "Species" },
-        { "stack": "stk2", "title": "Outcome" }
+        {
+          "stack": "stk1",
+          "title": "Species"
+        },
+        {
+          "stack": "stk2",
+          "title": "Outcome"
+        }
       ]
     },
     {
       "name": "resetData",
-      "values": [{}],
-      "transform": [{ "type": "filter", "expr": "speciesSelect" }]
+      "values": [
+        {}
+      ],
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "speciesSelect"
+        }
+      ]
     }
   ],
   "scales": [
@@ -181,7 +310,10 @@
       "name": "x",
       "type": "band",
       "range": "width",
-      "domain": ["stk1", "stk2"],
+      "domain": [
+        "stk1",
+        "stk2"
+      ],
       "paddingOuter": 0.08,
       "paddingInner": 0.92
     },
@@ -189,45 +321,88 @@
       "name": "y",
       "type": "linear",
       "range": "height",
-      "domain": { "data": "nodes", "field": "y1" },
+      "domain": {
+        "data": "nodes",
+        "field": "y1"
+      },
       "nice": false
     },
     {
       "name": "outcomeColor",
       "type": "ordinal",
-      "domain": ["fatal", "injured", "uninjured"],
-      "range": ["#c0392b", "#e67e22", "#7f8c8d"]
+      "domain": [
+        "fatal",
+        "injured",
+        "uninjured"
+      ],
+      "range": [
+        "#c0392b",
+        "#e67e22",
+        "#7f8c8d"
+      ]
     }
   ],
   "marks": [
     {
       "type": "text",
-      "from": { "data": "columnTitles" },
+      "from": {
+        "data": "columnTitles"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "signal": "scale('x', datum.stack) + bandwidth('x') / 2" },
-          "y": { "value": -10 },
-          "align": { "value": "center" },
-          "baseline": { "value": "bottom" },
-          "fontSize": { "value": 12 },
-          "fontWeight": { "value": "bold" },
-          "fill": { "value": "#1a2530" },
-          "text": { "field": "title" }
+          "x": {
+            "signal": "scale('x', datum.stack) + bandwidth('x') / 2"
+          },
+          "y": {
+            "value": -10
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "bottom"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#1a2530"
+          },
+          "text": {
+            "field": "title"
+          },
+          "font": {
+            "value": "Source Sans 3"
+          }
         }
       }
     },
     {
       "type": "path",
       "name": "edgeMark",
-      "from": { "data": "edges" },
+      "from": {
+        "data": "edges"
+      },
       "clip": true,
       "encode": {
         "update": {
-          "path": { "field": "path" },
-          "stroke": { "scale": "outcomeColor", "field": "stk2" },
-          "strokeWidth": { "field": "strokeWidth" },
-          "fill": { "value": "none" },
+          "path": {
+            "field": "path"
+          },
+          "stroke": {
+            "scale": "outcomeColor",
+            "field": "stk2"
+          },
+          "strokeWidth": {
+            "field": "strokeWidth"
+          },
+          "fill": {
+            "value": "none"
+          },
           "strokeOpacity": {
             "signal": "speciesSelect || speciesHover.species == datum.stk1 || speciesHover.outcome == datum.stk2 ? 0.72 : 0.28"
           },
@@ -236,23 +411,39 @@
           }
         },
         "hover": {
-          "strokeOpacity": { "value": 0.9 }
+          "strokeOpacity": {
+            "value": 0.9
+          }
         }
       }
     },
     {
       "type": "rect",
       "name": "groupMark",
-      "from": { "data": "groups" },
+      "from": {
+        "data": "groups"
+      },
       "encode": {
         "enter": {
-          "width": { "scale": "x", "band": 1 },
-          "cornerRadius": { "value": 2 }
+          "width": {
+            "scale": "x",
+            "band": 1
+          },
+          "cornerRadius": {
+            "value": 2
+          }
         },
         "update": {
-          "x": { "scale": "x", "field": "stack" },
-          "y": { "field": "scaledY0" },
-          "y2": { "field": "scaledY1" },
+          "x": {
+            "scale": "x",
+            "field": "stack"
+          },
+          "y": {
+            "field": "scaledY0"
+          },
+          "y2": {
+            "field": "scaledY1"
+          },
           "fill": {
             "signal": "datum.isSpecies ? '#1a4a63' : scale('outcomeColor', datum.grpId)"
           },
@@ -262,48 +453,83 @@
           "stroke": {
             "signal": "datum.isSpecies && speciesSelect && speciesSelect.species == datum.grpId ? '#0d2b3e' : null"
           },
-          "strokeWidth": { "signal": "datum.isSpecies && speciesSelect && speciesSelect.species == datum.grpId ? 2 : 0" },
-          "cursor": { "signal": "datum.isSpecies ? 'pointer' : 'default'" },
+          "strokeWidth": {
+            "signal": "datum.isSpecies && speciesSelect && speciesSelect.species == datum.grpId ? 2 : 0"
+          },
+          "cursor": {
+            "signal": "datum.isSpecies ? 'pointer' : 'default'"
+          },
           "tooltip": {
             "signal": "datum.label + ': ' + format(datum.total, ',d') + ' incidents (' + format(datum.share, '.1%') + ')'"
           }
         },
         "hover": {
-          "fillOpacity": { "value": 1 }
+          "fillOpacity": {
+            "value": 1
+          }
         }
       }
     },
     {
       "type": "text",
-      "from": { "data": "groups" },
+      "from": {
+        "data": "groups"
+      },
       "interactive": false,
       "encode": {
         "update": {
           "x": {
             "signal": "datum.isSpecies ? scale('x', 'stk1') - 8 : scale('x', 'stk2') + bandwidth('x') + 8"
           },
-          "y": { "signal": "(datum.scaledY0 + datum.scaledY1) / 2" },
-          "align": { "signal": "datum.isSpecies ? 'right' : 'left'" },
-          "baseline": { "value": "middle" },
-          "fontSize": { "value": 11 },
-          "fontWeight": { "value": "normal" },
-          "fill": { "value": "#1a2530" },
+          "y": {
+            "signal": "(datum.scaledY0 + datum.scaledY1) / 2"
+          },
+          "align": {
+            "signal": "datum.isSpecies ? 'right' : 'left'"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "normal"
+          },
+          "fill": {
+            "value": "#1a2530"
+          },
           "text": {
             "signal": "abs(datum.scaledY0 - datum.scaledY1) > 13 ? datum.displayLabel : ''"
+          },
+          "font": {
+            "value": "Source Sans 3"
           }
         }
       }
     },
     {
       "type": "group",
-      "from": { "data": "resetData" },
+      "from": {
+        "data": "resetData"
+      },
       "encode": {
         "enter": {
-          "xc": { "signal": "chartWidth / 2" },
-          "y": { "value": 4 },
-          "width": { "value": 96 },
-          "height": { "value": 24 },
-          "cursor": { "value": "pointer" }
+          "xc": {
+            "signal": "chartWidth / 2"
+          },
+          "y": {
+            "value": 4
+          },
+          "width": {
+            "value": 96
+          },
+          "height": {
+            "value": 24
+          },
+          "cursor": {
+            "value": "pointer"
+          }
         }
       },
       "marks": [
@@ -312,12 +538,24 @@
           "name": "resetBtn",
           "encode": {
             "enter": {
-              "width": { "signal": "parent.width" },
-              "height": { "signal": "parent.height" },
-              "cornerRadius": { "value": 3 },
-              "fill": { "value": "#f5f0e6" },
-              "stroke": { "value": "#1a4a63" },
-              "strokeWidth": { "value": 1 }
+              "width": {
+                "signal": "parent.width"
+              },
+              "height": {
+                "signal": "parent.height"
+              },
+              "cornerRadius": {
+                "value": 3
+              },
+              "fill": {
+                "value": "#f5f0e6"
+              },
+              "stroke": {
+                "value": "#1a4a63"
+              },
+              "strokeWidth": {
+                "value": 1
+              }
             }
           }
         },
@@ -326,14 +564,35 @@
           "interactive": false,
           "encode": {
             "enter": {
-              "xc": { "signal": "parent.width / 2" },
-              "yc": { "signal": "parent.height / 2" },
-              "align": { "value": "center" },
-              "baseline": { "value": "middle" },
-              "fontSize": { "value": 11 },
-              "fontWeight": { "value": "600" },
-              "fill": { "value": "#1a4a63" },
-              "text": { "value": "Show all" }
+              "xc": {
+                "signal": "parent.width / 2"
+              },
+              "yc": {
+                "signal": "parent.height / 2"
+              },
+              "align": {
+                "value": "center"
+              },
+              "baseline": {
+                "value": "middle"
+              },
+              "fontSize": {
+                "value": 11
+              },
+              "fontWeight": {
+                "value": "600"
+              },
+              "fill": {
+                "value": "#1a4a63"
+              },
+              "text": {
+                "value": "Show all"
+              }
+            },
+            "update": {
+              "font": {
+                "value": "Source Sans 3"
+              }
             }
           }
         }

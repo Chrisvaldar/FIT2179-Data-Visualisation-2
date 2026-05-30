@@ -2,22 +2,51 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": 1000,
   "height": 380,
-  "padding": { "bottom": 4 },
-  "autosize": { "type": "pad", "contains": "padding", "resize": true },
-  "data": { "url": "../../data/wrangled_data/activity_risk.csv" },
+  "padding": {
+    "bottom": 4
+  },
+  "autosize": {
+    "type": "pad",
+    "contains": "padding",
+    "resize": true
+  },
+  "data": {
+    "url": "../../data/wrangled_data/activity_risk.csv"
+  },
   "transform": [
-    { "calculate": "-datum.count", "as": "count_neg" },
-    { "calculate": "datum['Activity.clean']", "as": "activity" }
+    {
+      "calculate": "-datum.count",
+      "as": "count_neg"
+    },
+    {
+      "calculate": "datum['Activity.clean']",
+      "as": "activity"
+    }
   ],
   "config": {
-    "view": { "stroke": "transparent" },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
-    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3"
+    },
+    "view": {
+      "stroke": "transparent"
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
   },
   "hconcat": [
     {
       "title": {
         "text": "Number of incidents",
+        "font": "Source Sans 3",
         "fontSize": 12,
         "fontWeight": "bold",
         "anchor": "middle",
@@ -28,7 +57,11 @@
       "layer": [
         {
           "description": "Lollipop stem from 0 to count_neg",
-          "mark": { "type": "rule", "strokeWidth": 2.4, "color": "#3d5263" },
+          "mark": {
+            "type": "rule",
+            "strokeWidth": 2.4,
+            "color": "#3d5263"
+          },
           "encoding": {
             "y": {
               "field": "activity",
@@ -48,7 +81,12 @@
             "x": {
               "field": "count_neg",
               "type": "quantitative",
-              "scale": { "domain": [-520, 0] },
+              "scale": {
+                "domain": [
+                  -520,
+                  0
+                ]
+              },
               "axis": {
                 "title": null,
                 "labelExpr": "abs(datum.value)",
@@ -56,12 +94,27 @@
                 "gridColor": "#eeeeee"
               }
             },
-            "x2": { "datum": 0 },
+            "x2": {
+              "datum": 0
+            },
             "tooltip": [
-              { "field": "activity", "title": "Activity" },
-              { "field": "count", "title": "Total incidents" },
-              { "field": "fatal", "title": "Fatal" },
-              { "field": "fatal_rate", "title": "Incident fatality (%)", "format": ".1f" }
+              {
+                "field": "activity",
+                "title": "Activity"
+              },
+              {
+                "field": "count",
+                "title": "Total incidents"
+              },
+              {
+                "field": "fatal",
+                "title": "Fatal"
+              },
+              {
+                "field": "fatal_rate",
+                "title": "Incident fatality (%)",
+                "format": ".1f"
+              }
             ]
           }
         },
@@ -93,7 +146,12 @@
             "x": {
               "field": "count_neg",
               "type": "quantitative",
-              "scale": { "domain": [-520, 0] }
+              "scale": {
+                "domain": [
+                  -520,
+                  0
+                ]
+              }
             }
           }
         },
@@ -105,7 +163,8 @@
             "fontWeight": "bold",
             "color": "#1a2530",
             "align": "right",
-            "dx": -10
+            "dx": -10,
+            "font": "Source Sans 3"
           },
           "encoding": {
             "y": {
@@ -123,8 +182,14 @@
               ],
               "axis": null
             },
-            "x": { "field": "count_neg", "type": "quantitative" },
-            "text": { "field": "count", "type": "quantitative" }
+            "x": {
+              "field": "count_neg",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "count",
+              "type": "quantitative"
+            }
           }
         }
       ]
@@ -132,6 +197,7 @@
     {
       "title": {
         "text": "Activity",
+        "font": "Source Sans 3",
         "fontSize": 12,
         "fontWeight": "bold",
         "anchor": "middle",
@@ -147,7 +213,8 @@
             "fontSize": 12,
             "fontWeight": "bold",
             "color": "#1a2530",
-            "align": "center"
+            "align": "center",
+            "font": "Source Sans 3"
           },
           "encoding": {
             "y": {
@@ -165,15 +232,21 @@
               ],
               "axis": null
             },
-            "text": { "field": "activity", "type": "nominal" }
+            "text": {
+              "field": "activity",
+              "type": "nominal"
+            }
           }
         }
       ],
-      "view": { "stroke": "transparent" }
+      "view": {
+        "stroke": "transparent"
+      }
     },
     {
       "title": {
         "text": "Incident fatality (%)",
+        "font": "Source Sans 3",
         "fontSize": 12,
         "fontWeight": "bold",
         "anchor": "middle",
@@ -184,7 +257,11 @@
       "layer": [
         {
           "description": "Lollipop stem in red",
-          "mark": { "type": "rule", "strokeWidth": 2.4, "color": "#c0392b" },
+          "mark": {
+            "type": "rule",
+            "strokeWidth": 2.4,
+            "color": "#c0392b"
+          },
           "encoding": {
             "y": {
               "field": "activity",
@@ -204,20 +281,46 @@
             "x": {
               "field": "fatal_rate",
               "type": "quantitative",
-              "scale": { "domain": [0, 70] },
+              "scale": {
+                "domain": [
+                  0,
+                  70
+                ]
+              },
               "axis": {
                 "title": null,
                 "grid": true,
                 "gridColor": "#eeeeee",
-                "values": [0, 10, 20, 30, 40]
+                "values": [
+                  0,
+                  10,
+                  20,
+                  30,
+                  40
+                ]
               }
             },
-            "x2": { "datum": 0 },
+            "x2": {
+              "datum": 0
+            },
             "tooltip": [
-              { "field": "activity", "title": "Activity" },
-              { "field": "count", "title": "Total incidents" },
-              { "field": "fatal", "title": "Fatal" },
-              { "field": "fatal_rate", "title": "Incident fatality (%)", "format": ".1f" }
+              {
+                "field": "activity",
+                "title": "Activity"
+              },
+              {
+                "field": "count",
+                "title": "Total incidents"
+              },
+              {
+                "field": "fatal",
+                "title": "Fatal"
+              },
+              {
+                "field": "fatal_rate",
+                "title": "Incident fatality (%)",
+                "format": ".1f"
+              }
             ]
           }
         },
@@ -249,7 +352,12 @@
             "x": {
               "field": "fatal_rate",
               "type": "quantitative",
-              "scale": { "domain": [0, 70] }
+              "scale": {
+                "domain": [
+                  0,
+                  70
+                ]
+              }
             }
           }
         },
@@ -261,7 +369,8 @@
             "fontWeight": "bold",
             "color": "#1a2530",
             "align": "left",
-            "dx": 10
+            "dx": 10,
+            "font": "Source Sans 3"
           },
           "encoding": {
             "y": {
@@ -279,8 +388,15 @@
               ],
               "axis": null
             },
-            "x": { "field": "fatal_rate", "type": "quantitative" },
-            "text": { "field": "fatal_rate", "type": "quantitative", "format": ".1f" }
+            "x": {
+              "field": "fatal_rate",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "fatal_rate",
+              "type": "quantitative",
+              "format": ".1f"
+            }
           }
         }
       ]

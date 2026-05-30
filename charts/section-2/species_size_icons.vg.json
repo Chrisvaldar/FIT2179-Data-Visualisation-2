@@ -2,23 +2,66 @@
   "$schema": "https://vega.github.io/schema/vega/v6.json",
   "description": "Species size comparison: shared silhouette, width = median length on metre axis.",
   "width": 1000,
-  "height": { "signal": "chartHeight" },
-  "padding": { "top": 24, "left": 8, "right": 16, "bottom": 16 },
-  "autosize": { "type": "pad", "contains": "padding" },
+  "height": {
+    "signal": "chartHeight"
+  },
+  "padding": {
+    "top": 24,
+    "left": 8,
+    "right": 16,
+    "bottom": 16
+  },
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
+  },
   "background": "transparent",
   "config": {
-    "text": { "font": "Source Sans 3", "fontSize": 11 },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3",
+      "fontSize": 11
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
   },
   "signals": [
-    { "name": "plotLeft", "value": 164 },
-    { "name": "plotRight", "update": "width - 20" },
-    { "name": "iconAspect", "value": 0.428 },
-    { "name": "pathUnitsW", "value": 34160 },
-    { "name": "pathUnitsH", "value": 14620 },
-    { "name": "rowPad", "value": 12 },
-    { "name": "heightPower", "value": 0.38 },
-    { "name": "headerBottom", "value": 62 },
+    {
+      "name": "plotLeft",
+      "value": 164
+    },
+    {
+      "name": "plotRight",
+      "update": "width - 20"
+    },
+    {
+      "name": "iconAspect",
+      "value": 0.428
+    },
+    {
+      "name": "pathUnitsW",
+      "value": 34160
+    },
+    {
+      "name": "pathUnitsH",
+      "value": 14620
+    },
+    {
+      "name": "rowPad",
+      "value": 12
+    },
+    {
+      "name": "heightPower",
+      "value": 0.38
+    },
+    {
+      "name": "headerBottom",
+      "value": 62
+    },
     {
       "name": "sharkPath",
       "value": "m17235 13953c-81-15-336-83-461-124-520-168-914-404-1239-740-575-595-1186-1525-1712-2608-120-247-126-257-196-326-172-168-441-299-807-390-321-80-451-97-1240-160-1845-148-2948-253-3252-309-40-8-165-30-278-50-1008-179-1789-376-3135-791-2304-711-3853-1385-4655-2024-95-76-260-228-260-240 0-11 319-273 487-399 264-199 587-404 819-520 350-175 723-279 1011-283h58l226-282c133-166 246-298 275-320 171-132 651-296 1174-401 958-193 3143-530 6284-969l240-33 250-375c777-1160 1326-1812 1895-2248 111-85 335-234 466-309l91-52h682 683l-45 83c-117 216-312 660-393 892-157 457-265 1227-234 1672 6 92 15 171 19 175s171 12 372 18c2356 69 3920 170 4950 321 192 28 455 73 491 85 12 3 49-34 126-123 614-713 1286-1096 2041-1161 103-9 138 0 166 39 32 47 21 76-78 208-115 151-207 303-246 402-39 101-60 278-60 505 0 249 18 506 36 520 8 7 74 23 147 37 73 15 456 92 852 172s916 186 1156 234l437 88 233-78c129-43 271-85 315-94 75-15 86-15 138 0 98 29 135 111 122 271l-7 81 28 6c581 124 785 151 1133 150 301 0 517-35 797-128 232-77 578-249 791-392 274-185 841-597 1672-1214 516-384 931-617 1485-834 595-233 922-251 964-54 10 45-9 126-43 184-15 25-262 313-549 638-287 326-558 633-601 682-95 108-149 214-201 395-36 126-115 494-115 539 0 19-41 65-164 185-131 129-166 169-175 201-19 66-24 213-12 325 14 124 93 525 123 625 94 311 355 831 721 1434 111 184 387 620 439 693 22 32 143 135 373 318 187 149 359 289 382 310 71 66 80 159 28 277-14 30-25 59-25 63s37 30 83 57c164 101 294 220 345 317 12 22 26 63 32 93 6 29 15 53 20 53s65-11 135-25c126-25 174-26 206-1 10 7 31 67 52 147 72 272 125 381 234 478 69 62 272 210 523 381 200 136 245 175 280 246 35 70 26 129-29 187-73 79-235 86-484 22-135-35-818-273-1232-428-987-370-1795-755-2308-1099-146-98-359-262-448-345-46-43-288-273-539-512-417-399-779-744-871-831-56-54-250-190-399-280-223-135-601-317-805-387-499-171-1138-205-1935-102-198 25-453 68-461 77-3 4-27 70-54 147-133 391-264 610-401 671-68 30-113 30-186 0-92-38-184-110-336-263l-143-145-42 7c-23 4-145 27-272 52-901 175-2179 527-3920 1079-560 178-1465 477-1459 483 3 3 120 18 260 32 141 15 260 31 265 36s13 23 18 40c9 29 6 32-52 74-133 93-289 265-400 441-207 327-365 783-482 1392-290 1512-357 2559-195 3020 17 48 30 89 28 90s-12 1-23-1z"
@@ -32,7 +75,10 @@
     {
       "name": "stats",
       "url": "../../data/wrangled_data/species_size.csv",
-      "format": { "type": "csv", "parse": "auto" }
+      "format": {
+        "type": "csv",
+        "parse": "auto"
+      }
     },
     {
       "name": "species",
@@ -70,18 +116,31 @@
         },
         {
           "type": "collect",
-          "sort": { "field": "sort_key", "order": "ascending" }
+          "sort": {
+            "field": "sort_key",
+            "order": "ascending"
+          }
         },
         {
           "type": "window",
-          "ops": ["row_number"],
-          "as": ["row_idx"]
+          "ops": [
+            "row_number"
+          ],
+          "as": [
+            "row_idx"
+          ]
         },
         {
           "type": "joinaggregate",
-          "fields": ["size_m"],
-          "ops": ["min"],
-          "as": ["min_size_m"]
+          "fields": [
+            "size_m"
+          ],
+          "ops": [
+            "min"
+          ],
+          "as": [
+            "min_size_m"
+          ]
         },
         {
           "type": "formula",
@@ -105,10 +164,16 @@
         },
         {
           "type": "stack",
-          "sort": { "field": "row_idx", "order": "ascending" },
+          "sort": {
+            "field": "row_idx",
+            "order": "ascending"
+          },
           "field": "row_band",
           "offset": "zero",
-          "as": ["stack_y0", "stack_y1"]
+          "as": [
+            "stack_y0",
+            "stack_y1"
+          ]
         },
         {
           "type": "formula",
@@ -168,23 +233,55 @@
       "transform": [
         {
           "type": "aggregate",
-          "fields": ["row_end"],
-          "ops": ["max"],
-          "as": ["bottom"]
+          "fields": [
+            "row_end"
+          ],
+          "ops": [
+            "max"
+          ],
+          "as": [
+            "bottom"
+          ]
         }
       ]
     },
     {
       "name": "axisTicks",
-      "values": [{ "m": 0 }, { "m": 1 }, { "m": 2 }, { "m": 3 }, { "m": 4 }]
+      "values": [
+        {
+          "m": 0
+        },
+        {
+          "m": 1
+        },
+        {
+          "m": 2
+        },
+        {
+          "m": 3
+        },
+        {
+          "m": 4
+        }
+      ]
     }
   ],
   "scales": [
     {
       "name": "x",
       "type": "linear",
-      "domain": [0, 4],
-      "range": [{ "signal": "plotLeft" }, { "signal": "plotRight" }],
+      "domain": [
+        0,
+        4
+      ],
+      "range": [
+        {
+          "signal": "plotLeft"
+        },
+        {
+          "signal": "plotRight"
+        }
+      ],
       "nice": false
     }
   ],
@@ -194,105 +291,221 @@
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "signal": "plotLeft" },
-          "y": { "value": 22 },
-          "align": { "value": "left" },
-          "baseline": { "value": "bottom" },
-          "fontSize": { "value": 11 },
-          "fontWeight": { "value": 600 },
-          "fill": { "value": "#4a6274" },
-          "text": { "value": "Median recorded length (icon width = metres on axis)" }
+          "x": {
+            "signal": "plotLeft"
+          },
+          "y": {
+            "value": 22
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "bottom"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#4a6274"
+          },
+          "text": {
+            "value": "Median recorded length (icon width = metres on axis)"
+          },
+          "font": {
+            "value": "Source Sans 3"
+          }
         }
       }
     },
     {
       "type": "rule",
-      "from": { "data": "axisTicks" },
+      "from": {
+        "data": "axisTicks"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "scale": "x", "field": "m" },
-          "y": { "value": 40 },
-          "y2": { "value": 48 },
-          "stroke": { "value": "#1a2530" },
-          "strokeWidth": { "value": 1.2 }
+          "x": {
+            "scale": "x",
+            "field": "m"
+          },
+          "y": {
+            "value": 40
+          },
+          "y2": {
+            "value": 48
+          },
+          "stroke": {
+            "value": "#1a2530"
+          },
+          "strokeWidth": {
+            "value": 1.2
+          }
         }
       }
     },
     {
       "type": "text",
-      "from": { "data": "axisTicks" },
+      "from": {
+        "data": "axisTicks"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "scale": "x", "field": "m" },
-          "y": { "value": 50 },
-          "align": { "value": "center" },
-          "baseline": { "value": "top" },
-          "fontSize": { "value": 10 },
-          "fontWeight": { "value": "bold" },
-          "fill": { "value": "#1a2530" },
-          "text": { "signal": "datum.m + ' m'" }
+          "x": {
+            "scale": "x",
+            "field": "m"
+          },
+          "y": {
+            "value": 50
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#1a2530"
+          },
+          "text": {
+            "signal": "datum.m + ' m'"
+          },
+          "font": {
+            "value": "Source Sans 3"
+          }
         }
       }
     },
     {
       "type": "rect",
-      "from": { "data": "species" },
+      "from": {
+        "data": "species"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "value": 0 },
-          "width": { "signal": "width" },
-          "y": { "field": "row_y" },
-          "height": { "field": "row_band" },
-          "fill": { "field": "row_fill" }
+          "x": {
+            "value": 0
+          },
+          "width": {
+            "signal": "width"
+          },
+          "y": {
+            "field": "row_y"
+          },
+          "height": {
+            "field": "row_band"
+          },
+          "fill": {
+            "field": "row_fill"
+          }
         }
       }
     },
     {
       "type": "rule",
-      "from": { "data": "axisTicks" },
+      "from": {
+        "data": "axisTicks"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "scale": "x", "field": "m" },
-          "y": { "signal": "headerBottom - 2" },
-          "y2": { "signal": "data('layout').length ? data('layout')[0].bottom : headerBottom + 400" },
-          "stroke": { "signal": "datum.m == 0 ? '#b8c4ce' : '#cfd8e0'" },
-          "strokeWidth": { "signal": "datum.m == 0 ? 1.5 : 1" }
+          "x": {
+            "scale": "x",
+            "field": "m"
+          },
+          "y": {
+            "signal": "headerBottom - 2"
+          },
+          "y2": {
+            "signal": "data('layout').length ? data('layout')[0].bottom : headerBottom + 400"
+          },
+          "stroke": {
+            "signal": "datum.m == 0 ? '#b8c4ce' : '#cfd8e0'"
+          },
+          "strokeWidth": {
+            "signal": "datum.m == 0 ? 1.5 : 1"
+          }
         }
       }
     },
     {
       "type": "text",
-      "from": { "data": "species" },
+      "from": {
+        "data": "species"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "value": 12 },
-          "y": { "signal": "datum.row_y + datum.row_band / 2" },
-          "align": { "value": "left" },
-          "baseline": { "value": "middle" },
-          "fontSize": { "value": 10 },
-          "fontWeight": { "value": "normal" },
-          "fill": { "value": "#1a2530" },
-          "text": { "field": "display_label" }
+          "x": {
+            "value": 12
+          },
+          "y": {
+            "signal": "datum.row_y + datum.row_band / 2"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontWeight": {
+            "value": "normal"
+          },
+          "fill": {
+            "value": "#1a2530"
+          },
+          "text": {
+            "field": "display_label"
+          },
+          "font": {
+            "value": "Source Sans 3"
+          }
         }
       }
     },
     {
       "type": "path",
-      "from": { "data": "species" },
+      "from": {
+        "data": "species"
+      },
       "encode": {
         "update": {
-          "x": { "signal": "plotLeft" },
-          "y": { "signal": "datum.row_y + datum.icon_h + 4" },
-          "path": { "signal": "sharkPath" },
-          "scaleX": { "signal": "datum.icon_w / pathUnitsW" },
-          "scaleY": { "signal": "-datum.icon_h / pathUnitsH" },
-          "fill": { "value": "#1a2530" },
-          "opacity": { "value": 0.92 },
+          "x": {
+            "signal": "plotLeft"
+          },
+          "y": {
+            "signal": "datum.row_y + datum.icon_h + 4"
+          },
+          "path": {
+            "signal": "sharkPath"
+          },
+          "scaleX": {
+            "signal": "datum.icon_w / pathUnitsW"
+          },
+          "scaleY": {
+            "signal": "-datum.icon_h / pathUnitsH"
+          },
+          "fill": {
+            "value": "#1a2530"
+          },
+          "opacity": {
+            "value": 0.92
+          },
           "tooltip": {
             "signal": "datum.species_name + '\\n' + datum.size_label + ' median\\n' + datum.count_label"
           }
@@ -301,36 +514,80 @@
     },
     {
       "type": "text",
-      "from": { "data": "species" },
+      "from": {
+        "data": "species"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "field": "length_x" },
-          "y": { "field": "length_y" },
-          "align": { "value": "center" },
-          "baseline": { "value": "middle" },
-          "fontSize": { "value": 10 },
-          "fontWeight": { "value": "bold" },
-          "fill": { "value": "#ffffff" },
-          "text": { "field": "size_label" }
+          "x": {
+            "field": "length_x"
+          },
+          "y": {
+            "field": "length_y"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#ffffff"
+          },
+          "text": {
+            "field": "size_label"
+          },
+          "font": {
+            "value": "Source Sans 3"
+          }
         }
       }
     },
     {
       "type": "text",
-      "from": { "data": "annotations" },
+      "from": {
+        "data": "annotations"
+      },
       "interactive": false,
       "encode": {
         "update": {
-          "x": { "field": "note_x" },
-          "y": { "field": "note_y" },
-          "align": { "value": "left" },
-          "baseline": { "value": "middle" },
-          "fontSize": { "value": 10 },
-          "fontStyle": { "value": "italic" },
-          "fill": { "value": "#4a6274" },
-          "lineBreak": { "value": "\n" },
-          "text": { "field": "note" }
+          "x": {
+            "field": "note_x"
+          },
+          "y": {
+            "field": "note_y"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontStyle": {
+            "value": "italic"
+          },
+          "fill": {
+            "value": "#4a6274"
+          },
+          "lineBreak": {
+            "value": "\n"
+          },
+          "text": {
+            "field": "note"
+          },
+          "font": {
+            "value": "Source Sans 3"
+          }
         }
       }
     }

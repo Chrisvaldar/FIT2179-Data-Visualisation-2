@@ -2,20 +2,60 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": 1000,
   "height": 322,
-  "padding": { "top": 8, "left": 8, "right": 12, "bottom": 8 },
-  "data": { "url": "../../data/wrangled_data/gender_isotype.csv" },
+  "padding": {
+    "top": 8,
+    "left": 8,
+    "right": 12,
+    "bottom": 8
+  },
+  "data": {
+    "url": "../../data/wrangled_data/gender_isotype.csv"
+  },
   "config": {
-    "view": { "stroke": "transparent", "clip": false },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
-    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3"
+    },
+    "view": {
+      "stroke": "transparent",
+      "clip": false
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
   },
   "transform": [
-    { "calculate": "datum['Victim.gender']", "as": "gender" },
-    { "calculate": "datum['Victim.injury']", "as": "outcome" },
-    { "calculate": "datum.gender_row == 0 ? 20 : 188", "as": "band_y" },
-    { "calculate": "datum.gender_row == 0 ? 152 : 92", "as": "band_h" },
-    { "calculate": "24", "as": "col_step" },
-    { "calculate": "32", "as": "row_step" },
+    {
+      "calculate": "datum['Victim.gender']",
+      "as": "gender"
+    },
+    {
+      "calculate": "datum['Victim.injury']",
+      "as": "outcome"
+    },
+    {
+      "calculate": "datum.gender_row == 0 ? 20 : 188",
+      "as": "band_y"
+    },
+    {
+      "calculate": "datum.gender_row == 0 ? 152 : 92",
+      "as": "band_h"
+    },
+    {
+      "calculate": "24",
+      "as": "col_step"
+    },
+    {
+      "calculate": "32",
+      "as": "row_step"
+    },
     {
       "calculate": "datum.gender_row == 0 ? datum.band_y + 36 + datum.unit_row * datum.row_step : datum.band_y + datum.band_h / 2",
       "as": "icon_y"
@@ -30,14 +70,29 @@
       "description": "Row band backgrounds",
       "data": {
         "values": [
-          { "gender_row": 0, "label": "Male" },
-          { "gender_row": 1, "label": "Female" }
+          {
+            "gender_row": 0,
+            "label": "Male"
+          },
+          {
+            "gender_row": 1,
+            "label": "Female"
+          }
         ]
       },
       "transform": [
-        { "calculate": "datum.gender_row == 0 ? 20 : 188", "as": "band_y" },
-        { "calculate": "datum.gender_row == 0 ? 152 : 92", "as": "band_h" },
-        { "calculate": "datum.band_y + datum.band_h", "as": "band_y2" }
+        {
+          "calculate": "datum.gender_row == 0 ? 20 : 188",
+          "as": "band_y"
+        },
+        {
+          "calculate": "datum.gender_row == 0 ? 152 : 92",
+          "as": "band_h"
+        },
+        {
+          "calculate": "datum.band_y + datum.band_h",
+          "as": "band_y2"
+        }
       ],
       "mark": {
         "type": "rect",
@@ -45,10 +100,23 @@
         "opacity": 0.55
       },
       "encoding": {
-        "x": { "value": 142, "scale": null },
-        "x2": { "value": 996 },
-        "y": { "field": "band_y", "type": "quantitative", "scale": null },
-        "y2": { "field": "band_y2", "type": "quantitative", "scale": null },
+        "x": {
+          "value": 142,
+          "scale": null
+        },
+        "x2": {
+          "value": 996
+        },
+        "y": {
+          "field": "band_y",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y2": {
+          "field": "band_y2",
+          "type": "quantitative",
+          "scale": null
+        },
         "color": {
           "condition": {
             "test": "datum.gender_row == 0",
@@ -67,12 +135,29 @@
         "aspect": false
       },
       "encoding": {
-        "x": { "field": "icon_x", "type": "quantitative", "scale": null },
-        "y": { "field": "icon_y", "type": "quantitative", "scale": null },
-        "url": { "field": "icon_url", "type": "nominal" },
+        "x": {
+          "field": "icon_x",
+          "type": "quantitative",
+          "scale": null
+        },
+        "y": {
+          "field": "icon_y",
+          "type": "quantitative",
+          "scale": null
+        },
+        "url": {
+          "field": "icon_url",
+          "type": "nominal"
+        },
         "tooltip": [
-          { "field": "gender", "title": "Gender" },
-          { "field": "outcome", "title": "Outcome" },
+          {
+            "field": "gender",
+            "title": "Gender"
+          },
+          {
+            "field": "outcome",
+            "title": "Outcome"
+          },
           {
             "field": "source_count",
             "type": "quantitative",
@@ -105,15 +190,30 @@
         ]
       },
       "transform": [
-        { "calculate": "datum.gender_row == 0 ? 20 : 188", "as": "band_y" },
-        { "calculate": "datum.gender_row == 0 ? 152 : 92", "as": "band_h" },
+        {
+          "calculate": "datum.gender_row == 0 ? 20 : 188",
+          "as": "band_y"
+        },
+        {
+          "calculate": "datum.gender_row == 0 ? 152 : 92",
+          "as": "band_h"
+        },
         {
           "calculate": "datum.band_y + (datum.band_h - 38) / 2",
           "as": "label_block_top"
         },
-        { "calculate": "datum.label_block_top + 4", "as": "label_y" },
-        { "calculate": "datum.label_block_top + 17", "as": "incidents_y" },
-        { "calculate": "datum.label_block_top + 29", "as": "fatal_y" }
+        {
+          "calculate": "datum.label_block_top + 4",
+          "as": "label_y"
+        },
+        {
+          "calculate": "datum.label_block_top + 17",
+          "as": "incidents_y"
+        },
+        {
+          "calculate": "datum.label_block_top + 29",
+          "as": "fatal_y"
+        }
       ],
       "layer": [
         {
@@ -122,13 +222,26 @@
             "align": "left",
             "baseline": "middle",
             "fontSize": 13,
-            "fontWeight": "bold"
+            "fontWeight": "bold",
+            "font": "Source Sans 3"
           },
           "encoding": {
-            "x": { "value": 4, "scale": null },
-            "y": { "field": "label_y", "type": "quantitative", "scale": null },
-            "text": { "field": "label", "type": "nominal" },
-            "color": { "value": "#1a2530" }
+            "x": {
+              "value": 4,
+              "scale": null
+            },
+            "y": {
+              "field": "label_y",
+              "type": "quantitative",
+              "scale": null
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "#1a2530"
+            }
           }
         },
         {
@@ -136,17 +249,26 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 10
+            "fontSize": 10,
+            "font": "Source Sans 3"
           },
           "encoding": {
-            "x": { "value": 4, "scale": null },
+            "x": {
+              "value": 4,
+              "scale": null
+            },
             "y": {
               "field": "incidents_y",
               "type": "quantitative",
               "scale": null
             },
-            "text": { "field": "incidents", "type": "nominal" },
-            "color": { "value": "#5a6a75" }
+            "text": {
+              "field": "incidents",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "#5a6a75"
+            }
           }
         },
         {
@@ -154,35 +276,83 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 10
+            "fontSize": 10,
+            "font": "Source Sans 3"
           },
           "encoding": {
-            "x": { "value": 4, "scale": null },
-            "y": { "field": "fatal_y", "type": "quantitative", "scale": null },
-            "text": { "field": "fatal", "type": "nominal" },
-            "color": { "value": "#5a6a75" }
+            "x": {
+              "value": 4,
+              "scale": null
+            },
+            "y": {
+              "field": "fatal_y",
+              "type": "quantitative",
+              "scale": null
+            },
+            "text": {
+              "field": "fatal",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "#5a6a75"
+            }
           }
         }
       ]
     },
     {
       "description": "Legend title",
-      "data": { "values": [{ "text": "Each icon ≈ 10 incidents" }] },
-      "mark": { "type": "text", "align": "left", "baseline": "top", "fontSize": 11 },
+      "data": {
+        "values": [
+          {
+            "text": "Each icon ≈ 10 incidents"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "font": "Source Sans 3"
+      },
       "encoding": {
-        "x": { "value": 142, "scale": null },
-        "y": { "value": 288, "scale": null },
-        "text": { "field": "text", "type": "nominal" },
-        "color": { "value": "#1a2530" }
+        "x": {
+          "value": 142,
+          "scale": null
+        },
+        "y": {
+          "value": 288,
+          "scale": null
+        },
+        "text": {
+          "field": "text",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#1a2530"
+        }
       }
     },
     {
       "description": "Legend swatches: filled circles (no stray plot points)",
       "data": {
         "values": [
-          { "label": "Fatal", "color": "#c0392b", "x": 142 },
-          { "label": "Injured", "color": "#e67e22", "x": 218 },
-          { "label": "Uninjured", "color": "#7f8c8d", "x": 308 }
+          {
+            "label": "Fatal",
+            "color": "#c0392b",
+            "x": 142
+          },
+          {
+            "label": "Injured",
+            "color": "#e67e22",
+            "x": 218
+          },
+          {
+            "label": "Uninjured",
+            "color": "#7f8c8d",
+            "x": 308
+          }
         ]
       },
       "layer": [
@@ -193,9 +363,20 @@
             "filled": true
           },
           "encoding": {
-            "x": { "field": "x", "type": "quantitative", "scale": null },
-            "y": { "value": 308, "scale": null },
-            "color": { "field": "color", "type": "nominal", "scale": null }
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": null
+            },
+            "y": {
+              "value": 308,
+              "scale": null
+            },
+            "color": {
+              "field": "color",
+              "type": "nominal",
+              "scale": null
+            }
           }
         },
         {
@@ -204,13 +385,26 @@
             "align": "left",
             "baseline": "middle",
             "fontSize": 11,
-            "dx": 12
+            "dx": 12,
+            "font": "Source Sans 3"
           },
           "encoding": {
-            "x": { "field": "x", "type": "quantitative", "scale": null },
-            "y": { "value": 308, "scale": null },
-            "text": { "field": "label", "type": "nominal" },
-            "color": { "value": "#1a2530" }
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": null
+            },
+            "y": {
+              "value": 308,
+              "scale": null
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "#1a2530"
+            }
           }
         }
       ]

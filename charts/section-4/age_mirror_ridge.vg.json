@@ -2,27 +2,63 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "width": 1000,
   "height": 360,
-  "padding": { "top": 36, "left": 8, "right": 12, "bottom": 12 },
-  "data": { "url": "../../data/wrangled_data/age_records.csv" },
+  "padding": {
+    "top": 36,
+    "left": 8,
+    "right": 12,
+    "bottom": 12
+  },
+  "data": {
+    "url": "../../data/wrangled_data/age_records.csv"
+  },
   "config": {
-    "view": { "stroke": "transparent", "clip": false },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
-    "legend": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" }
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3"
+    },
+    "view": {
+      "stroke": "transparent",
+      "clip": false
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
+    "legend": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    }
   },
   "layer": [
     {
       "description": "Mirrored kernel density: fatal above centre, survived below",
       "transform": [
-        { "calculate": "toNumber(datum['Victim.age'])", "as": "age" },
-        { "calculate": "datum.outcome_group", "as": "side" },
+        {
+          "calculate": "toNumber(datum['Victim.age'])",
+          "as": "age"
+        },
+        {
+          "calculate": "datum.outcome_group",
+          "as": "side"
+        },
         {
           "density": "age",
-          "groupby": ["side"],
-          "extent": [0, 80],
+          "groupby": [
+            "side"
+          ],
+          "extent": [
+            0,
+            80
+          ],
           "steps": 160,
           "bandwidth": 3.5,
           "counts": true,
-          "as": ["age_value", "density"]
+          "as": [
+            "age_value",
+            "density"
+          ]
         },
         {
           "calculate": "datum.side == 'fatal' ? datum.density : -datum.density",
@@ -32,34 +68,67 @@
       "mark": {
         "type": "area",
         "opacity": 0.78,
-        "line": { "strokeWidth": 1.5, "color": "#ffffff" },
+        "line": {
+          "strokeWidth": 1.5,
+          "color": "#ffffff"
+        },
         "interpolate": "monotone"
       },
       "encoding": {
         "x": {
           "field": "age_value",
           "type": "quantitative",
-          "scale": { "domain": [0, 80], "nice": false },
+          "scale": {
+            "domain": [
+              0,
+              80
+            ],
+            "nice": false
+          },
           "axis": {
             "title": "Victim age (years)",
             "grid": true,
             "gridColor": "#eeeeee",
-            "values": [0, 10, 20, 30, 40, 50, 60, 70, 80]
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70,
+              80
+            ]
           }
         },
         "y": {
           "field": "signed_density",
           "type": "quantitative",
-          "scale": { "domain": [-45, 45], "nice": false },
+          "scale": {
+            "domain": [
+              -45,
+              45
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "y2": { "datum": 0 },
+        "y2": {
+          "datum": 0
+        },
         "color": {
           "field": "side",
           "type": "nominal",
           "scale": {
-            "domain": ["fatal", "survived"],
-            "range": ["#c0392b", "#1a6b8a"]
+            "domain": [
+              "fatal",
+              "survived"
+            ],
+            "range": [
+              "#c0392b",
+              "#1a6b8a"
+            ]
           },
           "legend": {
             "title": "Outcome",
@@ -83,7 +152,10 @@
             "title": "Estimated count",
             "format": ".1f"
           },
-          { "field": "side", "title": "Group" }
+          {
+            "field": "side",
+            "title": "Group"
+          }
         ]
       }
     },
@@ -91,8 +163,14 @@
       "description": "Centre baseline between fatal and survived halves",
       "data": {
         "values": [
-          { "age_value": 0, "signed_density": 0 },
-          { "age_value": 80, "signed_density": 0 }
+          {
+            "age_value": 0,
+            "signed_density": 0
+          },
+          {
+            "age_value": 80,
+            "signed_density": 0
+          }
         ]
       },
       "mark": {
@@ -105,12 +183,24 @@
         "x": {
           "field": "age_value",
           "type": "quantitative",
-          "scale": { "domain": [0, 80], "nice": false }
+          "scale": {
+            "domain": [
+              0,
+              80
+            ],
+            "nice": false
+          }
         },
         "y": {
           "field": "signed_density",
           "type": "quantitative",
-          "scale": { "domain": [-45, 45], "nice": false }
+          "scale": {
+            "domain": [
+              -45,
+              45
+            ],
+            "nice": false
+          }
         }
       }
     },
@@ -134,20 +224,36 @@
         "fontSize": 11,
         "fontStyle": "italic",
         "fill": "#2c3e50",
-        "clip": false
+        "clip": false,
+        "font": "Source Sans 3"
       },
       "encoding": {
         "x": {
           "field": "age_value",
           "type": "quantitative",
-          "scale": { "domain": [0, 80], "nice": false }
+          "scale": {
+            "domain": [
+              0,
+              80
+            ],
+            "nice": false
+          }
         },
         "y": {
           "field": "signed_density",
           "type": "quantitative",
-          "scale": { "domain": [-45, 45], "nice": false }
+          "scale": {
+            "domain": [
+              -45,
+              45
+            ],
+            "nice": false
+          }
         },
-        "text": { "field": "label", "type": "nominal" }
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
       }
     },
     {
@@ -170,25 +276,46 @@
         "fontSize": 11,
         "fontStyle": "italic",
         "fill": "#2c3e50",
-        "clip": false
+        "clip": false,
+        "font": "Source Sans 3"
       },
       "encoding": {
         "x": {
           "field": "age_value",
           "type": "quantitative",
-          "scale": { "domain": [0, 80], "nice": false }
+          "scale": {
+            "domain": [
+              0,
+              80
+            ],
+            "nice": false
+          }
         },
         "y": {
           "field": "signed_density",
           "type": "quantitative",
-          "scale": { "domain": [-45, 45], "nice": false }
+          "scale": {
+            "domain": [
+              -45,
+              45
+            ],
+            "nice": false
+          }
         },
-        "text": { "field": "label", "type": "nominal" }
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
       }
     }
   ],
   "resolve": {
-    "scale": { "x": "shared", "y": "shared" },
-    "legend": { "color": "shared" }
+    "scale": {
+      "x": "shared",
+      "y": "shared"
+    },
+    "legend": {
+      "color": "shared"
+    }
   }
 }

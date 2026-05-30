@@ -3,17 +3,35 @@
   "title": {
     "text": "Fatality rate per state",
     "anchor": "middle",
+    "font": "Source Sans 3",
     "fontSize": 12,
     "fontWeight": "bold",
     "color": "#1a2530"
   },
   "width": 480,
   "height": 520,
-  "autosize": { "type": "pad", "contains": "padding" },
-  "padding": { "bottom": 4 },
+  "autosize": {
+    "type": "pad",
+    "contains": "padding"
+  },
+  "padding": {
+    "bottom": 4
+  },
   "config": {
-    "view": { "stroke": "transparent", "fill": "#eef4f7" },
-    "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
+    "title": {
+      "font": "Source Sans 3"
+    },
+    "text": {
+      "font": "Source Sans 3"
+    },
+    "view": {
+      "stroke": "transparent",
+      "fill": "#eef4f7"
+    },
+    "axis": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3"
+    },
     "legend": {
       "labelFont": "Source Sans 3",
       "titleFont": "Source Sans 3",
@@ -21,34 +39,65 @@
       "offset": 4
     }
   },
-  "projection": { "type": "mercator", "center": [133, -27], "scale": 540 },
+  "projection": {
+    "type": "mercator",
+    "center": [
+      133,
+      -27
+    ],
+    "scale": 540
+  },
   "layer": [
     {
       "description": "States coloured by share of incidents that were fatal",
       "data": {
         "url": "../../data/topojson/australia_states.json",
-        "format": { "type": "topojson", "feature": "australia_states" }
+        "format": {
+          "type": "topojson",
+          "feature": "australia_states"
+        }
       },
       "transform": [
         {
           "filter": "datum.properties.name !== 'Lord Howe Island' && datum.properties.name !== 'Macquarie Island'"
         },
-        { "calculate": "slice(datum.properties.iso_3166_2, 3)", "as": "state_abbrev" },
+        {
+          "calculate": "slice(datum.properties.iso_3166_2, 3)",
+          "as": "state_abbrev"
+        },
         {
           "lookup": "state_abbrev",
           "from": {
-            "data": { "url": "../../data/wrangled_data/state_choropleth.csv" },
+            "data": {
+              "url": "../../data/wrangled_data/state_choropleth.csv"
+            },
             "key": "State",
-            "fields": ["total", "fatal", "fatal_rate", "population", "rate_per_million"]
+            "fields": [
+              "total",
+              "fatal",
+              "fatal_rate",
+              "population",
+              "rate_per_million"
+            ]
           }
         }
       ],
-      "mark": { "type": "geoshape", "stroke": "#ffffff", "strokeWidth": 1.2 },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.2
+      },
       "encoding": {
         "color": {
           "field": "fatal_rate",
           "type": "quantitative",
-          "scale": { "scheme": "reds", "domain": [0, 30] },
+          "scale": {
+            "scheme": "reds",
+            "domain": [
+              0,
+              30
+            ]
+          },
           "legend": {
             "title": "Fatality rate (%)",
             "gradientLength": 200,
@@ -58,11 +107,34 @@
           }
         },
         "tooltip": [
-          { "field": "properties.name", "type": "nominal", "title": "State" },
-          { "field": "total", "type": "quantitative", "title": "Total incidents", "format": "," },
-          { "field": "fatal", "type": "quantitative", "title": "Fatal incidents" },
-          { "field": "fatal_rate", "type": "quantitative", "title": "Fatality rate (%)", "format": ".1f" },
-          { "field": "rate_per_million", "type": "quantitative", "title": "Incidents per million people", "format": ".1f" }
+          {
+            "field": "properties.name",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "Total incidents",
+            "format": ","
+          },
+          {
+            "field": "fatal",
+            "type": "quantitative",
+            "title": "Fatal incidents"
+          },
+          {
+            "field": "fatal_rate",
+            "type": "quantitative",
+            "title": "Fatality rate (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "rate_per_million",
+            "type": "quantitative",
+            "title": "Incidents per million people",
+            "format": ".1f"
+          }
         ]
       }
     },
@@ -70,13 +142,48 @@
       "description": "Combined state labels, one line, smaller type",
       "data": {
         "values": [
-          { "state": "NSW", "lat": -32.0, "lon": 146.5, "label": "NSW (18.0%)" },
-          { "state": "QLD", "lat": -22.5, "lon": 144.5, "label": "QLD (27.0%)" },
-          { "state": "WA", "lat": -25.0, "lon": 121.5, "label": "WA (16.6%)" },
-          { "state": "SA", "lat": -29.0, "lon": 135.5, "label": "SA (27.4%)" },
-          { "state": "NT", "lat": -19.5, "lon": 133.5, "label": "NT (10.5%)" },
-          { "state": "VIC", "lat": -37.0, "lon": 144.75, "label": "VIC (14.3%)" },
-          { "state": "TAS", "lat": -42.0, "lon": 146.6, "label": "TAS (22.2%)" }
+          {
+            "state": "NSW",
+            "lat": -32.0,
+            "lon": 146.5,
+            "label": "NSW (18.0%)"
+          },
+          {
+            "state": "QLD",
+            "lat": -22.5,
+            "lon": 144.5,
+            "label": "QLD (27.0%)"
+          },
+          {
+            "state": "WA",
+            "lat": -25.0,
+            "lon": 121.5,
+            "label": "WA (16.6%)"
+          },
+          {
+            "state": "SA",
+            "lat": -29.0,
+            "lon": 135.5,
+            "label": "SA (27.4%)"
+          },
+          {
+            "state": "NT",
+            "lat": -19.5,
+            "lon": 133.5,
+            "label": "NT (10.5%)"
+          },
+          {
+            "state": "VIC",
+            "lat": -37.0,
+            "lon": 144.75,
+            "label": "VIC (14.3%)"
+          },
+          {
+            "state": "TAS",
+            "lat": -42.0,
+            "lon": 146.6,
+            "label": "TAS (22.2%)"
+          }
         ]
       },
       "mark": {
@@ -84,12 +191,22 @@
         "fontSize": 9,
         "fontWeight": "bold",
         "align": "center",
-        "baseline": "middle"
+        "baseline": "middle",
+        "font": "Source Sans 3"
       },
       "encoding": {
-        "longitude": { "field": "lon", "type": "quantitative" },
-        "latitude": { "field": "lat", "type": "quantitative" },
-        "text": { "field": "label", "type": "nominal" },
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
         "color": {
           "condition": {
             "test": "datum.state === 'SA' || datum.state === 'QLD'",
