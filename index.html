@@ -308,8 +308,7 @@
 
       /* Dot map: align chart + prose to a shared 820px column inside the card */
       .chart-block--820 .vis-wrap,
-      .chart-block--820 .chart-lede,
-      .chart-block--820 .chart-caption {
+      .chart-block--820 .chart-lede {
         max-width: 820px;
         width: 100%;
         margin-left: auto;
@@ -336,8 +335,7 @@
         width: 100%;
       }
 
-      .chart-block--split-maps .chart-lede,
-      .chart-block--split-maps .chart-caption {
+      .chart-block--split-maps .chart-lede {
         max-width: none;
       }
 
@@ -566,22 +564,6 @@
         font-weight: 600;
       }
 
-      .chart-caption {
-        font-size: 13px;
-        color: var(--text-light);
-        margin: 14px auto 0;
-        padding-top: 12px;
-        border-top: 1px solid rgba(0, 0, 0, 0.07);
-        max-width: 820px;
-        line-height: 1.65;
-        text-align: left;
-      }
-
-      .chart-caption strong {
-        color: var(--text-mid);
-        font-weight: 600;
-      }
-
       /* Inline highlight pill used in narration prose */
       .num {
         font-family: var(--font-display);
@@ -653,8 +635,8 @@
         max-width: 100%;
         height: auto;
       }
-      .vega-embed summary {
-        opacity: 0.3 !important;
+      .vega-embed details {
+        display: none !important;
       }
       .vega-embed form.vega-bindings {
         margin: 8px 0 16px;
@@ -1226,15 +1208,6 @@
               in Section 1; this is the state-level peer comparison.
             </p>
           </div>
-          <p class="chart-caption">
-            Figure 5.1. Side-by-side dot maps of New South Wales (left) and
-            California (right), 1950 to 2022. Each point is one incident,
-            coloured by outcome and sized up for fatalities. Projections are
-            centred on each state independently so both coastlines fill their
-            panel. Filters below the legend apply to both panels. NSW
-            boundaries from Natural Earth via Mapshaper; California from the
-            same source.
-          </p>
         </div>
 
         <!-- 5.2 NSW vs California outcome comparison -->
@@ -1266,12 +1239,6 @@
               <strong>7%</strong> in both places.
             </p>
           </div>
-          <p class="chart-caption">
-            Figure 5.2. Grouped bar chart by outcome (fatal, injured, uninjured),
-            with California and NSW bars side by side in each group, 1950 to
-            2022. Normalised view uses 2021 state populations (NSW 8.17M, ABS;
-            California 39.2M, US Census).
-          </p>
         </div>
       </section>
     </main>
