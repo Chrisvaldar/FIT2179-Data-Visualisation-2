@@ -1,4 +1,5 @@
-# GitHub Pages / Jekyll — this repo is a static Vega dashboard, not a Jekyll site.
+# GitHub Pages — optional Jekyll config (overridden by .nojekyll at repo root).
+# .nojekyll disables Jekyll so data/, charts/, and assets/ are published as static files.
 # The references/ folder is a local Vega-Lite doc mirror with {% include %} tags
 # that only exist on vega.github.io; building them breaks Pages.
 

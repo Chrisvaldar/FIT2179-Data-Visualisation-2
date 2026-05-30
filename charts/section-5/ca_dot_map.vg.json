@@ -81,7 +81,7 @@
     {
       "description": "California land mass",
       "data": {
-        "url": "../../data/topojson/california.json",
+        "url": "data/topojson/california.json",
         "format": {
           "type": "topojson",
           "feature": "california"
@@ -97,7 +97,7 @@
     {
       "description": "California white-shark incidents since 1950",
       "data": {
-        "url": "../../data/wrangled_data/ca_dot_map.csv"
+        "url": "data/wrangled_data/ca_dot_map.csv"
       },
       "transform": [
         {

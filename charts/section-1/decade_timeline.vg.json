@@ -53,7 +53,7 @@
     }
   ],
   "data": {
-    "url": "../../data/wrangled_data/decade_timeline.csv"
+    "url": "data/wrangled_data/decade_timeline.csv"
   },
   "layer": [
     {

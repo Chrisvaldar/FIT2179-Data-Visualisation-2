@@ -81,7 +81,7 @@
     {
       "description": "NSW state boundary",
       "data": {
-        "url": "../../data/topojson/australia_states.json",
+        "url": "data/topojson/australia_states.json",
         "format": {
           "type": "topojson",
           "feature": "australia_states"
@@ -102,7 +102,7 @@
     {
       "description": "NSW incidents since 1950",
       "data": {
-        "url": "../../data/wrangled_data/nsw_dot_map.csv"
+        "url": "data/wrangled_data/nsw_dot_map.csv"
       },
       "transform": [
         {

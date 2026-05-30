@@ -6,7 +6,7 @@
     "bottom": 4
   },
   "data": {
-    "url": "../../data/wrangled_data/wobbegong_activity.csv"
+    "url": "data/wrangled_data/wobbegong_activity.csv"
   },
   "config": {
     "title": {

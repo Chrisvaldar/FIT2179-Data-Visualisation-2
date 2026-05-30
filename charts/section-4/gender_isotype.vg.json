@@ -9,7 +9,7 @@
     "bottom": 8
   },
   "data": {
-    "url": "../../data/wrangled_data/gender_isotype.csv"
+    "url": "data/wrangled_data/gender_isotype.csv"
   },
   "config": {
     "title": {

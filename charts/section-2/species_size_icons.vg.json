@@ -78,7 +78,7 @@
   "data": [
     {
       "name": "stats",
-      "url": "../../data/wrangled_data/species_size.csv",
+      "url": "data/wrangled_data/species_size.csv",
       "format": {
         "type": "csv",
         "parse": "auto"

@@ -56,7 +56,7 @@
     {
       "description": "States coloured by population-normalised incident rate",
       "data": {
-        "url": "../../data/topojson/australia_states.json",
+        "url": "data/topojson/australia_states.json",
         "format": {
           "type": "topojson",
           "feature": "australia_states"
@@ -74,7 +74,7 @@
           "lookup": "state_abbrev",
           "from": {
             "data": {
-              "url": "../../data/wrangled_data/state_choropleth.csv"
+              "url": "data/wrangled_data/state_choropleth.csv"
             },
             "key": "State",
             "fields": [

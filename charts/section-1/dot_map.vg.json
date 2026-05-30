@@ -152,7 +152,7 @@
     {
       "description": "Australia land mass, soft sand fill",
       "data": {
-        "url": "../../data/topojson/australia.json",
+        "url": "data/topojson/australia.json",
         "format": {
           "type": "topojson",
           "feature": "australia"
@@ -168,7 +168,7 @@
     {
       "description": "State boundaries layered on top of the country mass",
       "data": {
-        "url": "../../data/topojson/australia_states.json",
+        "url": "data/topojson/australia_states.json",
         "format": {
           "type": "topojson",
           "feature": "australia_states"
@@ -249,7 +249,7 @@
     {
       "description": "Incident dots, filtered by decade and outcome selectors",
       "data": {
-        "url": "../../data/wrangled_data/dot_map.csv"
+        "url": "data/wrangled_data/dot_map.csv"
       },
       "transform": [
         {

@@ -11,7 +11,7 @@
     "resize": true
   },
   "data": {
-    "url": "../../data/wrangled_data/activity_risk.csv"
+    "url": "data/wrangled_data/activity_risk.csv"
   },
   "transform": [
     {

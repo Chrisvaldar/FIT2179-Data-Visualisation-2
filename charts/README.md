@@ -1,6 +1,6 @@
 # Chart specs
 
-Vega and Vega-Lite specifications grouped by narrative section. Each spec uses `../../data/` paths relative to its folder.
+Vega and Vega-Lite specifications grouped by narrative section. Each spec uses `data/` paths resolved from the site root (see `embedChart` in `index.html`).
 
 | Section | Files |
 |---------|-------|

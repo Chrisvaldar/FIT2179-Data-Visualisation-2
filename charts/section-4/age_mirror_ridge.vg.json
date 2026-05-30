@@ -9,7 +9,7 @@
     "bottom": 28
   },
   "data": {
-    "url": "../../data/wrangled_data/age_records.csv"
+    "url": "data/wrangled_data/age_records.csv"
   },
   "config": {
     "title": {

@@ -51,3 +51,15 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000/index.html` in your browser.
+
+Do not open `index.html` directly from the file explorer (`file://`); charts need HTTP so Vega can load CSV and TopoJSON.
+
+## GitHub Pages
+
+The repo includes a `.nojekyll` file so GitHub Pages serves the project as static files. Without it, Jekyll can swallow the `data/` folder and every chart 404s (SVG height becomes `NaN`).
+
+Enable Pages from the **main** branch, folder **/ (root)**. The site URL will be:
+
+`https://<username>.github.io/FIT2179-Data-Visualisation-2/`
+
+Open that URL (not a raw `github.com/.../blob/...` link). Chart specs load data from `data/wrangled_data/` and `data/topojson/` at the site root.

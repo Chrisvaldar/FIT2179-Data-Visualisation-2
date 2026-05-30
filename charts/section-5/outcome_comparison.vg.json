@@ -13,7 +13,7 @@
     "resize": true
   },
   "data": {
-    "url": "../../data/wrangled_data/outcome_comparison.csv"
+    "url": "data/wrangled_data/outcome_comparison.csv"
   },
   "config": {
     "title": {

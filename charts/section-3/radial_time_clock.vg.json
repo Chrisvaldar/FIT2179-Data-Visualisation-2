@@ -13,7 +13,7 @@
     "contains": "padding"
   },
   "data": {
-    "url": "../../data/wrangled_data/radial_time.csv"
+    "url": "data/wrangled_data/radial_time.csv"
   },
   "config": {
     "view": {

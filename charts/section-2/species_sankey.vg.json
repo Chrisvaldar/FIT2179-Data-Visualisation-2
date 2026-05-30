@@ -64,7 +64,7 @@
   "data": [
     {
       "name": "rawData",
-      "url": "../../data/wrangled_data/species_sankey.csv",
+      "url": "data/wrangled_data/species_sankey.csv",
       "format": {
         "type": "csv",
         "parse": "auto"
