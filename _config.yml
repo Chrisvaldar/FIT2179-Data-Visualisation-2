@@ -5,6 +5,10 @@
 title: Sharks in Australian Waters
 description: FIT2179 Data Visualisation 2
 
+# Ensure chart data and topojson are copied to _site (not only parsed as Jekyll data).
+include:
+  - data
+
 exclude:
   - references
   - scripts

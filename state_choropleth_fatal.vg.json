@@ -7,12 +7,12 @@
     "fontWeight": "bold",
     "color": "#1a2530"
   },
-  "width": "container",
-  "height": 380,
-  "autosize": { "type": "pad", "contains": "padding", "resize": true },
+  "width": 480,
+  "height": 520,
+  "autosize": { "type": "pad", "contains": "padding" },
   "padding": { "bottom": 4 },
   "config": {
-    "view": { "stroke": "transparent" },
+    "view": { "stroke": "transparent", "fill": "#eef4f7" },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
     "legend": {
       "labelFont": "Source Sans 3",
@@ -21,7 +21,7 @@
       "offset": 4
     }
   },
-  "projection": { "type": "mercator" },
+  "projection": { "type": "mercator", "center": [133, -27], "scale": 540 },
   "layer": [
     {
       "description": "States coloured by share of incidents that were fatal",
@@ -70,27 +70,33 @@
       "description": "Combined state labels, one line, smaller type",
       "data": {
         "values": [
-          { "lat": -32.0, "lon": 146.5, "label": "NSW (18.0%)" },
-          { "lat": -22.5, "lon": 144.5, "label": "QLD (27.0%)" },
-          { "lat": -25.0, "lon": 121.5, "label": "WA (16.6%)" },
-          { "lat": -29.0, "lon": 135.5, "label": "SA (27.4%)" },
-          { "lat": -19.5, "lon": 133.5, "label": "NT (10.5%)" },
-          { "lat": -37.0, "lon": 144.75, "label": "VIC (14.3%)" },
-          { "lat": -42.0, "lon": 146.6, "label": "TAS (22.2%)" }
+          { "state": "NSW", "lat": -32.0, "lon": 146.5, "label": "NSW (18.0%)" },
+          { "state": "QLD", "lat": -22.5, "lon": 144.5, "label": "QLD (27.0%)" },
+          { "state": "WA", "lat": -25.0, "lon": 121.5, "label": "WA (16.6%)" },
+          { "state": "SA", "lat": -29.0, "lon": 135.5, "label": "SA (27.4%)" },
+          { "state": "NT", "lat": -19.5, "lon": 133.5, "label": "NT (10.5%)" },
+          { "state": "VIC", "lat": -37.0, "lon": 144.75, "label": "VIC (14.3%)" },
+          { "state": "TAS", "lat": -42.0, "lon": 146.6, "label": "TAS (22.2%)" }
         ]
       },
       "mark": {
         "type": "text",
         "fontSize": 9,
         "fontWeight": "bold",
-        "fill": "#1a2530",
         "align": "center",
         "baseline": "middle"
       },
       "encoding": {
         "longitude": { "field": "lon", "type": "quantitative" },
         "latitude": { "field": "lat", "type": "quantitative" },
-        "text": { "field": "label", "type": "nominal" }
+        "text": { "field": "label", "type": "nominal" },
+        "color": {
+          "condition": {
+            "test": "datum.state === 'SA' || datum.state === 'QLD'",
+            "value": "#ffffff"
+          },
+          "value": "#1a2530"
+        }
       }
     }
   ]

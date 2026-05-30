@@ -1354,90 +1354,101 @@
   ============================================================ -->
     <script>
       const embedOpts = { actions: false, renderer: "canvas" };
+      const mapOpts = { actions: false, renderer: "svg" };
       const sankeyOpts = { ...embedOpts, renderer: "svg" };
 
-      vegaEmbed("#vis-dot-map", "dot_map.vg.json", embedOpts).catch(
-        console.warn,
-      );
-      const choroplethOpts = { ...embedOpts, renderer: "svg" };
+      function embedCharts() {
+        vegaEmbed("#vis-dot-map", "dot_map.vg.json", mapOpts).catch(console.warn);
+        vegaEmbed(
+          "#vis-choropleth-rate",
+          "state_choropleth_rate.vg.json",
+          mapOpts,
+        ).catch(console.warn);
+        vegaEmbed(
+          "#vis-choropleth-fatal",
+          "state_choropleth_fatal.vg.json",
+          mapOpts,
+        ).catch(console.warn);
+        vegaEmbed("#vis-timeline", "decade_timeline.vg.json", embedOpts).catch(
+          console.warn,
+        );
+        vegaEmbed("#vis-species", "species_sankey.vg.json", sankeyOpts).catch(
+          console.warn,
+        );
+        vegaEmbed(
+          "#vis-length-beeswarm",
+          "length_beeswarm.vg.json",
+          embedOpts,
+        ).catch(console.warn);
+        vegaEmbed(
+          "#vis-length-ridgeline",
+          "length_ridgeline.vg.json",
+          embedOpts,
+        ).catch(console.warn);
+        vegaEmbed(
+          "#vis-length-pictogram",
+          "length_pictogram.vg.json",
+          embedOpts,
+        ).catch(console.warn);
+        vegaEmbed("#vis-activity", "activity_risk.vg.json", embedOpts).catch(
+          console.warn,
+        );
+        vegaEmbed(
+          "#vis-radial-clock",
+          "radial_time_clock.vg.json",
+          { ...embedOpts, renderer: "svg" },
+        ).catch(console.warn);
+        vegaEmbed(
+          "#vis-gender-isotype",
+          "gender_isotype.vg.json",
+          { ...embedOpts, renderer: "svg" },
+        ).catch(console.warn);
+        vegaEmbed(
+          "#vis-age-ridge",
+          "age_mirror_ridge.vg.json",
+          embedOpts,
+        ).catch(console.warn);
+        vegaEmbed(
+          "#vis-outcome-comparison",
+          "outcome_comparison.vg.json",
+          embedOpts,
+        ).catch(console.warn);
+        vegaEmbed("#vis-nsw-dot-map", "nsw_dot_map.vg.json", mapOpts)
+          .then((nswResult) => {
+            return vegaEmbed("#vis-ca-dot-map", "ca_dot_map.vg.json", mapOpts).then(
+              (caResult) => {
+                const nswView = nswResult.view;
+                const caView = caResult.view;
+                const decadeSelect =
+                  document.getElementById("comparison-decade");
+                const outcomeSelect =
+                  document.getElementById("comparison-outcome");
 
-      vegaEmbed("#vis-choropleth-rate", "state_choropleth_rate.vg.json", choroplethOpts).catch(
-        console.warn,
-      );
-      vegaEmbed("#vis-choropleth-fatal", "state_choropleth_fatal.vg.json", choroplethOpts).catch(
-        console.warn,
-      );
-      vegaEmbed("#vis-timeline", "decade_timeline.vg.json", embedOpts).catch(
-        console.warn,
-      );
-      vegaEmbed("#vis-species", "species_sankey.vg.json", sankeyOpts).catch(
-        console.warn,
-      );
-      vegaEmbed(
-        "#vis-length-beeswarm",
-        "length_beeswarm.vg.json",
-        embedOpts,
-      ).catch(console.warn);
-      vegaEmbed(
-        "#vis-length-ridgeline",
-        "length_ridgeline.vg.json",
-        embedOpts,
-      ).catch(console.warn);
-      vegaEmbed(
-        "#vis-length-pictogram",
-        "length_pictogram.vg.json",
-        embedOpts,
-      ).catch(console.warn);
-      vegaEmbed("#vis-activity", "activity_risk.vg.json", embedOpts).catch(
-        console.warn,
-      );
-      vegaEmbed(
-        "#vis-radial-clock",
-        "radial_time_clock.vg.json",
-        { ...embedOpts, renderer: "svg" },
-      ).catch(console.warn);
-      vegaEmbed(
-        "#vis-gender-isotype",
-        "gender_isotype.vg.json",
-        { ...embedOpts, renderer: "svg" },
-      ).catch(console.warn);
-      vegaEmbed(
-        "#vis-age-ridge",
-        "age_mirror_ridge.vg.json",
-        embedOpts,
-      ).catch(console.warn);
-      vegaEmbed(
-        "#vis-outcome-comparison",
-        "outcome_comparison.vg.json",
-        embedOpts,
-      ).catch(console.warn);
-      vegaEmbed("#vis-nsw-dot-map", "nsw_dot_map.vg.json", embedOpts)
-        .then((nswResult) => {
-          return vegaEmbed("#vis-ca-dot-map", "ca_dot_map.vg.json", embedOpts).then(
-            (caResult) => {
-              const nswView = nswResult.view;
-              const caView = caResult.view;
-              const decadeSelect = document.getElementById("comparison-decade");
-              const outcomeSelect = document.getElementById("comparison-outcome");
+                function applyComparisonFilters() {
+                  const decadeVal = decadeSelect.value
+                    ? Number(decadeSelect.value)
+                    : null;
+                  const outcomeVal = outcomeSelect.value;
 
-              function applyComparisonFilters() {
-                const decadeVal = decadeSelect.value
-                  ? Number(decadeSelect.value)
-                  : null;
-                const outcomeVal = outcomeSelect.value;
+                  nswView.signal("decade_select", decadeVal).run();
+                  nswView.signal("outcome_select", outcomeVal).run();
+                  caView.signal("decade_select", decadeVal).run();
+                  caView.signal("outcome_select", outcomeVal).run();
+                }
 
-                nswView.signal("decade_select", decadeVal).run();
-                nswView.signal("outcome_select", outcomeVal).run();
-                caView.signal("decade_select", decadeVal).run();
-                caView.signal("outcome_select", outcomeVal).run();
-              }
+                decadeSelect.addEventListener("change", applyComparisonFilters);
+                outcomeSelect.addEventListener("change", applyComparisonFilters);
+              },
+            );
+          })
+          .catch(console.warn);
+      }
 
-              decadeSelect.addEventListener("change", applyComparisonFilters);
-              outcomeSelect.addEventListener("change", applyComparisonFilters);
-            },
-          );
-        })
-        .catch(console.warn);
+      if (document.readyState === "complete") {
+        embedCharts();
+      } else {
+        window.addEventListener("load", embedCharts);
+      }
     </script>
   </body>
 </html>

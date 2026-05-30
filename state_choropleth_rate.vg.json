@@ -7,12 +7,12 @@
     "fontWeight": "bold",
     "color": "#1a2530"
   },
-  "width": "container",
-  "height": 380,
-  "autosize": { "type": "pad", "contains": "padding", "resize": true },
+  "width": 480,
+  "height": 520,
+  "autosize": { "type": "pad", "contains": "padding" },
   "padding": { "bottom": 4 },
   "config": {
-    "view": { "stroke": "transparent" },
+    "view": { "stroke": "transparent", "fill": "#eef4f7" },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },
     "legend": {
       "labelFont": "Source Sans 3",
@@ -21,7 +21,7 @@
       "offset": 4
     }
   },
-  "projection": { "type": "mercator" },
+  "projection": { "type": "mercator", "center": [133, -27], "scale": 540 },
   "layer": [
     {
       "description": "States coloured by population-normalised incident rate",
@@ -39,18 +39,14 @@
           "from": {
             "data": { "url": "data/wrangled_data/state_choropleth.csv" },
             "key": "State",
-            "fields": ["total", "fatal", "fatal_rate", "population"]
+            "fields": ["total", "fatal", "fatal_rate", "population", "rate_per_million"]
           }
-        },
-        {
-          "calculate": "datum.total / datum.population * 1000000",
-          "as": "incidents_per_million"
         }
       ],
       "mark": { "type": "geoshape", "stroke": "#ffffff", "strokeWidth": 1.2 },
       "encoding": {
         "color": {
-          "field": "incidents_per_million",
+          "field": "rate_per_million",
           "type": "quantitative",
           "scale": { "scheme": "blues", "domain": [0, 80] },
           "legend": {
@@ -64,7 +60,7 @@
         "tooltip": [
           { "field": "properties.name", "type": "nominal", "title": "State" },
           { "field": "total", "type": "quantitative", "title": "Total incidents", "format": "," },
-          { "field": "incidents_per_million", "type": "quantitative", "title": "Incidents per million people", "format": ".1f" },
+          { "field": "rate_per_million", "type": "quantitative", "title": "Incidents per million people", "format": ".1f" },
           { "field": "population", "type": "quantitative", "title": "Population (2021)", "format": "," },
           { "field": "fatal_rate", "type": "quantitative", "title": "Fatality rate (%)", "format": ".1f" }
         ]
@@ -74,27 +70,33 @@
       "description": "Combined state labels, one line, smaller type",
       "data": {
         "values": [
-          { "lat": -32.0, "lon": 146.5, "label": "NSW (53.6)" },
-          { "lat": -22.5, "lon": 144.5, "label": "QLD (68.7)" },
-          { "lat": -25.0, "lon": 121.5, "label": "WA (70.6)" },
-          { "lat": -29.0, "lon": 135.5, "label": "SA (40.5)" },
-          { "lat": -19.5, "lon": 133.5, "label": "NT (75.9)" },
-          { "lat": -37.0, "lon": 144.75, "label": "VIC (10.5)" },
-          { "lat": -42.0, "lon": 146.6, "label": "TAS (47.3)" }
+          { "state": "NSW", "lat": -32.0, "lon": 146.5, "label": "NSW (53.6)" },
+          { "state": "QLD", "lat": -22.5, "lon": 144.5, "label": "QLD (68.7)" },
+          { "state": "WA", "lat": -25.0, "lon": 121.5, "label": "WA (70.6)" },
+          { "state": "SA", "lat": -29.0, "lon": 135.5, "label": "SA (40.5)" },
+          { "state": "NT", "lat": -19.5, "lon": 133.5, "label": "NT (75.9)" },
+          { "state": "VIC", "lat": -37.0, "lon": 144.75, "label": "VIC (10.5)" },
+          { "state": "TAS", "lat": -42.0, "lon": 146.6, "label": "TAS (47.3)" }
         ]
       },
       "mark": {
         "type": "text",
         "fontSize": 9,
         "fontWeight": "bold",
-        "fill": "#1a2530",
         "align": "center",
         "baseline": "middle"
       },
       "encoding": {
         "longitude": { "field": "lon", "type": "quantitative" },
         "latitude": { "field": "lat", "type": "quantitative" },
-        "text": { "field": "label", "type": "nominal" }
+        "text": { "field": "label", "type": "nominal" },
+        "color": {
+          "condition": {
+            "test": "datum.state === 'WA' || datum.state === 'NT' || datum.state === 'QLD'",
+            "value": "#ffffff"
+          },
+          "value": "#1a2530"
+        }
       }
     }
   ]
