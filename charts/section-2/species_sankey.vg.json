@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
-  "description": "Sankey diagram: shark species (left) to incident outcome (right). Inner width plus symmetric padding totals 1000px to match the centred embed cap in index.html.",
-  "width": 664,
+  "description": "Sankey diagram: shark species (left) to incident outcome (right). Full 1000px width so species labels can sit left of the plot without clipped side padding.",
+  "width": 1000,
   "height": 520,
   "padding": {
     "top": 36,
-    "left": 168,
-    "right": 168,
+    "left": 0,
+    "right": 0,
     "bottom": 12
   },
   "background": "transparent",
@@ -309,13 +309,16 @@
     {
       "name": "x",
       "type": "band",
-      "range": "width",
+      "range": [
+        180,
+        820
+      ],
       "domain": [
         "stk1",
         "stk2"
       ],
-      "paddingOuter": 0.08,
-      "paddingInner": 0.92
+      "paddingOuter": 0,
+      "paddingInner": 0.98
     },
     {
       "name": "y",
@@ -348,6 +351,7 @@
       "from": {
         "data": "columnTitles"
       },
+      "clip": false,
       "interactive": false,
       "encode": {
         "update": {
@@ -475,6 +479,7 @@
       "from": {
         "data": "groups"
       },
+      "clip": false,
       "interactive": false,
       "encode": {
         "update": {
