@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sharks in Australian Waters, 1791–2022</title>
+    <script>
+      (function () {
+        const u = new URL(window.location.href);
+        let path = u.pathname.replace(/\/index\.html$/i, "");
+        if (!path.endsWith("/")) path += "/";
+        const base = document.createElement("base");
+        base.href = u.origin + path;
+        document.head.appendChild(base);
+      })();
+    </script>
 
     <!-- Vega stack v6: Vega, Vega-Lite, and vega-embed must match -->
     <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
@@ -1391,20 +1401,50 @@
         },
       };
 
-      /** Site root for GitHub Pages project sites (e.g. /FIT2179-Data-Visualisation-2/). */
+      /** GitHub Pages project root, with or without trailing slash / index.html. */
       function getSiteBase() {
-        let path = window.location.pathname;
-        if (!path.endsWith("/")) {
-          path = path.slice(0, path.lastIndexOf("/") + 1);
-        }
-        return new URL(path, window.location.origin).href;
+        const u = new URL(window.location.href);
+        let path = u.pathname.replace(/\/index\.html$/i, "");
+        if (!path.endsWith("/")) path += "/";
+        u.pathname = path;
+        u.search = "";
+        u.hash = "";
+        return u.href;
       }
 
-      function embedChart(selector, specPath, opts = {}) {
-        return vegaEmbed(selector, specPath, {
+      function resolveDataUrl(url, base) {
+        if (!url || typeof url !== "string" || /^https?:\/\//i.test(url)) return url;
+        const clean = url.replace(/^\.\.\/\.\.\//, "").replace(/^\.\//, "");
+        return new URL(clean, base).href;
+      }
+
+      function rewriteSpecUrls(node, base) {
+        if (!node || typeof node !== "object") return;
+        if (Array.isArray(node)) {
+          node.forEach((item) => rewriteSpecUrls(item, base));
+          return;
+        }
+        for (const key of Object.keys(node)) {
+          if (key === "url" && typeof node[key] === "string") {
+            node[key] = resolveDataUrl(node[key], base);
+          } else {
+            rewriteSpecUrls(node[key], base);
+          }
+        }
+      }
+
+      async function embedChart(selector, specPath, opts = {}) {
+        const base = getSiteBase();
+        const specUrl = new URL(specPath, base).href;
+        const response = await fetch(specUrl);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${specPath} (${response.status})`);
+        }
+        const spec = await response.json();
+        rewriteSpecUrls(spec, base);
+        return vegaEmbed(selector, spec, {
           actions: false,
           renderer: "svg",
-          baseURL: getSiteBase(),
           ...chartFontConfig,
           ...opts,
         });
