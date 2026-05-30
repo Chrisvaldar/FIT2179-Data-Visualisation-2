@@ -88,7 +88,8 @@
             transparent 50%
           );
         color: var(--foam);
-        padding: 56px 48px 52px;
+        padding: 64px 48px 60px;
+        min-height: 280px;
         position: relative;
         overflow: hidden;
       }
@@ -106,24 +107,12 @@
       .hero-inner {
         max-width: var(--max-width);
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 32px;
-        align-items: center;
         position: relative;
+        z-index: 1;
       }
 
       .hero-text {
-      }
-
-      .hero-eyebrow {
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 11px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--sand);
-        margin-bottom: 14px;
+        max-width: min(540px, 52%);
       }
 
       .hero-title {
@@ -137,103 +126,51 @@
       }
 
       .hero-title em {
+        font-family: var(--font-display);
         font-style: italic;
+        font-weight: 900;
         color: var(--sand);
       }
 
       .hero-subtitle {
+        font-family: var(--font-body);
         font-size: 15px;
-        font-weight: 300;
+        font-weight: 400;
         color: rgba(250, 250, 247, 0.75);
-        max-width: 580px;
+        max-width: 520px;
         line-height: 1.7;
       }
 
-      .hero-stats {
-        display: flex;
-        gap: 36px;
-        margin-top: 36px;
-      }
-
-      .stat-pill {
-        text-align: center;
-      }
-
-      .stat-pill .num {
-        font-family: var(--font-body);
-        font-size: 32px;
-        font-weight: 700;
-        color: var(--sand);
-        line-height: 1;
-        display: block;
-      }
-
-      .stat-pill .lbl {
-        font-size: 11px;
-        font-weight: 300;
-        color: rgba(250, 250, 247, 0.6);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-top: 4px;
-        display: block;
-      }
-
-      /* SVG shark illustration */
       .hero-shark {
-        width: 260px;
-        opacity: 0.18;
-        flex-shrink: 0;
+        position: absolute;
+        right: -24%;
+        top: 73%;
+        width: min(1050px, 88vw);
+        height: min(420px, 130%);
+        object-fit: cover;
+        object-position: 94% 42%;
+        transform: translateY(-50%) scaleX(-1);
+        transform-origin: center;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.94;
+        -webkit-mask-image: linear-gradient(
+          to left,
+          #000 48%,
+          rgba(0, 0, 0, 0.9) 62%,
+          transparent 88%
+        );
+        mask-image: linear-gradient(
+          to left,
+          #000 48%,
+          rgba(0, 0, 0, 0.9) 62%,
+          transparent 88%
+        );
       }
 
       /* ============================================================
-       COLOUR KEY BAR (outcome legend, shared across all charts)
+       SHARED LEGEND DOTS (per-chart outcome keys)
     ============================================================ */
-      .legend-bar {
-        background: var(--ocean-mid);
-        padding: 12px 48px;
-      }
-
-      .legend-bar-inner {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 32px;
-      }
-
-      .legend-bar-key {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-      }
-
-      .legend-bar-items {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 6px 16px;
-      }
-
-      .legend-bar-label {
-        font-family: var(--font-body);
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: rgba(250, 250, 247, 0.55);
-        line-height: 1.2;
-      }
-
-      .legend-item {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        font-size: 13px;
-        color: rgba(250, 250, 247, 0.85);
-      }
-
       .legend-dot {
         width: 11px;
         height: 11px;
@@ -817,17 +754,24 @@
         .hero {
           padding: 40px 24px;
         }
-        .hero-inner {
-          grid-template-columns: 1fr;
+        .hero-text {
+          max-width: 100%;
         }
         .hero-shark {
-          display: none;
+          width: min(560px, 130vw);
+          height: min(300px, 55vh);
+          right: -38%;
+          object-position: 96% 42%;
+          opacity: 0.26;
+          -webkit-mask-image: linear-gradient(
+            to left,
+            #000 35%,
+            transparent 82%
+          );
+          mask-image: linear-gradient(to left, #000 35%, transparent 82%);
         }
         .page {
           padding: 0 20px 60px;
-        }
-        .legend-bar {
-          padding: 12px 20px;
         }
         .chart-grid-2 {
           grid-template-columns: 1fr;
@@ -848,11 +792,16 @@
        HERO MASTHEAD
   ============================================================ -->
     <header class="hero">
+      <img
+        class="hero-shark"
+        src="assets/hero-great-white-shark.png"
+        alt=""
+        aria-hidden="true"
+        width="770"
+        height="324"
+      />
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-eyebrow">
-            FIT2179 Data Visualisation 2 &nbsp;|&nbsp; Australia, 1791–2022
-          </p>
           <h1 class="hero-title">Sharks in<br /><em>Australian Waters</em></h1>
           <p class="hero-subtitle">
             Over 230 years and 1,196 recorded incidents, the story of sharks and
@@ -860,77 +809,9 @@
             attacked, which sharks are truly dangerous, and does the risk
             actually keep growing?
           </p>
-          <div class="hero-stats">
-            <div class="stat-pill">
-              <span class="num">1,196</span>
-              <span class="lbl">Total incidents</span>
-            </div>
-            <div class="stat-pill">
-              <span class="num">232</span>
-              <span class="lbl">Years of data</span>
-            </div>
-            <div class="stat-pill">
-              <span class="num">22.6%</span>
-              <span class="lbl">Overall fatality rate</span>
-            </div>
-            <div class="stat-pill">
-              <span class="num">7</span>
-              <span class="lbl">States covered</span>
-            </div>
-          </div>
         </div>
-
-        <!-- Inline SVG shark silhouette -->
-        <svg
-          class="hero-shark"
-          viewBox="0 0 400 200"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <!-- Body -->
-          <path
-            d="M20 110 Q80 60 180 90 Q280 115 380 100 Q360 130 280 140 Q180 155 80 135 Z"
-            fill="white"
-          />
-          <!-- Dorsal fin -->
-          <path d="M180 90 Q200 30 230 75 Q210 85 180 90 Z" fill="white" />
-          <!-- Pectoral fin -->
-          <path d="M160 115 Q130 155 110 145 Q140 125 160 115 Z" fill="white" />
-          <!-- Tail -->
-          <path d="M370 100 Q400 70 395 105 Q400 140 370 120 Z" fill="white" />
-          <!-- Eye -->
-          <circle cx="100" cy="110" r="5" fill="var(--ocean)" />
-          <!-- Mouth suggestion -->
-          <path
-            d="M30 115 Q45 125 60 118"
-            stroke="var(--ocean)"
-            stroke-width="2.5"
-            fill="none"
-            stroke-linecap="round"
-          />
-        </svg>
       </div>
     </header>
-
-    <!-- Shared colour legend -->
-    <div class="legend-bar">
-      <div class="legend-bar-inner">
-        <div class="legend-bar-key">
-          <span class="legend-bar-label">Outcome key</span>
-          <div class="legend-bar-items">
-            <span class="legend-item"
-              ><span class="legend-dot dot-fatal"></span> Fatal</span
-            >
-            <span class="legend-item"
-              ><span class="legend-dot dot-injured"></span> Injured</span
-            >
-            <span class="legend-item"
-              ><span class="legend-dot dot-uninjured"></span> Uninjured</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- ============================================================
        MAIN CONTENT
