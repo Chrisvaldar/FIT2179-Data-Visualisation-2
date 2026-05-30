@@ -339,7 +339,6 @@
 
       .chart-block--timeline .chart-block-legend {
         order: 2;
-        margin: 4px 0 2px;
       }
 
       .chart-block--timeline .chart-block-legend[hidden] {
@@ -348,7 +347,6 @@
 
       .chart-block--timeline .vega-embed > form.vega-bindings {
         order: 3;
-        margin: 0 0 8px;
       }
 
       .chart-block--split-maps .vis-wrap {
@@ -372,7 +370,7 @@
 
       /* Block title: shared by HTML headers and Vega config.title */
       .chart-header {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
 
       .chart-header__title {
@@ -406,7 +404,7 @@
         flex-wrap: wrap;
         gap: 6px 16px;
         width: 100%;
-        margin-top: 8px;
+        margin-top: 4px;
         font-family: var(--font-body);
         font-size: 11px;
         font-weight: 400;
@@ -431,7 +429,7 @@
         align-items: flex-start;
         gap: 6px;
         width: 100%;
-        margin: 0 0 8px;
+        margin: 4px 0 2px;
         font-family: var(--font-body);
         font-size: 11px;
         font-weight: 400;
@@ -483,7 +481,7 @@
       }
 
       .comparison-map-filters {
-        margin: 8px 0 16px;
+        margin: 0 0 8px;
         font-family: var(--font-body);
         font-size: 13px;
         color: var(--text-mid);
@@ -587,19 +585,13 @@
 
       .chart-block--outcome-comparison .chart-block-legend {
         order: 2;
-        margin: 4px 0 2px;
       }
 
       .chart-block--outcome-comparison .vega-embed > form.vega-bindings {
         order: 3;
-        margin: 0 0 8px;
       }
 
       /* Radial clock: chart centred; filter and legend left-aligned below */
-      .chart-block--radial-clock .chart-header {
-        margin-bottom: 6px;
-      }
-
       .chart-block--radial-clock .vis-wrap {
         margin: 0;
         justify-content: center;
@@ -625,23 +617,16 @@
 
       .chart-block--radial-clock .chart-block-legend {
         order: 2;
-        margin: 8px 0 4px;
       }
 
       .chart-block--radial-clock .vega-embed > form.vega-bindings {
         order: 3;
-        margin: 0 0 8px;
         align-self: flex-start;
         width: 100%;
       }
 
       .chart-block--radial-clock .vega-embed > *:not(form):not(details) {
         align-self: center !important;
-      }
-
-      .chart-block--radial-clock .chart-lede {
-        margin-top: 4px;
-        padding-top: 12px;
       }
 
       .chart-block--sankey .vega-embed,
@@ -652,20 +637,6 @@
       .chart-block--age-ridge .vega-embed,
       .chart-block--outcome-comparison .vega-embed {
         align-items: stretch !important;
-      }
-
-      .chart-block--choropleth .chart-lede,
-      .chart-block--timeline .chart-lede,
-      .chart-block--comparison-maps .chart-lede,
-      .chart-block--outcome-comparison .chart-lede,
-      .chart-block--sankey .chart-lede,
-      .chart-block--species-size .chart-lede,
-      .chart-block--activity .chart-lede,
-      .chart-block--gender-isotype .chart-lede,
-      .chart-block--age-ridge .chart-lede,
-      .chart-block--outcome-comparison .chart-lede {
-        margin-top: 4px;
-        padding-top: 8px;
       }
 
       /* Vega chart container, left-aligned so legends line up with filters */
@@ -682,8 +653,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0 36px;
-        margin: 22px 0 0;
-        padding-top: 18px;
+        margin: 4px 0 0;
+        padding-top: 8px;
         border-top: 2px solid var(--ocean);
         text-align: left;
       }
@@ -773,6 +744,11 @@
         align-self: stretch;
         width: 100%;
       }
+
+      /* Binds sit outside the SVG; avoid double gap from excess spec bottom padding */
+      .chart-block--dot-map .vega-embed form.vega-bindings {
+        margin-top: -6px;
+      }
       .vega-embed canvas,
       .vega-embed svg {
         display: block;
@@ -784,7 +760,7 @@
       }
       .vega-embed form.vega-bindings {
         order: 2;
-        margin: 8px 0 16px;
+        margin: 0 0 8px;
         font-family: var(--font-body);
         font-size: 13px;
         color: var(--text-mid);
