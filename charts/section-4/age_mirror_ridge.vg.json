@@ -6,7 +6,7 @@
     "top": 36,
     "left": 8,
     "right": 12,
-    "bottom": 44
+    "bottom": 28
   },
   "data": {
     "url": "../../data/wrangled_data/age_records.csv"
@@ -138,7 +138,7 @@
             "titleOrient": "top",
             "titleAnchor": "start",
             "titleAlign": "left",
-            "offset": 8,
+            "offset": 4,
             "labelFontSize": 11,
             "titleFontSize": 11,
             "titleFontWeight": "bold",

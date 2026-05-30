@@ -28,7 +28,12 @@
     "legend": {
       "labelFont": "Source Sans 3",
       "titleFont": "Source Sans 3",
-      "titleFontWeight": "bold"
+      "titleFontWeight": "bold",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "titleOrient": "top",
+      "titleAnchor": "start",
+      "titleAlign": "left"
     }
   },
   "params": [

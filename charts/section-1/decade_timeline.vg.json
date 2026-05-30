@@ -26,9 +26,12 @@
       "labelFont": "Source Sans 3",
       "titleFont": "Source Sans 3",
       "titleFontWeight": "bold",
-      "orient": "bottom-left",
+      "orient": "bottom",
       "offset": 4,
-      "direction": "horizontal"
+      "direction": "horizontal",
+      "titleOrient": "top",
+      "titleAnchor": "start",
+      "titleAlign": "left"
     }
   },
   "params": [
