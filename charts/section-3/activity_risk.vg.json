@@ -52,7 +52,7 @@
         "anchor": "middle",
         "color": "#1a2530"
       },
-      "width": 385,
+      "width": 410,
       "height": 380,
       "layer": [
         {
@@ -83,13 +83,27 @@
               "type": "quantitative",
               "scale": {
                 "domain": [
-                  -520,
+                  -500,
                   0
-                ]
+                ],
+                "nice": false
               },
               "axis": {
                 "title": null,
                 "labelExpr": "abs(datum.value)",
+                "values": [
+                  -500,
+                  -450,
+                  -400,
+                  -350,
+                  -300,
+                  -250,
+                  -200,
+                  -150,
+                  -100,
+                  -50,
+                  0
+                ],
                 "grid": true,
                 "gridColor": "#eeeeee"
               }
@@ -148,9 +162,10 @@
               "type": "quantitative",
               "scale": {
                 "domain": [
-                  -520,
+                  -500,
                   0
-                ]
+                ],
+                "nice": false
               }
             }
           }
@@ -252,7 +267,7 @@
         "anchor": "middle",
         "color": "#1a2530"
       },
-      "width": 435,
+      "width": 410,
       "height": 380,
       "layer": [
         {
@@ -284,8 +299,9 @@
               "scale": {
                 "domain": [
                   0,
-                  70
-                ]
+                  50
+                ],
+                "nice": false
               },
               "axis": {
                 "title": null,
@@ -293,10 +309,16 @@
                 "gridColor": "#eeeeee",
                 "values": [
                   0,
+                  5,
                   10,
+                  15,
                   20,
+                  25,
                   30,
-                  40
+                  35,
+                  40,
+                  45,
+                  50
                 ]
               }
             },
@@ -355,8 +377,9 @@
               "scale": {
                 "domain": [
                   0,
-                  70
-                ]
+                  50
+                ],
+                "nice": false
               }
             }
           }
