@@ -3,7 +3,7 @@
   "width": 1000,
   "height": 360,
   "padding": { "top": 36, "left": 8, "right": 12, "bottom": 12 },
-  "data": { "url": "data/wrangled_data/age_records.csv" },
+  "data": { "url": "../../data/wrangled_data/age_records.csv" },
   "config": {
     "view": { "stroke": "transparent", "clip": false },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },

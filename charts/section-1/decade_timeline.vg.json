@@ -25,7 +25,7 @@
       }
     }
   ],
-  "data": { "url": "data/wrangled_data/decade_timeline.csv" },
+  "data": { "url": "../../data/wrangled_data/decade_timeline.csv" },
   "layer": [
     {
       "description": "Stacked area for count mode, by outcome",

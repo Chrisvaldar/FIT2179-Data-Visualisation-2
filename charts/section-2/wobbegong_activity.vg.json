@@ -3,7 +3,7 @@
   "width": 800,
   "height": 380,
   "padding": { "bottom": 4 },
-  "data": { "url": "data/wrangled_data/wobbegong_activity.csv" },
+  "data": { "url": "../../data/wrangled_data/wobbegong_activity.csv" },
   "config": {
     "view": { "stroke": "transparent" },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },

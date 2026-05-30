@@ -4,7 +4,7 @@
   "height": 380,
   "padding": { "top": 44, "right": 12, "bottom": 12 },
   "autosize": { "type": "pad", "contains": "padding", "resize": true },
-  "data": { "url": "data/wrangled_data/outcome_comparison.csv" },
+  "data": { "url": "../../data/wrangled_data/outcome_comparison.csv" },
   "config": {
     "view": { "stroke": "transparent" },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },

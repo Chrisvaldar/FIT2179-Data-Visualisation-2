@@ -3,7 +3,7 @@
   "width": 1000,
   "height": 322,
   "padding": { "top": 8, "left": 8, "right": 12, "bottom": 8 },
-  "data": { "url": "data/wrangled_data/gender_isotype.csv" },
+  "data": { "url": "../../data/wrangled_data/gender_isotype.csv" },
   "config": {
     "view": { "stroke": "transparent", "clip": false },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },

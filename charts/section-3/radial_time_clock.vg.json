@@ -3,7 +3,7 @@
   "width": 560,
   "height": 560,
   "padding": { "top": 12, "bottom": 48 },
-  "data": { "url": "data/wrangled_data/radial_time.csv" },
+  "data": { "url": "../../data/wrangled_data/radial_time.csv" },
   "config": {
     "view": { "stroke": "transparent", "clip": false },
     "axis": { "labelFont": "Source Sans 3", "titleFont": "Source Sans 3" },

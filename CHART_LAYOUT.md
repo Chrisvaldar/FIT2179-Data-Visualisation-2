@@ -463,17 +463,17 @@ const choroplethOpts = { ...embedOpts, renderer: "svg" };
 
 | Figure | HTML classes | Vega spec(s) |
 |--------|--------------|--------------|
-| 1.1 Dot map | `split-maps` + `dot-map` | `dot_map.vg.json` |
-| 1.2 Choropleth | `split-maps` + `choropleth` | `state_choropleth_rate.vg.json`, `state_choropleth_fatal.vg.json` |
-| 1.3 Timeline | `split-maps` + `timeline` | `decade_timeline.vg.json` |
-| 2.1 Species bubble | `split-maps` + `species` | `species_bubble.vg.json` |
-| 2.2 Length beeswarm | `split-maps` + `length-beeswarm` | `length_beeswarm.vg.json` |
-| 2.3 Length ridgeline | `split-maps` + `length-ridgeline` | `length_ridgeline.vg.json` |
-| 2.4 Length pictogram | `split-maps` + `length-pictogram` | `length_pictogram.vg.json` |
-| 3.1 Activity risk | `split-maps` + `activity` | `activity_risk.vg.json` |
-| 3.2 Radial clock | `split-maps` + `radial-clock` | `radial_time_clock.vg.json` |
-| 4.1 Gender isotype | `split-maps` + `gender-isotype` | `gender_isotype.vg.json` |
-| 4.2 Age mirror ridge | `split-maps` + `age-ridge` | `age_mirror_ridge.vg.json` |
+| 1.1 Dot map | `split-maps` + `dot-map` | `charts/section-1/dot_map.vg.json` |
+| 1.2 Choropleth | `split-maps` + `choropleth` | `charts/section-1/state_choropleth_rate.vg.json`, `charts/section-1/state_choropleth_fatal.vg.json` |
+| 1.3 Timeline | `split-maps` + `timeline` | `charts/section-1/decade_timeline.vg.json` |
+| 2.1 Species sankey | `split-maps` + `sankey` | `charts/section-2/species_sankey.vg.json` |
+| 2.2 Species size | `split-maps` + `species-size` | `charts/section-2/species_size_icons.vg.json` |
+| 3.1 Activity risk | `split-maps` + `activity` | `charts/section-3/activity_risk.vg.json` |
+| 3.2 Radial clock | `split-maps` + `radial-clock` | `charts/section-3/radial_time_clock.vg.json` |
+| 4.1 Gender isotype | `split-maps` + `gender-isotype` | `charts/section-4/gender_isotype.vg.json` |
+| 4.2 Age mirror ridge | `split-maps` + `age-ridge` | `charts/section-4/age_mirror_ridge.vg.json` |
+| 5.1 Comparison maps | `split-maps` + `comparison-maps` | `charts/section-5/nsw_dot_map.vg.json`, `charts/section-5/ca_dot_map.vg.json` |
+| 5.2 Outcome comparison | `split-maps` + `outcome-comparison` | `charts/section-5/outcome_comparison.vg.json` |
 
 **Gender isotype (Figure 4.1):** Pattern C centred embed. Icon paths in `assets/icons/` (see `assets/icons/README.md`). Wrangle with `scripts/wrangle_gender_isotype.py` → `data/wrangled_data/gender_isotype.csv`.
 

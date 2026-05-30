@@ -21,7 +21,7 @@ def icon_ext(gender: str) -> str:
 
 
 def icon_url(gender: str, injury: str) -> str:
-    return f"assets/icons/{gender}-{injury}.{icon_ext(gender)}"
+    return f"../../assets/icons/{gender}-{injury}.{icon_ext(gender)}"
 
 
 def icons_for_count(count: int) -> int:

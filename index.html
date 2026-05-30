@@ -1301,54 +1301,54 @@
       const sankeyOpts = { ...embedOpts, renderer: "svg" };
 
       function embedCharts() {
-        vegaEmbed("#vis-dot-map", "dot_map.vg.json", mapOpts).catch(console.warn);
+        vegaEmbed("#vis-dot-map", "charts/section-1/dot_map.vg.json", mapOpts).catch(console.warn);
         vegaEmbed(
           "#vis-choropleth-rate",
-          "state_choropleth_rate.vg.json",
+          "charts/section-1/state_choropleth_rate.vg.json",
           mapOpts,
         ).catch(console.warn);
         vegaEmbed(
           "#vis-choropleth-fatal",
-          "state_choropleth_fatal.vg.json",
+          "charts/section-1/state_choropleth_fatal.vg.json",
           mapOpts,
         ).catch(console.warn);
-        vegaEmbed("#vis-timeline", "decade_timeline.vg.json", embedOpts).catch(
+        vegaEmbed("#vis-timeline", "charts/section-1/decade_timeline.vg.json", embedOpts).catch(
           console.warn,
         );
-        vegaEmbed("#vis-species", "species_sankey.vg.json", sankeyOpts).catch(
+        vegaEmbed("#vis-species", "charts/section-2/species_sankey.vg.json", sankeyOpts).catch(
           console.warn,
         );
         vegaEmbed(
           "#vis-species-size",
-          "species_size_icons.vg.json",
+          "charts/section-2/species_size_icons.vg.json",
           sankeyOpts,
         ).catch(console.warn);
-        vegaEmbed("#vis-activity", "activity_risk.vg.json", embedOpts).catch(
+        vegaEmbed("#vis-activity", "charts/section-3/activity_risk.vg.json", embedOpts).catch(
           console.warn,
         );
         vegaEmbed(
           "#vis-radial-clock",
-          "radial_time_clock.vg.json",
+          "charts/section-3/radial_time_clock.vg.json",
           { ...embedOpts, renderer: "svg" },
         ).catch(console.warn);
         vegaEmbed(
           "#vis-gender-isotype",
-          "gender_isotype.vg.json",
+          "charts/section-4/gender_isotype.vg.json",
           { ...embedOpts, renderer: "svg" },
         ).catch(console.warn);
         vegaEmbed(
           "#vis-age-ridge",
-          "age_mirror_ridge.vg.json",
+          "charts/section-4/age_mirror_ridge.vg.json",
           embedOpts,
         ).catch(console.warn);
         vegaEmbed(
           "#vis-outcome-comparison",
-          "outcome_comparison.vg.json",
+          "charts/section-5/outcome_comparison.vg.json",
           embedOpts,
         ).catch(console.warn);
-        vegaEmbed("#vis-nsw-dot-map", "nsw_dot_map.vg.json", mapOpts)
+        vegaEmbed("#vis-nsw-dot-map", "charts/section-5/nsw_dot_map.vg.json", mapOpts)
           .then((nswResult) => {
-            return vegaEmbed("#vis-ca-dot-map", "ca_dot_map.vg.json", mapOpts).then(
+            return vegaEmbed("#vis-ca-dot-map", "charts/section-5/ca_dot_map.vg.json", mapOpts).then(
               (caResult) => {
                 const nswView = nswResult.view;
                 const caView = caResult.view;
