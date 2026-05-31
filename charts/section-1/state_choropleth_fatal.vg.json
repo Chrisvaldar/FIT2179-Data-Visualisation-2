@@ -149,59 +149,67 @@
       }
     },
     {
-      "description": "Combined state labels, one line, smaller type",
+      "description": "State name labels (line above value)",
       "data": {
         "values": [
           {
             "state": "NSW",
             "lat": -32.0,
             "lon": 146.5,
-            "label": "NSW (18.0%)"
+            "name": "New South Wales",
+            "value": "(18.0%)"
           },
           {
             "state": "QLD",
             "lat": -22.5,
             "lon": 144.5,
-            "label": "QLD (27.0%)"
+            "name": "Queensland",
+            "value": "(27.0%)"
           },
           {
             "state": "WA",
             "lat": -25.0,
             "lon": 121.5,
-            "label": "WA (16.6%)"
+            "name": "Western Australia",
+            "value": "(16.6%)"
           },
           {
             "state": "SA",
             "lat": -29.0,
             "lon": 135.5,
-            "label": "SA (27.4%)"
+            "name": "South Australia",
+            "value": "(27.4%)"
           },
           {
             "state": "NT",
             "lat": -19.5,
             "lon": 133.5,
-            "label": "NT (10.5%)"
+            "name": "Northern Territory",
+            "value": "(10.5%)"
           },
           {
             "state": "VIC",
             "lat": -37.0,
             "lon": 144.75,
-            "label": "VIC (14.3%)"
+            "name": "Victoria",
+            "value": "(14.3%)"
           },
           {
             "state": "TAS",
             "lat": -42.0,
             "lon": 146.6,
-            "label": "TAS (22.2%)"
+            "name": "Tasmania",
+            "value": "(22.2%)"
           }
         ]
       },
       "mark": {
         "type": "text",
-        "fontSize": 9,
+        "fontSize": 8,
         "fontWeight": "bold",
         "align": "center",
         "baseline": "middle",
+        "dy": 3,
         "font": "Source Sans 3"
       },
       "encoding": {
@@ -214,7 +222,93 @@
           "type": "quantitative"
         },
         "text": {
-          "field": "label",
+          "field": "name",
+          "type": "nominal"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.state === 'SA' || datum.state === 'QLD'",
+            "value": "#ffffff"
+          },
+          "value": "#1a2530"
+        }
+      }
+    },
+    {
+      "description": "State value labels (line below name)",
+      "data": {
+        "values": [
+          {
+            "state": "NSW",
+            "lat": -32.0,
+            "lon": 146.5,
+            "name": "New South Wales",
+            "value": "(18.0%)"
+          },
+          {
+            "state": "QLD",
+            "lat": -22.5,
+            "lon": 144.5,
+            "name": "Queensland",
+            "value": "(27.0%)"
+          },
+          {
+            "state": "WA",
+            "lat": -25.0,
+            "lon": 121.5,
+            "name": "Western Australia",
+            "value": "(16.6%)"
+          },
+          {
+            "state": "SA",
+            "lat": -29.0,
+            "lon": 135.5,
+            "name": "South Australia",
+            "value": "(27.4%)"
+          },
+          {
+            "state": "NT",
+            "lat": -19.5,
+            "lon": 133.5,
+            "name": "Northern Territory",
+            "value": "(10.5%)"
+          },
+          {
+            "state": "VIC",
+            "lat": -37.0,
+            "lon": 144.75,
+            "name": "Victoria",
+            "value": "(14.3%)"
+          },
+          {
+            "state": "TAS",
+            "lat": -42.0,
+            "lon": 146.6,
+            "name": "Tasmania",
+            "value": "(22.2%)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 8,
+        "fontWeight": "bold",
+        "align": "center",
+        "baseline": "top",
+        "dy": 11,
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "value",
           "type": "nominal"
         },
         "color": {

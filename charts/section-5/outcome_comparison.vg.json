@@ -56,6 +56,10 @@
   ],
   "transform": [
     {
+      "calculate": "datum.region === 'NSW' || datum.region === 'New South Wales' ? 'New South Wales' : datum.region",
+      "as": "region_label"
+    },
+    {
       "calculate": "datum.outcome === 'fatal' ? 'Fatal' : datum.outcome === 'injured' ? 'Injured' : 'Uninjured'",
       "as": "outcome_label"
     },
@@ -70,7 +74,7 @@
   ],
   "layer": [
     {
-      "description": "Grouped bars: outcome on x, California vs NSW within each group",
+      "description": "Grouped bars: outcome on x, California vs New South Wales within each group",
       "mark": {
         "type": "bar",
         "cornerRadiusEnd": 3
@@ -91,11 +95,11 @@
           }
         },
         "xOffset": {
-          "field": "region",
+          "field": "region_label",
           "type": "nominal",
           "sort": [
             "California",
-            "NSW"
+            "New South Wales"
           ]
         },
         "y": {
@@ -116,12 +120,12 @@
           }
         },
         "color": {
-          "field": "region",
+          "field": "region_label",
           "type": "nominal",
           "scale": {
             "domain": [
               "California",
-              "NSW"
+              "New South Wales"
             ],
             "range": [
               "#5a6f7d",
@@ -132,7 +136,7 @@
         },
         "tooltip": [
           {
-            "field": "region",
+            "field": "region_label",
             "title": "Region"
           },
           {
@@ -183,11 +187,11 @@
           ]
         },
         "xOffset": {
-          "field": "region",
+          "field": "region_label",
           "type": "nominal",
           "sort": [
             "California",
-            "NSW"
+            "New South Wales"
           ]
         },
         "y": {

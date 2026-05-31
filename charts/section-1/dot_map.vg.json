@@ -188,36 +188,43 @@
         "values": [
           {
             "state": "NSW",
+            "label": "New South Wales",
             "lat": -32.4751,
             "lon": 146.781
           },
           {
             "state": "QLD",
+            "label": "Queensland",
             "lat": -23.1364,
             "lon": 144.778
           },
           {
             "state": "WA",
+            "label": "Western Australia",
             "lat": -25.8483,
             "lon": 121.646
           },
           {
             "state": "SA",
+            "label": "South Australia",
             "lat": -29.6504,
             "lon": 135.783
           },
           {
             "state": "VIC",
+            "label": "Victoria",
             "lat": -37.0082,
             "lon": 144.75
           },
           {
             "state": "TAS",
+            "label": "Tasmania",
             "lat": -42.1383,
             "lon": 146.603
           },
           {
             "state": "NT",
+            "label": "Northern Territory",
             "lat": -20.1026,
             "lon": 133.78
           }
@@ -225,7 +232,7 @@
       },
       "mark": {
         "type": "text",
-        "fontSize": 11,
+        "fontSize": 10,
         "fontWeight": "bold",
         "fill": "#8a6e3a",
         "fillOpacity": 0.7,
@@ -241,7 +248,7 @@
           "type": "quantitative"
         },
         "text": {
-          "field": "state",
+          "field": "label",
           "type": "nominal"
         }
       }
@@ -257,6 +264,10 @@
         },
         {
           "filter": "outcome_select === 'all' || datum['Victim.injury'] === outcome_select"
+        },
+        {
+          "calculate": "datum.State == 'NSW' ? 'New South Wales' : datum.State == 'QLD' ? 'Queensland' : datum.State == 'VIC' ? 'Victoria' : datum.State == 'TAS' ? 'Tasmania' : datum.State == 'WA' ? 'Western Australia' : datum.State == 'SA' ? 'South Australia' : datum.State == 'NT' ? 'Northern Territory' : datum.State",
+          "as": "State_full"
         }
       ],
       "mark": {
@@ -323,7 +334,7 @@
             "title": "Location"
           },
           {
-            "field": "State",
+            "field": "State_full",
             "title": "State"
           },
           {
