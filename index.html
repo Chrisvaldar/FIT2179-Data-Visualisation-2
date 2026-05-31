@@ -273,6 +273,15 @@
         overflow: visible;
       }
 
+      /* Dot map + vconcat timeline: do not clip the stacked SVG */
+      .chart-block.chart-block--dot-map {
+        overflow: visible !important;
+      }
+
+      .chart-block--dot-map {
+        overflow: visible !important;
+      }
+
       .chart-block--timeline {
         overflow: visible;
       }
@@ -443,15 +452,83 @@
         display: none;
       }
 
-      /* Dot map: stretch to the full card width */
+      /* Dot map block: HTML column stacks map, timeline, legend, filters */
       .chart-block--dot-map .vis-wrap {
-        justify-content: stretch;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        overflow: visible;
       }
 
-      .chart-block--dot-map .vis-wrap > div,
       .chart-block--dot-map #vis-dot-map {
+        display: contents;
+      }
+
+      /* vega-embed v6 injects svg + form directly into #vis-dot-map (no .vega-embed wrapper) */
+      .chart-block--dot-map #vis-dot-map > svg {
+        order: 1;
+        display: block;
         width: 100%;
-        max-width: none;
+        max-width: 1000px;
+        height: auto;
+        overflow: visible !important;
+      }
+
+      .chart-block--dot-map .chart-block-legend {
+        order: 2;
+        margin-top: 8px;
+        flex-shrink: 0;
+      }
+
+      .chart-block--dot-map #vis-dot-map > form.vega-bindings {
+        order: 3;
+        margin: 8px 0 0;
+        flex-shrink: 0;
+        line-height: normal;
+        font-family: var(--font-body);
+        font-size: 12px;
+        color: var(--text-mid);
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-self: flex-start;
+        width: 100%;
+        max-width: 1000px;
+      }
+
+      .chart-block--dot-map #vis-dot-map > form.vega-bindings label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .chart-block--dot-map #vis-dot-map > form.vega-bindings select,
+      .chart-block--dot-map #vis-dot-map > form.vega-bindings input[type="range"] {
+        font: inherit;
+        padding: 2px 6px;
+      }
+
+      /* Fallback if a .vega-embed wrapper is present */
+      .chart-block--dot-map .vega-embed {
+        display: block !important;
+        width: 100%;
+        max-width: 1000px;
+        overflow: visible;
+      }
+
+      .chart-block--dot-map .vega-embed > svg {
+        display: block;
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+        overflow: visible !important;
+      }
+
+      .chart-block--dot-map .vega-embed > form.vega-bindings {
+        margin-top: 8px;
+        flex-shrink: 0;
+        line-height: normal;
       }
 
       /* Section 2–3: full-width prose; chart 4 left-aligned, charts 5–6 centred */
@@ -709,15 +786,9 @@
         order: 1;
         align-self: flex-start;
       }
-      .chart-block--dot-map .vega-embed > *:not(form):not(details) {
-        align-self: stretch;
-        width: 100%;
-      }
+      /* dot-map: two separate embeds; global vega-embed rules apply per chart */
 
-      /* Binds sit outside the SVG; avoid double gap from excess spec bottom padding */
-      .chart-block--dot-map .vega-embed form.vega-bindings {
-        margin-top: -6px;
-      }
+      /* dot-map bindings order handled in block above; keep other charts unchanged */
 
       .chart-block--age-ridge .vega-embed > *:not(form):not(details) {
         margin-bottom: -4px;
@@ -841,22 +912,56 @@
           <div class="chart-header">
             <div class="chart-header__title">New South Wales bears the brunt, but no coast is safe</div>
           </div>
-          <div class="vis-wrap"><div id="vis-dot-map"></div></div>
+          <div class="vis-wrap">
+            <div id="vis-dot-map"></div>
+            <div
+              class="chart-block-legend"
+              id="vis-dot-map-legend"
+              aria-label="Outcome legend"
+            >
+              <span class="chart-block-legend__title">Outcome</span>
+              <div class="chart-block-legend__items">
+                <span class="chart-block-legend__item">
+                  <span class="legend-dot dot-fatal"></span> Fatal
+                </span>
+                <span class="chart-block-legend__item">
+                  <span class="legend-dot dot-injured"></span> Injured
+                </span>
+                <span class="chart-block-legend__item">
+                  <span class="legend-dot dot-uninjured"></span> Uninjured
+                </span>
+              </div>
+            </div>
+          </div>
           <div class="chart-lede">
             <p class="chart-lede__col">
               <strong>Sydney Harbour</strong> and the
               <strong>northern beaches</strong> carry the densest concentration
               of incidents on the map, with a second cluster running up the
-              <strong>Gold Coast and Byron Bay corridor</strong>. The surge in
-              dots <strong>after 2000</strong> reflects
-              <strong>population growth</strong> and
-              <strong>better reporting</strong> as much as any change in shark
-              behaviour.
+              <strong>Gold Coast and Byron Bay corridor</strong>.
+              <strong>Fatal incidents</strong> are not locked to any
+              <strong>famous beach</strong>: they are scattered across the
+              entire coastline, from <strong>Tasmania</strong> to the
+              <strong>Top End</strong>. Drag on the timeline to filter the map
+              by decade; double-click to reset.
             </p>
             <p class="chart-lede__col">
-              <strong>Fatal incidents</strong> are not locked to any
-              <strong>famous beach</strong>. They are scattered across the
-              entire coastline, from <strong>Tasmania</strong> to the <strong>Top End</strong>.
+              The <strong>2010s</strong> recorded <strong>231 incidents</strong>,
+              nearly double the <strong>164</strong> from the <strong>2000s</strong>,
+              and on raw count alone that looks like a crisis. Switch to incidents
+              per million people and the rate collapses. The
+              <strong>1790s</strong> sit at around <strong>200 per million</strong>,
+              reflecting how few people lived in Australia then rather than any
+              explosion of shark activity. Since <strong>Federation in 1901</strong>,
+              the per capita rate has stayed remarkably flat even as raw counts
+              climbed.
+            </p>
+            <p class="chart-lede__col">
+              The <strong>WW2 dip</strong> is visible in the raw count view,
+              consistent with fewer civilians on beaches during wartime. The
+              modern surge is almost entirely a story of
+              <strong>more Australians in the water</strong>, not more aggressive
+              sharks.
             </p>
           </div>
         </div>
@@ -896,55 +1001,6 @@
               <strong>27%</strong> compared to <strong>New South Wales&rsquo;s 18%</strong>.
               So if you ever find yourself in a shark incident, hope it is not off
               the coast of <strong>South Australia</strong>.
-            </p>
-          </div>
-        </div>
-
-        <!-- 1.3 Decade timeline -->
-        <div class="chart-block full-width chart-block--split-maps chart-block--timeline">
-          <div class="chart-header">
-            <div class="chart-header__title">231 incidents in the 2010s sounds alarming. It isn&rsquo;t.</div>
-          </div>
-          <div class="vis-wrap">
-            <div id="vis-timeline"></div>
-            <div
-              class="chart-block-legend"
-              id="vis-timeline-legend"
-              aria-label="Outcome legend"
-            >
-              <span class="chart-block-legend__title">Outcome</span>
-              <div class="chart-block-legend__items">
-                <span class="chart-block-legend__item">
-                  <span class="legend-dot dot-fatal"></span> Fatal
-                </span>
-                <span class="chart-block-legend__item">
-                  <span class="legend-dot dot-injured"></span> Injured
-                </span>
-                <span class="chart-block-legend__item">
-                  <span class="legend-dot dot-uninjured"></span> Uninjured
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="chart-lede">
-            <p class="chart-lede__col">
-              The <strong>2010s</strong> recorded <strong>231 incidents</strong>,
-              nearly double the <strong>164</strong> from the <strong>2000s</strong>,
-              and on raw count alone that looks like a crisis. Switch to incidents
-              per million people and the chart collapses. The
-              <strong>1790s</strong> sit at around <strong>200 per million</strong>,
-              a figure that reflects how few people were in Australia at the time
-              rather than any genuine explosion of shark activity. Since
-              <strong>Federation in 1901</strong>, the per capita rate has stayed
-              remarkably flat, hovering in low single digits even as raw counts
-              climbed.
-            </p>
-            <p class="chart-lede__col">
-              The <strong>WW2 dip</strong> is visible in the raw count view,
-              consistent with fewer civilians on beaches during wartime. The
-              modern surge is almost entirely a story of
-              <strong>more Australians in the water</strong>, not more aggressive
-              sharks.
             </p>
           </div>
         </div>
@@ -1444,7 +1500,7 @@
       }
 
       /** Bump when chart JSON changes so GitHub Pages CDN/browser caches do not serve stale specs. */
-      const CHART_SPEC_VERSION = "20260531c";
+      const CHART_SPEC_VERSION = "20260531r";
 
       async function embedChart(selector, specPath, opts = {}) {
         const base = getSiteBase();
@@ -1484,7 +1540,7 @@
       }
 
       const embedOpts = {};
-      const mapOpts = embedOpts;
+      const mapOpts = { ...embedOpts, width: 1000 };
       const sankeyOpts = embedOpts;
 
       async function loadChartFonts() {
@@ -1504,9 +1560,17 @@
         await loadChartFonts();
         console.info("[charts] site base:", getSiteBase());
 
-        embedChart("#vis-dot-map", "charts/section-1/dot_map.vg.json", mapOpts).catch((e) =>
-          logEmbedError("#vis-dot-map", "charts/section-1/dot_map.vg.json", e),
-        );
+        embedChart("#vis-dot-map", "charts/section-1/dot_map.vg.json", mapOpts)
+          .then((result) => {
+            const view = result.view;
+            const legend = document.getElementById("vis-dot-map-legend");
+            const syncLegend = () => {
+              if (legend) legend.hidden = view.signal("metric") !== "count";
+            };
+            view.addSignalListener("metric", syncLegend);
+            syncLegend();
+          })
+          .catch((e) => logEmbedError("#vis-dot-map", "charts/section-1/dot_map.vg.json", e));
         embedChart(
           "#vis-choropleth-rate",
           "charts/section-1/state_choropleth_rate.vg.json",
@@ -1521,18 +1585,6 @@
         ).catch((e) =>
           logEmbedError("#vis-choropleth-fatal", "charts/section-1/state_choropleth_fatal.vg.json", e),
         );
-        embedChart("#vis-timeline", "charts/section-1/decade_timeline.vg.json", embedOpts)
-          .then(({ view }) => {
-            const legend = document.getElementById("vis-timeline-legend");
-            const syncLegend = () => {
-              if (legend) legend.hidden = view.signal("metric") !== "count";
-            };
-            view.addSignalListener("metric", syncLegend);
-            syncLegend();
-          })
-          .catch((e) =>
-            logEmbedError("#vis-timeline", "charts/section-1/decade_timeline.vg.json", e),
-          );
         embedChart("#vis-species", "charts/section-2/species_sankey.vg.json", sankeyOpts).catch(
           (e) => logEmbedError("#vis-species", "charts/section-2/species_sankey.vg.json", e),
         );

@@ -3,9 +3,13 @@
   "width": 1000,
   "height": 380,
   "padding": {
-    "top": 44,
+    "top": 8,
     "right": 12,
-    "bottom": 12
+    "bottom": 72,
+    "left": 56
+  },
+  "autosize": {
+    "type": "pad"
   },
   "config": {
     "title": {
@@ -18,9 +22,16 @@
       "stroke": "transparent",
       "clip": false
     },
-    "axis": {
+    "axisX": {
       "labelFont": "Source Sans 3",
-      "titleFont": "Source Sans 3"
+      "titleFont": "Source Sans 3",
+      "titlePadding": 12,
+      "labelPadding": 6
+    },
+    "axisY": {
+      "labelFont": "Source Sans 3",
+      "titleFont": "Source Sans 3",
+      "titlePadding": 8
     },
     "legend": {
       "labelFont": "Source Sans 3",
@@ -89,26 +100,6 @@
               2020
             ],
             "nice": false
-          },
-          "axis": {
-            "title": "Decade",
-            "values": [
-              1800,
-              1820,
-              1840,
-              1860,
-              1880,
-              1900,
-              1920,
-              1940,
-              1960,
-              1980,
-              2000,
-              2020
-            ],
-            "format": "d",
-            "labelAngle": -45,
-            "grid": false
           }
         },
         "y": {
@@ -120,13 +111,6 @@
               "expr": "metric === 'count' ? [0, 280] : [0, 235]"
             },
             "nice": false
-          },
-          "axis": {
-            "title": {
-              "expr": "metric === 'count' ? 'Number of incidents' : 'Incidents per million people'"
-            },
-            "grid": true,
-            "gridColor": "#eeeeee"
           }
         },
         "color": {
@@ -199,11 +183,19 @@
       "encoding": {
         "x": {
           "field": "Decade",
-          "type": "quantitative"
+          "type": "quantitative",
+          "scale": {
+            "domain": [1790, 2020],
+            "nice": false
+          }
         },
         "y": {
           "field": "rate_per_million",
-          "type": "quantitative"
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 235],
+            "nice": false
+          }
         },
         "tooltip": [
           {
@@ -405,6 +397,74 @@
           "type": "nominal"
         }
       }
+    },
+    {
+      "description": "Decade brush: drag on x-axis to filter the map above",
+      "mark": {
+        "type": "bar",
+        "opacity": 0,
+        "tooltip": null
+      },
+      "encoding": {
+        "x": {
+          "field": "Decade",
+          "type": "quantitative",
+          "scale": {
+            "domain": [1790, 2020],
+            "nice": false
+          },
+          "axis": {
+            "title": "Decade (drag to filter map, double-click to reset)",
+            "titlePadding": 12,
+            "labelPadding": 6,
+            "values": [
+              1800,
+              1820,
+              1840,
+              1860,
+              1880,
+              1900,
+              1920,
+              1940,
+              1960,
+              1980,
+              2000,
+              2020
+            ],
+            "format": "d",
+            "labelAngle": -45,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "total",
+          "type": "quantitative",
+          "aggregate": "max",
+          "scale": {
+            "domain": {
+              "expr": "metric === 'count' ? [0, 280] : [0, 235]"
+            },
+            "nice": false
+          },
+          "axis": {
+            "title": {
+              "expr": "metric === 'count' ? 'Number of incidents' : 'Incidents per million people'"
+            },
+            "titlePadding": 8,
+            "grid": true,
+            "gridColor": "#eeeeee"
+          }
+        }
+      },
+      "params": [
+        {
+          "name": "decade_brush",
+          "select": {
+            "type": "interval",
+            "encodings": ["x"]
+          }
+        }
+      ]
     }
   ]
 }
