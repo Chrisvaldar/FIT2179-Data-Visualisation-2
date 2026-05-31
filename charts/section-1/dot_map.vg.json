@@ -14,7 +14,7 @@
     },
     "view": {
       "stroke": "transparent",
-      "clip": false
+      "clip": true
     },
     "axis": {
       "labelFont": "Source Sans 3",
@@ -117,26 +117,6 @@
         }
       },
       "layer": [
-        {
-          "description": "Ocean background",
-          "data": {
-            "values": [
-              {}
-            ]
-          },
-          "mark": {
-            "type": "rect",
-            "fill": "#dbe7ee",
-            "x": 0,
-            "y": 0,
-            "x2": {
-              "expr": "width"
-            },
-            "y2": {
-              "expr": "height"
-            }
-          }
-        },
         {
           "description": "Australia land mass, soft sand fill",
           "data": {
