@@ -1500,7 +1500,7 @@
       }
 
       /** Bump when chart JSON changes so GitHub Pages CDN/browser caches do not serve stale specs. */
-      const CHART_SPEC_VERSION = "20260531r";
+      const CHART_SPEC_VERSION = "20260531s";
 
       async function embedChart(selector, specPath, opts = {}) {
         const base = getSiteBase();
@@ -1541,6 +1541,7 @@
 
       const embedOpts = {};
       const mapOpts = { ...embedOpts, width: 1000 };
+      const choroplethOpts = embedOpts;
       const sankeyOpts = embedOpts;
 
       async function loadChartFonts() {
@@ -1574,14 +1575,14 @@
         embedChart(
           "#vis-choropleth-rate",
           "charts/section-1/state_choropleth_rate.vg.json",
-          mapOpts,
+          choroplethOpts,
         ).catch((e) =>
           logEmbedError("#vis-choropleth-rate", "charts/section-1/state_choropleth_rate.vg.json", e),
         );
         embedChart(
           "#vis-choropleth-fatal",
           "charts/section-1/state_choropleth_fatal.vg.json",
-          mapOpts,
+          choroplethOpts,
         ).catch((e) =>
           logEmbedError("#vis-choropleth-fatal", "charts/section-1/state_choropleth_fatal.vg.json", e),
         );
