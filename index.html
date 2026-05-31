@@ -751,21 +751,51 @@
     ============================================================ */
       footer {
         background: var(--ocean);
-        color: rgba(250, 250, 247, 0.55);
-        font-size: 12px;
-        padding: 28px 48px;
+        color: rgba(250, 250, 247, 0.62);
+        font-size: 14px;
+        padding: 40px 48px 48px;
         margin-top: 0;
-        line-height: 1.6;
+        line-height: 1.65;
       }
 
       footer .footer-inner {
         max-width: var(--max-width);
         margin: 0 auto;
         display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      footer .footer-row {
+        display: flex;
         justify-content: space-between;
-        align-items: center;
-        gap: 24px;
+        align-items: flex-start;
+        gap: 32px;
         flex-wrap: wrap;
+      }
+
+      footer .footer-block {
+        flex: 1 1 280px;
+        min-width: 0;
+      }
+
+      footer .footer-block--wide {
+        flex: 1 1 100%;
+      }
+
+      footer .footer-label {
+        display: block;
+        color: rgba(250, 250, 247, 0.88);
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+
+      footer .footer-meta {
+        font-size: 13px;
+        color: rgba(250, 250, 247, 0.5);
       }
 
       footer a {
@@ -1420,16 +1450,45 @@
   ============================================================ -->
     <footer>
       <div class="footer-inner">
-        <div>
-          <strong style="color: rgba(250, 250, 247, 0.8)">Data sources:</strong>
-          <a href="https://github.com/cjabradshaw/AustralianSharkIncidentDatabase" target="_blank" rel="noopener">Australian Shark Incident Database (ASID)</a>,
-          1791–2022 &nbsp;&middot;&nbsp;
-          <a href="https://data.ca.gov/dataset/shark-incident-database-california" target="_blank" rel="noopener">California Shark Incident Database</a>,
-          1950–2022
+        <div class="footer-row">
+          <div class="footer-block">
+            <span class="footer-label">Author</span>
+            Christopher Valensio Darsono
+          </div>
+          <div class="footer-block">
+            <span class="footer-label">Submitted</span>
+            31 May 2026
+          </div>
+          <div class="footer-block">
+            <span class="footer-label">Unit</span>
+            FIT2179 Data Visualisation 2 &nbsp;&middot;&nbsp; Semester 1, 2026
+          </div>
         </div>
-        <div style="text-align: right">
-          FIT2179 Data Visualisation 2 &nbsp;&middot;&nbsp; Semester 1, 2026
+        <div class="footer-row">
+          <div class="footer-block footer-block--wide">
+            <span class="footer-label">Data sources</span>
+            <a href="https://github.com/cjabradshaw/AustralianSharkIncidentDatabase" target="_blank" rel="noopener">Australian Shark Incident Database (ASID)</a>,
+            1791–2022 &nbsp;&middot;&nbsp;
+            <a href="https://data.ca.gov/dataset/shark-incident-database-california" target="_blank" rel="noopener">California Shark Incident Database</a>,
+            1950–2022
+          </div>
         </div>
+        <div class="footer-row">
+          <div class="footer-block footer-block--wide">
+            <span class="footer-label">AI tools</span>
+            Generative AI was used in the preparation of this submission.
+            <a href="https://cursor.com" target="_blank" rel="noopener">Cursor</a>
+            and
+            <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude</a>
+            assisted with building Vega-Lite and Vega chart specifications and with drafting narrative text on the page.
+          </div>
+        </div>
+        <p class="footer-meta">
+          Sketch: <a href="dv2_sketch.pdf" target="_blank" rel="noopener">dv2_sketch.pdf</a>
+          &nbsp;&middot;&nbsp;
+          Chart specs:
+          <a href="https://github.com/Chrisvaldar/FIT2179-Data-Visualisation-2" target="_blank" rel="noopener">GitHub repository</a>
+        </p>
       </div>
     </footer>
 
