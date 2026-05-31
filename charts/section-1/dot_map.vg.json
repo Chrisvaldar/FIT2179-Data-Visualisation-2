@@ -19,7 +19,7 @@
     },
     "view": {
       "stroke": "transparent",
-      "clip": false
+      "clip": true
     },
     "axis": {
       "labelFont": "Source Sans 3",
@@ -37,6 +37,34 @@
     }
   },
   "params": [
+    {
+      "name": "state_select",
+      "value": null,
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "NSW",
+          "QLD",
+          "VIC",
+          "WA",
+          "SA",
+          "TAS",
+          "NT"
+        ],
+        "labels": [
+          "All Australia",
+          "New South Wales",
+          "Queensland",
+          "Victoria",
+          "Western Australia",
+          "South Australia",
+          "Tasmania",
+          "Northern Territory"
+        ],
+        "name": "Zoom to state: "
+      }
+    },
     {
       "name": "decade_select",
       "value": null,
@@ -122,11 +150,12 @@
   ],
   "projection": {
     "type": "mercator",
-    "center": [
-      133,
-      -27
-    ],
-    "scale": 850
+    "center": {
+      "expr": "state_select == null ? [133, -27] : state_select == 'NSW' ? [146.0, -32.0] : state_select == 'QLD' ? [145.0, -18.8] : state_select == 'VIC' ? [144.8, -38.4] : state_select == 'WA' ? [114.0, -25.0] : state_select == 'SA' ? [136.8, -35.1] : state_select == 'TAS' ? [146.4, -41.8] : state_select == 'NT' ? [133.2, -12.8] : [133, -27]"
+    },
+    "scale": {
+      "expr": "state_select == null ? 850 : state_select == 'NSW' ? 2100 : state_select == 'QLD' ? 1600 : state_select == 'VIC' ? 4000 : state_select == 'WA' ? 1400 : state_select == 'SA' ? 1800 : state_select == 'TAS' ? 2450 : state_select == 'NT' ? 3600 : 850"
+    }
   },
   "layer": [
     {
@@ -238,6 +267,11 @@
         "fillOpacity": 0.7,
         "font": "Source Sans 3"
       },
+      "transform": [
+        {
+          "filter": "state_select === null || datum.state == state_select"
+        }
+      ],
       "encoding": {
         "longitude": {
           "field": "lon",
@@ -254,11 +288,14 @@
       }
     },
     {
-      "description": "Incident dots, filtered by decade and outcome selectors",
+      "description": "Incident dots, filtered by state zoom, decade, and outcome selectors",
       "data": {
         "url": "data/wrangled_data/dot_map.csv"
       },
       "transform": [
+        {
+          "filter": "state_select === null || datum.State == state_select"
+        },
         {
           "filter": "decade_select === null || datum.Decade == decade_select"
         },
@@ -367,6 +404,11 @@
           }
         ]
       },
+      "transform": [
+        {
+          "filter": "state_select === null || state_select == 'NSW'"
+        }
+      ],
       "mark": {
         "type": "text",
         "align": "left",
@@ -403,6 +445,11 @@
           }
         ]
       },
+      "transform": [
+        {
+          "filter": "state_select === null || state_select == 'WA'"
+        }
+      ],
       "mark": {
         "type": "text",
         "align": "right",
