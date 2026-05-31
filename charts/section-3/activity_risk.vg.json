@@ -175,7 +175,7 @@
           "description": "Count label sitting next to each circle",
           "mark": {
             "type": "text",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#1a2530",
             "align": "right",
@@ -389,7 +389,7 @@
           "description": "Fatality rate label next to each red circle",
           "mark": {
             "type": "text",
-            "fontSize": 11,
+            "fontSize": 12,
             "fontWeight": "bold",
             "color": "#1a2530",
             "align": "left",

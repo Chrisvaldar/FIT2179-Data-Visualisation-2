@@ -90,7 +90,7 @@
           ],
           "axis": {
             "title": null,
-            "labelFontSize": 13,
+            "labelFontSize": 12,
             "labelPadding": 12
           }
         },
@@ -171,7 +171,7 @@
         "type": "text",
         "baseline": "bottom",
         "dy": -4,
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "color": "#1a2530",
         "font": "Source Sans 3"

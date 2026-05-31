@@ -428,7 +428,7 @@
       ],
       "mark": {
         "type": "text",
-        "fontSize": 11,
+        "fontSize": 12,
         "fill": "#4a6274",
         "align": "center",
         "baseline": "middle",
@@ -485,7 +485,7 @@
       ],
       "mark": {
         "type": "text",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "fill": "#1a2530",
         "align": "center",
@@ -570,7 +570,7 @@
       ],
       "mark": {
         "type": "text",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontWeight": "bold",
         "fill": "#1a2530",
         "align": "center",
@@ -606,7 +606,7 @@
       },
       "mark": {
         "type": "text",
-        "fontSize": 13,
+        "fontSize": 12,
         "fontWeight": "bold",
         "fill": "#1a2530",
         "align": "center",

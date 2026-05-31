@@ -232,7 +232,7 @@
       },
       "mark": {
         "type": "text",
-        "fontSize": 10,
+        "fontSize": 12,
         "fontWeight": "bold",
         "fill": "#8a6e3a",
         "fillOpacity": 0.7,
@@ -310,9 +310,9 @@
             "titleAlign": "left",
             "offset": 8,
             "labelExpr": "datum.label === 'fatal' ? 'Fatal' : datum.label === 'injured' ? 'Injured' : 'Uninjured'",
-            "labelFontSize": 11,
+            "labelFontSize": 12,
             "labelFontStyle": "normal",
-            "titleFontSize": 11,
+            "titleFontSize": 12,
             "titleFontStyle": "normal",
             "titleFontWeight": "bold"
           }
@@ -372,7 +372,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": 14,
-        "fontSize": 11.5,
+        "fontSize": 12,
         "fontStyle": "italic",
         "fill": "#000000",
         "font": "Source Sans 3"
@@ -408,7 +408,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -14,
-        "fontSize": 11.5,
+        "fontSize": 12,
         "fontStyle": "italic",
         "fill": "#000000",
         "font": "Source Sans 3"

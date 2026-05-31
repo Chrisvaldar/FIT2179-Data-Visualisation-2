@@ -111,8 +111,8 @@
             "titleAnchor": "start",
             "titleAlign": "left",
             "gradientLength": 200,
-            "labelFontSize": 10,
-            "titleFontSize": 11,
+            "labelFontSize": 12,
+            "titleFontSize": 12,
             "titleFontWeight": "bold"
           }
         },
@@ -155,7 +155,7 @@
         "values": [
           {
             "state": "NSW",
-            "lat": -32.0,
+            "lat": -32,
             "lon": 146.5,
             "name": "New South Wales",
             "value": "(53.6)"
@@ -169,14 +169,14 @@
           },
           {
             "state": "WA",
-            "lat": -25.0,
+            "lat": -25,
             "lon": 121.5,
             "name": "Western Australia",
             "value": "(70.6)"
           },
           {
             "state": "SA",
-            "lat": -29.0,
+            "lat": -29,
             "lon": 135.5,
             "name": "South Australia",
             "value": "(40.5)"
@@ -190,14 +190,14 @@
           },
           {
             "state": "VIC",
-            "lat": -37.0,
+            "lat": -37,
             "lon": 144.75,
             "name": "Victoria",
             "value": "(10.5)"
           },
           {
             "state": "TAS",
-            "lat": -42.0,
+            "lat": -42,
             "lon": 146.6,
             "name": "Tasmania",
             "value": "(47.3)"
@@ -206,7 +206,7 @@
       },
       "mark": {
         "type": "text",
-        "fontSize": 8,
+        "fontSize": 10,
         "fontWeight": "bold",
         "align": "center",
         "baseline": "middle",
@@ -241,7 +241,7 @@
         "values": [
           {
             "state": "NSW",
-            "lat": -32.0,
+            "lat": -32,
             "lon": 146.5,
             "name": "New South Wales",
             "value": "(53.6)"
@@ -255,14 +255,14 @@
           },
           {
             "state": "WA",
-            "lat": -25.0,
+            "lat": -25,
             "lon": 121.5,
             "name": "Western Australia",
             "value": "(70.6)"
           },
           {
             "state": "SA",
-            "lat": -29.0,
+            "lat": -29,
             "lon": 135.5,
             "name": "South Australia",
             "value": "(40.5)"
@@ -276,14 +276,14 @@
           },
           {
             "state": "VIC",
-            "lat": -37.0,
+            "lat": -37,
             "lon": 144.75,
             "name": "Victoria",
             "value": "(10.5)"
           },
           {
             "state": "TAS",
-            "lat": -42.0,
+            "lat": -42,
             "lon": 146.6,
             "name": "Tasmania",
             "value": "(47.3)"
@@ -292,7 +292,7 @@
       },
       "mark": {
         "type": "text",
-        "fontSize": 8,
+        "fontSize": 10,
         "fontWeight": "bold",
         "align": "center",
         "baseline": "top",

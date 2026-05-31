@@ -16,7 +16,7 @@
     },
     "text": {
       "font": "Source Sans 3",
-      "fontSize": 11
+      "fontSize": 12
     },
     "axis": {
       "labelFont": "Source Sans 3",
@@ -496,7 +496,7 @@
             "value": "middle"
           },
           "fontSize": {
-            "value": 11
+            "value": 12
           },
           "fontWeight": {
             "value": "normal"
@@ -582,7 +582,7 @@
                 "value": "middle"
               },
               "fontSize": {
-                "value": 11
+                "value": 12
               },
               "fontWeight": {
                 "value": "600"

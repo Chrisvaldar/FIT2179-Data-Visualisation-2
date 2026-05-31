@@ -139,8 +139,8 @@
             "titleAnchor": "start",
             "titleAlign": "left",
             "offset": 4,
-            "labelFontSize": 11,
-            "titleFontSize": 11,
+            "labelFontSize": 12,
+            "titleFontSize": 12,
             "titleFontWeight": "bold",
             "labelExpr": "datum.label == 'fatal' ? 'Fatal' : 'Survived (injured or uninjured)'"
           }
@@ -227,7 +227,7 @@
         "baseline": "bottom",
         "dy": -18,
         "lineBreak": "\n",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontStyle": "italic",
         "fill": "#2c3e50",
         "clip": false,
@@ -279,7 +279,7 @@
         "baseline": "top",
         "dy": 8,
         "lineBreak": "\n",
-        "fontSize": 11,
+        "fontSize": 12,
         "fontStyle": "italic",
         "fill": "#2c3e50",
         "clip": false,

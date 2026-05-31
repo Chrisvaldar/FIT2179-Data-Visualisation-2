@@ -222,7 +222,7 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 13,
+            "fontSize": 12,
             "fontWeight": "bold",
             "font": "Source Sans 3"
           },
@@ -250,7 +250,7 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 10,
+            "fontSize": 12,
             "font": "Source Sans 3"
           },
           "encoding": {
@@ -277,7 +277,7 @@
             "type": "text",
             "align": "left",
             "baseline": "middle",
-            "fontSize": 10,
+            "fontSize": 12,
             "font": "Source Sans 3"
           },
           "encoding": {
