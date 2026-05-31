@@ -1,2 +1,5 @@
 node_modules/
 package-lock.json
+
+# Working export for LLM narrative drafting (not part of submission)
+CHART_NARRATIVE_FOR_LLM.md
