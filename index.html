@@ -204,7 +204,7 @@
       .page {
         max-width: var(--max-width);
         margin: 0 auto;
-        padding: 0 40px 80px;
+        padding: 0 40px;
       }
 
       /* ============================================================
@@ -253,6 +253,10 @@
         padding: 32px 36px 28px;
         margin-bottom: var(--chart-gap);
         overflow: hidden;
+      }
+
+      .page > section:last-of-type > .chart-block:last-child {
+        margin-bottom: 0;
       }
 
       .chart-block.full-width {
@@ -750,7 +754,7 @@
         color: rgba(250, 250, 247, 0.55);
         font-size: 12px;
         padding: 28px 48px;
-        margin-top: 80px;
+        margin-top: 0;
         line-height: 1.6;
       }
 
@@ -854,7 +858,7 @@
           mask-image: linear-gradient(to left, #000 35%, transparent 82%);
         }
         .page {
-          padding: 0 20px 60px;
+          padding: 0 20px;
         }
         .chart-grid-2 {
           grid-template-columns: 1fr;
