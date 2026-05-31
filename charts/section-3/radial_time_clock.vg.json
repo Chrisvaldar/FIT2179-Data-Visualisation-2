@@ -399,10 +399,6 @@
             "label": "3pm"
           },
           {
-            "Hour": 16,
-            "label": "4pm"
-          },
-          {
             "Hour": 18,
             "label": "6pm"
           },
@@ -449,47 +445,42 @@
         },
         "text": {
           "field": "label"
-        },
-        "opacity": {
-          "condition": {
-            "test": "datum.Hour == 16",
-            "value": 0
-          },
-          "value": 1
         }
       }
     },
     {
-      "description": "Peak hour tick label, 4pm",
+      "description": "Overnight low activity annotation",
       "data": {
         "values": [
           {
-            "Hour": 16,
-            "label": "4pm"
+            "hour": 2.5,
+            "label": "Almost no incidents\novernight"
           }
         ]
       },
       "transform": [
         {
-          "calculate": "(toNumber(datum.Hour) + 0.5) / 24 * 6.283185307179586 - 1.5707963267948966",
+          "calculate": "datum.hour / 24 * 6.283185307179586 - 1.5707963267948966",
           "as": "angle"
         },
         {
-          "calculate": "280 + 218 * sin(datum.angle)",
+          "calculate": "280 + 250 * sin(datum.angle)",
           "as": "label_x"
         },
         {
-          "calculate": "280 - 218 * cos(datum.angle)",
+          "calculate": "280 - 250 * cos(datum.angle)",
           "as": "label_y"
         }
       ],
       "mark": {
         "type": "text",
         "fontSize": 12,
-        "fontWeight": "bold",
-        "fill": "#1a2530",
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
         "align": "center",
         "baseline": "middle",
+        "lineBreak": "\n",
+        "clip": false,
         "font": "Source Sans 3"
       },
       "encoding": {
@@ -511,28 +502,29 @@
       }
     },
     {
-      "description": "Peak hour data label at 4pm",
+      "description": "Afternoon peak danger annotation near 4pm",
       "transform": [
         {
           "filter": "datum.hour == 16"
         },
         {
-          "calculate": "280 + 236 * sin(datum.angle)",
+          "calculate": "280 + 250 * sin(datum.angle)",
           "as": "label_x"
         },
         {
-          "calculate": "280 - 236 * cos(datum.angle)",
+          "calculate": "280 - 250 * cos(datum.angle)",
           "as": "label_y"
         }
       ],
       "mark": {
         "type": "text",
         "fontSize": 12,
-        "fontWeight": "bold",
-        "fill": "#1a2530",
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
         "align": "center",
         "baseline": "middle",
         "lineBreak": "\n",
+        "clip": false,
         "font": "Source Sans 3"
       },
       "encoding": {
@@ -549,49 +541,7 @@
           "axis": null
         },
         "text": {
-          "datum": "55 incidents\nat 4pm"
-        }
-      }
-    },
-    {
-      "description": "Morning secondary peak label at 11am",
-      "transform": [
-        {
-          "filter": "datum.hour == 11"
-        },
-        {
-          "calculate": "280 + 232 * sin(datum.angle)",
-          "as": "label_x"
-        },
-        {
-          "calculate": "280 - 232 * cos(datum.angle)",
-          "as": "label_y"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fontWeight": "bold",
-        "fill": "#1a2530",
-        "align": "center",
-        "baseline": "middle",
-        "font": "Source Sans 3"
-      },
-      "encoding": {
-        "x": {
-          "field": "label_x",
-          "type": "quantitative",
-          "scale": null,
-          "axis": null
-        },
-        "y": {
-          "field": "label_y",
-          "type": "quantitative",
-          "scale": null,
-          "axis": null
-        },
-        "text": {
-          "datum": "45 at 11am"
+          "datum": "Peak danger,\nafternoon glare reduces visibility"
         }
       }
     },

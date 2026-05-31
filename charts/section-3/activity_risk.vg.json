@@ -55,6 +55,10 @@
       },
       "width": 410,
       "height": 380,
+      "view": {
+        "stroke": "transparent",
+        "clip": false
+      },
       "layer": [
         {
           "description": "Lollipop stem from 0 to count_neg",
@@ -205,6 +209,117 @@
             "text": {
               "field": "count",
               "type": "quantitative"
+            }
+          }
+        },
+        {
+          "description": "Swimming count annotation",
+          "data": {
+            "values": [
+              {
+                "activity": "Swimming",
+                "count_neg": -451,
+                "label": "Highest incident count of any activity"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "center",
+            "baseline": "bottom",
+            "dx": 50,
+            "dy": -8,
+            "fontSize": 12,
+            "fontStyle": "italic",
+            "fill": "#2c3e50",
+            "clip": false,
+            "font": "Source Sans 3"
+          },
+          "encoding": {
+            "y": {
+              "field": "activity",
+              "type": "nominal",
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
+              "axis": null
+            },
+            "x": {
+              "field": "count_neg",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -500,
+                  0
+                ],
+                "nice": false
+              }
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          }
+        },
+        {
+          "description": "Boating low activity annotation",
+          "data": {
+            "values": [
+              {
+                "activity": "Boating",
+                "count_neg": -33,
+                "label": "Fewest incidents, zero deaths"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": -170,
+            "fontSize": 12,
+            "fontStyle": "italic",
+            "fill": "#2c3e50",
+            "clip": false,
+            "font": "Source Sans 3"
+          },
+          "encoding": {
+            "y": {
+              "field": "activity",
+              "type": "nominal",
+              "sort": [
+                "Swimming",
+                "Surfing/Boarding",
+                "Snorkelling",
+                "Spearfishing",
+                "Diving",
+                "Fishing",
+                "Boating",
+                "Standing in Water"
+              ],
+              "axis": null
+            },
+            "x": {
+              "field": "count_neg",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -500,
+                  0
+                ],
+                "nice": false
+              }
+            },
+            "text": {
+              "field": "label",
+              "type": "nominal"
             }
           }
         }

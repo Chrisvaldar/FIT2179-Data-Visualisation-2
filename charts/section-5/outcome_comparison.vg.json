@@ -203,6 +203,228 @@
           "type": "nominal"
         }
       }
+    },
+    {
+      "description": "Raw count uninjured parity annotation",
+      "transform": [
+        {
+          "filter": "metric === 'count'"
+        }
+      ],
+      "data": {
+        "values": [
+          {
+            "outcome_label": "Uninjured",
+            "y": 80,
+            "label": "Almost identical when not normalised"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
+        "clip": false,
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "x": {
+          "field": "outcome_label",
+          "type": "nominal",
+          "sort": [
+            "Fatal",
+            "Injured",
+            "Uninjured"
+          ]
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": {
+              "expr": "metric === 'count' ? [0, 210] : [0, 24]"
+            },
+            "nice": false
+          }
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "description": "Raw count fatal parity annotation",
+      "transform": [
+        {
+          "filter": "metric === 'count'"
+        }
+      ],
+      "data": {
+        "values": [
+          {
+            "outcome_label": "Fatal",
+            "y": 20,
+            "label": "Raw fatalities are surprisingly close too"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -6,
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
+        "clip": false,
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "x": {
+          "field": "outcome_label",
+          "type": "nominal",
+          "sort": [
+            "Fatal",
+            "Injured",
+            "Uninjured"
+          ]
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": {
+              "expr": "metric === 'count' ? [0, 210] : [0, 24]"
+            },
+            "nice": false
+          }
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "description": "Rate NSW injured gap annotation",
+      "transform": [
+        {
+          "filter": "metric === 'rate'"
+        }
+      ],
+      "data": {
+        "values": [
+          {
+            "outcome_label": "Injured",
+            "region_label": "New South Wales",
+            "y": 22.78,
+            "label": "NSW 22.8/million vs CA 2.75/million"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": -200,
+        "dy": -6,
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
+        "clip": false,
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "x": {
+          "field": "outcome_label",
+          "type": "nominal",
+          "sort": [
+            "Fatal",
+            "Injured",
+            "Uninjured"
+          ]
+        },
+        "xOffset": {
+          "field": "region_label",
+          "type": "nominal",
+          "sort": [
+            "California",
+            "New South Wales"
+          ]
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": {
+              "expr": "metric === 'count' ? [0, 210] : [0, 24]"
+            },
+            "nice": false
+          }
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "description": "Rate fatal cluster annotation",
+      "transform": [
+        {
+          "filter": "metric === 'rate'"
+        }
+      ],
+      "data": {
+        "values": [
+          {
+            "outcome_label": "Fatal",
+            "y": 2.45,
+            "label": "Fatalities are where the gap narrows"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -20,
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "fill": "#2c3e50",
+        "clip": false,
+        "font": "Source Sans 3"
+      },
+      "encoding": {
+        "x": {
+          "field": "outcome_label",
+          "type": "nominal",
+          "sort": [
+            "Fatal",
+            "Injured",
+            "Uninjured"
+          ]
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": {
+              "expr": "metric === 'count' ? [0, 210] : [0, 24]"
+            },
+            "nice": false
+          }
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
     }
   ]
 }
